@@ -1,11 +1,11 @@
+
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
   
-  
   <title>Gilgamesh&#39;s Blog</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
 <meta property="og:title" content="Gilgamesh&#39;s Blog">
 <meta property="og:url" content="https://gilgamesh-lzq.github.io/index.html">
@@ -14,40 +14,27 @@
 <meta property="article:author" content="Gilgamesh">
 <meta name="twitter:card" content="summary">
   
-    <link rel="alternate" href="/atom.xml" title="Gilgamesh's Blog" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="Gilgamesh&#39;s Blog" type="application/atom+xml">
   
   
-    <link rel="shortcut icon" href="/favicon.png">
-  
-  
-    
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
-
+    <link rel="icon" href="/favicon.png">
   
   
 <link rel="stylesheet" href="/css/style.css">
 
-  
-    
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
-
+  <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
   
 <meta name="generator" content="Hexo 6.1.0"></head>
-
 <body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
+<div id="container">
+  <div id="wrap">
+    <header id="header">
   <div id="banner"></div>
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
         <a href="/" id="logo">Gilgamesh&#39;s Blog</a>
       </h1>
-      
-        <h2 id="subtitle-wrap">
-          <a href="/" id="subtitle">饭不是因为最后一口才吃饱的</a>
-        </h2>
       
     </div>
     <div id="header-inner" class="inner">
@@ -66,19 +53,25 @@
         <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://gilgamesh-lzq.github.io"></form>
+        <form action="//www.baidu.com/baidu" method="get" accept-charset="utf-8" class="search-form">
+          <input type="search" name="word" maxlength="20" class="search-form-input" placeholder="Search">
+          <input type="submit" value="" class="search-form-submit">
+          <input name=tn type=hidden value="bds">
+          <input name=cl type=hidden value="3">
+          <input name=ct type=hidden value="2097152">
+          <input type="hidden" name="si" value="gilgamesh-lzq.github.io">
+        </form>
       </div>
     </div>
   </div>
 </header>
-
-      <div class="outer">
-        <section id="main">
+    <div class="outer">
+      <section id="main">
   
-    <article id="post-图数据库调研报告" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-图数据库调研报告" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2022/04/02/%E5%9B%BE%E6%95%B0%E6%8D%AE%E5%BA%93%E8%B0%83%E7%A0%94%E6%8A%A5%E5%91%8A/" class="article-date">
-  <time class="dt-published" datetime="2022-04-02T11:10:13.000Z" itemprop="datePublished">2022-04-02</time>
+  <time datetime="2022-04-02T11:10:13.000Z" itemprop="datePublished">2022-04-02</time>
 </a>
     
   </div>
@@ -89,13 +82,13 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/04/02/%E5%9B%BE%E6%95%B0%E6%8D%AE%E5%BA%93%E8%B0%83%E7%A0%94%E6%8A%A5%E5%91%8A/">图数据库调研报告</a>
+      <a class="article-title" href="/2022/04/02/%E5%9B%BE%E6%95%B0%E6%8D%AE%E5%BA%93%E8%B0%83%E7%A0%94%E6%8A%A5%E5%91%8A/">图数据库调研报告</a>
     </h1>
   
 
       </header>
     
-    <div class="e-content article-entry" itemprop="articleBody">
+    <div class="article-entry" itemprop="articleBody">
       
         <h1 align='center'>图数据库调研报告</h1>
 
@@ -103,7 +96,7 @@
 
 <h5 align='center'>2021-11-28</h5>
 
-<p>我主要参考了<em><strong>《Demystifying Graph Databases: Analysis and Taxonomy of Data Organization, System Designs, and Graph Queries》</strong></em>这篇文章。它是2019年10月的一篇针对图数据库的综述，这篇综述本身引用了202篇参考文献，被引29次。文章中也提到，在这篇文章之前几乎没有专门针对图形数据库的系统方面的调查，只有几篇涵盖该领域小部分的简短论文(对几个系统、概念或技术的简要描述，对图处理质量的调查，以及几个系统的性能评估)。因此我主要解读这篇综述中对图数据库的介绍和总结，对其中的一些表述进行理解后的复述以及解释，并为了更好地说明图数据库基本特点对文章内容进行重新组合。</p>
+<p>我主要参考了<strong><em>《Demystifying Graph Databases: Analysis and Taxonomy of Data Organization, System Designs, and Graph Queries》</em></strong>这篇文章。它是2019年10月的一篇针对图数据库的综述，这篇综述本身引用了202篇参考文献，被引29次。文章中也提到，在这篇文章之前几乎没有专门针对图形数据库的系统方面的调查，只有几篇涵盖该领域小部分的简短论文(对几个系统、概念或技术的简要描述，对图处理质量的调查，以及几个系统的性能评估)。因此我主要解读这篇综述中对图数据库的介绍和总结，对其中的一些表述进行理解后的复述以及解释，并为了更好地说明图数据库基本特点对文章内容进行重新组合。</p>
 <p>我选择的调研题目是图数据库的储存索引和查询优化。重点是各种图数据库类型分类以及它们的储存方式。储存方式的不同自然带来了不同的索引方式。索引方式各有千秋引出了查询的优化方案。</p>
 <h1 align='center'><font size="6">目录</font></h1>
 
@@ -128,44 +121,36 @@
 <p>在表示图结构时，许多图形数据库使用AL的变体，因为它使遍历邻域变得高效和简单。这包括基于LPG的原生图形数据库、KV存储、文档存储、宽列存储、元组存储和OODBMS类中的几个(但不是所有)系统。但是所考虑的RDF、RDBMS和数据中心系统都没有显式使用AL。这是因为底层数据模型的默认设计，例如RDBMS中的表或文档存储中的文档，并不经常使用AL。此外，绝大多数系统都没有使用未压缩的AM，因为它在$O(𝑛^2)$空间中的效率很低，特别是对于稀疏图。使用AM的系统侧重于压缩邻接矩阵来减少存储和查询开销(例如，GBASE)。在AL中效率低下的一个潜在原因是扫描所有的边来寻找给定顶点的邻居，为了缓解这一问题，可以采用索引结构。对于具有𝑛个顶点的图，这样的索引是指向各个邻域的指针数组，仅占用𝑂(𝑛)空间。</p>
 <p>下面来详细介绍一下不同类型的图模型以及它们的特点。</p>
 <h3 id="1-3-1简单图模型"><a href="#1-3-1简单图模型" class="headerlink" title="1.3.1简单图模型"></a>1.3.1简单图模型</h3><p>最简单的表示图的数据结构有邻接矩阵(AM)、邻接列表(AL)、边列表(EL)三种，它们都可以表示有向图或无向图。AM使用$O(n^2)$空间，可以在O(1)时间内检查两个顶点的连通性；AL占用O(𝑛+𝑚)空间，可以在$O(|𝐴𝑢|)⊆O(Degree_{max})$时间内检查连通性。</p>
-<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:02-19:08:26-64f1dd9348ca3abff26e19083013d9e0_4_Figure_3.png" alt="img" style="zoom:33%;" />
-
-<h3 id="1-3-2超图模型"><a href="#1-3-2超图模型" class="headerlink" title="1.3.2超图模型"></a>1.3.2超图模型</h3><p>任意边可以连接任意个点。超图的每一个定点至少属于一条边，也可以属于一条封闭的曲线。形式上，超图表示为元组(𝑉，𝐸)，𝑉是这个超图模型中所有顶点，𝐸是超边的集合，每个超边使用一组点表示，它是V的一个非空子集。例如：$V&#x3D;{a,b,c,d,e,f,g}，E&#x3D;{abc,cde,def,efg}$。</p>
+<p><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:02-19:08:26-64f1dd9348ca3abff26e19083013d9e0_4_Figure_3.png" alt="img" style="zoom:33%;" /></p>
+<h3 id="1-3-2超图模型"><a href="#1-3-2超图模型" class="headerlink" title="1.3.2超图模型"></a>1.3.2超图模型</h3><p>任意边可以连接任意个点。超图的每一个定点至少属于一条边，也可以属于一条封闭的曲线。形式上，超图表示为元组(𝑉，𝐸)，𝑉是这个超图模型中所有顶点，𝐸是超边的集合，每个超边使用一组点表示，它是V的一个非空子集。例如：$V=\{a,b,c,d,e,f,g\}，E=\{abc,cde,def,efg\}$。</p>
 <p>超图在图形数据库和图处理系统中很少使用。HyperGraphDB的基本构建块是点和超边的每个值，都有自己唯一的ID以及区分顶点和边的标签。顶点和超边也有类型ID(即标签ID)，还有一个递归结构，这个递归结构可以可以是另一个递归结构或二进制数据的值ID。</p>
-<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:02-19:08:26-64f1dd9348ca3abff26e19083013d9e0_19_Figure_11.png" alt="img" style="zoom:60%;" />
-
-<h3 id="1-3-3标记属性图-LPG"><a href="#1-3-3标记属性图-LPG" class="headerlink" title="1.3.3标记属性图(LPG)"></a>1.3.3标记属性图(LPG)</h3><p>经典的图模型tuple 𝐺&#x3D;(𝑉，𝐸)对各种现实世界的问题进行建模还不够丰富，因此图形数据库经常使用标记属性图LPG(Label Property Graph Model，LPG)。每个顶点和边可以具有任意数量的属性。属性是一对(𝑘𝑒𝑦，𝑣𝑎𝑙𝑢𝑒)，其中Key标识属性，Value是该属性的相应值。</p>
-<p>形式上，LPG被定义为元组$(𝑉ertex，𝐸dge，𝐿abel，𝑙<em>V，𝑙_E，𝐾ey，𝑊</em>{value}，𝑝_V，𝑝_E)$，其中𝐿是标签集，$L_V$和$L_E$分别代表V和E到L所有子集中某一个的一个映射因此，每个顶点和边都被映射到一个标号子集。顶点和边可以与任意数量的属性相关联，将属性建模为键-值对(𝑝&#x3D;(𝑘𝑒𝑦，𝑣𝑎𝑙𝑢𝑒)，其中𝑘𝑒𝑦∈𝐾，𝑣𝑎𝑙𝑢𝑒∈𝑊。𝐾和𝑊是所有可能键和值的集合。$p_V$和$p_E$分别为获取某点和某边的属性键值对的集合的映射函数。</p>
+<p><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:02-19:08:26-64f1dd9348ca3abff26e19083013d9e0_19_Figure_11.png" alt="img" style="zoom:60%;" /></p>
+<h3 id="1-3-3标记属性图-LPG"><a href="#1-3-3标记属性图-LPG" class="headerlink" title="1.3.3标记属性图(LPG)"></a>1.3.3标记属性图(LPG)</h3><p>经典的图模型tuple 𝐺=(𝑉，𝐸)对各种现实世界的问题进行建模还不够丰富，因此图形数据库经常使用标记属性图LPG(Label Property Graph Model，LPG)。每个顶点和边可以具有任意数量的属性。属性是一对(𝑘𝑒𝑦，𝑣𝑎𝑙𝑢𝑒)，其中Key标识属性，Value是该属性的相应值。</p>
+<p>形式上，LPG被定义为元组$(𝑉ertex，𝐸dge，𝐿abel，𝑙_V，𝑙_E，𝐾ey，𝑊_{value}，𝑝_V，𝑝_E)$，其中𝐿是标签集，$L_V$和$L_E$分别代表V和E到L所有子集中某一个的一个映射因此，每个顶点和边都被映射到一个标号子集。顶点和边可以与任意数量的属性相关联，将属性建模为键-值对(𝑝=(𝑘𝑒𝑦，𝑣𝑎𝑙𝑢𝑒)，其中𝑘𝑒𝑦∈𝐾，𝑣𝑎𝑙𝑢𝑒∈𝑊。𝐾和𝑊是所有可能键和值的集合。$p_V$和$p_E$分别为获取某点和某边的属性键值对的集合的映射函数。</p>
 <p>除了下文中要说的RDF系统或明确指出是其他系统外，下文要说到的所有系统实际上都使用LPG的某些变体。</p>
-<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:02-19:08:26-64f1dd9348ca3abff26e19083013d9e0_6_Figure_4.png" alt="img" style="zoom:60%;" />
-
+<p><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:02-19:08:26-64f1dd9348ca3abff26e19083013d9e0_6_Figure_4.png" alt="img" style="zoom:60%;" /></p>
 <p>上图为一个社交网络的子图，其中一个人可以认识其他人、发布消息和评论其他人的消息。</p>
 <h3 id="1-3-4-LPG变体"><a href="#1-3-4-LPG变体" class="headerlink" title="1.3.4 LPG变体"></a>1.3.4 LPG变体</h3><p>Neo4j支持任意数量的顶点标签，但是它只允许每条边有一个标签(称为边缘类型)；ArangoDB只允许每个顶点一个标签和每个边一个标签，这便于将顶点和边分离到不同的文档集合中。</p>
-<p>形式上，它使用𝐺&#x3D;(𝑉，𝐸，𝐿)表示，其中𝑉是顶点集，𝐸是边集。此定义下允许两个点通过具有不同标签的多条边连接。</p>
+<p>形式上，它使用𝐺=(𝑉，𝐸，𝐿)表示，其中𝑉是顶点集，𝐸是边集。此定义下允许两个点通过具有不同标签的多条边连接。</p>
 <h3 id="1-3-5资源描述框架RDF"><a href="#1-3-5资源描述框架RDF" class="headerlink" title="1.3.5资源描述框架RDF"></a>1.3.5资源描述框架RDF</h3><p>资源描述框架(RDF)是用于表示信息的规范集合。它是由万维网联盟(W3C)于1999年推出的，RDF规范的最新版本(1.1)于2014年发布。它的目标是实现一种简单的格式，允许在不同格式的数据之间轻松交换数据。它在描述不规则连接的数据时特别有用。</p>
 <p>RDF模型的核心部分是一个三元组的集合。每个三元组由主体、谓词、客体组成，因此RDF数据库通常也称为三重存储。主语可以是标识符(称为统一资源标识符(URI))，也可以是空白节点(即虚拟标识符)。客体可以是URI、空白节点或值较为简单的文字。使用三元组可以将标识符与标识符连接或将标识符与文字连接。谓词使用另一个URI命名。</p>
 <h4 id="Cray图引擎"><a href="#Cray图引擎" class="headerlink" title="Cray图引擎"></a>Cray图引擎</h4><p>Cray Graph Engine(CGE)是一个三元组存储，可以扩展到无数个RDF三元组。CGE不存储三元组而是存储四元组(4元组)，其中第四个元素是ID。因此，可以在一个CGE数据库中存储多个图。CGE中的四元组按照它们的谓词和它们所属的图的标识符进行分组。因此，对于一组这样的四元组，只需要存储具有子对象和对象的对。这些主体-客体对存储在哈希表中(每组一个哈希表)。由于每个主体和客体被表示为唯一的48位整数标识符(HURI)，因此可以将主体-客体对打包成12个字节并存储在32位无符号整数数组中，从而最终减少了所需的存储量。</p>
 <h4 id="AllegroGraph和BlazeGraph"><a href="#AllegroGraph和BlazeGraph" class="headerlink" title="AllegroGraph和BlazeGraph"></a>AllegroGraph和BlazeGraph</h4><p>一些RDF存储允许显式地将属性附加到三元组。AllegroGraph允许在创建三元组时定义每个三元组的任意属性集，但是这些属性不可变。BlazeGraph是RDF的一种扩展，允许将三元组附加到三元组谓词。和普通的RDF类似，顶点可以使用三元组来存储标签和属性。但是与普通的RDF相比，使用RDF可以更自然地表示LPG边缘：边可以存储为三元组，边属性可以通过其他三元组链接到边三元组。</p>
 <h3 id="1-3-6-LPG与RDF之间的转换"><a href="#1-3-6-LPG与RDF之间的转换" class="headerlink" title="1.3.6 LPG与RDF之间的转换"></a>1.3.6 LPG与RDF之间的转换</h3><p>要想在RDF模型中表示带标签的属性图需要把LPG顶点映射到URI，然后使用RDF三元组通过分别用RDF谓词和RDF对象表示属性键和属性值来将这些点与它们的LPG属性链接起来。</p>
 <p>例如，对于具有ID vertex-id的顶点以及具有key property-key和value property-value的对应属性，可以创建一个RDF三元组(vertex-id、property-key、property-value)。类似地，可以通过为每个边赋予URI状态来表示RDF模型中的LPG图模型中的边并将边属性与类似于顶点的特定边链接起来：(边-id，属性-键，属性-值)。然后，必须使用两个三元组将每条边连接到其任意相邻顶点。最后，通过为顶点和边创建RDF三元组，LPG标签也可以以类似于属性的方式转换为RDF三元组使得谓词变成有标签的URI并包含该标签的字符串名。下图展示了将LPG图转换为RDF三元组的过程示例。</p>
-<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:02-19:08:26-64f1dd9348ca3abff26e19083013d9e0_6_Figure_5.png" alt="img" style="zoom:50%;" />
-
+<p><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:02-19:08:26-64f1dd9348ca3abff26e19083013d9e0_6_Figure_5.png" alt="img" style="zoom:50%;" /></p>
 <p>如果所有顶点和边只有一个标签，则可以省略标签的三元组，并将标签与顶点或边名称一起存储在标识符中。如下图例子：</p>
-<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:02-19:08:26-64f1dd9348ca3abff26e19083013d9e0_7_Figure_6.png" alt="img" style="zoom:50%;" />
-
+<p><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:02-19:08:26-64f1dd9348ca3abff26e19083013d9e0_7_Figure_6.png" alt="img" style="zoom:50%;" /></p>
 <p>将RDF数据转换为LPG模型更为复杂，因为RDF谓词(通常会转换为边)是URI。因此，从RDF图转换为LPG图时必须将边映射到顶点并链接这些顶点，否则得到的LPG图可能会断开。有几种方案用于这样的RDF到LPG转换，例如以增加图大小为代价导出二部LPG图。</p>
 <h2 id="1-4非图底层的系统存储方案"><a href="#1-4非图底层的系统存储方案" class="headerlink" title="1.4非图底层的系统存储方案"></a>1.4非图底层的系统存储方案</h2><p>很多不是专门为图数据设计的数据库也可以储存图数据模型，包括使用键值对、文档和元组、关系和表以及对象的数据库。</p>
-<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:02-19:08:26-64f1dd9348ca3abff26e19083013d9e0_10_Figure_7.png" alt="img" style="zoom:50%;" />
-
+<p><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:02-19:08:26-64f1dd9348ca3abff26e19083013d9e0_10_Figure_7.png" alt="img" style="zoom:50%;" /></p>
 <h3 id="1-4-1键-值对-key-value"><a href="#1-4-1键-值对-key-value" class="headerlink" title="1.4.1键-值对(key-value)"></a>1.4.1键-值对(key-value)</h3><p>键值存储是最简单的NoSQL存储方式。将数据存储为键-值对的集合，重点放在基于键的高性能和高度可伸缩的查找上。键和值的确切形式取决于特定的系统或应用程序。键可以是简单的(例如，URI或散列)，也可以是结构化的。值通常编码为字节数组，也就是说值的结构通常是无模式的。但是，键值存储还可以强加一些额外的数据布局从而构建无模式的值。根据键值存储的一般性质，可以有许多方式将图表示为KV值的集合。例如可以使用顶点标签作为键，将顶点的邻域编码为值。</p>
 <h4 id="微软图引擎-Trinity"><a href="#微软图引擎-Trinity" class="headerlink" title="微软图引擎(Trinity)"></a>微软图引擎(Trinity)</h4><p>微软的图引擎是基于名为Trinity的分布式键值对。Trinity实现了全局可寻址的分布式RAM存储。在Trinity中，键称为cell ID，值称为cell(单元格)。一个cell可以保存不同数据类型的数据项，包括其他cell的ID。MS Graph Engine在Trinity KV存储层之上引入了一个图存储层，点存储在专用字段包含cell ID或ID的哈希值的cell中。与给定点𝑣相邻的边直接在v的cell中存储为𝑣邻域的ID列表。但是，如果边包含丰富的数据，则这样的边也可以和关联数据一起存储在单独的专用cell中。</p>
 <h3 id="1-4-2文档-document"><a href="#1-4-2文档-document" class="headerlink" title="1.4.2文档(document)"></a>1.4.2文档(document)</h3><p>文档是一类文档存储的NoSQL数据库中的基本存储单元。这些文档存储在集合中多个文档集合构成一个数据库，使用所选的标准半结构化格式(例如JSON或XML)对文档进行编码。文档存储扩展了键值存储，因为文档可以被视为具有某种灵活模式的值。该模式由属性组成，其中每个属性都有一个名称以及一个或多个值。这样一个基于具有属性的文档允许各种值类型、键-值对存储和递归数据存储(属性值可以是列表或键值字典)</p>
 <p>文档存储每个顶点都存储在一个顶点文档中。文档存储键值对的能力用于在相应的顶点文档中存储顶点标签和属性。然而，边存储的细节取决于系统：边可以存储在与每个边的源顶点对应的文档中，也可以存储在目的顶点的文档中。文档不会限制可以存储的键值，因此点和边可能具有不同的属性集。</p>
-<h4 id="OrientDB"><a href="#OrientDB" class="headerlink" title="OrientDB"></a>OrientDB</h4><p>在OrientDB中，每个文档𝑑都有一个记录ID(RID)，由存储𝑑的文档集合的ID和偏移量(其在该集合中的位置)组成。文档之间的指针使用这些唯一的RID表示。orientDB引入了规则边和轻量级边。规则边存储在边的文档中，可以具有它们自己的相关键&#x2F;值对(例如，对边缘属性或标签进行编码)。轻量级边则直接存储在相邻(源或目标)顶点的文档中。这样的边没有任何关联的键&#x2F;值对。它们构造指向其他顶点的简单指针，并且它们被实现为文档RID。因此，顶点文档不仅存储顶点的标签和属性，还存储轻量级边的列表(作为与相邻顶点相关联的文档的RID的列表)，以及指向相邻规则边的指针列表(作为与这些规则边相关联的文档的RID的列表)。每条规则边都有指向存储源和目标顶点的文档的指针(RID)。每个点存储指向其传入和传出边的链接(RID)列表。</p>
-<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:02-19:08:26-64f1dd9348ca3abff26e19083013d9e0_20_Figure_12.png" alt="img" style="zoom:33%;" />
-
-<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:02-19:08:26-64f1dd9348ca3abff26e19083013d9e0_20_Figure_13.png" alt="img" style="zoom:50%;" />
-
+<h4 id="OrientDB"><a href="#OrientDB" class="headerlink" title="OrientDB"></a>OrientDB</h4><p>在OrientDB中，每个文档𝑑都有一个记录ID(RID)，由存储𝑑的文档集合的ID和偏移量(其在该集合中的位置)组成。文档之间的指针使用这些唯一的RID表示。orientDB引入了规则边和轻量级边。规则边存储在边的文档中，可以具有它们自己的相关键/值对(例如，对边缘属性或标签进行编码)。轻量级边则直接存储在相邻(源或目标)顶点的文档中。这样的边没有任何关联的键/值对。它们构造指向其他顶点的简单指针，并且它们被实现为文档RID。因此，顶点文档不仅存储顶点的标签和属性，还存储轻量级边的列表(作为与相邻顶点相关联的文档的RID的列表)，以及指向相邻规则边的指针列表(作为与这些规则边相关联的文档的RID的列表)。每条规则边都有指向存储源和目标顶点的文档的指针(RID)。每个点存储指向其传入和传出边的链接(RID)列表。</p>
+<p><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:02-19:08:26-64f1dd9348ca3abff26e19083013d9e0_20_Figure_12.png" alt="img" style="zoom:33%;" /></p>
+<p><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:02-19:08:26-64f1dd9348ca3abff26e19083013d9e0_20_Figure_13.png" alt="img" style="zoom:50%;" /></p>
 <h4 id="ArangoDB"><a href="#ArangoDB" class="headerlink" title="ArangoDB"></a>ArangoDB</h4><p>ArangoDB将其文档保存为称为VelcyPack的二进制格式，这是JSON文档的压缩实现。文档可以存储在不同的集合中，并且具有key属性，该属性是给定集合中的唯一ID。与OrientDB不同，这些ID不是直接内存指针。为了保持图的特性，ArangoDB使用了点集合和边集合。前者是带有顶点文档的规则文档集合，顶点文档不存储关于相邻边的信息，这具有在添加或移除边时不必修改顶点文档的优点。边缘集合存储边缘文档。边缘文档有两个特定的属性：源和目的地，它们是与给定边连接的两个顶点相关联的文档的ID。ArangoDB的设计中有一个优化，可以防止读取顶点文档，并允许基于另一个边文档中的顶点ID直接访问一个边文档。这可以提高高速缓存效率，从而减少查询执行时间。</p>
 <p>可以使用不同的文档集合来存储不同的边缘类型(例如，“Friend_of”或“Like”)。当检索以某种边类型为条件的边(例如，“Friend_of”)时，不必遍历整个邻接列表(所有“Friend_of”和“Like”边)，而是可以使用特定边缘类型(“Friend_Of”)的边缘来确定集合的目标。</p>
 <h3 id="1-4-3元组-tuple"><a href="#1-4-3元组-tuple" class="headerlink" title="1.4.3元组(tuple)"></a>1.4.3元组(tuple)</h3><p>元组是元组存储的NoSQL存储方式的基础。元组存储是RDF存储的一种扩展：RDF存储被限制为三元组，而元组存储可以包含任意大小的元组。元组中的元素数量不是固定的，甚至在单个数据库中也是可以变化的。每个元组都有一个ID，该ID可以是直接指向内存的指针。元组的集合可以以不同的方式对图形建模。例如，一个大小为𝑛的元组可以存储指向包含顶点邻域的其他元组的指针。这种元组和图形数据之间的具体映射方式取决于不同的数据库。</p>
@@ -177,18 +162,15 @@
 <h3 id="1-4-5对象-object"><a href="#1-4-5对象-object" class="headerlink" title="1.4.5对象(object)"></a>1.4.5对象(object)</h3><p>还可以使用面向对象的数据库管理系统(OODBMS)中的对象集合来建模图形。数据元素及其关系通过某种形式的指针链接的对象来实现。将图建模为对象的细节在很大程度上取决于特定的设计。</p>
 <h4 id="VelocityGraph"><a href="#VelocityGraph" class="headerlink" title="VelocityGraph"></a>VelocityGraph</h4><p>VelocityGraph是依赖于VelocityDB分布式对象数据库的图形数据库。它的边、顶点以及边或顶点属性存储在包含对其他对象的引用的C#对象中。为了处理这种结构，VelocityGraphy引入了VertexType、EdgeType和PropertyType等抽象概念。每个对象都有一个指向它物理存储位置的唯一id。每个顶点和边都有一个类型(标签)，属性存储在字典中，点将相邻边储存在集合中。</p>
 <h3 id="1-4-6宽列储存"><a href="#1-4-6宽列储存" class="headerlink" title="1.4.6宽列储存"></a>1.4.6宽列储存</h3><p>宽列存储结合了键值存储和关系表的不同功能。宽列存储将键映射到行(将键映射到值的KV存储)。每行可以有任意数量的cell，并且每个cell构成一个键-值对。因此，一行包含cell键到cell值的映射，有效地使宽列存储成为二维KV值(行键和cell键都标识特定值)。此外，宽列存储是一个表，其中cell键构成列名。但是与关系型数据库不同，同一表中的行之间的列名称和格式可能不同。</p>
-<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:02-19:08:26-64f1dd9348ca3abff26e19083013d9e0_21_Figure_14.png" alt="img" style="zoom:60%;" />
-
+<p><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:02-19:08:26-64f1dd9348ca3abff26e19083013d9e0_21_Figure_14.png" alt="img" style="zoom:60%;" /></p>
 <h4 id="Titan-and-JanusGrap"><a href="#Titan-and-JanusGrap" class="headerlink" title="Titan and JanusGrap"></a>Titan and JanusGrap</h4><p>Titan及其后续的JanusGraph建立在宽列储存之上。它们可以使用不同的宽列存储作为底层，例如Apache Cassandra。在这两个系统中，当存储图时，每行代表一个顶点。每个顶点属性和相邻边都存储在单独的单元中，因此一个边和该边的所有属性被编码在单个单元中。由于每行中的cell是按cell键排序的，因此此排序顺序可用于高效地查找cell。对于图，属性和边的cell键的选择是这样的：在对cell进行排序后，存储属性的cell首先出现，然后是包含边的cell。由于行是按键排序的，因此两个系统都会直接将表划分为所谓的平面，这些平面可以分布在多个数据服务器上。</p>
-<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:02-19:08:26-64f1dd9348ca3abff26e19083013d9e0_21_Figure_14.png" alt="img" style="zoom:60%;" />
-
+<p><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:02-19:08:26-64f1dd9348ca3abff26e19083013d9e0_21_Figure_14.png" alt="img" style="zoom:60%;" /></p>
 <h2 id="1-5原生图数据库系统"><a href="#1-5原生图数据库系统" class="headerlink" title="1.5原生图数据库系统"></a>1.5原生图数据库系统</h2><h3 id="1-5-1-直接指针"><a href="#1-5-1-直接指针" class="headerlink" title="1.5.1 直接指针"></a>1.5.1 直接指针</h3><h4 id="Neo4j"><a href="#Neo4j" class="headerlink" title="Neo4j"></a>Neo4j</h4><p>Neo4j是最流行的图数据库系统。Neo4j使用基于固定大小记录的存储设计实现LPG模型。顶点𝑣由顶点记录表示，该记录存储：(1)𝑣的标签、(2)指向𝑣属性的链表的指针、(3)指向与𝑣相邻的第一边的指针、(4)一些标志。边𝑒由边记录来表示，该边记录存储：(1)𝑒的sedge类型(标签)、(2)指向𝑒属性的链表的指针、(3)指向表示与𝑒相邻的顶点的两个顶点记录的指针、(4)指向两个相邻顶点的AL的指针、(5)一些标志。每个属性记录最多可以存储四个属性，具体取决于属性值的大小：大的值(例如，长字符串)存储在单独的动态存储中，在顶点和边记录之外允许记录一些较小的属性。此外，如果查询中没有访问任何属性，则根本不会加载它们。</p>
 <p>顶点的AL的实现为双向链表。一条边只存储一次，但它是两个这样的链表的一部分(每个相邻顶点一个列表)。因此，一条边有两个指向前一条边的指针和两个指向下一条边的指针。两个顶点由一条“知道”边链接。两个顶点都维护属性的链接列表。边是两个双向链表的一部分，每个相邻顶点一个链表。</p>
 <p><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:02-19:08:26-64f1dd9348ca3abff26e19083013d9e0_22_Figure_16-16380682153473.png" alt="img" style="zoom:40%;" />   <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:02-19:08:26-64f1dd9348ca3abff26e19083013d9e0_23_Figure_17-16380682153474.png" alt="img" style="zoom:45%;" /></p>
 <p>Neo4j中的一个核心概念是使用直接指针：顶点存储指向其邻居的物理分配的指针。因此，对于邻域查询或遍历，不需要索引，而是可以跟随直接指针(遍历中的根顶点除外)，因此查询复杂度不依赖于图的大小。相反，它只取决于被访问的子图有多大（也就是说，如果内存放不下整个图，那么执行速度基本取决于缓存和预取，运行时间可能显著增加）。</p>
-<h3 id="1-5-2-B-树和位图"><a href="#1-5-2-B-树和位图" class="headerlink" title="1.5.2 B+树和位图"></a>1.5.2 B+树和位图</h3><h4 id="Sparksee-x2F-DEX"><a href="#Sparksee-x2F-DEX" class="headerlink" title="Sparksee&#x2F;DEX"></a>Sparksee&#x2F;DEX</h4><p>Sparksee是一个图数据库系统，以前称为DEX。Sparksee的顶点和边(都称为对象)都有唯一的ID。对于每个属性名称，都有一个关联的B+树，它将顶点和边ID映射到各自的属性值。从属性值到顶点和边ID的反向映射由位图维护，其中位设置为1表示对应的ID具有某个属性值。此外，每个顶点存储了表示输入边和输出边的两个位图，两个B+树维护有关边连接到哪些顶点的信息(每个边方向一个树)。</p>
-<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:02-19:08:26-64f1dd9348ca3abff26e19083013d9e0_23_Figure_18.png" alt="img" style="zoom:60%;" />
-
+<h3 id="1-5-2-B-树和位图"><a href="#1-5-2-B-树和位图" class="headerlink" title="1.5.2 B+树和位图"></a>1.5.2 B+树和位图</h3><h4 id="Sparksee-DEX"><a href="#Sparksee-DEX" class="headerlink" title="Sparksee/DEX"></a>Sparksee/DEX</h4><p>Sparksee是一个图数据库系统，以前称为DEX。Sparksee的顶点和边(都称为对象)都有唯一的ID。对于每个属性名称，都有一个关联的B+树，它将顶点和边ID映射到各自的属性值。从属性值到顶点和边ID的反向映射由位图维护，其中位设置为1表示对应的ID具有某个属性值。此外，每个顶点存储了表示输入边和输出边的两个位图，两个B+树维护有关边连接到哪些顶点的信息(每个边方向一个树)。</p>
+<p><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:02-19:08:26-64f1dd9348ca3abff26e19083013d9e0_23_Figure_18.png" alt="img" style="zoom:60%;" /></p>
 <p>Sparksee是少数几个不基于记录的系统之一，它使用简化为B+树和位图。位图的使用允许以比特为单位执行某些操作。例如，如果要查找具有特定属性值的所有顶点，如“age”和“First Name”，只需找到与“age”和“First Name”属性相关联的两个位图，然后得到第三个位图，该位图是对这两个输入位图应用按位“与”运算的结果。</p>
 <p>未压缩的位图可能会大的离谱。由于大多数图都是稀疏的，按顶点或边索引的位图大多包含零。可以把它们切割成32位簇来缩小这种稀疏位图的尺寸。如果簇包含非零位，则显式存储该位。这个位图然后由(簇-ID，位-数据)对的集合表示。这些对存储在排序树结构中，以实现高效的查找、插入和删除。</p>
 <h3 id="1-5-3稀疏邻接矩阵"><a href="#1-5-3稀疏邻接矩阵" class="headerlink" title="1.5.3稀疏邻接矩阵"></a>1.5.3稀疏邻接矩阵</h3><h4 id="GBASE"><a href="#GBASE" class="headerlink" title="GBASE"></a>GBASE</h4><p>GBASE是一个只能表示有向图结构的系统，它既不存储属性，也不存储标签。GBASE的目标是保持图的邻接矩阵的压缩，这样就可以有效地检索选定顶点的所有输入和输出边，而不会产生令人望而却步的$𝑂(𝑛^2)$矩阵存储开销。同时，利用邻接矩阵可以在𝑂(1)时间内验证任意两个顶点是否连通。为了压缩邻接矩阵，GBASE将其切割成$𝐾^2$个块(每行和每列都有𝐾块)。因此，获取每个顶点的传入和传出邻居的查询只需要查询𝐾个块。可以针对特定数据库优化参数𝐾。当𝐾变小时，就必须检索更多的小文件。如果𝐾变大，文件会变少，但它们会变得更大，从而产生开销。当块只包含0或只包含1时，可以进行进一步的优化，这样可以实现更高的压缩率。</p>
@@ -198,33 +180,37 @@
 <p>一些系统(例如，Sparksee、一些三元组存储或面向列的RDBMS)不在专用记录中连续存储有关顶点和边的信息。相反，它们为每个属性或标签维护单独的数据结构。因此，关于给定顶点的信息分布在不同的结构上。如果想要找到某个特定顶点的属性，就必须在相关的数据结构(索引)中查询该属性，并找到给定顶点的值。这种使用的索引结构的示例是B+树(在Sparksee中)或哈希表(在某些RDF系统中)。</p>
 <p>图数据结构的另一个方面是设计记录之间的邻接关系。可以为每条记录分配一个ID，然后通过ID将记录相互链接，或者可以使用直接内存指针。使用ID需要索引结构来查找物理存储与特定ID关联的记录的地址。直接内存指针不需要索引即可从一条记录遍历到其相邻记录。但是此时仍可使用索引，例如检索具有特定属性值的点，此情况下直接指针仅有助于解决折点之间的邻接查询。</p>
 <p>有时，图形数据直接存储在索引中。三元组存储将索引用于主体、谓词和客体的各种排列，以高效地回答查询。Jena TBD将大量数据存储在这些索引中，但本身没有三元表，因为索引已经存储了所有必要的数据。HyperGraphDB使用键值索引(即Berkeley DB)来访问其物理存储。此外，该方法允许与引用计数共享基元数据值，从而使得多个相同的值仅存储一次。</p>
-<p>也有一些其他数据布局优化。例如，CGE优化了存储来自其三元组&#x2F;四元组的字符串的方式。考虑到许多三元组&#x2F;四元组可能共享字符串，每个三元组&#x2F;四元组存储多个长字符串的效率很低。因此，类似于许多其他RDF系统，CGE维护一个将字符串映射到唯一的48位整数标识符(HURI)的字典。为此，使用了两个分布式哈希表(一个用于将字符串映射到HURI，另一个用于将HURI映射到字符串)。加载时，对字符串进行排序，然后将其分配给HURI。这允许整数比较(等于、大于、小于等)以代替更昂贵的字符串比较。该方法被例如诸如WhiteDB的元组存储使用。</p>
+<p>也有一些其他数据布局优化。例如，CGE优化了存储来自其三元组/四元组的字符串的方式。考虑到许多三元组/四元组可能共享字符串，每个三元组/四元组存储多个长字符串的效率很低。因此，类似于许多其他RDF系统，CGE维护一个将字符串映射到唯一的48位整数标识符(HURI)的字典。为此，使用了两个分布式哈希表(一个用于将字符串映射到HURI，另一个用于将HURI映射到字符串)。加载时，对字符串进行排序，然后将其分配给HURI。这允许整数比较(等于、大于、小于等)以代替更昂贵的字符串比较。该方法被例如诸如WhiteDB的元组存储使用。</p>
 <h2 id="2-2邻域索引类型"><a href="#2-2邻域索引类型" class="headerlink" title="2.2邻域索引类型"></a>2.2邻域索引类型</h2><p>主要用于加速邻接表的访问，以加速遍历查询。这种索引称为为以顶点为中心的索引。虽然允许每个顶点有多个以顶点为中心的索引，每个索引都针对不同的条件进行了优化，然后由查询优化器选择不同的条件，但也存在更简单的解决方案。LiveGraphs使用两级层次结构，在指向实际物理存储之前，第一级通过它们的标签来区分边。Graphflow将顶点的邻居索引到前向和后向邻接列表中，其中每个列表首先按边标签划分，然后按邻居顶点的标签划分。另一个例子是Sparksee，它使用各种不同的索引结构来查找相邻顶点和顶点的属性。</p>
-<h2 id="2-3数据索引类型"><a href="#2-3数据索引类型" class="headerlink" title="2.3数据索引类型"></a>2.3数据索引类型</h2><p>这种索引主要是为了处理邻域信息以外的数据。例如，可以索引具有特定属性(值)的所有顶点。它们通常用于加速业务智能工作负载。许多三元组存储，例如AllegroGraph，都提供主体(S)、谓词(P)和客体(O)的全部六种排列，以及附加的聚合索引。然而，为了降低相关成本，也存在其他方法：TripleBit仅使用具有两个聚合索引(SP，SO)和两个辅助索引结构的两个排列(PSO，POS)。GStore在两种索引结构的帮助下实现了模式匹配查询：VS*树，这是一种专门的B+树，以及基于TRIE的T索引。一些数据库系统，如AmazonNeptun或AnzoGraph只提供隐式索引，但仍然可以高效地应对所有类型的查询。大多数图数据库系统都允许用户显式定义索引。其中一些系统，如Azure Cosmos DB，对于更具体的用例支持复合索引(不同标签&#x2F;属性的组合)，除了内部索引之外，一些系统还使用外部索引工具。例如，Titan和JanusGraph使用内部索引进行基于标签和值的查找，但依赖外部索引后端进行涉及多个属性、范围或全文搜索的重要查找。</p>
+<h2 id="2-3数据索引类型"><a href="#2-3数据索引类型" class="headerlink" title="2.3数据索引类型"></a>2.3数据索引类型</h2><p>这种索引主要是为了处理邻域信息以外的数据。例如，可以索引具有特定属性(值)的所有顶点。它们通常用于加速业务智能工作负载。许多三元组存储，例如AllegroGraph，都提供主体(S)、谓词(P)和客体(O)的全部六种排列，以及附加的聚合索引。然而，为了降低相关成本，也存在其他方法：TripleBit仅使用具有两个聚合索引(SP，SO)和两个辅助索引结构的两个排列(PSO，POS)。GStore在两种索引结构的帮助下实现了模式匹配查询：VS*树，这是一种专门的B+树，以及基于TRIE的T索引。一些数据库系统，如AmazonNeptun或AnzoGraph只提供隐式索引，但仍然可以高效地应对所有类型的查询。大多数图数据库系统都允许用户显式定义索引。其中一些系统，如Azure Cosmos DB，对于更具体的用例支持复合索引(不同标签/属性的组合)，除了内部索引之外，一些系统还使用外部索引工具。例如，Titan和JanusGraph使用内部索引进行基于标签和值的查找，但依赖外部索引后端进行涉及多个属性、范围或全文搜索的重要查找。</p>
 <p>根据数据索引的实现方式进一步对其进行分类。用于实现这些索引的三种基本数据结构：树、跳跃表和哈希表。根据表中的标准对系统进行分类。可以发现索引类型和图形数据库的后端之间没有明确的联系，但是大多数系统使用基于树的索引。</p>
-<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:02-19:08:26-64f1dd9348ca3abff26e19083013d9e0_29_Table_5.png" alt="img" style="zoom:60%;" />
-
+<p><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:02-19:08:26-64f1dd9348ca3abff26e19083013d9e0_29_Table_5.png" alt="img" style="zoom:60%;" /></p>
 <p>数据通常存储在数据结构中。当这些数据结构变得更加复杂时，一些图形数据库选择使用结构化索引来增强其设计。其他系统中的LiveGraph使用顶点索引将其顶点ID映射到物理存储位置。同样，ArangoDB多次使用混合索引、哈希表来查找顶点的关联边和相邻顶点的文档。</p>
 <h1 id="3-优化"><a href="#3-优化" class="headerlink" title="3.优化"></a>3.优化</h1><p>基于记录的系统通常为需要检索关于顶点或边的全部或大部分信息的查询提供更高的性能，因为所需的数据存储在连续的内存块中，所以效率更高。在将数据存储在索引中的系统中，查询每个属性的数据结构会导致更多的随机访问模式。如果只想检索有关顶点或边的单个属性，这样的系统可能只需要检索单个值。而许多基于记录的系统不能仅检索部分记录，会获取更多不必要的数据。</p>
-<p>此外，决定是否使用ID或直接内存指针来链接记录取决于给定系统的工作负载的读&#x2F;写比率。在前一种情况下，必须使用索引结构来查找记录的地址。与紧随其后的直接指针相比，这会降低读取查询的速度。但是，使用ID而不是指针可以提高写查询的效率。例如，当必须将记录移动到新地址时，所有指向这条记录的指针都需要更新来映射到新地址，ID可以保持不变，只有索引结构需要修改给定记录的地址。</p>
+<p>此外，决定是否使用ID或直接内存指针来链接记录取决于给定系统的工作负载的读/写比率。在前一种情况下，必须使用索引结构来查找记录的地址。与紧随其后的直接指针相比，这会降低读取查询的速度。但是，使用ID而不是指针可以提高写查询的效率。例如，当必须将记录移动到新地址时，所有指向这条记录的指针都需要更新来映射到新地址，ID可以保持不变，只有索引结构需要修改给定记录的地址。</p>
 <p>对于更新图的事务性工作负载，基于非图数据模型(例如文档存储或宽列存储)的系统通常获得更高的性能。相反，只读工作负载(包括简单分析和全局分析)通常在原生图数据库上实现更高的性能。全局分析尤其受益于确保单个查询并行化的原生图数据库。</p>
 <h2 id="3-1将数据划分为记录"><a href="#3-1将数据划分为记录" class="headerlink" title="3.1将数据划分为记录"></a>3.1将数据划分为记录</h2><p>图形数据库通常将数据组织成称为记录的小单元，一条记录包含关于特定单个实体(例如：一个人)的信息，该信息被组织成指定的逻辑字段(例如：名字、姓氏等)。一定数量的记录通常一起保存在内存或磁盘中的一个连续盘块中，以增强数据访问局部性。基于记录的数据组织的细节在很大程度上取决于特定的系统。例如，关系型数据库可以将表行视为记录，键值存储通常在单个记录中维护单个值，而在文档存储中，单个文档可以是记录。一些系统允许可变大小的记录(例如：ArangoDB)，而其他系统仅允许固定大小的记录(例如：Neo4j)。可以观察到，虽然一些系统(例如：一些三元组存储如CrayGraph engine)没有显式提到记录，但是数据仍然可以隐式地以基于记录的方式组织起来。</p>
 <p>图形数据库通常每个顶点使用一条或多条记录(这些记录有时被称为顶点记录)。Neo4j对顶点使用多个固定大小的记录，而文档数据库对每个顶点使用一个文档(例如：ArangoDB)。边有时与相关联的(源或目标)顶点(例如：Titan或JanusGraph)一起存储在同一记录中。否则，边存储在单独的边记录中(例如：ArangoDB)。</p>
 <h2 id="3-2在索引结构中存储数据"><a href="#3-2在索引结构中存储数据" class="headerlink" title="3.2在索引结构中存储数据"></a>3.2在索引结构中存储数据</h2><p>图数据库通常使用索引来加快查询速度。基于非图形后端的系统(例如RDBMS或文档存储)通常依赖于此类系统中原本的索引方法。原生图形数据库对每个顶点的邻域采用索引结构，通常采用直接指针的形式。</p>
-<p>除了使用索引结构来维护数据的位置之外，一些数据库还将图形数据存储在索引本身中。在这种情况下，索引不指向特定的数据记录，但索引本身包含所需的数据。具有此类功能的示例系统有Sparksee&#x2F;DEX和Cray Graph Engine。为了维护索引，前者使用位图和B+树，而后者使用哈希表。</p>
+<p>除了使用索引结构来维护数据的位置之外，一些数据库还将图形数据存储在索引本身中。在这种情况下，索引不指向特定的数据记录，但索引本身包含所需的数据。具有此类功能的示例系统有Sparksee/DEX和Cray Graph Engine。为了维护索引，前者使用位图和B+树，而后者使用哈希表。</p>
 <h2 id="3-3使用轻量级边的数据结构"><a href="#3-3使用轻量级边的数据结构" class="headerlink" title="3.3使用轻量级边的数据结构"></a>3.3使用轻量级边的数据结构</h2><p>某些系统(例如：OrientDB)允许将没有标签或属性的边存储为轻量级边。这样的边存储在对应的源顶点和(或)目的顶点的记录中。这些轻量级边由其目标顶点的ID或指向此顶点的指针表示。这可以节省存储空间并加速解决不同的图查询，例如验证两个顶点的连通性。</p>
 <h2 id="3-4将记录与直接指针链接"><a href="#3-4将记录与直接指针链接" class="headerlink" title="3.4将记录与直接指针链接"></a>3.4将记录与直接指针链接</h2><p>在基于记录的系统中，顶点和边存储在记录中。为了能够有效地解决连通性查询(即，验证两个顶点是否连接)，这些记录必须指向其他记录。可以存储指向相应连接记录的直接指针(即存储器地址)。例如，边记录可以存储指向具有相邻顶点的顶点记录的直接指针。还可以为每个记录分配一个唯一的ID，并使用这些ID而不是直接指针来引用其他记录。这虽然需要额外的索引结构来根据记录ID查找记录的物理位置，但是如果物理位置改变，更新索引结构通常比更改所有关联的直接指针更容易。</p>
 <p>可以给一个系统使用直接指针来避免维护额外的专用索引结构来遍历图形。注意索引仍可用于查找顶点；使用直接指针意味着只有邻接数据的结构没有附加索引。使用直接指针避免了额外的索引遍历从而可以加速图的遍历。但是当需要更新邻接数据时，通常也需要更新大量指针，从而产生额外的开销。</p>
 <h2 id="3-5支持并发性和并行性"><a href="#3-5支持并发性和并行性" class="headerlink" title="3.5支持并发性和并行性"></a>3.5支持并发性和并行性</h2><p>几乎所有的图数据库系统都支持并发查询，但在几乎所有的系统类中，支持并行查询执行的系统却较少(除了基于OODBMS的图形数据库)。这表明更多的数据库将更多的压力放在单位时间内执行的查询的高吞吐量上，而不是降低单个查询的延迟上。一个值得注意的例外是Cray图引擎，它不支持并发查询，但它确实提供了单个查询的并行化。</p>
 <p>查询并发的方法之一是不同类型的锁。例如，WhiteDB使用读写锁提供数据库范围的锁定，从而支持并发读取器，但一次只能有一个写入操作。还可以自动更新元组字段(设置、比较和设置、添加)作为锁定整个数据库的替代方法。WhiteDB本身不强制一致性，它取决于用户正确使用锁和原子性。另一种方法是基于事务的，例如由OrientDB使用，它为分布式事务提供ACID。</p>
-<p>一些支持并行查询执行的系统在执行这种并行化查询时明确地优化了通信的数据量。例如，CGE中的计算分布在参与的进程中。为了最大限度地减少所有对所有的通信量，查询结果在本地聚合，并且只要有可能，每个进程只与少数几个对等点通信以避免网络拥塞。微软图引擎和Trinity数据库的底层实现使用的另一种简化通信的方法是减小进程交换的数据块的大小。为此，Trinity维护特殊的访问器，允许访问单元格中的单个属性而无需加载整个单元格，这降低了许多不需要整个单元的操作的I&#x2F;O成本。几个系统共享的单边通信，使得进程能够直接访问彼此的数据。例如，Trinity可以部署在InfiniBand上利用远程直接内存访问。类似地，Cray的底层实现使多个计算节点的内存资源可以作为单个全局地址空间使用，也支持CGE中的单边通信。这便于在分布式环境中进行并行编程。</p>
+<p>一些支持并行查询执行的系统在执行这种并行化查询时明确地优化了通信的数据量。例如，CGE中的计算分布在参与的进程中。为了最大限度地减少所有对所有的通信量，查询结果在本地聚合，并且只要有可能，每个进程只与少数几个对等点通信以避免网络拥塞。微软图引擎和Trinity数据库的底层实现使用的另一种简化通信的方法是减小进程交换的数据块的大小。为此，Trinity维护特殊的访问器，允许访问单元格中的单个属性而无需加载整个单元格，这降低了许多不需要整个单元的操作的I/O成本。几个系统共享的单边通信，使得进程能够直接访问彼此的数据。例如，Trinity可以部署在InfiniBand上利用远程直接内存访问。类似地，Cray的底层实现使多个计算节点的内存资源可以作为单个全局地址空间使用，也支持CGE中的单边通信。这便于在分布式环境中进行并行编程。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://gilgamesh-lzq.github.io/2022/04/02/%E5%9B%BE%E6%95%B0%E6%8D%AE%E5%BA%93%E8%B0%83%E7%A0%94%E6%8A%A5%E5%91%8A/" data-id="cl1htrwvt0000lt8od5sd3nv1" data-title="图数据库调研报告" class="article-share-link">Share</a>
       
+        <a data-url="https://gilgamesh-lzq.github.io/2022/04/02/%E5%9B%BE%E6%95%B0%E6%8D%AE%E5%BA%93%E8%B0%83%E7%A0%94%E6%8A%A5%E5%91%8A/" data-id="cl1hunox10000vg8o1mvi42az" class="article-share-link">Share</a>
       
+
+      
+        <a href="https://gilgamesh-lzq.github.io/2022/04/02/%E5%9B%BE%E6%95%B0%E6%8D%AE%E5%BA%93%E8%B0%83%E7%A0%94%E6%8A%A5%E5%91%8A/#ds-thread" class="article-comment-link">Comments</a>
+      
+
       
     </footer>
   </div>
@@ -232,12 +218,11 @@
 </article>
 
 
-
   
-    <article id="post-张宇一轮线代概率论" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-张宇一轮线代概率论" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2022/04/02/%E5%BC%A0%E5%AE%87%E4%B8%80%E8%BD%AE%E7%BA%BF%E4%BB%A3%E6%A6%82%E7%8E%87%E8%AE%BA/" class="article-date">
-  <time class="dt-published" datetime="2022-04-02T09:35:49.000Z" itemprop="datePublished">2022-04-02</time>
+  <time datetime="2022-04-02T09:35:49.000Z" itemprop="datePublished">2022-04-02</time>
 </a>
     
   </div>
@@ -248,13 +233,13 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/04/02/%E5%BC%A0%E5%AE%87%E4%B8%80%E8%BD%AE%E7%BA%BF%E4%BB%A3%E6%A6%82%E7%8E%87%E8%AE%BA/">张宇一轮线代概率论</a>
+      <a class="article-title" href="/2022/04/02/%E5%BC%A0%E5%AE%87%E4%B8%80%E8%BD%AE%E7%BA%BF%E4%BB%A3%E6%A6%82%E7%8E%87%E8%AE%BA/">张宇一轮线代概率论</a>
     </h1>
   
 
       </header>
     
-    <div class="e-content article-entry" itemprop="articleBody">
+    <div class="article-entry" itemprop="articleBody">
       
         <h1 align="center">张宇一轮线代概率论</h1>
 
@@ -265,32 +250,31 @@
 <li>某行余子式计算，直接按系数换掉那一行</li>
 </ul>
 </li>
-<li><p>范德蒙行列式：$\left|\begin{array}{cccc}1 &amp;1&amp;\cdots&amp;1 \x_1&amp;x_2&amp;\cdots &amp;x_n\x_1^2&amp;x_2^2&amp;\cdots &amp;x_n^2\\vdots&amp;\vdots&amp;&amp;\vdots\x_1^{n-1}&amp;x_2^{n-1}&amp;\cdots &amp;x_n^{n-1}\ \end{array}\right|&#x3D;\underset{1\le i&lt;j\le n}{\Pi}(x_j-x_i)$ </p>
+<li><p>范德蒙行列式：$\left|\begin{array}{cccc}1 &amp;1&amp;\cdots&amp;1 \\x_1&amp;x_2&amp;\cdots &amp;x_n\\x_1^2&amp;x_2^2&amp;\cdots &amp;x_n^2\\\vdots&amp;\vdots&amp;&amp;\vdots\\x_1^{n-1}&amp;x_2^{n-1}&amp;\cdots &amp;x_n^{n-1}\\ \end{array}\right|=\underset{1\le i&lt;j\le n}{\Pi}(x_j-x_i)$ </p>
 </li>
-<li><p>计算</p>
-<ul>
-<li>爪形：&#x3D;&#x3D;斜爪消横爪&#x3D;&#x3D; <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153683.png" alt="image-20220311095320748" style="zoom:20%;" /></li>
-<li>异爪形 ：&#x3D;&#x3D;递推n阶(从指甲尖开始)&#x3D;&#x3D; <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153685.png" alt="image-20220311095302450" style="zoom:20%;" />    <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153686.png" alt="image-20220311095412950" style="zoom:25%;" /></li>
-<li>行(列)和相等（每行元素换个位置）：&#x3D;&#x3D;所有列加到第一列，所有行减去第一行&#x3D;&#x3D; <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153687.png" alt="image-20220311100334670" style="zoom:25%;" /></li>
-<li>拉普拉斯展开：&#x3D;&#x3D;行列变换化为分块矩阵&#x3D;&#x3D; <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153688.png" alt="image-20220311101656567" style="zoom:25%;" /></li>
+<li>计算<ul>
+<li>爪形：==斜爪消横爪== <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153683.png" alt="image-20220311095320748" style="zoom:20%;" /></li>
+<li>异爪形 ：==递推n阶(从指甲尖开始)== <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153685.png" alt="image-20220311095302450" style="zoom:20%;" />    <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153686.png" alt="image-20220311095412950" style="zoom:25%;" /></li>
+<li>行(列)和相等（每行元素换个位置）：==所有列加到第一列，所有行减去第一行== <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153687.png" alt="image-20220311100334670" style="zoom:25%;" /></li>
+<li>拉普拉斯展开：==行列变换化为分块矩阵== <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153688.png" alt="image-20220311101656567" style="zoom:25%;" /></li>
 <li>范德蒙行列式</li>
 </ul>
 </li>
 </ul>
 <h2 id="二、矩阵"><a href="#二、矩阵" class="headerlink" title="二、矩阵"></a>二、矩阵</h2><h3 id="1-性质"><a href="#1-性质" class="headerlink" title="1.性质"></a>1.性质</h3><ul>
-<li>$\begin{cases}(\boldsymbol{A}+\boldsymbol{B})^T&amp;&#x3D;&amp;\boldsymbol{A}^T+\boldsymbol{B}^T\(\boldsymbol{AB})^T&amp;&#x3D;&amp;\boldsymbol{B}^T\boldsymbol{A}^T\|\boldsymbol{A_{n\times n}}^T|&amp;&#x3D;&amp;|\boldsymbol{A_{n\times n}}|\end{cases}$ </li>
+<li>$\begin{cases}(\boldsymbol{A}+\boldsymbol{B})^T&amp;=&amp;\boldsymbol{A}^T+\boldsymbol{B}^T\(\boldsymbol{AB})^T&amp;=&amp;\boldsymbol{B}^T\boldsymbol{A}^T\|\boldsymbol{A_{n\times n}}^T|&amp;=&amp;|\boldsymbol{A_{n\times n}}|\end{cases}$ </li>
 <li>施密特正交化 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153689.png" alt="image-20220311231044096" style="zoom: 40%;" /> <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153690.png" alt="image-20220311231115416" style="zoom: 40%;" /> </li>
-<li>$\boldsymbol{A}^T\boldsymbol{A}&#x3D;E$，则正交。其向量组是标准正交向量组。<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153691.png" alt="image-20220312064436764" style="zoom: 33%;" /></li>
+<li>$\boldsymbol{A}^T\boldsymbol{A}=E$，则正交。其向量组是标准正交向量组。<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153691.png" alt="image-20220312064436764" style="zoom: 33%;" /></li>
 <li>分块矩阵 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153692.png" alt="image-20220312064925270" style="zoom:40%;" /></li>
 </ul>
 <h3 id="2-矩阵的逆"><a href="#2-矩阵的逆" class="headerlink" title="2.矩阵的逆"></a>2.矩阵的逆</h3><ul>
-<li>$\boldsymbol{A}^{-1}&#x3D;\frac{1}{|\boldsymbol{A}|}\boldsymbol{A}^*$  <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153694.png" alt="image-20220312074751928" style="zoom:33%;" /><ul>
+<li>$\boldsymbol{A}^{-1}=\frac{1}{|\boldsymbol{A}|}\boldsymbol{A}^*$  <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153694.png" alt="image-20220312074751928" style="zoom:33%;" /><ul>
 <li>二阶求逆口诀：主对调，副变号，<strong>除以行列式</strong></li>
 </ul>
 </li>
 <li>分块矩阵的逆 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153695.png" alt="image-20220312075135249" style="zoom:40%;" /></li>
-<li>伴随矩阵：代数余子式<strong>转置</strong>排成矩阵 $\boldsymbol{A}\boldsymbol{A}^*&#x3D;\boldsymbol{A}^*\boldsymbol{A}&#x3D;|\boldsymbol{A}|\boldsymbol{E}$ <ul>
-<li>$|\boldsymbol{A}^*|&#x3D;|\boldsymbol{A}|^{n-1}$ ，$(\boldsymbol{A}^*)^*&#x3D;|\boldsymbol{A}^{n-2}|A$ ，$(k\boldsymbol{A})^*&#x3D;k^{n-1}\boldsymbol{A}^*$</li>
+<li>伴随矩阵：代数余子式<strong>转置</strong>排成矩阵 $\boldsymbol{A}\boldsymbol{A}^<em>=\boldsymbol{A}^</em>\boldsymbol{A}=|\boldsymbol{A}|\boldsymbol{E}$ <ul>
+<li>$|\boldsymbol{A}^<em>|=|\boldsymbol{A}|^{n-1}$ ，$(\boldsymbol{A}^</em>)^<em>=|\boldsymbol{A}^{n-2}|A$ ，$(k\boldsymbol{A})^</em>=k^{n-1}\boldsymbol{A}^*$ </li>
 </ul>
 </li>
 </ul>
@@ -306,7 +290,7 @@
 </li>
 </ul>
 </li>
-<li><p>分块矩阵的逆 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153697.png" alt="image-20220312230346064" style="zoom: 25%;" /> <strong>左乘同行，右乘同列，添负号</strong> &#x3D;&#x3D;主对角线不换位置，副对角线换位置&#x3D;&#x3D;</p>
+<li><p>分块矩阵的逆 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153697.png" alt="image-20220312230346064" style="zoom: 25%;" /> <strong>左乘同行，右乘同列，添负号</strong> ==主对角线不换位置，副对角线换位置==</p>
 </li>
 </ul>
 <h2 id="三、向量组"><a href="#三、向量组" class="headerlink" title="三、向量组"></a>三、向量组</h2><h3 id="1-线性相关"><a href="#1-线性相关" class="headerlink" title="1.线性相关"></a>1.线性相关</h3><ul>
@@ -327,14 +311,11 @@
 <li>按列找出一个秩为$r(A)$的子矩阵，挑出来的那几列对应的原向量就是极大无关组</li>
 </ul>
 </li>
-<li><p>向量组等价$\iff r(I)&#x3D;r(II)&#x3D;r(I|II)$ </p>
+<li><p>向量组等价$\iff r(I)=r(II)=r(I|II)$ </p>
 </li>
-<li><p>两个向量组，被表出的秩不大</p>
-</li>
-<li><p>秩<strong>越乘越小</strong> </p>
-</li>
-<li><p>$\begin{cases}r(AB)\le min{r(A),r(B)}\r(A+B)\le r(A)+r(B)\r(A^*)&#x3D;\begin{cases}n&amp;r(A)&#x3D;n\1&amp;r(A)&#x3D;n-1\0&amp;r(A)&lt;n-1\end{cases}\AB&#x3D;0\Longrightarrow r(A)+r(B)\le A的列数\end{cases}$</p>
-</li>
+<li>两个向量组，被表出的秩不大</li>
+<li>秩<strong>越乘越小</strong> </li>
+<li>$\begin{cases}r(AB)\le min\{r(A),r(B)\}\\r(A+B)\le r(A)+r(B)\\r(A^*)=\begin{cases}n&amp;r(A)=n\\1&amp;r(A)=n-1\\0&amp;r(A)&lt;n-1\end{cases}\\AB=0\Longrightarrow r(A)+r(B)\le A的列数\end{cases}$ </li>
 </ul>
 <h3 id="3-向量空间"><a href="#3-向量空间" class="headerlink" title="3.向量空间"></a>3.向量空间</h3><ul>
 <li>$\xi到\eta$的过渡矩阵定义：<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153698.png" alt="image-20220315155609939" style="zoom:33%;" /></li>
@@ -374,50 +355,52 @@
 </li>
 <li><p>同解</p>
 <ul>
-<li><p>$r(A)&#x3D;r(B)&#x3D;r[\frac{A}{B}]$ 三秩相同（<strong>竖着拼</strong>）</p>
+<li><p>$r(A)=r(B)=r[\frac{A}{B}]$ 三秩相同（<strong>竖着拼</strong>）</p>
 </li>
-<li><p>&#x3D;&#x3D;设$A_{m\times n}$，则$r(A)&#x3D;r(A^T)&#x3D;r(AA^T)&#x3D;r(A^TA)$&#x3D;&#x3D; </p>
+<li><p>==设$A_{m\times n}$，则$r(A)=r(A^T)=r(AA^T)=r(A^TA)$== </p>
 <blockquote>
-<p>构造$Ax&#x3D;0,A^TAx&#x3D;0$，显然1的解是2的解</p>
-<p>若$\eta$是2的任一解$\Longrightarrow A^TA\eta&#x3D;0\Longrightarrow \eta^T A^TA\eta&#x3D;0\Longrightarrow(A\eta)^TA\eta&#x3D;0\Longrightarrow||A\eta||^2&#x3D;0\Longrightarrow A\eta&#x3D;0$ </p>
+<p>构造$Ax=0,A^TAx=0$，显然1的解是2的解</p>
+<p>若$\eta$是2的任一解$\Longrightarrow A^TA\eta=0\Longrightarrow \eta^T A^TA\eta=0\Longrightarrow(A\eta)^TA\eta=0\Longrightarrow||A\eta||^2=0\Longrightarrow A\eta=0$ </p>
 <p>结论：1与2同解，基础解系等价，秩相同</p>
 </blockquote>
 </li>
 </ul>
 </li>
 </ul>
-<h2 id="五、特征值-A为方阵"><a href="#五、特征值-A为方阵" class="headerlink" title="五、特征值**(A为方阵)**"></a>五、特征值**(A为方阵)**</h2><h3 id="1-特征值与特征向量"><a href="#1-特征值与特征向量" class="headerlink" title="1.特征值与特征向量"></a>1.特征值与特征向量</h3><ul>
+<h2 id="五、特征值-A为方阵"><a href="#五、特征值-A为方阵" class="headerlink" title="五、特征值(A为方阵)"></a>五、特征值<strong>(A为方阵)</strong></h2><h3 id="1-特征值与特征向量"><a href="#1-特征值与特征向量" class="headerlink" title="1.特征值与特征向量"></a>1.特征值与特征向量</h3><ul>
 <li><p>性质</p>
 <ul>
 <li><p><strong>特征值的和</strong>等于主对角线元素的和，<strong>特征值的积</strong>等于行列式</p>
 </li>
 <li><p>k重特征值至多只有k个线性无关的特征向量</p>
 </li>
-<li><p>&#x3D;&#x3D;$tr(A^*)&#x3D;A_{11}+A_{22}+A_{33}&#x3D;\lambda_1^*+\lambda_2^*+\lambda_3^*&#x3D;\lambda_2\lambda_3+\lambda_1\lambda_3+\lambda_1\lambda_2$&#x3D;&#x3D; </p>
+<li><p>==$tr(A^<em>)=A_{11}+A_{22}+A_{33}=\lambda_1^</em>+\lambda_2^<em>+\lambda_3^</em>=\lambda_2\lambda_3+\lambda_1\lambda_3+\lambda_1\lambda_2$== </p>
 </li>
 <li><p>矩阵秩为1，特征值必为$(n-1)$个0和一个“迹”</p>
 </li>
 <li><p>例题</p>
 <blockquote>
-<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153703.png" alt="image-20220316104012183" style="zoom:33%;" /></blockquote>
+<p><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153703.png" alt="image-20220316104012183" style="zoom:33%;" /></p>
+</blockquote>
 </li>
 </ul>
 </li>
 <li><p>求法</p>
 <ul>
-<li><p>具体：$|\lambda E-A|&#x3D;0$ 特征方程。求出$\lambda$带回方程求出所有解即为特征向量</p>
+<li><p>具体：$|\lambda E-A|=0$ 特征方程。求出$\lambda$带回方程求出所有解即为特征向量</p>
 <ul>
-<li>$f(\lambda)&#x3D;a_k\lambda^k+…+a_1\lambda^1+a_0&#x3D;0$ 试根方法<ul>
-<li>若$a_0&#x3D;0$，$\lambda&#x3D;0$是根</li>
-<li>若$a_k+…+a_1+a_0&#x3D;0$，$\lambda&#x3D;1$是根</li>
-<li>若偶次项之和&#x3D;奇次项之和，$\lambda&#x3D;-1$是根</li>
+<li><p>$f(\lambda)=a_k\lambda^k+…+a_1\lambda^1+a_0=0$ 试根方法</p>
+<ul>
+<li>若$a_0=0$，$\lambda=0$是根</li>
+<li>若$a_k+…+a_1+a_0=0$，$\lambda=1$是根</li>
+<li>若偶次项之和=奇次项之和，$\lambda=-1$是根</li>
 <li>若最高次项是1，且所有系数都是整数，那么所有有理根都是$a_0$的因数</li>
-</ul>
-</li>
 </ul>
 <blockquote>
 <p>注意$k\neq0!!!$ <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153704.png" alt="image-20220316075710694" style="zoom: 30%;" /></p>
 </blockquote>
+</li>
+</ul>
 </li>
 <li><p>抽象</p>
 <blockquote>
@@ -446,15 +429,15 @@
 <li>实对称阵<ul>
 <li>不同特征值的特征向量<strong>正交</strong>。它必有n个线性无关的特征向量，因此必可相似对角化</li>
 <li>特征向量间的关系 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153706.png" alt="image-20220316162627233" style="zoom: 25%;" /></li>
-<li>计算：求$Q^{-1}AQ&#x3D;Q^TAQ&#x3D;\Lambda$，多一步正交化(如果需要的话)和单位化</li>
+<li>计算：求$Q^{-1}AQ=Q^TAQ=\Lambda$，多一步正交化(如果需要的话)和单位化</li>
 </ul>
 </li>
 <li>反问题<ul>
 <li>反求参数：相似矩阵迹相同，行列式相同</li>
-<li>反求A：$A&#x3D;P\Lambda P^{-1}$</li>
+<li>反求A：$A=P\Lambda P^{-1}$ </li>
 </ul>
 </li>
-<li>求$A^n$与$f(A)$</li>
+<li>求$A^n$与$f(A)$ </li>
 </ul>
 </li>
 </ul>
@@ -467,16 +450,17 @@
 <li><p>配方法：将平方项和与其有关的混合项一次配完，如法炮制直至全部配完</p>
 <ul>
 <li><strong>n元要n换</strong>！缺项要补项</li>
-<li>没有平方项用平方差公式创造平方</li>
-</ul>
+<li><p>没有平方项用平方差公式创造平方</p>
 <blockquote>
-<p>例题：$f&#x3D;x_1^2+2x_1x_2+2x_1x_3-x_2^2-2x_2x_3-x_3^2$ 化为标准型，写出<strong>可逆</strong>线性变换</p>
-<p>$f&#x3D;(x_1+x_2+x_3)^2-2x_2^2-4x_2x_3-2x_3^2$ </p>
-<p>$\ \ &#x3D;(x_1+x_2+x_3)^2-2(x_2+x_3)^2$ </p>
-<p>令$\begin{cases}y_1&#x3D;x_1+x_2+x_3\y_2&#x3D;x_2+x_3\y_3&#x3D;x_3\end{cases}$ ，最终结果记得求逆</p>
+<p>例题：$f=x_1^2+2x_1x_2+2x_1x_3-x_2^2-2x_2x_3-x_3^2$ 化为标准型，写出<strong>可逆</strong>线性变换</p>
+<p>$f=(x_1+x_2+x_3)^2-2x_2^2-4x_2x_3-2x_3^2$ </p>
+<p>$\ \ =(x_1+x_2+x_3)^2-2(x_2+x_3)^2$ </p>
+<p>令$\begin{cases}y_1=x_1+x_2+x_3\\y_2=x_2+x_3\\y_3=x_3\end{cases}$ ，最终结果记得求逆</p>
 </blockquote>
 </li>
-<li><p>合同：$A,B$为N阶实对称阵，$C^TAC&#x3D;B$，C可逆，$f(x)$与$g(y)$为合同二次型</p>
+</ul>
+</li>
+<li><p>合同：$A,B$为N阶实对称阵，$C^TAC=B$，C可逆，$f(x)$与$g(y)$为合同二次型</p>
 <ul>
 <li>相当于旋转了坐标轴</li>
 </ul>
@@ -489,13 +473,14 @@
 </li>
 <li><p>判定：</p>
 <ul>
-<li>必要条件：主对角元素全正、行列式&gt;0</li>
-</ul>
+<li><p>必要条件：主对角元素全正、行列式&gt;0 </p>
 <blockquote>
 <p>前提A一定是对称阵 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153707.png" alt="image-20220316231249574" style="zoom: 40%;" /></p>
 </blockquote>
 </li>
-<li><p>三大变换：A正定$\begin{cases}\iff A^T正定\\iff A^{-1}正定\\Longrightarrow A^*正定\end{cases}$</p>
+</ul>
+</li>
+<li><p>三大变换：A正定$\begin{cases}\iff A^T正定\\\iff A^{-1}正定\\\Longrightarrow A^*正定\end{cases}$ </p>
 </li>
 </ul>
 <h1 id=""><a href="#" class="headerlink" title="$\ $"></a>$\ $</h1><h1 id="概率论"><a href="#概率论" class="headerlink" title="概率论"></a>概率论</h1><h2 id="一、随机事件与概率"><a href="#一、随机事件与概率" class="headerlink" title="一、随机事件与概率"></a>一、随机事件与概率</h2><ul>
@@ -503,7 +488,7 @@
 <ul>
 <li><p>有限个样本点、等可能</p>
 </li>
-<li><p>大学期间**排列符号用$P_n^m$**，因为A另有用途</p>
+<li><p>大学期间<strong>排列符号用$P_n^m$</strong>，因为A另有用途</p>
 </li>
 <li><p>用对立事件取巧计算</p>
 </li>
@@ -517,8 +502,7 @@
 </li>
 <li><p>例题：</p>
 <blockquote>
- <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153710.png" alt="image-20220318143307507" style="zoom:33%;" />
-
+<p> <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153710.png" alt="image-20220318143307507" style="zoom:33%;" /></p>
 <p>定义上来说AB不对</p>
 </blockquote>
 </li>
@@ -526,28 +510,27 @@
 </li>
 <li><p><strong>全概率公式</strong>例题：</p>
 <blockquote>
- <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153711.png" alt="image-20220318145527373" style="zoom:33%;" />
-
-<p>$P(A)&#x3D;P(H_1)P(A|H_1)+P(H_2)P(A|H_2)&#x3D;\frac{7}{8}$ </p>
-<p>$P(C_1)&#x3D;P(H_1|A)&#x3D;\frac{P(H_1A)}{P(A)}&#x3D;\frac{4}{7},P(C_2)&#x3D;P(H_2|A)&#x3D;\frac{P(H_2A)}{P(A)}&#x3D;\frac{3}{7}$</p>
-<p>$P(\bar A)&#x3D;P(C_1)P(\bar A|C_1)+P(C_2)P(\bar A|C_2)&#x3D;\frac{4}{7}\cdot0+\frac{3}{7}\cdot\frac{1}{4}&#x3D;\frac{3}{28}$ </p>
+<p> <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153711.png" alt="image-20220318145527373" style="zoom:33%;" /></p>
+<p>$P(A)=P(H_1)P(A|H_1)+P(H_2)P(A|H_2)=\frac{7}{8}$ </p>
+<p>$P(C_1)=P(H_1|A)=\frac{P(H_1A)}{P(A)}=\frac{4}{7},P(C_2)=P(H_2|A)=\frac{P(H_2A)}{P(A)}=\frac{3}{7}$</p>
+<p>$P(\bar A)=P(C_1)P(\bar A|C_1)+P(C_2)P(\bar A|C_2)=\frac{4}{7}\cdot0+\frac{3}{7}\cdot\frac{1}{4}=\frac{3}{28}$ </p>
 </blockquote>
 </li>
 <li><p>事件独立性</p>
 <ul>
-<li>三个事件相互独立&#x2F;两两独立 含义不一样</li>
+<li>三个事件相互独立/两两独立 含义不一样</li>
 </ul>
 </li>
 </ul>
 <h2 id="二、一维随机变量"><a href="#二、一维随机变量" class="headerlink" title="二、一维随机变量"></a>二、一维随机变量</h2><h3 id="1-随机变量"><a href="#1-随机变量" class="headerlink" title="1.随机变量"></a>1.随机变量</h3><ul>
-<li>分布函数 $F(x)&#x3D;P{X\le x}$，<strong>x取遍实数轴！</strong><ul>
+<li>分布函数 $F(x)=P\{X\le x\}$，<strong>x取遍实数轴！</strong><ul>
 <li>性质<ul>
 <li>单调不减</li>
 <li>右连续：左空心，右实心</li>
 <li>左极限0，右极限1</li>
 </ul>
 </li>
-<li>应用：求概率 $\begin{cases}P{X\le a}&#x3D;F(a)\P{X&lt; a}&#x3D;F(a-0)\P{X+ a}&#x3D;F(a)-F(a-0)\end{cases}$</li>
+<li>应用：求概率 $\begin{cases}P\{X\le a\}=F(a)\\P\{X&lt; a\}=F(a-0)\\P\{X+ a\}=F(a)-F(a-0)\end{cases}$</li>
 </ul>
 </li>
 </ul>
@@ -564,30 +547,31 @@
 <li><p>指数分布 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153714.png" alt="image-20220319161745927" style="zoom:40%;" /> </p>
 <ul>
 <li>$\lambda$表示失效率，越高表示越快</li>
-<li>$p(x\ge s+t|x\ge s)&#x3D;p(x\ge t)$</li>
+<li>$p(x\ge s+t|x\ge s)=p(x\ge t)$ </li>
 </ul>
 </li>
 <li><p>正态分布 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153715.png" alt="image-20220319164105042" style="zoom:40%;" /> $\phi(x)$ </p>
 <ul>
-<li>$\Phi(0)&#x3D;0,\Phi(-x)&#x3D;1-\Phi(x)$ </li>
+<li>$\Phi(0)=0,\Phi(-x)=1-\Phi(x)$ </li>
 <li>上$\alpha$分位数：某点右侧面积是$\alpha$ </li>
 <li><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153716.png" alt="image-20220319171921146" style="zoom:40%;" /> 见到正态分布必写标准化</li>
 </ul>
 </li>
 </ul>
 <h3 id="3-离散型分布"><a href="#3-离散型分布" class="headerlink" title="3.离散型分布"></a>3.离散型分布</h3><ul>
-<li>二项分布B(n,p)：伯努利实验 $p{X&#x3D;k}&#x3D;C_n^kp^k(1-p)^{n-k}$ </li>
-<li>几何分布 G(p)：首次发生 $p{X&#x3D;k}&#x3D;p\cdot(1-p)^{k-1}$ </li>
-<li>泊松分布 $P(\lambda)$ ：稀有事件发生概率 $p{X&#x3D;k}&#x3D;\frac{\lambda^k}{k!}e^{-\lambda}(k&#x3D;0,1,…;\lambda&gt;0)$ <ul>
+<li>二项分布B(n,p)：伯努利实验 $p\{X=k\}=C_n^kp^k(1-p)^{n-k}$ </li>
+<li>几何分布 G(p)：首次发生 $p\{X=k\}=p\cdot(1-p)^{k-1}$ </li>
+<li>泊松分布 $P(\lambda)$ ：稀有事件发生概率 $p\{X=k\}=\frac{\lambda^k}{k!}e^{-\lambda}(k=0,1,…;\lambda&gt;0)$ <ul>
 <li>某场合某单位时间内源源不断的质点来流的个数，$\lambda$表示强度</li>
 </ul>
 </li>
-<li>超几何分布 H(n,N,M)：$p{X&#x3D;k}&#x3D;\frac{C_m^kC_{N-M}^{n-k}}{C_N^n},max{0,n-N+M\le k\le min{M,n}$</li>
+<li>超几何分布 H(n,N,M)：$p\{X=k\}=\frac{C_m^kC_{N-M}^{n-k}}{C_N^n},max\{0,n-N+M\le k\le min\{M,n\}$</li>
 </ul>
 <h3 id="4-随机变量分布函数"><a href="#4-随机变量分布函数" class="headerlink" title="4.随机变量分布函数"></a>4.随机变量分布函数</h3><ul>
 <li><p>例题</p>
 <blockquote>
- <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153717.jpg" alt="90C3A0B8D9E27A9F74A0A24737072DDD" style="zoom:17%;" /></blockquote>
+<p> <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153717.jpg" alt="90C3A0B8D9E27A9F74A0A24737072DDD" style="zoom:17%;" /></p>
+</blockquote>
 </li>
 </ul>
 <h2 id="三、多维随机变量"><a href="#三、多维随机变量" class="headerlink" title="三、多维随机变量"></a>三、多维随机变量</h2><h3 id="1-多维随机变量"><a href="#1-多维随机变量" class="headerlink" title="1.多维随机变量"></a>1.多维随机变量</h3><ul>
@@ -599,11 +583,11 @@
 </ul>
 <h3 id="3-二维连续"><a href="#3-二维连续" class="headerlink" title="3.二维连续"></a>3.二维连续</h3><ul>
 <li>联合概率密度</li>
-<li>边缘概率密度：&#x3D;&#x3D;求谁不积谁，不积先定限&#x3D;&#x3D; <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153720.png" alt="image-20220319200659586" style="zoom:40%;" /></li>
-<li>条件概率密度：<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153722.png" alt="image-20220319200849965" style="zoom:13%;" /> $条件&#x3D;\frac{联合}{边缘}$ </li>
+<li>边缘概率密度：==求谁不积谁，不积先定限== <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153720.png" alt="image-20220319200659586" style="zoom:40%;" /></li>
+<li>条件概率密度：<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153722.png" alt="image-20220319200849965" style="zoom:13%;" /> $条件=\frac{联合}{边缘}$ </li>
 <li>独立性：<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153723.png" alt="image-20220319201059600" style="zoom: 22%;" /></li>
 </ul>
-<h3 id="4-函数的分布-⭐️"><a href="#4-函数的分布-⭐️" class="headerlink" title="4.函数的分布**(⭐️)**"></a>4.函数的分布**(⭐️)**</h3><ul>
+<h3 id="4-函数的分布-⭐️"><a href="#4-函数的分布-⭐️" class="headerlink" title="4.函数的分布(⭐️)"></a>4.函数的分布<strong>(⭐️)</strong></h3><ul>
 <li><p>(离散，离散)-&gt;离散</p>
 </li>
 <li><p>(连续，连续)-&gt;连续</p>
@@ -612,9 +596,10 @@
 </li>
 <li><p>卷积公式 </p>
 <blockquote>
-<p>$Z&#x3D;X+Y$时，把一个变量直接替换，对另一个变量积分，得到Z的概率密度函数</p>
+<p>$Z=X+Y$时，把一个变量直接替换，对另一个变量积分，得到Z的概率密度函数</p>
 <p>其实积分内部还要乘一个偏导z</p>
- <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153724.png" alt="image-20220320082850030" style="zoom:30%;" /></blockquote>
+<p> <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153724.png" alt="image-20220320082850030" style="zoom:30%;" /> </p>
+</blockquote>
 </li>
 </ul>
 </li>
@@ -627,8 +612,8 @@
 <h2 id="四、随机变量数字特征"><a href="#四、随机变量数字特征" class="headerlink" title="四、随机变量数字特征"></a>四、随机变量数字特征</h2><h3 id="1-一维"><a href="#1-一维" class="headerlink" title="1.一维"></a>1.一维</h3><ul>
 <li>期望 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153726.png" alt="image-20220320101157215" style="zoom:25%;" /></li>
 <li>方差：<ul>
-<li>平方的期望减期望的平方 $DX&#x3D;EX^2-(EX)^2$ </li>
-<li>$D(X\pm Y)&#x3D;D(X)+D(Y)\pm 2Cov(X,Y)$ </li>
+<li>平方的期望减期望的平方 $DX=EX^2-(EX)^2$ </li>
+<li>$D(X\pm Y)=D(X)+D(Y)\pm 2Cov(X,Y)$ </li>
 <li><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153727.png" alt="image-20220320104520366" style="zoom:40%;" /></li>
 </ul>
 </li>
@@ -636,8 +621,8 @@
 </ul>
 <h3 id="2-二维"><a href="#2-二维" class="headerlink" title="2.二维"></a>2.二维</h3><ul>
 <li>期望：只有独立才可打开直接乘</li>
-<li>协方差：$Cov(X,Y)&#x3D;E(XY)-EXEY$ </li>
-<li>相关系数 $\rho_{xy}&#x3D;\frac{E(XY)-EXEY}{\sqrt{DX}\sqrt{DY}}$ 为0时<strong>线性不相关</strong></li>
+<li>协方差：$Cov(X,Y)=E(XY)-EXEY$ </li>
+<li>相关系数 $\rho_{xy}=\frac{E(XY)-EXEY}{\sqrt{DX}\sqrt{DY}}$ 为0时<strong>线性不相关</strong> </li>
 </ul>
 <h3 id="3-独立性判定"><a href="#3-独立性判定" class="headerlink" title="3.独立性判定"></a>3.独立性判定</h3><ul>
 <li>用分布判定独立性</li>
@@ -652,7 +637,7 @@
 <h3 id="3-中心极限定理"><a href="#3-中心极限定理" class="headerlink" title="3.中心极限定理"></a>3.中心极限定理</h3><ul>
 <li><p>列维-林德伯格定理</p>
 </li>
-<li><p>利莫夫-拉普拉斯定理：样本足够大时，$\sum\limits_{i&#x3D;1}^{n}X_i,E&#x3D;nE\bar X,D&#x3D;nD\bar X$ </p>
+<li><p>利莫夫-拉普拉斯定理：样本足够大时，$\sum\limits_{i=1}^{n}X_i,E=nE\bar X,D=nD\bar X$ </p>
 <blockquote>
 <p>例题 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153729.png" alt="image-20220320152012514" style="zoom:37%;" /></p>
 </blockquote>
@@ -668,45 +653,46 @@
 </li>
 <li><p>顺序统计量</p>
 <ul>
-<li>Max $\begin{cases}F_{(n)}(x)&#x3D;[F(x)]^n\f_{(n)}(x)&#x3D;n[F(x)]^{n-1}f(x)\end{cases}$</li>
-<li>Min $\begin{cases}F_{(l)}(x)&#x3D;1-[1-F(x)]^n\f_{(l)}(x)&#x3D;n[1-F(x)]^{n-1}f(x)\end{cases}$</li>
+<li>Max $\begin{cases}F_{(n)}(x)=[F(x)]^n\\f_{(n)}(x)=n[F(x)]^{n-1}f(x)\end{cases}$</li>
+<li>Min $\begin{cases}F_{(l)}(x)=1-[1-F(x)]^n\\f_{(l)}(x)=n[1-F(x)]^{n-1}f(x)\end{cases}$ </li>
 </ul>
 </li>
 <li><p>三大分布</p>
 <ul>
 <li>$\chi^2$分布：标准正态分布的平方和，有几个自由度就是几<ul>
-<li>EX&#x3D;n，DX&#x3D;2n</li>
+<li>EX=n，DX=2n</li>
 </ul>
 </li>
 <li>t分布：把$\chi^2$分布变换成一对一：除以n再开方<ul>
 <li>自由度是<strong>样本个数-1</strong> </li>
-<li><strong>$t_{1-\alpha}(n)&#x3D;-t_\alpha(n)$</strong></li>
+<li><strong>$t_{1-\alpha}(n)=-t_\alpha(n)$</strong> </li>
 </ul>
 </li>
 <li>F分布：两个$\chi^2$分布分别除以自己的自由度再比较</li>
-<li><strong>$F_\alpha(n_1,n_2)&#x3D;\frac{1}{F_{1-\alpha}(n_2,n_1)}$</strong></li>
+<li><strong>$F_\alpha(n_1,n_2)=\frac{1}{F_{1-\alpha}(n_2,n_1)}$</strong> </li>
 </ul>
 </li>
-<li><p>&#x3D;&#x3D;正态总体下常用结论&#x3D;&#x3D;</p>
+<li><p>==正态总体下常用结论==</p>
 <blockquote>
- <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153734.png" alt="image-20220320195027681" style="zoom:40%;" /></blockquote>
+<p> <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153734.png" alt="image-20220320195027681" style="zoom:40%;" /></p>
+</blockquote>
 </li>
 </ul>
 <h3 id="2-参数的点估计"><a href="#2-参数的点估计" class="headerlink" title="2.参数的点估计"></a>2.参数的点估计</h3><ul>
 <li>方法<ul>
-<li>矩估计法：算出来$EX$，令$\bar x&#x3D;EX$，反解出来$\hat \theta$ </li>
+<li>矩估计法：算出来$EX$，令$\bar x=EX$，反解出来$\hat \theta$ </li>
 <li>极大似然估计<ul>
 <li>写概率函数，取对数，求导，令为0，解出$\hat \theta$，根据范围选择合理的值</li>
 <li><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153735.png" alt="image-20220321093858663" style="zoom:30%;" /></li>
-<li>问“估计值”，用小写$x_i$；问“估计量”用大写$X_i$</li>
+<li>问“估计值”，用小写$x_i$；问“估计量”用大写$X_i$ </li>
 </ul>
 </li>
 </ul>
 </li>
 <li>评价标准<ul>
-<li>无偏：$E\hat\theta&#x3D;\theta$，$\hat\theta$是无偏估计</li>
+<li>无偏：$E\hat\theta=\theta$，$\hat\theta$是无偏估计</li>
 <li>有效：$\hat\theta_1,\hat\theta_2$都是无偏估计，谁方差小谁更有效</li>
-<li>一致（相合性）：$\hat\theta\stackrel{P}{\longrightarrow}\theta$</li>
+<li>一致（相合性）：$\hat\theta\stackrel{P}{\longrightarrow}\theta$ </li>
 </ul>
 </li>
 </ul>
@@ -716,10 +702,10 @@
 <li><p>正态总体均值的置信区间</p>
 <blockquote>
 <p>推导：</p>
-<p>$p(|\bar x-\mu|&lt;\Delta)&#x3D;1-\alpha\iff p(|\frac{\bar x-\mu}{\sigma&#x2F;\sqrt{n}}|&lt;\frac{\Delta}{\sigma&#x2F;\sqrt{n}})&#x3D;1-\alpha$ </p>
-<p>$\Delta&#x3D;Z_{\frac{\alpha}{2}}\frac{\sigma}{\sqrt{n}}$ 或者 $\Delta&#x3D;T_{\frac{\alpha}{2}}(n-1)\cdot\frac{S}{\sqrt{n}}$ </p>
+<p>$p(|\bar x-\mu|&lt;\Delta)=1-\alpha\iff p(|\frac{\bar x-\mu}{\sigma/\sqrt{n}}|&lt;\frac{\Delta}{\sigma/\sqrt{n}})=1-\alpha$ </p>
+<p>$\Delta=Z_{\frac{\alpha}{2}}\frac{\sigma}{\sqrt{n}}$ 或者 $\Delta=T_{\frac{\alpha}{2}}(n-1)\cdot\frac{S}{\sqrt{n}}$ </p>
 <p>$\Delta$表示想要置信度为$1-\alpha$情况下$|\bar x-\mu|$的上限 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153736.png" alt="image-20220321082805252" style="zoom:25%;" /></p>
-<p>即$p(\bar x-\Delta&lt;\mu&lt;\bar x+\Delta)&#x3D;1-\alpha&#x3D;0.99$ “有99%的把握落在这个区间”</p>
+<p>即$p(\bar x-\Delta&lt;\mu&lt;\bar x+\Delta)=1-\alpha=0.99$ “有99%的把握落在这个区间”</p>
 </blockquote>
 </li>
 </ul>
@@ -740,9 +726,14 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://gilgamesh-lzq.github.io/2022/04/02/%E5%BC%A0%E5%AE%87%E4%B8%80%E8%BD%AE%E7%BA%BF%E4%BB%A3%E6%A6%82%E7%8E%87%E8%AE%BA/" data-id="cl1htrwvv0001lt8o81hj57qa" data-title="张宇一轮线代概率论" class="article-share-link">Share</a>
       
+        <a data-url="https://gilgamesh-lzq.github.io/2022/04/02/%E5%BC%A0%E5%AE%87%E4%B8%80%E8%BD%AE%E7%BA%BF%E4%BB%A3%E6%A6%82%E7%8E%87%E8%AE%BA/" data-id="cl1hunox40002vg8o4afp2fhl" class="article-share-link">Share</a>
       
+
+      
+        <a href="https://gilgamesh-lzq.github.io/2022/04/02/%E5%BC%A0%E5%AE%87%E4%B8%80%E8%BD%AE%E7%BA%BF%E4%BB%A3%E6%A6%82%E7%8E%87%E8%AE%BA/#ds-thread" class="article-comment-link">Comments</a>
+      
+
       
     </footer>
   </div>
@@ -750,12 +741,11 @@
 </article>
 
 
-
   
-    <article id="post-张宇一轮高数" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-张宇一轮高数" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2022/04/02/%E5%BC%A0%E5%AE%87%E4%B8%80%E8%BD%AE%E9%AB%98%E6%95%B0/" class="article-date">
-  <time class="dt-published" datetime="2022-04-02T09:04:33.000Z" itemprop="datePublished">2022-04-02</time>
+  <time datetime="2022-04-02T09:04:33.000Z" itemprop="datePublished">2022-04-02</time>
 </a>
     
   </div>
@@ -766,47 +756,46 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/04/02/%E5%BC%A0%E5%AE%87%E4%B8%80%E8%BD%AE%E9%AB%98%E6%95%B0/">张宇一轮高数</a>
+      <a class="article-title" href="/2022/04/02/%E5%BC%A0%E5%AE%87%E4%B8%80%E8%BD%AE%E9%AB%98%E6%95%B0/">张宇一轮高数</a>
     </h1>
   
 
       </header>
     
-    <div class="e-content article-entry" itemprop="articleBody">
+    <div class="article-entry" itemprop="articleBody">
       
         <h1 align="center">张宇一轮高数</h1>
 
 <p>[TOC]</p>
 <h1 id="高数"><a href="#高数" class="headerlink" title="高数"></a>高数</h1><h2 id="一、第一讲-函数"><a href="#一、第一讲-函数" class="headerlink" title="一、第一讲-函数"></a>一、第一讲-函数</h2><h3 id="1-函数性质：单调、有界、奇偶、周期"><a href="#1-函数性质：单调、有界、奇偶、周期" class="headerlink" title="1.函数性质：单调、有界、奇偶、周期"></a>1.函数性质：单调、有界、奇偶、周期</h3><h3 id="2-指数对数运算法则，因式分解公式、常用不等式"><a href="#2-指数对数运算法则，因式分解公式、常用不等式" class="headerlink" title="2.指数对数运算法则，因式分解公式、常用不等式"></a>2.指数对数运算法则，因式分解公式、常用不等式</h3><ul>
 <li>看见对数和分数，想着<strong>把幂次提出来！</strong>尤其是分数。</li>
-<li>$ln(1+\frac{1}{x})&#x3D;ln(x+1)-ln(x)$，想中值定理。</li>
+<li>$ln(1+\frac{1}{x})=ln(x+1)-ln(x)$，想中值定理。</li>
 </ul>
 <h3 id="3-特殊画图-用直角坐标观点画极坐标系的图形"><a href="#3-特殊画图-用直角坐标观点画极坐标系的图形" class="headerlink" title="3.特殊画图:用直角坐标观点画极坐标系的图形"></a>3.特殊画图:用直角坐标观点画极坐标系的图形</h3><ul>
-<li><p>极坐标—<strong>心形线</strong>（外摆线）  $r&#x3D;a(1-cos\theta),(a&gt;0)$，<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020146269.png" alt="image-20220203090719195" style="zoom:25%;" /></p>
+<li><p>极坐标—-<strong>心形线</strong>（外摆线）  $r=a(1-cos\theta),(a&gt;0)$，<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020146269.png" alt="image-20220203090719195" style="zoom:25%;" /></p>
 <ul>
 <li><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020146271.png" alt="image-20220203091010726" style="zoom:30%;" /></li>
-<li>玫瑰线  $r&#x3D;asin(3\theta),(a&gt;0)$  ，<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020146272.png" alt="image-20220203091922376" style="zoom:25%;" /></li>
-<li>阿基米德螺线  $r&#x3D;a\theta,(\theta &gt;0,a\ge 0)$  ，<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020146273.png" alt="image-20220203092411064" style="zoom:25%;" /></li>
-<li>伯努利双纽线。定义：$MA\times MB&#x3D;a^2$，$r^2&#x3D;a^2cos(2\theta)$，换成sin旋转45度<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020146274.png" alt="image-20220203092802113" style="zoom:25%;" /></li>
+<li>玫瑰线  $r=asin(3\theta),(a&gt;0)$  ，<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020146272.png" alt="image-20220203091922376" style="zoom:25%;" /></li>
+<li>阿基米德螺线  $r=a\theta,(\theta &gt;0,a\ge 0)$  ，<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020146273.png" alt="image-20220203092411064" style="zoom:25%;" /></li>
+<li>伯努利双纽线。定义：$MA\times MB=a^2$，$r^2=a^2cos(2\theta)$，换成sin旋转45度<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020146274.png" alt="image-20220203092802113" style="zoom:25%;" /></li>
 </ul>
 </li>
-<li><p>参数方程—<strong>摆线</strong>  <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020146275.png" alt="image-20220203094106668" style="zoom:25%;" /></p>
+<li><p>参数方程—-<strong>摆线</strong>  <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020146275.png" alt="image-20220203094106668" style="zoom:25%;" /></p>
 </li>
-<li><p><strong>星形线</strong>（内摆线）  $$ \left{\begin{array}{lr}x&#x3D;rcos^3t  \ y&#x3D;rsin^3t \end{array}\right.$$， $x^{\frac{2}{3}}+y^{\frac{2}{3}}&#x3D;r^{\frac{2}{3}}$。<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020146276.png" alt="image-20220203100121753" style="zoom:20%;" /></p>
-</li>
+<li><strong>星形线</strong>（内摆线）  <script type="math/tex">\left\{\begin{array}{lr}x=rcos^3t  \\ y=rsin^3t \end{array}\right.</script>， $x^{\frac{2}{3}}+y^{\frac{2}{3}}=r^{\frac{2}{3}}$。<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020146276.png" alt="image-20220203100121753" style="zoom:20%;" /></li>
 </ul>
 <h3 id="4-反函数："><a href="#4-反函数：" class="headerlink" title="4.反函数："></a>4.反函数：</h3><ul>
 <li>严格单调函数必有反函数（反过来不行，举例：分段）。</li>
-<li>$y&#x3D;ln(x+\sqrt{x^2+1})$它是个奇函数，导数是$\frac{1}{\sqrt{x^2+1}}$ (包括反向积回去)。  反双曲正弦。<ul>
+<li>$y=ln(x+\sqrt{x^2+1})$它是个奇函数，导数是$\frac{1}{\sqrt{x^2+1}}$ (包括反向积回去)。  反双曲正弦。<ul>
 <li>1是$a^2$，可以带入公式</li>
 </ul>
 </li>
-<li>$\sqrt{a}-\sqrt{b}&#x3D;\frac{a-b}{\sqrt{a}+\sqrt{b}}$   下面是加，上面是平方项   <strong>看见这样的就想反解！</strong></li>
-<li>求反函数：$e^y&#x3D;\sqrt{x^2+1}+x$，     $e^{-y}&#x3D;\sqrt{x^2+1}-x$，    $x&#x3D;\frac{e^y-e^{-y}}{2}$（经典奇函数，双曲正弦）。<ul>
+<li>$\sqrt{a}-\sqrt{b}=\frac{a-b}{\sqrt{a}+\sqrt{b}}$   下面是加，上面是平方项   <strong>看见这样的就想反解！</strong></li>
+<li>求反函数：$e^y=\sqrt{x^2+1}+x$，     $e^{-y}=\sqrt{x^2+1}-x$，    $x=\frac{e^y-e^{-y}}{2}$（经典奇函数，双曲正弦）。<ul>
 <li><strong>它的泰勒展开式特别有意思！</strong><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020146277.png" alt="image-20220202212621259" style="zoom:25%;" /></li>
 </ul>
 </li>
-<li>$y&#x3D;\frac{e^x+e^{-x}}{2}$ 悬链线，偶函数，双曲余弦<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020146278.png" alt="image-20220202212644422" style="zoom:25%;" /></li>
+<li>$y=\frac{e^x+e^{-x}}{2}$ 悬链线，偶函数，双曲余弦<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020146278.png" alt="image-20220202212644422" style="zoom:25%;" /></li>
 </ul>
 <h3 id="5-函数四种基本特性"><a href="#5-函数四种基本特性" class="headerlink" title="5.函数四种基本特性"></a>5.函数四种基本特性</h3><ul>
 <li>单调<ul>
@@ -825,12 +814,12 @@
 <h3 id="6-基本函数"><a href="#6-基本函数" class="headerlink" title="6.基本函数"></a>6.基本函数</h3><ul>
 <li>看见 $u^v$ 换成 $e^{vln(u)}$ 来运算。</li>
 <li>arcsin是$-\frac{\pi}{2}\sim\frac{\pi}{2}$变换而来的，arccos是$0\sim\pi$变换而来的。</li>
-<li>$arcsin(x)+arccos(x)&#x3D;\frac{\pi}{2},(-1\le x\le 1)$，求导为0，值是常数。$f’(x)&#x3D;\frac{1}{\sqrt{1-x^2}}-\frac{1}{\sqrt{1-x^2}}&#x3D;0$。$f(b)-f(a)&#x3D;f’(\xi)(b-a)$，说明值为常数。<strong>图是对称往上翘的</strong></li>
-<li>$arctan(x)+arccot(x)&#x3D;\frac{\pi}{2},(-\infty\le x\le \infty)$。$f’(x)&#x3D;\frac{1}{1+x^2}-\frac{1}{1+x^2}&#x3D;0$。<strong>图是对称往下栽歪的</strong>。</li>
-<li>[x]，不超过x的最大整数。$x-1&lt;[x]\le x$。<strong>严格大于它减一</strong>      $\lim_{x \to 0^+}[x]&#x3D;0，\lim_{x \to 0^-}[x]&#x3D;-1$。</li>
+<li>$arcsin(x)+arccos(x)=\frac{\pi}{2},(-1\le x\le 1)$，求导为0，值是常数。$f’(x)=\frac{1}{\sqrt{1-x^2}}-\frac{1}{\sqrt{1-x^2}}=0$。$f(b)-f(a)=f’(\xi)(b-a)$，说明值为常数。<strong>图是对称往上翘的</strong></li>
+<li>$arctan(x)+arccot(x)=\frac{\pi}{2},(-\infty\le x\le \infty)$。$f’(x)=\frac{1}{1+x^2}-\frac{1}{1+x^2}=0$。<strong>图是对称往下栽歪的</strong>。</li>
+<li>[x]，不超过x的最大整数。$x-1&lt;[x]\le x$。<strong>严格大于它减一</strong>      $\lim_{x \to 0^+}[x]=0，\lim_{x \to 0^-}[x]=-1$。</li>
 </ul>
 <h3 id="7-中学基础知识"><a href="#7-中学基础知识" class="headerlink" title="7.中学基础知识"></a>7.中学基础知识</h3><ul>
-<li>等比数列：$$ S_n&#x3D;\left{\begin{array}{lr}na_1,&amp; r&#x3D;1  \ \frac{a_1(1-r^n)}{1-r},&amp; r\neq1 \end{array}\right.$$    <strong>特殊：当$|r|&lt;1,\lim_{n\to\infty}\frac{1-r^n}{1-r}&#x3D;\frac{1}{1-r}$</strong>    <ul>
+<li>等比数列：<script type="math/tex">S_n=\left\{\begin{array}{lr}na_1,& r=1  \\ \frac{a_1(1-r^n)}{1-r},& r\neq1 \end{array}\right.</script>    <strong>特殊：当$|r|&lt;1,\lim_{n\to\infty}\frac{1-r^n}{1-r}=\frac{1}{1-r}$</strong>    <ul>
 <li>常用求和公式<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020146284.png" alt="image-20220203101730707" style="zoom:33%;" /></li>
 </ul>
 </li>
@@ -844,13 +833,13 @@
 <li>基本不等式  <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020146290.png" alt="image-20220203165716994" style="zoom:33%;" /></li>
 </ul>
 <h2 id="二、第二讲-数列极限"><a href="#二、第二讲-数列极限" class="headerlink" title="二、第二讲-数列极限"></a>二、第二讲-数列极限</h2><h3 id="1-定义"><a href="#1-定义" class="headerlink" title="1.定义"></a>1.定义</h3><ul>
-<li>极限定义步骤：先用通项和极限值写出距离表达式，通过$\varepsilon$ 反解出n，取N&#x3D;取整加一。</li>
-<li><strong>例题</strong>：当$\lim\limits_{n\to\infty}A_n\to A，则\lim\limits_{n\to\infty}|A_n|\to |A|$。反之不成立。当A&#x3D;0，反之成立。</li>
+<li>极限定义步骤：先用通项和极限值写出距离表达式，通过$\varepsilon$ 反解出n，取N=取整加一。</li>
+<li><strong>例题</strong>：当$\lim\limits_{n\to\infty}A_n\to A，则\lim\limits_{n\to\infty}|A_n|\to |A|$。反之不成立。当A=0，反之成立。</li>
 <li>数列收敛，其任何一个子数列收敛（它的逆否命题经常用）。两个子数列<strong>不收敛到同一个数</strong>。</li>
 </ul>
 <h3 id="2-性质"><a href="#2-性质" class="headerlink" title="2.性质"></a>2.性质</h3><ul>
 <li>唯一性、有界性</li>
-<li>保号性。<strong>推论</strong>：数列${a_n}$从某项起$a_n&gt;0$且$a_n$极限为A，则$A\ge 0$。<strong>“即使通项大于0，极限也有可能是0”</strong><ul>
+<li>保号性。<strong>推论</strong>：数列$\{a_n\}$从某项起$a_n&gt;0$且$a_n$极限为A，则$A\ge 0$。<strong>“即使通项大于0，极限也有可能是0”</strong><ul>
 <li>$a_n\ge 0$也行。$\le 0$同理。</li>
 </ul>
 </li>
@@ -862,12 +851,8 @@
 </li>
 <li>单调有界准则：单调有界数列必有极限（魏尔斯特拉斯定理）</li>
 </ul>
-<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020146291.jpg" alt="IMG_20220204_095950_edit_259757588862445" style="zoom:15%;" />
-
-
-
-<h2 id="三、函数极限"><a href="#三、函数极限" class="headerlink" title="三、函数极限"></a>三、函数极限</h2><h3 id="1-定义和性质"><a href="#1-定义和性质" class="headerlink" title="1.定义和性质"></a>1.定义和性质</h3><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020146292.png" alt="image-20220204123043703" style="zoom:40%;" />
-
+<p><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020146291.jpg" alt="IMG_20220204_095950_edit_259757588862445" style="zoom:15%;" /></p>
+<h2 id="三、函数极限"><a href="#三、函数极限" class="headerlink" title="三、函数极限"></a>三、函数极限</h2><h3 id="1-定义和性质"><a href="#1-定义和性质" class="headerlink" title="1.定义和性质"></a>1.定义和性质</h3><p><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020146292.png" alt="image-20220204123043703" style="zoom:40%;" /></p>
 <ul>
 <li>极限存在充要条件：左右极限都存在且相等</li>
 <li>减去极限值得到的函数，其极限为无穷小量（接近0）</li>
@@ -878,13 +863,14 @@
 <li>推论：戴帽法，<strong>即使函数大于0，极限也有可能得0</strong></li>
 </ul>
 </li>
-<li>概念：$+\infty$ 在&#x3D;&#x3D;考研数学里规定为不存在&#x3D;&#x3D;，但它不叫“不存在”<ul>
+<li>概念：$+\infty$ 在==考研数学里规定为不存在==，但它不叫“不存在”<ul>
 <li><strong>极限存在必有界，充分不必要</strong>。</li>
 <li>有界函数和有界函数的和差积还是有界的。<strong>（有限个）</strong></li>
 <li>$f’(x)在(a,b)$内有界，则$f(x)$在此区间内有界（用拉格朗日证）<strong>（有限区间，不是无穷区间）</strong></li>
 <li>区间内函数有界的证法：<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020146293.png" alt="image-20220204134103953" style="zoom:25%;" /></li>
 <li>$e^u,|u|,arctan(u),[u]$ 这四种看见就想<strong>分类讨论</strong><blockquote>
-<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020146294.jpg" alt="IMG_20220204_162809_edit_265698421962060" style="zoom:15%;" /></blockquote>
+<p><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020146294.jpg" alt="IMG_20220204_162809_edit_265698421962060" style="zoom:15%;" /></p>
+</blockquote>
 </li>
 </ul>
 </li>
@@ -899,13 +885,12 @@
 <ul>
 <li><p>$\frac{0}{0}或\frac{\infty}{\infty}$，上下都可导，上下求导极限为A或$\infty$。<strong>（第三条不满足不能用）</strong>，比如导完极限不存在</p>
 <blockquote>
-<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020146295.png" alt="image-20220204164103266" style="zoom:25%;" />
+<p><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020146295.png" alt="image-20220204164103266" style="zoom:25%;" /></p>
 </blockquote>
 </li>
-<li><p><em>分子简单分母复杂、次数底下高—洛必达越用越复杂！</em></p>
+<li><p><em>分子简单分母复杂、次数底下高—-洛必达越用越复杂！</em></p>
 </li>
-<li><p><em>等价无穷小替换时候，长得更基本的那个才能换</em></p>
-</li>
+<li><em>等价无穷小替换时候，长得更基本的那个才能换</em></li>
 </ul>
 </li>
 <li><p>泰勒公式</p>
@@ -914,30 +899,31 @@
 <ul>
 <li><p>$x \to 0$时，</p>
 <ol>
-<li>$$\sin{x} &#x3D; x - \frac{1}{6}x^3 + o(x^3)$$   <strong>奇函数展开没有偶次项</strong></li>
-<li>$$\cos{x} &#x3D; 1 - \frac{x^2}{2!} + \frac{x^4}{4!} + o(x^4)$$    <strong>偶函数展开没有奇次项</strong></li>
-<li>$$\tan{x} &#x3D; x + \frac{x^3}{3} + o(x^3)$$</li>
-<li>$$\arcsin{x} &#x3D; x + \frac{1}{6}x^3 + o(x^3)$$</li>
-<li>$$\arctan{x} &#x3D; x - \frac{x^3}{3} + o(x^3)$$</li>
-<li>$$\ln(1+x) &#x3D; x - \frac{x^2}{2} + \frac{x^3}{3} - \frac{x^4}{4} +o(x^4)$$</li>
-<li>$$e^x &#x3D; 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + … +\frac{x^n}{n!}$$</li>
-<li>$$\frac{1}{1-x} &#x3D; 1 +x +x^2 + … + x^n ,,(|x| \lt 1)$$</li>
-<li>$$(1+x)^{\alpha} &#x3D; 1 + \alpha x + \frac{\alpha(\alpha-1)}{2!}x^2 +o(x^2)$$<br> $$\sqrt{1+x} &#x3D; 1+ \frac{x}{2} - \frac{x^2}{8} + o(x^2)$$</li>
+<li><script type="math/tex">\sin{x} = x - \frac{1}{6}x^3 + o(x^3)</script>   <strong>奇函数展开没有偶次项</strong></li>
+<li><script type="math/tex">\cos{x} = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} + o(x^4)</script>    <strong>偶函数展开没有奇次项</strong></li>
+<li><script type="math/tex; mode=display">\tan{x} = x + \frac{x^3}{3} + o(x^3)</script></li>
+<li><script type="math/tex; mode=display">\arcsin{x} = x + \frac{1}{6}x^3 + o(x^3)</script></li>
+<li><script type="math/tex; mode=display">\arctan{x} = x - \frac{x^3}{3} + o(x^3)</script></li>
+<li><script type="math/tex; mode=display">\ln(1+x) = x - \frac{x^2}{2} + \frac{x^3}{3} - \frac{x^4}{4} +o(x^4)</script></li>
+<li><script type="math/tex; mode=display">e^x = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + ... +\frac{x^n}{n!}</script></li>
+<li><script type="math/tex; mode=display">\frac{1}{1-x} = 1 +x +x^2 + ... + x^n ,\,(|x| \lt 1)</script></li>
+<li><script type="math/tex; mode=display">(1+x)^{\alpha} = 1 + \alpha x + \frac{\alpha(\alpha-1)}{2!}x^2 +o(x^2)</script><script type="math/tex; mode=display">\sqrt{1+x} = 1+ \frac{x}{2} - \frac{x^2}{8} + o(x^2)</script><p><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020146296.png" alt="image-20220204165947859" style="zoom:25%;" /></p>
+</li>
 </ol>
-  <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020146296.png" alt="image-20220204165947859" style="zoom:25%;" /></li>
+</li>
 </ul>
 </li>
 <li><p>展开原则</p>
 <ul>
 <li>若函数$f(x)$在包含$x_0$的某个开区间$(a,b)$上具有(n+1)阶的导数，那么对于任一$x\epsilon(a,b)$，有<blockquote>
-<p><strong>$f(x)&#x3D;\frac{f(x_0)}{0!}+\frac{f’(x_0)}{1!}(x-x_0)+\frac{f’’(x_0)}{2!}(x-x_0)^2+…+\frac{f^n(x_0)}{n!}(x-x_0)^n+R_n(x)$</strong></p>
+<p><strong>$f(x)=\frac{f(x_0)}{0!}+\frac{f’(x_0)}{1!}(x-x_0)+\frac{f’’(x_0)}{2!}(x-x_0)^2+…+\frac{f^n(x_0)}{n!}(x-x_0)^n+R_n(x)$</strong>   </p>
 </blockquote>
 </li>
 </ul>
 </li>
 <li><p>例题：求$\lim\limits_{x\to 0}e^{tanx}-e^x$的阶数</p>
 <blockquote>
-<p>原式&#x3D;$\lim_{x\to 0}e^x(e^{tanx-x}-1)\sim 1\times(tanx-x)\sim \frac{x^3}{3}$</p>
+<p>原式=$\lim_{x\to 0}e^x(e^{tanx-x}-1)\sim 1\times(tanx-x)\sim \frac{x^3}{3}$ </p>
 </blockquote>
 </li>
 </ul>
@@ -948,8 +934,8 @@
 <ul>
 <li><p>例题：求证$\lim\limits_{x\to\infty}\frac{1}{x}sin(\frac{1}{x})$不存在。</p>
 <blockquote>
-<p>取$x_n&#x3D;\frac{1}{n\pi},n\to\infty,\lim\limits_{x\to\infty}f(x_n)&#x3D;0$，</p>
-<p>取$x_n&#x3D;\frac{1}{(2n+\frac{1}{2})\pi},n\to\infty,\lim\limits_{x\to\infty}f(x_n)&#x3D;\infty$。</p>
+<p>取$x_n=\frac{1}{n\pi},n\to\infty,\lim\limits_{x\to\infty}f(x_n)=0$，</p>
+<p>取$x_n=\frac{1}{(2n+\frac{1}{2})\pi},n\to\infty,\lim\limits_{x\to\infty}f(x_n)=\infty$。</p>
 </blockquote>
 </li>
 </ul>
@@ -962,7 +948,7 @@
 <ul>
 <li><p>例题：求$\lim\limits_{n\to\infty}(ntan\frac{1}{n})^{n^2},n\epsilon N^+$ </p>
 <blockquote>
-<p>取$x_n&#x3D;\frac{1}{n}$，由归结原则，原式为  $\lim\limits_{x\to 0}(\frac{tanx}{x})^{\frac{1}{n^2}}&#x3D;e^{\lim\limits_{x\to 0}\frac{1}{n^2}\frac{tanx-x}{x}}&#x3D;e^{\frac{1}{3}}$</p>
+<p>取$x_n=\frac{1}{n}$，由归结原则，原式为  $\lim\limits_{x\to 0}(\frac{tanx}{x})^{\frac{1}{n^2}}=e^{\lim\limits_{x\to 0}\frac{1}{n^2}\frac{tanx-x}{x}}=e^{\frac{1}{3}}$ </p>
 </blockquote>
 </li>
 </ul>
@@ -975,44 +961,12 @@
 <ul>
 <li><p>低阶吸收高阶</p>
 <blockquote>
-<p>例题：$\lim\limits_{x\to 0}\frac{sin^2x-x^2}{e^{x^4}-1}&#x3D;\lim\limits_{x\to 0}\frac{(sinx+x)(six-x)}{x^4}&#x3D;-\frac{1}{3}$  </p>
+<p>例题：$\lim\limits_{x\to 0}\frac{sin^2x-x^2}{e^{x^4}-1}=\lim\limits_{x\to 0}\frac{(sinx+x)(six-x)}{x^4}=-\frac{1}{3}$  </p>
 </blockquote>
 </li>
-<li><p>$$\lim\limits_{x \to 0} \frac{A}{B} &#x3D; 1 \iff A \sim B$$</p>
-</li>
-<li><table>
-<thead>
-<tr>
-<th>$e^x-1 \sim x$</th>
-<th>$\ln(1+x) \sim x$</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>$\sin{x} \sim x$</td>
-<td>$x - \sin{x} \sim \frac{1}{6}x^3$</td>
-</tr>
-<tr>
-<td>$\arcsin{x} \sim x$</td>
-<td>$x - \arcsin{x} \sim -\frac{1}{6}x^3 $</td>
-</tr>
-<tr>
-<td>$\tan{x} \sim x$</td>
-<td>$x - \tan{x} \sim -\frac{1}{3}x^3$</td>
-</tr>
-<tr>
-<td>$\arctan{x} \sim x$</td>
-<td>$x - \arctan{x} \sim \frac{1}{3}x^3$</td>
-</tr>
-<tr>
-<td>$1-\cos{x} \sim \frac{1}{2}x^2$</td>
-<td>$x^2-sin^2{x} \sim \frac{1}{3}x^4$</td>
-</tr>
-<tr>
-<td>$(1+x)^{\alpha}-1 \sim \alpha x$</td>
-<td>$x+\sin{x} \sim 2x$</td>
-</tr>
-</tbody></table>
-<p>  两个无穷小相除求极限，为非1常数—同阶无穷小；为1—等价无穷小。</p>
+<li><script type="math/tex; mode=display">\lim\limits_{x \to 0} \frac{A}{B} = 1 \iff A \sim B</script></li>
+<li><p>| $e^x-1 \sim x$                   | $\ln(1+x) \sim x$                      |<br>  | ———————————————— | ——————————————————— |<br>  | $\sin{x} \sim x$                 | $x - \sin{x} \sim \frac{1}{6}x^3$      |<br>  | $\arcsin{x} \sim x$              | $x - \arcsin{x} \sim -\frac{1}{6}x^3 $ |<br>  | $\tan{x} \sim x$                 | $x - \tan{x} \sim -\frac{1}{3}x^3$     |<br>  | $\arctan{x} \sim x$              | $x - \arctan{x} \sim \frac{1}{3}x^3$   |<br>  | $1-\cos{x} \sim \frac{1}{2}x^2$  | $x^2-sin^2{x} \sim \frac{1}{3}x^4$     |<br>  | $(1+x)^{\alpha}-1 \sim \alpha x$ | $x+\sin{x} \sim 2x$                    |</p>
+<p>  两个无穷小相除求极限，为非1常数—-同阶无穷小；为1—-等价无穷小。</p>
 </li>
 </ul>
 </li>
@@ -1020,12 +974,12 @@
 <h3 id="3-连续与间断"><a href="#3-连续与间断" class="headerlink" title="3.连续与间断"></a>3.连续与间断</h3><ul>
 <li>第一类<ul>
 <li>可去：<em>极限和函数值都有，但不相等，或者点没定义</em> <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020146299.png" alt="image-20220205090315908" style="zoom:20%;" /></li>
-<li>跳跃：<em>左右极限存在但不相等</em></li>
+<li>跳跃：<em>左右极限存在但不相等</em> </li>
 </ul>
 </li>
 <li>第二类<ul>
 <li>无穷：<em>两遍极限都是无穷大</em></li>
-<li>振荡：<em>极限值振荡不存在，例如  $\lim\limits_{x\to 0}sin(\frac{1}{x})$</em></li>
+<li>振荡：<em>极限值振荡不存在，例如  $\lim\limits_{x\to 0}sin(\frac{1}{x})$</em> </li>
 </ul>
 </li>
 <li>有双侧定义才讨论间断点</li>
@@ -1035,7 +989,7 @@
 <ul>
 <li><p>证明：偶函数的导数是奇函数</p>
 <blockquote>
-<p>$f’(-x)&#x3D;\lim\limits_{\Delta x\to 0}\frac{f(-x+\Delta x)-f(-x)}{\Delta x}&#x3D;-\lim\limits_{\Delta x\to 0}\frac{f(x+(-\Delta x))-f(x)}{-\Delta x}&#x3D;-f’(x)$</p>
+<p>$f’(-x)=\lim\limits_{\Delta x\to 0}\frac{f(-x+\Delta x)-f(-x)}{\Delta x}=-\lim\limits_{\Delta x\to 0}\frac{f(x+(-\Delta x))-f(x)}{-\Delta x}=-f’(x)$</p>
 </blockquote>
 <ul>
 <li><strong>没有形式的时候自己凑形式，尤其是凑定义，或者已知条件</strong></li>
@@ -1043,7 +997,7 @@
 </li>
 <li><p>例题：</p>
 <blockquote>
-<p>$\lim\limits_{x\to 1}{\frac{f(x)}{x-1}}&#x3D;2\Longrightarrow f(1)&#x3D;0,f’(1)&#x3D;2$</p>
+<p>$\lim\limits_{x\to 1}{\frac{f(x)}{x-1}}=2\Longrightarrow f(1)=0,f’(1)=2$</p>
 </blockquote>
 <ul>
 <li><strong>看见这种形式直接这么想</strong></li>
@@ -1062,14 +1016,13 @@
 </li>
 <li><p>复合</p>
 <ul>
-<li>$df(💩)&#x3D;f’(💩)d(💩)$ 一阶微分形式不变性</li>
+<li>$df(💩)=f’(💩)d(💩)$ 一阶微分形式不变性</li>
 <li>分段的复合函数求导不一定要写出来解析式，可以<strong>使用链式求导规则，直接代值进去</strong></li>
 </ul>
 </li>
 <li><p>反函数</p>
 <ul>
-<li><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020146301.png" alt="image-20220217082952182" style="zoom:30%;" />
-
+<li><p><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020146301.png" alt="image-20220217082952182" style="zoom:30%;" /></p>
 <blockquote>
 <p><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020146302.png" alt="image-20220217083749882" style="zoom:20%;" />。。  <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020146303.png" alt="image-20220217090440542" style="zoom:20%;" /></p>
 </blockquote>
@@ -1082,7 +1035,7 @@
 <ul>
 <li><p>公式推导<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020146304.png" alt="image-20220217092114687" style="zoom:20%;" /></p>
 </li>
-<li><p>例：求$sin(xy)&#x3D;ln(\frac{x+e}{y})+1$ 在$x&#x3D;0$时的导数</p>
+<li><p>例：求$sin(xy)=ln(\frac{x+e}{y})+1$ 在$x=0$时的导数</p>
 <blockquote>
 <p>y要当作x的函数来对待，需要复合求导<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020146305.png" alt="image-20220217092903197" style="zoom:20%;" /></p>
 </blockquote>
@@ -1107,29 +1060,26 @@
 <li><strong>极值定义</strong>中需要<strong>邻域</strong>，因此单侧点不考虑</li>
 </ul>
 <h3 id="2-单调性、极值判别"><a href="#2-单调性、极值判别" class="headerlink" title="2.单调性、极值判别"></a>2.单调性、极值判别</h3><ul>
-<li><p>单调性判别</p>
-</li>
+<li>单调性判别</li>
 <li><p>极值必要条件</p>
 <ul>
-<li>（费马定理）：$x&#x3D;x_0$处可导，且在$x_0$处取得极值，则必有$f’(x_0)&#x3D;0$。</li>
+<li>（费马定理）：$x=x_0$处可导，且在$x_0$处取得极值，则必有$f’(x_0)=0$。</li>
 </ul>
 </li>
-<li><p>&#x3D;&#x3D;联系$f$与$f’$，立即想到拉格朗日！！&#x3D;&#x3D;</p>
+<li><p>==联系$f$与$f’$，立即想到拉格朗日！！==</p>
 </li>
-<li><p>三个充分条件</p>
-<ul>
+<li>三个充分条件<ul>
 <li>在某点连续（不需要可导），去心邻域内可导，左右导数正负决定是什么极值点</li>
-<li>二阶可导，$f’(x)&#x3D;0,f’’(x)\neq 0$，必为极值点</li>
+<li>二阶可导，$f’(x)=0,f’’(x)\neq 0$，必为极值点</li>
 <li>n阶可导，最高阶不得0的导数是<strong>偶数阶导数</strong>，必为极值点</li>
 </ul>
 </li>
 </ul>
 <h3 id="3-凹凸性与拐点"><a href="#3-凹凸性与拐点" class="headerlink" title="3.凹凸性与拐点"></a>3.凹凸性与拐点</h3><ul>
-<li><p>凹凸性判别</p>
-</li>
+<li>凹凸性判别</li>
 <li><p>判拐点必要条件</p>
 <ul>
-<li>&#x3D;&#x3D;注：&#x3D;&#x3D;拐点是凹凸分界点，无需可导，只要连续。<strong>拐点是曲线上一点</strong>，而极值点在定义域上，写作$x_0$</li>
+<li>==注：==拐点是凹凸分界点，无需可导，只要连续。<strong>拐点是曲线上一点</strong>，而极值点在定义域上，写作$x_0$</li>
 <li>二阶导存在，且这点是拐点，那么二阶导为0</li>
 </ul>
 </li>
@@ -1150,8 +1100,7 @@
 </li>
 <li><p>水平：和斜渐近线不会在同一方向上共同存在</p>
 </li>
-<li><p>斜渐近线：$\lim\limits_{x\to \infty}\frac{f(x)}{x}&#x3D;k$，$\lim\limits_{x\to \infty}f(x)-kx&#x3D;b$ 。太快太慢的函数都不会有斜渐近线</p>
-</li>
+<li>斜渐近线：$\lim\limits_{x\to \infty}\frac{f(x)}{x}=k$，$\lim\limits_{x\to \infty}f(x)-kx=b$ 。太快太慢的函数都不会有斜渐近线</li>
 </ul>
 <h3 id="5-最值或取值范围"><a href="#5-最值或取值范围" class="headerlink" title="5.最值或取值范围"></a>5.最值或取值范围</h3><ul>
 <li><p>闭区间</p>
@@ -1185,20 +1134,20 @@
 <li><p>罗尔定理</p>
 <ul>
 <li>闭区间连续开区间可导，端点值相等，开区间内存在一点使导数为0</li>
-<li>常用乘积导数公式的逆用来构造辅助函数$\begin{cases}[f\times f]’&amp;&#x3D;2f\times f’\ [f\times f’]’&amp;&#x3D;(f’)^2+f\times f’’\ [f\times e^g]’&amp;&#x3D;e^g\times[f’+f\times g’] \end{cases}$ </li>
+<li>常用乘积导数公式的逆用来构造辅助函数$\begin{cases}[f\times f]’&amp;=2f\times f’\\ [f\times f’]’&amp;=(f’)^2+f\times f’’\\ [f\times e^g]’&amp;=e^g\times[f’+f\times g’] \end{cases}$ </li>
 <li>构造辅助函数 $F(x)$<ul>
-<li>求导公式 $(u \cdot v)’ &#x3D; u’v+uv’$ 逆用<ul>
-<li>见 $F’(\xi)&#x3D;f’(\xi)\cdot \xi+f(\xi)&#x3D;0$，构造 $F(x)&#x3D;f(x)x$</li>
-<li>见 $F’(\xi)&#x3D;[f’(\xi)+f(\xi)]e^{\xi}&#x3D;0$，构造 $F(x)&#x3D;f(x) e^x$</li>
-<li>见 $F’(\xi)&#x3D;[f’(\xi)+f(\xi) \varphi’(\xi)] e^{\varphi(\xi)}&#x3D;0$，构造 $F(x)&#x3D;f(x) e^{\varphi(x)}$</li>
-<li>见  $F’(\xi)&#x3D;f’’(x)+g(x)f’(x)&#x3D;0$,构造 $F(x)&#x3D;f’(x) e^{\int g(x)\text{d}x}$</li>
-<li>见 $F’(\xi)&#x3D;f(x)+g(x) \int_0^x f(t)\text{d}t &#x3D;0$，构造 $F(x)&#x3D;\int_0^x f(t)\text{d}t \cdot e^{\int g(x) \text{d}x}$</li>
-<li>见 $F’(\xi)&#x3D;f’(x)+g(x)[f(x)-1]&#x3D;0$，构造 $F(x)&#x3D;[f(x)-1] \cdot e^{\int g(x)\text{d}x}$</li>
+<li>求导公式 $(u \cdot v)’ = u’v+uv’$ 逆用<ul>
+<li>见 $F’(\xi)=f’(\xi)\cdot \xi+f(\xi)=0$，构造 $F(x)=f(x)x$</li>
+<li>见 $F’(\xi)=[f’(\xi)+f(\xi)]e^{\xi}=0$，构造 $F(x)=f(x) e^x$</li>
+<li>见 $F’(\xi)=[f’(\xi)+f(\xi) \varphi’(\xi)] e^{\varphi(\xi)}=0$，构造 $F(x)=f(x) e^{\varphi(x)}$</li>
+<li>见  $F’(\xi)=f’’(x)+g(x)f’(x)=0$,构造 $F(x)=f’(x) e^{\int g(x)\text{d}x}$</li>
+<li>见 $F’(\xi)=f(x)+g(x) \int_0^x f(t)\text{d}t =0$，构造 $F(x)=\int_0^x f(t)\text{d}t \cdot e^{\int g(x) \text{d}x}$</li>
+<li>见 $F’(\xi)=f’(x)+g(x)[f(x)-1]=0$，构造 $F(x)=[f(x)-1] \cdot e^{\int g(x)\text{d}x}$</li>
 </ul>
 </li>
 <li>积分还原法<ol>
 <li>将欲证结论中的 $\xi$ 改为 $x$</li>
-<li>积分之（为了简单，令 $c&#x3D;0$）</li>
+<li>积分之（为了简单，令 $c=0$）</li>
 <li>移项使等式一端为0，另一端记为 $F(x)$</li>
 </ol>
 </li>
@@ -1208,13 +1157,13 @@
 </li>
 <li><p>拉格朗日中值定理</p>
 <ul>
-<li>常见形式 $\begin{cases}f-f\ f \text{与} f’ \end{cases}$ ，0和1可以用来构造</li>
+<li>常见形式 $\begin{cases}f-f\\ f \text{与} f’ \end{cases}$ ，0和1可以用来构造</li>
 <li><strong>证闭区间用积分中值定理，证开区间用拉格朗日</strong></li>
 </ul>
 </li>
-<li><p>柯西中值定理 $\frac{f(b)-f(a)}{g(b)-g(a)}&#x3D;\frac{f’(\xi)}{g’(\xi)},g’\neq0$ </p>
+<li><p>柯西中值定理 $\frac{f(b)-f(a)}{g(b)-g(a)}=\frac{f’(\xi)}{g’(\xi)},g’\neq0$ </p>
 <ul>
-<li>取$g(x)&#x3D;x$，退化为拉格朗日</li>
+<li>取$g(x)=x$，退化为拉格朗日</li>
 </ul>
 </li>
 <li><p>泰勒公式</p>
@@ -1226,7 +1175,7 @@
 </li>
 <li><p>积分中值定理</p>
 <ul>
-<li>$\int_{a}^{b}f(x)dx&#x3D;f(\xi)(b-a)$，把积分转换为函数，$\xi$在ab之间</li>
+<li>$\int_{a}^{b}f(x)dx=f(\xi)(b-a)$，把积分转换为函数，$\xi$在ab之间</li>
 </ul>
 </li>
 </ul>
@@ -1256,7 +1205,7 @@
 </ul>
 </li>
 <li>定积分<ul>
-<li>概念：取区间为 $(0,1),\lim\limits_{n\to\infty}\sum\limits_{i&#x3D;1}^n f(\frac{i}{n})\frac{1}{n}&#x3D;\int_0^1f(x)dx$ <ul>
+<li>概念：取区间为 $(0,1),\lim\limits_{n\to\infty}\sum\limits_{i=1}^n f(\frac{i}{n})\frac{1}{n}=\int_0^1f(x)dx$ <ul>
 <li>碰见<strong>夹逼做不出来</strong>的极限可以考虑<strong>定积分定义</strong>。看n和i是不是齐次的</li>
 </ul>
 </li>
@@ -1281,58 +1230,51 @@
 </li>
 </ul>
 <h3 id="2-计算-1"><a href="#2-计算-1" class="headerlink" title="2.计算"></a>2.计算</h3><h4 id="1）基本积分公式"><a href="#1）基本积分公式" class="headerlink" title="1）基本积分公式"></a>1）基本积分公式</h4><ol>
-<li><p>$\int x^k\text{d}x &#x3D; \frac{1}{k+1} x^{k+1} +C , (k \ne -1)$； $\begin{cases}\int \frac{1}{x^2}\text{d}x&amp;&#x3D;-\frac{1}{x}+C\ \int \frac{1}{\sqrt{x}} \text{d}x &amp;&#x3D; 2\sqrt{x} +C\end{cases}$ </p>
+<li><p>$\int x^k\text{d}x = \frac{1}{k+1} x^{k+1} +C \, (k \ne -1)$； $\begin{cases}\int \frac{1}{x^2}\text{d}x&amp;=-\frac{1}{x}+C\\ \int \frac{1}{\sqrt{x}} \text{d}x &amp;= 2\sqrt{x} +C\end{cases}$ </p>
 </li>
-<li><p>$\int \frac{1}{x} \text{d}x &#x3D; \ln{|x|} + C$</p>
+<li><p>$\int \frac{1}{x} \text{d}x = \ln{|x|} + C$</p>
 <ul>
-<li>$[\ln|u(x)|]_x’ &#x3D; \frac{u_x’}{u(x)}$</li>
+<li>$[\ln|u(x)|]_x’ = \frac{u_x’}{u(x)}$</li>
 </ul>
 </li>
-<li><p>$\int a^x \text{d}x &#x3D; \frac{1}{\ln{a}} a^x+ C$</p>
+<li><p>$\int a^x \text{d}x = \frac{1}{\ln{a}} a^x+ C$</p>
 <ul>
-<li>$\int e^x \text{d}x &#x3D; e^x + C$</li>
+<li>$\int e^x \text{d}x = e^x + C$</li>
 </ul>
 </li>
-<li><p>$\int \sin{x} \text{d}x &#x3D; -\cos{x} + C$</p>
-<ul>
-<li>$\int \cos{x} \text{d}x &#x3D; \sin{x} + C$</li>
-<li>$\int \tan{x} \text{d}x &#x3D; -\ln{|\cos{x}|} + C$</li>
-<li>$\int \cot{x} \text{d}x &#x3D; \ln{|\sin{x}|} + C$</li>
-<li>$\int \sec{x} \text{d}x &#x3D; \ln{|\sec{x}+\tan{x}|} + C$</li>
-<li>$\int \csc{x} \text{d}x &#x3D; \ln{|\csc{x}-\cot{x}|} + C$</li>
-<li>$\int \sec^2{x} \text{d}x &#x3D; \tan{x} + C$</li>
-<li>$\int \csc^2{x} \text{d}x &#x3D; -\cot{x} + C$</li>
-<li>$\int \sec{x}\tan{x} \text{d}x &#x3D; \sec{x} + C$</li>
-<li>$\int \csc{x}\cot{x} \text{d}x &#x3D; -\csc{x} + C$</li>
+<li>$\int \sin{x} \text{d}x = -\cos{x} + C$<ul>
+<li>$\int \cos{x} \text{d}x = \sin{x} + C$</li>
+<li>$\int \tan{x} \text{d}x = -\ln{|\cos{x}|} + C$</li>
+<li>$\int \cot{x} \text{d}x = \ln{|\sin{x}|} + C$</li>
+<li>$\int \sec{x} \text{d}x = \ln{|\sec{x}+\tan{x}|} + C$</li>
+<li>$\int \csc{x} \text{d}x = \ln{|\csc{x}-\cot{x}|} + C$</li>
+<li>$\int \sec^2{x} \text{d}x = \tan{x} + C$</li>
+<li>$\int \csc^2{x} \text{d}x = -\cot{x} + C$</li>
+<li>$\int \sec{x}\tan{x} \text{d}x = \sec{x} + C$</li>
+<li>$\int \csc{x}\cot{x} \text{d}x = -\csc{x} + C$</li>
 </ul>
 </li>
-<li><p>$\int \frac{1}{\sqrt{1-x^2}} \text{d}x &#x3D; \arcsin{x} + C$</p>
-<ul>
-<li>$\int \frac{1}{\sqrt{a^2-x^2}} \text{d}x &#x3D; \arcsin{\frac{x}{a}} + C$</li>
+<li>$\int \frac{1}{\sqrt{1-x^2}} \text{d}x = \arcsin{x} + C$<ul>
+<li>$\int \frac{1}{\sqrt{a^2-x^2}} \text{d}x = \arcsin{\frac{x}{a}} + C$</li>
 </ul>
 </li>
-<li><p>$\int \frac{1}{\sqrt{x^2+a^2}} \text{d}x &#x3D; \ln{(x+\sqrt{x^2+a^2})} + C$</p>
-<ul>
-<li>$\int \frac{1}{\sqrt{x^2-a^2}} \text{d}x &#x3D; \ln{|x+\sqrt{x^2-a^2}|} + C$</li>
+<li>$\int \frac{1}{\sqrt{x^2+a^2}} \text{d}x = \ln{(x+\sqrt{x^2+a^2})} + C$<ul>
+<li>$\int \frac{1}{\sqrt{x^2-a^2}} \text{d}x = \ln{|x+\sqrt{x^2-a^2}|} + C$</li>
 </ul>
 </li>
-<li><p>$\int \frac{1}{1+x^2} \text{d}x &#x3D; \arctan{x} + C$</p>
-<ul>
-<li>$\int \frac{1}{a^2+x^2} \text{d}x &#x3D; \frac{1}{a} \arctan{\frac{x}{a}} + C$</li>
+<li>$\int \frac{1}{1+x^2} \text{d}x = \arctan{x} + C$<ul>
+<li>$\int \frac{1}{a^2+x^2} \text{d}x = \frac{1}{a} \arctan{\frac{x}{a}} + C$</li>
 </ul>
 </li>
-<li><p>$\int \frac{1}{a^2-x^2} \text{d}x &#x3D; \frac{1}{2a} \ln{|\frac{a+x}{a-x}|} + C$</p>
-<ul>
-<li>$\int \frac{1}{x^2-a^2} \text{d}x &#x3D; \frac{1}{2a} \ln{|\frac{x-a}{x+a}|} + C$</li>
+<li>$\int \frac{1}{a^2-x^2} \text{d}x = \frac{1}{2a} \ln{|\frac{a+x}{a-x}|} + C$<ul>
+<li>$\int \frac{1}{x^2-a^2} \text{d}x = \frac{1}{2a} \ln{|\frac{x-a}{x+a}|} + C$</li>
 </ul>
 </li>
-<li><p>$\int \sqrt{a^2-x^2} \text{d}x &#x3D; \frac{a^2}{2} \arcsin{\frac{x}{a}} + \frac{x}{2} \sqrt{a^2-x^2} + C$</p>
-</li>
-<li><p>$\int sin^2xdx&#x3D;\frac{x}{2}-\frac{sin2x}{4}+C$；$sin^2&#x3D;\frac{1-cos2x}{2}$</p>
-<ul>
-<li>$\int cos^2xdx&#x3D;\frac{x}{2}+\frac{sin2x}{4}+C$；$cos^2&#x3D;\frac{1+cos2x}{2}$</li>
-<li>$\int tan^2xdx&#x3D;tanx-x+C$；$tan^2&#x3D;sec^2x-1$</li>
-<li>$\int cot^2xdx&#x3D;-cotx-x+C$；$cot^2&#x3D;csc^2x-1$</li>
+<li>$\int \sqrt{a^2-x^2} \text{d}x = \frac{a^2}{2} \arcsin{\frac{x}{a}} + \frac{x}{2} \sqrt{a^2-x^2} + C$</li>
+<li>$\int sin^2xdx=\frac{x}{2}-\frac{sin2x}{4}+C$；$sin^2=\frac{1-cos2x}{2}$<ul>
+<li>$\int cos^2xdx=\frac{x}{2}+\frac{sin2x}{4}+C$；$cos^2=\frac{1+cos2x}{2}$</li>
+<li>$\int tan^2xdx=tanx-x+C$；$tan^2=sec^2x-1$</li>
+<li>$\int cot^2xdx=-cotx-x+C$；$cot^2=csc^2x-1$ </li>
 </ul>
 </li>
 </ol>
@@ -1354,26 +1296,26 @@
 <li>解待定系数时候不需要硬解，可以设出来一些x值巧妙消掉几个字母</li>
 </ul>
 <h4 id="5）定积分"><a href="#5）定积分" class="headerlink" title="5）定积分"></a>5）定积分</h4><ul>
-<li><strong>区间再现</strong>公式：$\int_a^bf(x)dx&#x3D;\int_a^bf(a+b-x)dx$ 。<ul>
+<li><strong>区间再现</strong>公式：$\int_a^bf(x)dx=\int_a^bf(a+b-x)dx$ 。<ul>
 <li>要求函数连续</li>
 <li>一般是两个加起来好做</li>
 </ul>
 </li>
-<li><strong>点火公式</strong>: $I &#x3D; \int_0^{\frac{\pi}{2}} \sin^n{x} \mathrm{d}x&#x3D;\begin{cases}\frac{n-1}{n} \frac{n-3}{n-2} … \frac{1}{2} \cdot \frac{\pi}{2}&amp;,n为偶数(\ge2)\\frac{n-1}{n} \frac{n-3}{n-2} … \frac{2}{3} \cdot 1&amp;,n为奇数(\ge3)\end{cases}$ 。</li>
-<li>点火公式有x挡着：$\int_0^{nT}xf(x)dx&#x3D;\frac{n^2T}{2}\int_0^Tf(x)dx$ </li>
-<li><strong>扩大范围</strong>点火公式：$\begin{cases}\int_0^\pi sin^nxdx&#x3D;2\int_0^{\frac{\pi}{2}} \sin^n{x}dx\ \int_0^\pi cos^nxdx&#x3D;\begin{cases}0&amp;,n为正奇数 \2\int_0^{\frac{\pi}{2}} \cos^n{x}dx&amp;,n为正偶数\end{cases}\ \int_0^{2\pi}sin^nxdx&#x3D;\int_0^{2\pi}cos^nxdx&#x3D;\begin{cases}0&amp;,n为正奇数 \4\int_0^{\frac{\pi}{2}} \sin^n{x}dx&amp;,n为正偶数 \end{cases}\end{cases}$</li>
+<li><strong>点火公式</strong>: $I = \int_0^{\frac{\pi}{2}} \sin^n{x} \mathrm{d}x=\begin{cases}\frac{n-1}{n} \frac{n-3}{n-2} … \frac{1}{2} \cdot \frac{\pi}{2}&amp;,n为偶数(\ge2)\\\frac{n-1}{n} \frac{n-3}{n-2} … \frac{2}{3} \cdot 1&amp;,n为奇数(\ge3)\end{cases}$ 。</li>
+<li>点火公式有x挡着：$\int_0^{nT}xf(x)dx=\frac{n^2T}{2}\int_0^Tf(x)dx$ </li>
+<li><strong>扩大范围</strong>点火公式：$\begin{cases}\int_0^\pi sin^nxdx=2\int_0^{\frac{\pi}{2}} \sin^n{x}dx\\ \int_0^\pi cos^nxdx=\begin{cases}0&amp;,n为正奇数 \\2\int_0^{\frac{\pi}{2}} \cos^n{x}dx&amp;,n为正偶数\end{cases}\\ \int_0^{2\pi}sin^nxdx=\int_0^{2\pi}cos^nxdx=\begin{cases}0&amp;,n为正奇数 \\4\int_0^{\frac{\pi}{2}} \sin^n{x}dx&amp;,n为正偶数 \end{cases}\end{cases}$ </li>
 </ul>
 <h2 id="九、积分几何应用"><a href="#九、积分几何应用" class="headerlink" title="九、积分几何应用"></a>九、积分几何应用</h2><h3 id="1-平面面积"><a href="#1-平面面积" class="headerlink" title="1.平面面积"></a>1.平面面积</h3><ul>
-<li>射线旋转出来的面积：$S&#x3D;\int_\alpha^\beta \frac{1}{2}|r_2^2-r_1^2|d\theta$ <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020146313.png" alt="image-20220220154049347" style="zoom:25%;" /></li>
+<li>射线旋转出来的面积：$S=\int_\alpha^\beta \frac{1}{2}|r_2^2-r_1^2|d\theta$ <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020146313.png" alt="image-20220220154049347" style="zoom:25%;" /></li>
 <li>参数方程算面积，都转换到t，y直接带y(t)，dx化为X’(t)dt。（范围也化成t的范围）</li>
 </ul>
 <h3 id="2-旋转体体积"><a href="#2-旋转体体积" class="headerlink" title="2.旋转体体积"></a>2.旋转体体积</h3><ul>
-<li>绕y旋转用一堆空心圆柱来算 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020146314.png" alt="image-20220220164134432" style="zoom:20%;" /></li>
+<li>绕y旋转用一堆空心圆柱来算 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020146314.png" alt="image-20220220164134432" style="zoom:20%;" /> </li>
 </ul>
-<h3 id=""><a href="#" class="headerlink" title=""></a></h3><h2 id="十、积分等式与不等式"><a href="#十、积分等式与不等式" class="headerlink" title="十、积分等式与不等式"></a>十、积分等式与不等式</h2><ul>
+<h3 id=""><a href="#" class="headerlink" title=" "></a> </h3><h2 id="十、积分等式与不等式"><a href="#十、积分等式与不等式" class="headerlink" title="十、积分等式与不等式"></a>十、积分等式与不等式</h2><ul>
 <li>等式<ul>
 <li>中值定理：<ul>
-<li>f,g在$[a,b]$上<strong>连续且g不变号</strong>，至少存在一点$\xi\in[a,b]$，使得$\int_a^bf(x)g(x)dx&#x3D;f(\xi)\int_a^bg(x)dx$ </li>
+<li>f,g在$[a,b]$上<strong>连续且g不变号</strong>，至少存在一点$\xi\in[a,b]$，使得$\int_a^bf(x)g(x)dx=f(\xi)\int_a^bg(x)dx$ </li>
 <li>用柯西中值定理证，设出来变上限积分往里带</li>
 </ul>
 </li>
@@ -1393,21 +1335,23 @@
 <li>内点，聚点（边界点）</li>
 </ul>
 </li>
-<li>可微：$\lim\limits_{\Delta x\to 0,\Delta y\to0}\frac{f(x+\Delta x,y+\Delta y)-f(x,y)}{\sqrt{\Delta x^2+\Delta y^2}}&#x3D;0$ </li>
-<li>偏导数连续性：$\lim\limits_{x\to0}f_x’(x,y)&#x3D;f’_x(0,y)$，y同理</li>
+<li>可微：$\lim\limits_{\Delta x\to 0,\Delta y\to0}\frac{f(x+\Delta x,y+\Delta y)-f(x,y)}{\sqrt{\Delta x^2+\Delta y^2}}=0$ </li>
+<li>偏导数连续性：$\lim\limits_{x\to0}f_x’(x,y)=f’_x(0,y)$，y同理</li>
 </ul>
 <h3 id="2-多元函数微分法则"><a href="#2-多元函数微分法则" class="headerlink" title="2.多元函数微分法则"></a>2.多元函数微分法则</h3><ul>
 <li><p>链式求导规则 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020146315.png" alt="image-20220222222551924" style="zoom:25%;" /></p>
 </li>
-<li><p>隐函数存在定理（公式法）：$\frac{dy}{dx}&#x3D;-\frac{F_x’}{F_y’}$ </p>
+<li><p>隐函数存在定理（公式法）：$\frac{dy}{dx}=-\frac{F_x’}{F_y’}$ </p>
 <ul>
 <li><p>例：已知两个偏导数，求原函数</p>
 <ul>
 <li>积回去一个，设出来另一个</li>
-<li>用设出来的函数再往回积</li>
-</ul>
+<li><p>用设出来的函数再往回积</p>
 <blockquote>
-<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020146316.png" alt="image-20220222232612930" style="zoom:25%;" /></blockquote>
+<p><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020146316.png" alt="image-20220222232612930" style="zoom:25%;" /></p>
+</blockquote>
+</li>
+</ul>
 </li>
 </ul>
 </li>
@@ -1416,7 +1360,7 @@
 <li>概念</li>
 <li>无条件极值：先求出<strong>可疑点</strong>，再求偏导<strong>验证</strong><ul>
 <li>必要条件：一阶偏导数存在且为0</li>
-<li>充分条件：$\Delta&#x3D;AC-B^2&#x3D;\begin{cases}&gt;0&amp;极值\begin{cases}A&lt;0&amp;极大值\A&gt;0&amp;极小值\end{cases}\&lt;0&amp;非极值\&#x3D;0&amp;方法失效，另谋他法\end{cases}$</li>
+<li>充分条件：$\Delta=AC-B^2=\begin{cases}&gt;0&amp;极值\begin{cases}A<0&极大值\\A>0&amp;极小值\end{cases}\\&lt;0&amp;非极值\\=0&amp;方法失效，另谋他法\end{cases}$  </li>
 </ul>
 </li>
 <li>条件极值与拉格朗日乘数法<ul>
@@ -1430,13 +1374,13 @@
 </ul>
 <h3 id="2-计算-2"><a href="#2-计算-2" class="headerlink" title="2.计算"></a>2.计算</h3><ul>
 <li>直角坐标系</li>
-<li>极坐标系：$d\sigma&#x3D;d\theta \cdot rdr$，<strong>别忘了r！！！</strong> <ul>
+<li>极坐标系：$d\sigma=d\theta \cdot rdr$，<strong>别忘了r！！！</strong> <ul>
 <li>看有没有$x^2+y^2或者\frac{x}{y}或者\frac{y}{x}$的形式</li>
 <li>看积分区域是否圆</li>
 </ul>
 </li>
 <li>积分次序<ul>
-<li>常见积不出来的函数。调整积分次序<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020146317.png" alt="image-20220223191644151" style="zoom:25%;" /></li>
+<li>常见积不出来的函数。调整积分次序<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020146317.png" alt="image-20220223191644151" style="zoom:25%;" /> </li>
 </ul>
 </li>
 <li>二重积分处理一元积分问题</li>
@@ -1456,33 +1400,33 @@
 </li>
 <li><p>可化为变量可分离</p>
 <ul>
-<li>$\frac{dy}{dx}&#x3D;f(ax+by+c)$，令$u&#x3D;ax+by+c$，则有$\frac{du}{dx}&#x3D;a+bf(u)$ </li>
+<li>$\frac{dy}{dx}=f(ax+by+c)$，令$u=ax+by+c$，则有$\frac{du}{dx}=a+bf(u)$ </li>
 <li>齐次型：可以整体换元的</li>
 </ul>
 </li>
 <li><p>一阶线性微分方程</p>
 <ul>
-<li><p>对于$y’+py&#x3D;q$，$y&#x3D;e^{-\int pdx}[\int e^{\int pdx}\cdot qdx+C]$ </p>
+<li><p>对于$y’+py=q$，$y=e^{-\int pdx}[\int e^{\int pdx}\cdot qdx+C]$ </p>
 </li>
 <li><p><strong>lnu注意绝对值！</strong>一阶这里不加绝对值，其他时候加绝对值</p>
 </li>
-<li><p>例：求$y’+1&#x3D;e^{-y}sinx$的通解</p>
+<li><p>例：求$y’+1=e^{-y}sinx$的通解</p>
 <blockquote>
-<p>$e^y\cdot y’+e^y&#x3D;sinx$，即$(e^y)’+e^y&#x3D;sinx$</p>
+<p>$e^y\cdot y’+e^y=sinx$，即$(e^y)’+e^y=sinx$ </p>
 </blockquote>
 </li>
 </ul>
 </li>
 <li><p>伯努利方程</p>
 <ul>
-<li>$y’+py&#x3D;q\cdot y^n$ <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020146318.png" alt="image-20220223222751901" style="zoom:33%;" /></li>
+<li>$y’+py=q\cdot y^n$ <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020146318.png" alt="image-20220223222751901" style="zoom:33%;" /> </li>
 </ul>
 </li>
 </ul>
 <h3 id="3-二阶可降阶求解"><a href="#3-二阶可降阶求解" class="headerlink" title="3.二阶可降阶求解"></a>3.二阶可降阶求解</h3><ul>
-<li>缺y型：$y’’&#x3D;f(x,y’)$，没有y，正常算y’，再求y</li>
-<li>缺x型：$y’’&#x3D;f(y,y’)$，没有x，<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020146319.png" alt="image-20220223225437032" style="zoom:25%;" /> </li>
-<li>两种题型只是<strong>p代的形式不同</strong></li>
+<li>缺y型：$y’’=f(x,y’)$，没有y，正常算y’，再求y</li>
+<li>缺x型：$y’’=f(y,y’)$，没有x，<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020146319.png" alt="image-20220223225437032" style="zoom:25%;" /> </li>
+<li>两种题型只是<strong>p代的形式不同</strong> </li>
 </ul>
 <h3 id="4-高阶"><a href="#4-高阶" class="headerlink" title="4.高阶"></a>4.高阶</h3><ul>
 <li><p>概念</p>
@@ -1495,13 +1439,13 @@
 <ul>
 <li><p>两个线性无关的解，线性组合是通解</p>
 </li>
-<li><p>齐次通解 + 特解 &#x3D; 非齐次特解。自由项可拆，特解相加</p>
+<li><p>齐次通解 + 特解 = 非齐次特解。自由项可拆，特解相加</p>
 </li>
-<li><p>特解形式： $y’’+py’+qy&#x3D;0$ 求$\Delta$，$y_{齐通}&#x3D;\begin{cases}C_1e^{\lambda_1x}+C_2e^{\lambda_2x}&amp;\Delta&gt;0\(C_1+C_2x)e^{\lambda x}&amp;\Delta&#x3D;0\e^{\alpha x}(C_1cos\beta x+C_2sin\beta x)&amp;\Delta&lt;0\end{cases}$ </p>
+<li><p>特解形式： $y’’+py’+qy=0$ 求$\Delta$，$y_{齐通}=\begin{cases}C_1e^{\lambda_1x}+C_2e^{\lambda_2x}&amp;\Delta&gt;0\(C_1+C_2x)e^{\lambda x}&amp;\Delta=0\\e^{\alpha x}(C_1cos\beta x+C_2sin\beta x)&amp;\Delta&lt;0\end{cases}$ </p>
 <blockquote>
-<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020146320.png" alt="image-20220302204304394" style="zoom:30%;" />
-
-<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020146321.png" alt="image-20220303095129056" style="zoom:30%;" /></blockquote>
+<p><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020146320.png" alt="image-20220302204304394" style="zoom:30%;" /></p>
+<p><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020146321.png" alt="image-20220303095129056" style="zoom:30%;" /></p>
+</blockquote>
 </li>
 </ul>
 </li>
@@ -1519,9 +1463,8 @@
 </li>
 <li><p>比较判别法</p>
 <blockquote>
-<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020146322.png" alt="image-20220303161148444" style="zoom:25%;" />
-
-<p>广义p-级数：$\sum\limits_2^\infty\frac{1}{n(ln\ n)^p};;;\begin{cases}p&gt;1&amp;收敛\p\le1&amp;发散\end{cases}$ </p>
+<p><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020146322.png" alt="image-20220303161148444" style="zoom:25%;" /></p>
+<p>广义p-级数：$\sum\limits_2^\infty\frac{1}{n(ln\ n)^p}\;\;\;\begin{cases}p&gt;1&amp;收敛\\p\le1&amp;发散\end{cases}$ </p>
 </blockquote>
 </li>
 <li><p>比较判别法的极限形式</p>
@@ -1531,14 +1474,14 @@
 </li>
 <li><p>比值判别法（达朗贝尔）</p>
 <ul>
-<li>通项后一项比它 求极限，极限&lt;1收敛，&gt;1发散，&#x3D;1无法判别</li>
-<li><strong>通项里带n+1次方或者比值的时候好用</strong></li>
+<li>通项后一项比它 求极限，极限<1收敛，>1发散，=1无法判别</li>
+<li><strong>通项里带n+1次方或者比值的时候好用</strong> </li>
 </ul>
 </li>
 <li><p>根植判别法（柯西）</p>
 <ul>
 <li>开n次跟号，小于1收敛，大于1发散，等于1无法判别</li>
-<li><strong>次数越高越方便</strong></li>
+<li><strong>次数越高越方便</strong> </li>
 </ul>
 </li>
 </ul>
@@ -1546,14 +1489,14 @@
 <li><p>交错级数</p>
 <ul>
 <li>莱布尼茨判别法：通项绝对值单调不增，趋于0</li>
-<li><strong>造正负号，讨论单调性</strong></li>
+<li><strong>造正负号，讨论单调性</strong> </li>
 </ul>
 </li>
 <li><p>任意项级数</p>
 <ul>
 <li>绝对收敛：加绝对值后收敛</li>
 <li>条件收敛：本身收敛，加绝对值后发散</li>
-<li><strong>看见平方项想到基本不等式！</strong></li>
+<li><strong>看见平方项想到基本不等式！</strong> </li>
 </ul>
 </li>
 </ul>
@@ -1562,12 +1505,12 @@
 <ul>
 <li><p>阿贝尔定理：<strong>两个点单独讨论！</strong> </p>
 <blockquote>
-<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020146323.png" alt="image-20220304085403041" style="zoom:35%;" />
+<p><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020146323.png" alt="image-20220304085403041" style="zoom:35%;" /></p>
 </blockquote>
 </li>
-<li><p>收敛域求法：$\lim\limits_{n\to\infty}|\frac{a_{n+1}}{a_n}|&#x3D;\rho$，$R&#x3D;\frac{1}{\rho}$ </p>
+<li><p>收敛域求法：$\lim\limits_{n\to\infty}|\frac{a_{n+1}}{a_n}|=\rho$，$R=\frac{1}{\rho}$ </p>
 <ul>
-<li>$\lim\limits_{n\to\infty}\frac{|u_{n+1}(x)|}{|u_n(x)|}&#x3D;\rho，或者开n次跟号$，令其&lt;1，得到的开区间就是收敛域。再判断端点</li>
+<li>$\lim\limits_{n\to\infty}\frac{|u_{n+1}(x)|}{|u_n(x)|}=\rho，或者开n次跟号$，令其&lt;1，得到的开区间就是收敛域。再判断端点</li>
 <li>条件收敛的半径就是收敛半径<ol>
 <li>乘除因式$(x-x_0)^k$ 或者平移，半径不变</li>
 <li>逐项求导，半径不变，收敛域可能缩小</li>
@@ -1583,7 +1526,7 @@
 <li><p>运算法则</p>
 <ul>
 <li>通项和下标都相同才能加减</li>
-<li>通项下标一起变 $\sum\limits_{n&#x3D;k}^\infty a_nx^n&#x3D;\sum\limits_{n&#x3D;k+l}^\infty a_{n-l}x^{n-l}$ </li>
+<li>通项下标一起变 $\sum\limits_{n=k}^\infty a_nx^n=\sum\limits_{n=k+l}^\infty a_{n-l}x^{n-l}$ </li>
 <li>只变下标：拆出来前n项</li>
 <li>只变通项：提出来n次幂</li>
 </ul>
@@ -1598,7 +1541,7 @@
 <ul>
 <li><p>先导后积（用变限积分避免+C）（<strong>n在分母上</strong>）</p>
 <blockquote>
-<p>$\int_{x_0}^xS’(t)dt&#x3D;S(t)|<em>{x_0}^x&#x3D;S(x)-S(x_0)$ 因此 $S(x)&#x3D;S(x_0)+\int</em>{x_0}^xS’(t)dt$。$x_0$通常选为中心点，好算</p>
+<p>$\int_{x_0}^xS’(t)dt=S(t)|_{x_0}^x=S(x)-S(x_0)$ 因此 $S(x)=S(x_0)+\int_{x_0}^xS’(t)dt$。$x_0$通常选为中心点，好算</p>
 </blockquote>
 </li>
 <li><p>先积后导（<strong>n在分子上</strong>）</p>
@@ -1620,20 +1563,20 @@
 <h2 id="十五、数一数二专题"><a href="#十五、数一数二专题" class="headerlink" title="十五、数一数二专题"></a>十五、数一数二专题</h2><h3 id="1-微分"><a href="#1-微分" class="headerlink" title="1.微分"></a>1.微分</h3><ul>
 <li><p>物理应用</p>
 </li>
-<li><p><strong>相关变化率</strong>：$\frac{dy}{dt}&#x3D;\frac{dy}{dx}\cdot\frac{dx}{dt}$ </p>
+<li><p><strong>相关变化率</strong>：$\frac{dy}{dt}=\frac{dy}{dx}\cdot\frac{dx}{dt}$ </p>
 <blockquote>
 <p>例：<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020146326.png" alt="image-20220304132010923" style="zoom:33%;" /></p>
 </blockquote>
 </li>
-<li><p>几何应用：曲率$k&#x3D;\frac{|y’’|}{[1+(y’)^2]^\frac{3}{2}}$，曲率半径$R&#x3D;\frac{1}{k}$</p>
+<li><p>几何应用：曲率$k=\frac{|y’’|}{[1+(y’)^2]^\frac{3}{2}}$，曲率半径$R=\frac{1}{k}$ </p>
 </li>
 </ul>
 <h3 id="2-积分"><a href="#2-积分" class="headerlink" title="2.积分"></a>2.积分</h3><ul>
 <li><p>物理应用</p>
 <ul>
-<li><p>抽水做功$W&#x3D;x\cdot\int_a^b\rho gA(x)dx&#x3D;\rho g\int_a^bxA(x)dx$ </p>
+<li><p>抽水做功$W=x\cdot\int_a^b\rho gA(x)dx=\rho g\int_a^bxA(x)dx$ </p>
 </li>
-<li><p>水压力$F&#x3D;\int_a^b\rho gx\cdot[f(x)-h(x)]dx$ </p>
+<li><p>水压力$F=\int_a^b\rho gx\cdot[f(x)-h(x)]dx$ </p>
 <blockquote>
 <p>例：<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020146327.png" alt="image-20220304134700776" style="zoom:33%;" /></p>
 </blockquote>
@@ -1649,9 +1592,9 @@
 </ul>
 </li>
 </ul>
-<h3 id="3-欧拉方程"><a href="#3-欧拉方程" class="headerlink" title="3.欧拉方程"></a>3.欧拉方程</h3><p>形如$x^2y’’+pxy’+qy&#x3D;f(x)$。解法：x&gt;0时令$x&#x3D;e^t$，x&lt;0时令$x&#x3D;-e^t$，方程化为$y’’_t+(p-1)y’_t+qy&#x3D;f(e^x)$。</p>
+<h3 id="3-欧拉方程"><a href="#3-欧拉方程" class="headerlink" title="3.欧拉方程"></a>3.欧拉方程</h3><p>形如$x^2y’’+pxy’+qy=f(x)$。解法：x&gt;0时令$x=e^t$，x&lt;0时令$x=-e^t$，方程化为$y’’_t+(p-1)y’_t+qy=f(e^x)$。</p>
 <h3 id="4-傅立叶级数"><a href="#4-傅立叶级数" class="headerlink" title="4.傅立叶级数"></a>4.傅立叶级数</h3><ul>
-<li><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020146331.png" alt="image-20220304164107852" style="zoom:33%;" /> $\begin{cases}a_n&#x3D;\frac{1}{l}\int_{-l}^lf(x)cos\frac{n\pi}{l}xdx,&amp;n&#x3D;0,1,2…\b_n&#x3D;\frac{1}{l}\int_{-l}^lf(x)sin\frac{n\pi}{l}xdx,&amp;n&#x3D;0,1,2…\a_0&#x3D;\frac{1}{l}\int_{-l}^lf(x)dx\end{cases}$ </li>
+<li><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020146331.png" alt="image-20220304164107852" style="zoom:33%;" /> $\begin{cases}a_n=\frac{1}{l}\int_{-l}^lf(x)cos\frac{n\pi}{l}xdx,&amp;n=0,1,2…\\b_n=\frac{1}{l}\int_{-l}^lf(x)sin\frac{n\pi}{l}xdx,&amp;n=0,1,2…\\a_0=\frac{1}{l}\int_{-l}^lf(x)dx\end{cases}$ </li>
 <li>定义域给一半，要求展开成正线级数或者余弦级数，按要求延拓再展开</li>
 </ul>
 <h2 id="十六、空间解析几何"><a href="#十六、空间解析几何" class="headerlink" title="十六、空间解析几何"></a>十六、空间解析几何</h2><h3 id="1-向量"><a href="#1-向量" class="headerlink" title="1.向量"></a>1.向量</h3><ul>
@@ -1662,19 +1605,19 @@
 <h3 id="2-平面与直线"><a href="#2-平面与直线" class="headerlink" title="2.平面与直线"></a>2.平面与直线</h3><ul>
 <li><p>平面方程</p>
 <blockquote>
-<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020146335.png" alt="image-20220304200430063" style="zoom:40%;" />
+<p><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020146335.png" alt="image-20220304200430063" style="zoom:40%;" /></p>
 </blockquote>
 </li>
 <li><p>直线方程</p>
 <blockquote>
-<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020146336.png" alt="image-20220304200733367" style="zoom:40%;" />
+<p><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020146336.png" alt="image-20220304200733367" style="zoom:40%;" /></p>
 </blockquote>
 </li>
-<li><p>点面距离：$d&#x3D;\frac{|Ax_0+By_0+Cz_0+D|}{\sqrt{A^2+B^2+C^2}}$</p>
+<li><p>点面距离：$d=\frac{|Ax_0+By_0+Cz_0+D|}{\sqrt{A^2+B^2+C^2}}$ </p>
 </li>
 </ul>
 <h3 id="3-曲线与曲面"><a href="#3-曲线与曲面" class="headerlink" title="3.曲线与曲面"></a>3.曲线与曲面</h3><ul>
-<li>空间曲线在坐标面上投影：联立$\begin{cases}F(x,y,z)&#x3D;0\G(x,y,z)&#x3D;0\end{cases}$，消去z得到$\phi(x,y)&#x3D;0$，则投影为$\begin{cases}\phi(x,y)&#x3D;0\z&#x3D;0\end{cases}$</li>
+<li>空间曲线在坐标面上投影：联立$\begin{cases}F(x,y,z)=0\\G(x,y,z)=0\end{cases}$，消去z得到$\phi(x,y)=0$，则投影为$\begin{cases}\phi(x,y)=0\\z=0\end{cases}$ </li>
 </ul>
 <h3 id="4-曲面与曲面"><a href="#4-曲面与曲面" class="headerlink" title="4.曲面与曲面"></a>4.曲面与曲面</h3><ul>
 <li><p>二次曲面</p>
@@ -1692,14 +1635,14 @@
 <li><p>旋转曲面：绕谁转谁不变，另一个字母写成另外两个字母的平方和开根号</p>
 </li>
 <li><blockquote>
-<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020146358.png" alt="image-20220304204422876" style="zoom: 33%;" />
+<p><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020146358.png" alt="image-20220304204422876" style="zoom: 33%;" /></p>
 </blockquote>
 </li>
 <li><p>例：<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020146359.png" alt="image-20220304205216327" style="zoom:33%;" /></p>
 </li>
 </ul>
 <h3 id="5-多元微分几何应用"><a href="#5-多元微分几何应用" class="headerlink" title="5.多元微分几何应用"></a>5.多元微分几何应用</h3><ul>
-<li>&#x3D;&#x3D;“切一刀，转一圈，投下来”&#x3D;&#x3D;</li>
+<li>==“切一刀，转一圈，投下来”==</li>
 <li>曲线的切线与法平面<ul>
 <li>参数方程给出：三个参数方程求导就是切向量</li>
 <li>交面式方程给出 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020146360.png" alt="image-20220305080443286" style="zoom:33%;" /></li>
@@ -1719,7 +1662,8 @@
 <p>曲面积分是一个面，表达式只有等号，而三重积分是一个体，小于等于号</p>
 </blockquote>
 <ul>
-<li>计算<ul>
+<li><p>计算</p>
+<ul>
 <li><p>基础方法</p>
 <ul>
 <li><p>直角坐标系</p>
@@ -1735,7 +1679,7 @@
 </li>
 <li><p>柱面坐标系：一个定积分+极坐标系下的二重积分</p>
 </li>
-<li><p>球面坐标系：记得乘$r^2sin\phi$，$\begin{cases}x&#x3D;rsin\phi cos\theta\y&#x3D;rsin\phi sin\theta\z&#x3D;rcos\phi\end{cases}$</p>
+<li><p>球面坐标系：记得乘$r^2sin\phi$，$\begin{cases}x=rsin\phi cos\theta\\y=rsin\phi sin\theta\\z=rcos\phi\end{cases}$ </p>
 </li>
 </ul>
 </li>
@@ -1750,7 +1694,7 @@
 </ul>
 <h3 id="2-一型曲线积分"><a href="#2-一型曲线积分" class="headerlink" title="2.一型曲线积分"></a>2.一型曲线积分</h3><ul>
 <li>概念性质<ul>
-<li>概念：沿着一条曲线路径进行定积分**(ds)** <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020146364.png" alt="image-20220308081455335" style="zoom:20%;" /></li>
+<li>概念：沿着一条曲线路径进行定积分<strong>(ds)</strong> <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020146364.png" alt="image-20220308081455335" style="zoom:20%;" /> </li>
 </ul>
 </li>
 </ul>
@@ -1759,21 +1703,20 @@
 </li>
 <li><p>计算</p>
 <ul>
-<li>化为二重积分：<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020146365.png" alt="image-20220308220011588" style="zoom:20%;" /></li>
+<li>化为二重积分：<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020146365.png" alt="image-20220308220011588" style="zoom:20%;" /> </li>
 </ul>
 </li>
-<li><p>应用</p>
-<ul>
+<li>应用<ul>
 <li>几何量<ul>
-<li>面积：例：<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020146366.png" alt="image-20220308224306051" style="zoom:25%;" /></li>
+<li>面积：例：<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020146366.png" alt="image-20220308224306051" style="zoom:25%;" /> </li>
 </ul>
 </li>
 <li>转动惯量<ul>
-<li>空间物体：$I_x&#x3D;\iiint_\Omega (y^2+z^2)\rho(x,y,z)dv$。<strong>其他两个字母的平方和</strong>以及$\rho$来算三重积分</li>
+<li>空间物体：$I_x=\iiint_\Omega (y^2+z^2)\rho(x,y,z)dv$。<strong>其他两个字母的平方和</strong>以及$\rho$来算三重积分</li>
 </ul>
 </li>
 <li>引力<ul>
-<li>空间物体：$F_x&#x3D;Gm\iiint_\Omega\frac{\rho(x,y,z)(x-x_0)}{[(x-x_0)^2+(y-y_0)^2+(z-z_0)^2]^{\frac{3}{2}}}d v$。下面分母是<strong>距离的三次方</strong></li>
+<li>空间物体：$F_x=Gm\iiint_\Omega\frac{\rho(x,y,z)(x-x_0)}{[(x-x_0)^2+(y-y_0)^2+(z-z_0)^2]^{\frac{3}{2}}}d v$。下面分母是<strong>距离的三次方</strong></li>
 </ul>
 </li>
 </ul>
@@ -1782,7 +1725,7 @@
 <h3 id="4-二型曲线积分"><a href="#4-二型曲线积分" class="headerlink" title="4.二型曲线积分"></a>4.二型曲线积分</h3><ul>
 <li><p>概念性质</p>
 <ul>
-<li>概念：$W&#x3D;\int_{A\to B}Pdx+Qdy+rdz$ <strong>（有起点终点）</strong></li>
+<li>概念：$W=\int_{A\to B}Pdx+Qdy+rdz$ <strong>（有起点终点）</strong></li>
 </ul>
 </li>
 <li><p>计算</p>
@@ -1794,9 +1737,9 @@
 </li>
 <li><p><strong>格林公式</strong>：封闭曲线，左手在区域内，PQ有一阶连续偏导</p>
 <ul>
-<li><p>$\oint\limits_LPdx+Qdy&#x3D;\iint\limits_D(Q_x-P_y)d\sigma$ </p>
+<li><p>$\oint\limits_LPdx+Qdy=\iint\limits_D(Q_x-P_y)d\sigma$ </p>
 </li>
-<li><p>&#x3D;&#x3D;看好谁是P谁是Q！！&#x3D;&#x3D; </p>
+<li><p>==看好谁是P谁是Q！！== </p>
 </li>
 <li><p>例：</p>
 <blockquote>
@@ -1816,7 +1759,7 @@
 </ul>
 </li>
 <li><strong>高斯公式</strong>：封闭曲面，取外侧，PQR都有一阶连续偏导<ul>
-<li>$\oiint\limits_{\sum_{外}}Pdydz+Qdzdx+Rdxdy&#x3D;\iiint\limits_\Omega(P_x+Q_y+R_z)dV$</li>
+<li>$\oiint\limits_{\sum_{外}}Pdydz+Qdzdx+Rdxdy=\iiint\limits_\Omega(P_x+Q_y+R_z)dV$ </li>
 </ul>
 </li>
 </ul>
@@ -1835,9 +1778,14 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://gilgamesh-lzq.github.io/2022/04/02/%E5%BC%A0%E5%AE%87%E4%B8%80%E8%BD%AE%E9%AB%98%E6%95%B0/" data-id="cl1htrwvw0002lt8o28ha4ccf" data-title="张宇一轮高数" class="article-share-link">Share</a>
       
+        <a data-url="https://gilgamesh-lzq.github.io/2022/04/02/%E5%BC%A0%E5%AE%87%E4%B8%80%E8%BD%AE%E9%AB%98%E6%95%B0/" data-id="cl1hunox30001vg8o2qyuc5ny" class="article-share-link">Share</a>
       
+
+      
+        <a href="https://gilgamesh-lzq.github.io/2022/04/02/%E5%BC%A0%E5%AE%87%E4%B8%80%E8%BD%AE%E9%AB%98%E6%95%B0/#ds-thread" class="article-comment-link">Comments</a>
+      
+
       
     </footer>
   </div>
@@ -1845,19 +1793,15 @@
 </article>
 
 
-
   
-
 
 </section>
-        
-          <aside id="sidebar">
+      
+      <aside id="sidebar">
   
     
-
   
     
-
   
     
   
@@ -1865,10 +1809,9 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/04/">四月 2022</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/04/">四月 2022</a><span class="archive-list-count">3</span></li></ul>
     </div>
   </div>
-
 
   
     
@@ -1894,47 +1837,124 @@
   </div>
 
   
-</aside>
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Links</h3>
+    <div class="widget">
+      <ul>
         
-      </div>
-      <footer id="footer">
+          <li>
+            <a href="http://arvinxiang.com" target="_blank">主题作者</a>
+          </li>
+        
+          <li>
+            <a href="http://reqianduan.com" target="_blank">热前端</a>
+          </li>
+        
+          <li>
+            <a href="http://yuancheng.work" target="_blank">远程.work</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+      
+    </div>
+    <footer id="footer">
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      
       &copy; 2022 Gilgamesh<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+      Powered by <a href="//hexo.io/" target="_blank">Hexo</a>
+      .
+      Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>
     </div>
   </div>
 </footer>
-
-    </div>
-    <nav id="mobile-nav">
+  </div>
+  <nav id="mobile-nav">
   
     <a href="/" class="mobile-nav-link">Home</a>
   
     <a href="/archives" class="mobile-nav-link">Archives</a>
   
 </nav>
-    
+  <!-- totop start -->
+<div id="totop">
+<a title="totop"><img src="/img/scrollup.png"/></a>
+</div>
+
+<!-- totop end -->
+
+<!-- 多说公共js代码 start -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"reqianduan"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+<!-- 多说公共js代码 end -->
 
 
-<script src="/js/jquery-3.4.1.min.js"></script>
+<!-- 百度分享 start -->
+
+<!-- 百度分享 end -->
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
 
 
+
+<! -- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+                processEscapes: true
+                    
+}
   
-<script src="/fancybox/jquery.fancybox.min.js"></script>
+        });
+</script>
 
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+tex2jax: {
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+                  
+}
+    
+        });
+</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Queue(function() {
+            var all = MathJax.Hub.getAllJax(), i;
+            for(i=0; i < all.length; i += 1) {
+                            all[i].SourceElement().parentNode.className += ' has-jax';
+                                    
+            }
+                
+        });
+</script>
+
+<script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.5.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
 
 
 
 <script src="/js/script.js"></script>
 
 
-
-
-
-  </div>
+</div>
 </body>
 </html>
