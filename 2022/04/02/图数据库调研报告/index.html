@@ -1,12 +1,22 @@
 
+
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/myfavicon.png">
+  <link rel="icon" href="/img/myfavicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
   
-  <title>图数据库调研报告 | Gilgamesh&#39;s Blog</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="图数据库调研报告  1951851 刘子千  2021-11-28  我主要参考了《Demystifying Graph Databases: Analysis and Taxonomy of Data Organization, System Designs, and Graph Queries》这篇文章。它是2019年10月的一篇针对图数据库的综述，这篇综述本身引用了202篇参考文献，被引29">
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Gilgamesh">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="图数据库调研报告  1951851 刘子千  2021-11-28  我主要参考了《Demystifying Graph Databases: Analysis and Taxonomy of Data Organization, System Designs, and Graph Queries》这篇文章。它是2019年10月的一篇针对图数据库的综述，这篇综述本身引用了202篇参考文献，被引29">
 <meta property="og:type" content="article">
 <meta property="og:title" content="图数据库调研报告">
 <meta property="og:url" content="https://gilgamesh-lzq.github.io/2022/04/02/%E5%9B%BE%E6%95%B0%E6%8D%AE%E5%BA%93%E8%B0%83%E7%A0%94%E6%8A%A5%E5%91%8A/index.html">
@@ -30,80 +40,223 @@
 <meta property="article:published_time" content="2022-04-02T11:10:13.000Z">
 <meta property="article:modified_time" content="2022-04-02T11:10:42.142Z">
 <meta property="article:author" content="Gilgamesh">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:02-19:08:26-64f1dd9348ca3abff26e19083013d9e0_4_Figure_3.png">
   
   
-    <link rel="icon" href="/favicon.png">
-  
-  
-<link rel="stylesheet" href="/css/style.css">
+  <title>图数据库调研报告 - Gilgamesh&#39;s Blog</title>
 
-  <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4/github-markdown.min.css" />
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hint.css@2/hint.min.css" />
+
   
-<meta name="generator" content="Hexo 6.1.0"></head>
-<body>
-<div id="container">
-  <div id="wrap">
-    <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Gilgamesh&#39;s Blog</a>
-      </h1>
+    
+    
       
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css" />
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"gilgamesh-lzq.github.io","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 6.1.0"></head>
+
+
+<body>
+  <header style="height: 80vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Gilgamesh&#39;s Blog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
     </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//www.baidu.com/baidu" method="get" accept-charset="utf-8" class="search-form">
-          <input type="search" name="word" maxlength="20" class="search-form-input" placeholder="Search">
-          <input type="submit" value="" class="search-form-submit">
-          <input name=tn type=hidden value="bds">
-          <input name=cl type=hidden value="3">
-          <input name=ct type=hidden value="2097152">
-          <input type="hidden" name="si" value="gilgamesh-lzq.github.io">
-        </form>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/post.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="图数据库调研报告">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2022-04-02 19:10" pubdate>
+        2022年4月2日 晚上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      15k 字
+    </span>
+  
+
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      122 分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+            <div class="scroll-down-bar">
+              <i class="iconfont icon-arrowdown"></i>
+            </div>
+          
+        </div>
       </div>
     </div>
-  </div>
-</header>
-    <div class="outer">
-      <section id="main"><article id="post-图数据库调研报告" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2022/04/02/%E5%9B%BE%E6%95%B0%E6%8D%AE%E5%BA%93%E8%B0%83%E7%A0%94%E6%8A%A5%E5%91%8A/" class="article-date">
-  <time datetime="2022-04-02T11:10:13.000Z" itemprop="datePublished">2022-04-02</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      图数据库调研报告
-    </h1>
-  
+  </header>
 
-      </header>
+  <main>
     
-    <div class="article-entry" itemprop="articleBody">
       
-        <h1 align='center'>图数据库调研报告</h1>
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">图数据库调研报告</h1>
+            
+            <div class="markdown-body">
+              <h1 align='center'>图数据库调研报告</h1>
 
 <h4 align='center'>1951851 刘子千</h4>
 
@@ -134,14 +287,14 @@
 <p>在表示图结构时，许多图形数据库使用AL的变体，因为它使遍历邻域变得高效和简单。这包括基于LPG的原生图形数据库、KV存储、文档存储、宽列存储、元组存储和OODBMS类中的几个(但不是所有)系统。但是所考虑的RDF、RDBMS和数据中心系统都没有显式使用AL。这是因为底层数据模型的默认设计，例如RDBMS中的表或文档存储中的文档，并不经常使用AL。此外，绝大多数系统都没有使用未压缩的AM，因为它在$O(𝑛^2)$空间中的效率很低，特别是对于稀疏图。使用AM的系统侧重于压缩邻接矩阵来减少存储和查询开销(例如，GBASE)。在AL中效率低下的一个潜在原因是扫描所有的边来寻找给定顶点的邻居，为了缓解这一问题，可以采用索引结构。对于具有𝑛个顶点的图，这样的索引是指向各个邻域的指针数组，仅占用𝑂(𝑛)空间。</p>
 <p>下面来详细介绍一下不同类型的图模型以及它们的特点。</p>
 <h3 id="1-3-1简单图模型"><a href="#1-3-1简单图模型" class="headerlink" title="1.3.1简单图模型"></a>1.3.1简单图模型</h3><p>最简单的表示图的数据结构有邻接矩阵(AM)、邻接列表(AL)、边列表(EL)三种，它们都可以表示有向图或无向图。AM使用$O(n^2)$空间，可以在O(1)时间内检查两个顶点的连通性；AL占用O(𝑛+𝑚)空间，可以在$O(|𝐴𝑢|)⊆O(Degree_{max})$时间内检查连通性。</p>
-<p><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:02-19:08:26-64f1dd9348ca3abff26e19083013d9e0_4_Figure_3.png" alt="img" style="zoom:33%;" /></p>
+<p><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:02-19:08:26-64f1dd9348ca3abff26e19083013d9e0_4_Figure_3.png" srcset="/img/loading.gif" lazyload alt="img" style="zoom:33%;" /></p>
 <h3 id="1-3-2超图模型"><a href="#1-3-2超图模型" class="headerlink" title="1.3.2超图模型"></a>1.3.2超图模型</h3><p>任意边可以连接任意个点。超图的每一个定点至少属于一条边，也可以属于一条封闭的曲线。形式上，超图表示为元组(𝑉，𝐸)，𝑉是这个超图模型中所有顶点，𝐸是超边的集合，每个超边使用一组点表示，它是V的一个非空子集。例如：$V=\{a,b,c,d,e,f,g\}，E=\{abc,cde,def,efg\}$。</p>
 <p>超图在图形数据库和图处理系统中很少使用。HyperGraphDB的基本构建块是点和超边的每个值，都有自己唯一的ID以及区分顶点和边的标签。顶点和超边也有类型ID(即标签ID)，还有一个递归结构，这个递归结构可以可以是另一个递归结构或二进制数据的值ID。</p>
-<p><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:02-19:08:26-64f1dd9348ca3abff26e19083013d9e0_19_Figure_11.png" alt="img" style="zoom:60%;" /></p>
+<p><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:02-19:08:26-64f1dd9348ca3abff26e19083013d9e0_19_Figure_11.png" srcset="/img/loading.gif" lazyload alt="img" style="zoom:60%;" /></p>
 <h3 id="1-3-3标记属性图-LPG"><a href="#1-3-3标记属性图-LPG" class="headerlink" title="1.3.3标记属性图(LPG)"></a>1.3.3标记属性图(LPG)</h3><p>经典的图模型tuple 𝐺=(𝑉，𝐸)对各种现实世界的问题进行建模还不够丰富，因此图形数据库经常使用标记属性图LPG(Label Property Graph Model，LPG)。每个顶点和边可以具有任意数量的属性。属性是一对(𝑘𝑒𝑦，𝑣𝑎𝑙𝑢𝑒)，其中Key标识属性，Value是该属性的相应值。</p>
 <p>形式上，LPG被定义为元组$(𝑉ertex，𝐸dge，𝐿abel，𝑙_V，𝑙_E，𝐾ey，𝑊_{value}，𝑝_V，𝑝_E)$，其中𝐿是标签集，$L_V$和$L_E$分别代表V和E到L所有子集中某一个的一个映射因此，每个顶点和边都被映射到一个标号子集。顶点和边可以与任意数量的属性相关联，将属性建模为键-值对(𝑝=(𝑘𝑒𝑦，𝑣𝑎𝑙𝑢𝑒)，其中𝑘𝑒𝑦∈𝐾，𝑣𝑎𝑙𝑢𝑒∈𝑊。𝐾和𝑊是所有可能键和值的集合。$p_V$和$p_E$分别为获取某点和某边的属性键值对的集合的映射函数。</p>
 <p>除了下文中要说的RDF系统或明确指出是其他系统外，下文要说到的所有系统实际上都使用LPG的某些变体。</p>
-<p><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:02-19:08:26-64f1dd9348ca3abff26e19083013d9e0_6_Figure_4.png" alt="img" style="zoom:60%;" /></p>
+<p><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:02-19:08:26-64f1dd9348ca3abff26e19083013d9e0_6_Figure_4.png" srcset="/img/loading.gif" lazyload alt="img" style="zoom:60%;" /></p>
 <p>上图为一个社交网络的子图，其中一个人可以认识其他人、发布消息和评论其他人的消息。</p>
 <h3 id="1-3-4-LPG变体"><a href="#1-3-4-LPG变体" class="headerlink" title="1.3.4 LPG变体"></a>1.3.4 LPG变体</h3><p>Neo4j支持任意数量的顶点标签，但是它只允许每条边有一个标签(称为边缘类型)；ArangoDB只允许每个顶点一个标签和每个边一个标签，这便于将顶点和边分离到不同的文档集合中。</p>
 <p>形式上，它使用𝐺=(𝑉，𝐸，𝐿)表示，其中𝑉是顶点集，𝐸是边集。此定义下允许两个点通过具有不同标签的多条边连接。</p>
@@ -151,19 +304,19 @@
 <h4 id="AllegroGraph和BlazeGraph"><a href="#AllegroGraph和BlazeGraph" class="headerlink" title="AllegroGraph和BlazeGraph"></a>AllegroGraph和BlazeGraph</h4><p>一些RDF存储允许显式地将属性附加到三元组。AllegroGraph允许在创建三元组时定义每个三元组的任意属性集，但是这些属性不可变。BlazeGraph是RDF的一种扩展，允许将三元组附加到三元组谓词。和普通的RDF类似，顶点可以使用三元组来存储标签和属性。但是与普通的RDF相比，使用RDF可以更自然地表示LPG边缘：边可以存储为三元组，边属性可以通过其他三元组链接到边三元组。</p>
 <h3 id="1-3-6-LPG与RDF之间的转换"><a href="#1-3-6-LPG与RDF之间的转换" class="headerlink" title="1.3.6 LPG与RDF之间的转换"></a>1.3.6 LPG与RDF之间的转换</h3><p>要想在RDF模型中表示带标签的属性图需要把LPG顶点映射到URI，然后使用RDF三元组通过分别用RDF谓词和RDF对象表示属性键和属性值来将这些点与它们的LPG属性链接起来。</p>
 <p>例如，对于具有ID vertex-id的顶点以及具有key property-key和value property-value的对应属性，可以创建一个RDF三元组(vertex-id、property-key、property-value)。类似地，可以通过为每个边赋予URI状态来表示RDF模型中的LPG图模型中的边并将边属性与类似于顶点的特定边链接起来：(边-id，属性-键，属性-值)。然后，必须使用两个三元组将每条边连接到其任意相邻顶点。最后，通过为顶点和边创建RDF三元组，LPG标签也可以以类似于属性的方式转换为RDF三元组使得谓词变成有标签的URI并包含该标签的字符串名。下图展示了将LPG图转换为RDF三元组的过程示例。</p>
-<p><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:02-19:08:26-64f1dd9348ca3abff26e19083013d9e0_6_Figure_5.png" alt="img" style="zoom:50%;" /></p>
+<p><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:02-19:08:26-64f1dd9348ca3abff26e19083013d9e0_6_Figure_5.png" srcset="/img/loading.gif" lazyload alt="img" style="zoom:50%;" /></p>
 <p>如果所有顶点和边只有一个标签，则可以省略标签的三元组，并将标签与顶点或边名称一起存储在标识符中。如下图例子：</p>
-<p><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:02-19:08:26-64f1dd9348ca3abff26e19083013d9e0_7_Figure_6.png" alt="img" style="zoom:50%;" /></p>
+<p><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:02-19:08:26-64f1dd9348ca3abff26e19083013d9e0_7_Figure_6.png" srcset="/img/loading.gif" lazyload alt="img" style="zoom:50%;" /></p>
 <p>将RDF数据转换为LPG模型更为复杂，因为RDF谓词(通常会转换为边)是URI。因此，从RDF图转换为LPG图时必须将边映射到顶点并链接这些顶点，否则得到的LPG图可能会断开。有几种方案用于这样的RDF到LPG转换，例如以增加图大小为代价导出二部LPG图。</p>
 <h2 id="1-4非图底层的系统存储方案"><a href="#1-4非图底层的系统存储方案" class="headerlink" title="1.4非图底层的系统存储方案"></a>1.4非图底层的系统存储方案</h2><p>很多不是专门为图数据设计的数据库也可以储存图数据模型，包括使用键值对、文档和元组、关系和表以及对象的数据库。</p>
-<p><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:02-19:08:26-64f1dd9348ca3abff26e19083013d9e0_10_Figure_7.png" alt="img" style="zoom:50%;" /></p>
+<p><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:02-19:08:26-64f1dd9348ca3abff26e19083013d9e0_10_Figure_7.png" srcset="/img/loading.gif" lazyload alt="img" style="zoom:50%;" /></p>
 <h3 id="1-4-1键-值对-key-value"><a href="#1-4-1键-值对-key-value" class="headerlink" title="1.4.1键-值对(key-value)"></a>1.4.1键-值对(key-value)</h3><p>键值存储是最简单的NoSQL存储方式。将数据存储为键-值对的集合，重点放在基于键的高性能和高度可伸缩的查找上。键和值的确切形式取决于特定的系统或应用程序。键可以是简单的(例如，URI或散列)，也可以是结构化的。值通常编码为字节数组，也就是说值的结构通常是无模式的。但是，键值存储还可以强加一些额外的数据布局从而构建无模式的值。根据键值存储的一般性质，可以有许多方式将图表示为KV值的集合。例如可以使用顶点标签作为键，将顶点的邻域编码为值。</p>
 <h4 id="微软图引擎-Trinity"><a href="#微软图引擎-Trinity" class="headerlink" title="微软图引擎(Trinity)"></a>微软图引擎(Trinity)</h4><p>微软的图引擎是基于名为Trinity的分布式键值对。Trinity实现了全局可寻址的分布式RAM存储。在Trinity中，键称为cell ID，值称为cell(单元格)。一个cell可以保存不同数据类型的数据项，包括其他cell的ID。MS Graph Engine在Trinity KV存储层之上引入了一个图存储层，点存储在专用字段包含cell ID或ID的哈希值的cell中。与给定点𝑣相邻的边直接在v的cell中存储为𝑣邻域的ID列表。但是，如果边包含丰富的数据，则这样的边也可以和关联数据一起存储在单独的专用cell中。</p>
 <h3 id="1-4-2文档-document"><a href="#1-4-2文档-document" class="headerlink" title="1.4.2文档(document)"></a>1.4.2文档(document)</h3><p>文档是一类文档存储的NoSQL数据库中的基本存储单元。这些文档存储在集合中多个文档集合构成一个数据库，使用所选的标准半结构化格式(例如JSON或XML)对文档进行编码。文档存储扩展了键值存储，因为文档可以被视为具有某种灵活模式的值。该模式由属性组成，其中每个属性都有一个名称以及一个或多个值。这样一个基于具有属性的文档允许各种值类型、键-值对存储和递归数据存储(属性值可以是列表或键值字典)</p>
 <p>文档存储每个顶点都存储在一个顶点文档中。文档存储键值对的能力用于在相应的顶点文档中存储顶点标签和属性。然而，边存储的细节取决于系统：边可以存储在与每个边的源顶点对应的文档中，也可以存储在目的顶点的文档中。文档不会限制可以存储的键值，因此点和边可能具有不同的属性集。</p>
 <h4 id="OrientDB"><a href="#OrientDB" class="headerlink" title="OrientDB"></a>OrientDB</h4><p>在OrientDB中，每个文档𝑑都有一个记录ID(RID)，由存储𝑑的文档集合的ID和偏移量(其在该集合中的位置)组成。文档之间的指针使用这些唯一的RID表示。orientDB引入了规则边和轻量级边。规则边存储在边的文档中，可以具有它们自己的相关键/值对(例如，对边缘属性或标签进行编码)。轻量级边则直接存储在相邻(源或目标)顶点的文档中。这样的边没有任何关联的键/值对。它们构造指向其他顶点的简单指针，并且它们被实现为文档RID。因此，顶点文档不仅存储顶点的标签和属性，还存储轻量级边的列表(作为与相邻顶点相关联的文档的RID的列表)，以及指向相邻规则边的指针列表(作为与这些规则边相关联的文档的RID的列表)。每条规则边都有指向存储源和目标顶点的文档的指针(RID)。每个点存储指向其传入和传出边的链接(RID)列表。</p>
-<p><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:02-19:08:26-64f1dd9348ca3abff26e19083013d9e0_20_Figure_12.png" alt="img" style="zoom:33%;" /></p>
-<p><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:02-19:08:26-64f1dd9348ca3abff26e19083013d9e0_20_Figure_13.png" alt="img" style="zoom:50%;" /></p>
+<p><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:02-19:08:26-64f1dd9348ca3abff26e19083013d9e0_20_Figure_12.png" srcset="/img/loading.gif" lazyload alt="img" style="zoom:33%;" /></p>
+<p><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:02-19:08:26-64f1dd9348ca3abff26e19083013d9e0_20_Figure_13.png" srcset="/img/loading.gif" lazyload alt="img" style="zoom:50%;" /></p>
 <h4 id="ArangoDB"><a href="#ArangoDB" class="headerlink" title="ArangoDB"></a>ArangoDB</h4><p>ArangoDB将其文档保存为称为VelcyPack的二进制格式，这是JSON文档的压缩实现。文档可以存储在不同的集合中，并且具有key属性，该属性是给定集合中的唯一ID。与OrientDB不同，这些ID不是直接内存指针。为了保持图的特性，ArangoDB使用了点集合和边集合。前者是带有顶点文档的规则文档集合，顶点文档不存储关于相邻边的信息，这具有在添加或移除边时不必修改顶点文档的优点。边缘集合存储边缘文档。边缘文档有两个特定的属性：源和目的地，它们是与给定边连接的两个顶点相关联的文档的ID。ArangoDB的设计中有一个优化，可以防止读取顶点文档，并允许基于另一个边文档中的顶点ID直接访问一个边文档。这可以提高高速缓存效率，从而减少查询执行时间。</p>
 <p>可以使用不同的文档集合来存储不同的边缘类型(例如，“Friend_of”或“Like”)。当检索以某种边类型为条件的边(例如，“Friend_of”)时，不必遍历整个邻接列表(所有“Friend_of”和“Like”边)，而是可以使用特定边缘类型(“Friend_Of”)的边缘来确定集合的目标。</p>
 <h3 id="1-4-3元组-tuple"><a href="#1-4-3元组-tuple" class="headerlink" title="1.4.3元组(tuple)"></a>1.4.3元组(tuple)</h3><p>元组是元组存储的NoSQL存储方式的基础。元组存储是RDF存储的一种扩展：RDF存储被限制为三元组，而元组存储可以包含任意大小的元组。元组中的元素数量不是固定的，甚至在单个数据库中也是可以变化的。每个元组都有一个ID，该ID可以是直接指向内存的指针。元组的集合可以以不同的方式对图形建模。例如，一个大小为𝑛的元组可以存储指向包含顶点邻域的其他元组的指针。这种元组和图形数据之间的具体映射方式取决于不同的数据库。</p>
@@ -175,15 +328,15 @@
 <h3 id="1-4-5对象-object"><a href="#1-4-5对象-object" class="headerlink" title="1.4.5对象(object)"></a>1.4.5对象(object)</h3><p>还可以使用面向对象的数据库管理系统(OODBMS)中的对象集合来建模图形。数据元素及其关系通过某种形式的指针链接的对象来实现。将图建模为对象的细节在很大程度上取决于特定的设计。</p>
 <h4 id="VelocityGraph"><a href="#VelocityGraph" class="headerlink" title="VelocityGraph"></a>VelocityGraph</h4><p>VelocityGraph是依赖于VelocityDB分布式对象数据库的图形数据库。它的边、顶点以及边或顶点属性存储在包含对其他对象的引用的C#对象中。为了处理这种结构，VelocityGraphy引入了VertexType、EdgeType和PropertyType等抽象概念。每个对象都有一个指向它物理存储位置的唯一id。每个顶点和边都有一个类型(标签)，属性存储在字典中，点将相邻边储存在集合中。</p>
 <h3 id="1-4-6宽列储存"><a href="#1-4-6宽列储存" class="headerlink" title="1.4.6宽列储存"></a>1.4.6宽列储存</h3><p>宽列存储结合了键值存储和关系表的不同功能。宽列存储将键映射到行(将键映射到值的KV存储)。每行可以有任意数量的cell，并且每个cell构成一个键-值对。因此，一行包含cell键到cell值的映射，有效地使宽列存储成为二维KV值(行键和cell键都标识特定值)。此外，宽列存储是一个表，其中cell键构成列名。但是与关系型数据库不同，同一表中的行之间的列名称和格式可能不同。</p>
-<p><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:02-19:08:26-64f1dd9348ca3abff26e19083013d9e0_21_Figure_14.png" alt="img" style="zoom:60%;" /></p>
+<p><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:02-19:08:26-64f1dd9348ca3abff26e19083013d9e0_21_Figure_14.png" srcset="/img/loading.gif" lazyload alt="img" style="zoom:60%;" /></p>
 <h4 id="Titan-and-JanusGrap"><a href="#Titan-and-JanusGrap" class="headerlink" title="Titan and JanusGrap"></a>Titan and JanusGrap</h4><p>Titan及其后续的JanusGraph建立在宽列储存之上。它们可以使用不同的宽列存储作为底层，例如Apache Cassandra。在这两个系统中，当存储图时，每行代表一个顶点。每个顶点属性和相邻边都存储在单独的单元中，因此一个边和该边的所有属性被编码在单个单元中。由于每行中的cell是按cell键排序的，因此此排序顺序可用于高效地查找cell。对于图，属性和边的cell键的选择是这样的：在对cell进行排序后，存储属性的cell首先出现，然后是包含边的cell。由于行是按键排序的，因此两个系统都会直接将表划分为所谓的平面，这些平面可以分布在多个数据服务器上。</p>
-<p><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:02-19:08:26-64f1dd9348ca3abff26e19083013d9e0_21_Figure_14.png" alt="img" style="zoom:60%;" /></p>
+<p><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:02-19:08:26-64f1dd9348ca3abff26e19083013d9e0_21_Figure_14.png" srcset="/img/loading.gif" lazyload alt="img" style="zoom:60%;" /></p>
 <h2 id="1-5原生图数据库系统"><a href="#1-5原生图数据库系统" class="headerlink" title="1.5原生图数据库系统"></a>1.5原生图数据库系统</h2><h3 id="1-5-1-直接指针"><a href="#1-5-1-直接指针" class="headerlink" title="1.5.1 直接指针"></a>1.5.1 直接指针</h3><h4 id="Neo4j"><a href="#Neo4j" class="headerlink" title="Neo4j"></a>Neo4j</h4><p>Neo4j是最流行的图数据库系统。Neo4j使用基于固定大小记录的存储设计实现LPG模型。顶点𝑣由顶点记录表示，该记录存储：(1)𝑣的标签、(2)指向𝑣属性的链表的指针、(3)指向与𝑣相邻的第一边的指针、(4)一些标志。边𝑒由边记录来表示，该边记录存储：(1)𝑒的sedge类型(标签)、(2)指向𝑒属性的链表的指针、(3)指向表示与𝑒相邻的顶点的两个顶点记录的指针、(4)指向两个相邻顶点的AL的指针、(5)一些标志。每个属性记录最多可以存储四个属性，具体取决于属性值的大小：大的值(例如，长字符串)存储在单独的动态存储中，在顶点和边记录之外允许记录一些较小的属性。此外，如果查询中没有访问任何属性，则根本不会加载它们。</p>
 <p>顶点的AL的实现为双向链表。一条边只存储一次，但它是两个这样的链表的一部分(每个相邻顶点一个列表)。因此，一条边有两个指向前一条边的指针和两个指向下一条边的指针。两个顶点由一条“知道”边链接。两个顶点都维护属性的链接列表。边是两个双向链表的一部分，每个相邻顶点一个链表。</p>
-<p><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:02-19:08:26-64f1dd9348ca3abff26e19083013d9e0_22_Figure_16-16380682153473.png" alt="img" style="zoom:40%;" />   <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:02-19:08:26-64f1dd9348ca3abff26e19083013d9e0_23_Figure_17-16380682153474.png" alt="img" style="zoom:45%;" /></p>
+<p><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:02-19:08:26-64f1dd9348ca3abff26e19083013d9e0_22_Figure_16-16380682153473.png" srcset="/img/loading.gif" lazyload alt="img" style="zoom:40%;" />   <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:02-19:08:26-64f1dd9348ca3abff26e19083013d9e0_23_Figure_17-16380682153474.png" srcset="/img/loading.gif" lazyload alt="img" style="zoom:45%;" /></p>
 <p>Neo4j中的一个核心概念是使用直接指针：顶点存储指向其邻居的物理分配的指针。因此，对于邻域查询或遍历，不需要索引，而是可以跟随直接指针(遍历中的根顶点除外)，因此查询复杂度不依赖于图的大小。相反，它只取决于被访问的子图有多大（也就是说，如果内存放不下整个图，那么执行速度基本取决于缓存和预取，运行时间可能显著增加）。</p>
 <h3 id="1-5-2-B-树和位图"><a href="#1-5-2-B-树和位图" class="headerlink" title="1.5.2 B+树和位图"></a>1.5.2 B+树和位图</h3><h4 id="Sparksee-DEX"><a href="#Sparksee-DEX" class="headerlink" title="Sparksee/DEX"></a>Sparksee/DEX</h4><p>Sparksee是一个图数据库系统，以前称为DEX。Sparksee的顶点和边(都称为对象)都有唯一的ID。对于每个属性名称，都有一个关联的B+树，它将顶点和边ID映射到各自的属性值。从属性值到顶点和边ID的反向映射由位图维护，其中位设置为1表示对应的ID具有某个属性值。此外，每个顶点存储了表示输入边和输出边的两个位图，两个B+树维护有关边连接到哪些顶点的信息(每个边方向一个树)。</p>
-<p><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:02-19:08:26-64f1dd9348ca3abff26e19083013d9e0_23_Figure_18.png" alt="img" style="zoom:60%;" /></p>
+<p><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:02-19:08:26-64f1dd9348ca3abff26e19083013d9e0_23_Figure_18.png" srcset="/img/loading.gif" lazyload alt="img" style="zoom:60%;" /></p>
 <p>Sparksee是少数几个不基于记录的系统之一，它使用简化为B+树和位图。位图的使用允许以比特为单位执行某些操作。例如，如果要查找具有特定属性值的所有顶点，如“age”和“First Name”，只需找到与“age”和“First Name”属性相关联的两个位图，然后得到第三个位图，该位图是对这两个输入位图应用按位“与”运算的结果。</p>
 <p>未压缩的位图可能会大的离谱。由于大多数图都是稀疏的，按顶点或边索引的位图大多包含零。可以把它们切割成32位簇来缩小这种稀疏位图的尺寸。如果簇包含非零位，则显式存储该位。这个位图然后由(簇-ID，位-数据)对的集合表示。这些对存储在排序树结构中，以实现高效的查找、插入和删除。</p>
 <h3 id="1-5-3稀疏邻接矩阵"><a href="#1-5-3稀疏邻接矩阵" class="headerlink" title="1.5.3稀疏邻接矩阵"></a>1.5.3稀疏邻接矩阵</h3><h4 id="GBASE"><a href="#GBASE" class="headerlink" title="GBASE"></a>GBASE</h4><p>GBASE是一个只能表示有向图结构的系统，它既不存储属性，也不存储标签。GBASE的目标是保持图的邻接矩阵的压缩，这样就可以有效地检索选定顶点的所有输入和输出边，而不会产生令人望而却步的$𝑂(𝑛^2)$矩阵存储开销。同时，利用邻接矩阵可以在𝑂(1)时间内验证任意两个顶点是否连通。为了压缩邻接矩阵，GBASE将其切割成$𝐾^2$个块(每行和每列都有𝐾块)。因此，获取每个顶点的传入和传出邻居的查询只需要查询𝐾个块。可以针对特定数据库优化参数𝐾。当𝐾变小时，就必须检索更多的小文件。如果𝐾变大，文件会变少，但它们会变得更大，从而产生开销。当块只包含0或只包含1时，可以进行进一步的优化，这样可以实现更高的压缩率。</p>
@@ -197,7 +350,7 @@
 <h2 id="2-2邻域索引类型"><a href="#2-2邻域索引类型" class="headerlink" title="2.2邻域索引类型"></a>2.2邻域索引类型</h2><p>主要用于加速邻接表的访问，以加速遍历查询。这种索引称为为以顶点为中心的索引。虽然允许每个顶点有多个以顶点为中心的索引，每个索引都针对不同的条件进行了优化，然后由查询优化器选择不同的条件，但也存在更简单的解决方案。LiveGraphs使用两级层次结构，在指向实际物理存储之前，第一级通过它们的标签来区分边。Graphflow将顶点的邻居索引到前向和后向邻接列表中，其中每个列表首先按边标签划分，然后按邻居顶点的标签划分。另一个例子是Sparksee，它使用各种不同的索引结构来查找相邻顶点和顶点的属性。</p>
 <h2 id="2-3数据索引类型"><a href="#2-3数据索引类型" class="headerlink" title="2.3数据索引类型"></a>2.3数据索引类型</h2><p>这种索引主要是为了处理邻域信息以外的数据。例如，可以索引具有特定属性(值)的所有顶点。它们通常用于加速业务智能工作负载。许多三元组存储，例如AllegroGraph，都提供主体(S)、谓词(P)和客体(O)的全部六种排列，以及附加的聚合索引。然而，为了降低相关成本，也存在其他方法：TripleBit仅使用具有两个聚合索引(SP，SO)和两个辅助索引结构的两个排列(PSO，POS)。GStore在两种索引结构的帮助下实现了模式匹配查询：VS*树，这是一种专门的B+树，以及基于TRIE的T索引。一些数据库系统，如AmazonNeptun或AnzoGraph只提供隐式索引，但仍然可以高效地应对所有类型的查询。大多数图数据库系统都允许用户显式定义索引。其中一些系统，如Azure Cosmos DB，对于更具体的用例支持复合索引(不同标签/属性的组合)，除了内部索引之外，一些系统还使用外部索引工具。例如，Titan和JanusGraph使用内部索引进行基于标签和值的查找，但依赖外部索引后端进行涉及多个属性、范围或全文搜索的重要查找。</p>
 <p>根据数据索引的实现方式进一步对其进行分类。用于实现这些索引的三种基本数据结构：树、跳跃表和哈希表。根据表中的标准对系统进行分类。可以发现索引类型和图形数据库的后端之间没有明确的联系，但是大多数系统使用基于树的索引。</p>
-<p><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:02-19:08:26-64f1dd9348ca3abff26e19083013d9e0_29_Table_5.png" alt="img" style="zoom:60%;" /></p>
+<p><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:02-19:08:26-64f1dd9348ca3abff26e19083013d9e0_29_Table_5.png" srcset="/img/loading.gif" lazyload alt="img" style="zoom:60%;" /></p>
 <p>数据通常存储在数据结构中。当这些数据结构变得更加复杂时，一些图形数据库选择使用结构化索引来增强其设计。其他系统中的LiveGraph使用顶点索引将其顶点ID映射到物理存储位置。同样，ArangoDB多次使用混合索引、哈希表来查找顶点的关联边和相邻顶点的文档。</p>
 <h1 id="3-优化"><a href="#3-优化" class="headerlink" title="3.优化"></a>3.优化</h1><p>基于记录的系统通常为需要检索关于顶点或边的全部或大部分信息的查询提供更高的性能，因为所需的数据存储在连续的内存块中，所以效率更高。在将数据存储在索引中的系统中，查询每个属性的数据结构会导致更多的随机访问模式。如果只想检索有关顶点或边的单个属性，这样的系统可能只需要检索单个值。而许多基于记录的系统不能仅检索部分记录，会获取更多不必要的数据。</p>
 <p>此外，决定是否使用ID或直接内存指针来链接记录取决于给定系统的工作负载的读/写比率。在前一种情况下，必须使用索引结构来查找记录的地址。与紧随其后的直接指针相比，这会降低读取查询的速度。但是，使用ID而不是指针可以提高写查询的效率。例如，当必须将记录移动到新地址时，所有指向这条记录的指针都需要更新来映射到新地址，ID可以保持不变，只有索引结构需要修改给定记录的地址。</p>
@@ -213,191 +366,246 @@
 <p>查询并发的方法之一是不同类型的锁。例如，WhiteDB使用读写锁提供数据库范围的锁定，从而支持并发读取器，但一次只能有一个写入操作。还可以自动更新元组字段(设置、比较和设置、添加)作为锁定整个数据库的替代方法。WhiteDB本身不强制一致性，它取决于用户正确使用锁和原子性。另一种方法是基于事务的，例如由OrientDB使用，它为分布式事务提供ACID。</p>
 <p>一些支持并行查询执行的系统在执行这种并行化查询时明确地优化了通信的数据量。例如，CGE中的计算分布在参与的进程中。为了最大限度地减少所有对所有的通信量，查询结果在本地聚合，并且只要有可能，每个进程只与少数几个对等点通信以避免网络拥塞。微软图引擎和Trinity数据库的底层实现使用的另一种简化通信的方法是减小进程交换的数据块的大小。为此，Trinity维护特殊的访问器，允许访问单元格中的单个属性而无需加载整个单元格，这降低了许多不需要整个单元的操作的I/O成本。几个系统共享的单边通信，使得进程能够直接访问彼此的数据。例如，Trinity可以部署在InfiniBand上利用远程直接内存访问。类似地，Cray的底层实现使多个计算节点的内存资源可以作为单个全局地址空间使用，也支持CGE中的单边通信。这便于在分布式环境中进行并行编程。</p>
 
-      
-    </div>
-    <footer class="article-footer">
-      
-        <a data-url="https://gilgamesh-lzq.github.io/2022/04/02/%E5%9B%BE%E6%95%B0%E6%8D%AE%E5%BA%93%E8%B0%83%E7%A0%94%E6%8A%A5%E5%91%8A/" data-id="cl1hzgb5x0000b88o5wwj35rp" class="article-share-link">Share</a>
-      
-
-      
-        <a href="https://gilgamesh-lzq.github.io/2022/04/02/%E5%9B%BE%E6%95%B0%E6%8D%AE%E5%BA%93%E8%B0%83%E7%A0%94%E6%8A%A5%E5%91%8A/#ds-thread" class="article-comment-link">Comments</a>
-      
-
-      
-    </footer>
-  </div>
-  
-    
-<nav id="article-nav">
-  
-  
-    <a href="/2022/04/02/%E5%BC%A0%E5%AE%87%E4%B8%80%E8%BD%AE%E7%BA%BF%E4%BB%A3%E6%A6%82%E7%8E%87%E8%AE%BA/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">张宇一轮线代概率论</div>
-    </a>
-  
-</nav>
-
-  
-</article>
-
-
-  <section id="comments">
-    <div id="ds-thread" class="ds-thread" data-thread-key="2022/04/02/图数据库调研报告/" data-title="图数据库调研报告" data-url="https://gilgamesh-lzq.github.io/2022/04/02/%E5%9B%BE%E6%95%B0%E6%8D%AE%E5%BA%93%E8%B0%83%E7%A0%94%E6%8A%A5%E5%91%8A/"></div>
-  </section>
-</section>
-      
-      <aside id="sidebar">
-  
-    
-  
-    
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/04/">四月 2022</a><span class="archive-list-count">3</span></li></ul>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2022/04/02/%E5%9B%BE%E6%95%B0%E6%8D%AE%E5%BA%93%E8%B0%83%E7%A0%94%E6%8A%A5%E5%91%8A/">图数据库调研报告</a>
-          </li>
-        
-          <li>
-            <a href="/2022/04/02/%E5%BC%A0%E5%AE%87%E4%B8%80%E8%BD%AE%E7%BA%BF%E4%BB%A3%E6%A6%82%E7%8E%87%E8%AE%BA/">张宇一轮线代概率论</a>
-          </li>
-        
-          <li>
-            <a href="/2022/04/02/%E5%BC%A0%E5%AE%87%E4%B8%80%E8%BD%AE%E9%AB%98%E6%95%B0/">张宇一轮高数</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Links</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="https://github.com/Gilgamesh-lzq" target="_blank">我的主页</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-      
-    </div>
-    <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2022 Gilgamesh<br>
-      Powered by <a href="//hexo.io/" target="_blank">Hexo</a>
-      .
-      Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>
-    </div>
-  </div>
-</footer>
-  </div>
-  <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-  <!-- totop start -->
-<div id="totop">
-<a title="totop"><img src="/img/scrollup.png"/></a>
-</div>
-
-<!-- totop end -->
-
-<!-- 多说公共js代码 start -->
-<script type="text/javascript">
-var duoshuoQuery = {short_name:"reqianduan"};
-  (function() {
-    var ds = document.createElement('script');
-    ds.type = 'text/javascript';ds.async = true;
-    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-    ds.charset = 'UTF-8';
-    (document.getElementsByTagName('head')[0]
-     || document.getElementsByTagName('body')[0]).appendChild(ds);
-  })();
-  </script>
-<!-- 多说公共js代码 end -->
-
-
-<!-- 百度分享 start -->
-
-<!-- 百度分享 end -->
-
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-
-
-
-
-<! -- mathjax config similar to math.stackexchange -->
-
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-                processEscapes: true
-                    
-}
-  
-        });
-</script>
-
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-tex2jax: {
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-                  
-}
-    
-        });
-</script>
-
-<script type="text/x-mathjax-config">
-MathJax.Hub.Queue(function() {
-            var all = MathJax.Hub.getAllJax(), i;
-            for(i=0; i < all.length; i += 1) {
-                            all[i].SourceElement().parentNode.className += ' has-jax';
-                                    
-            }
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
                 
-        });
-</script>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/04/02/%E5%BC%A0%E5%AE%87%E4%B8%80%E8%BD%AE%E7%BA%BF%E4%BB%A3%E6%A6%82%E7%8E%87%E8%AE%BA/">
+                        <span class="hidden-mobile">张宇一轮线代概率论</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
 
-<script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.5.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
-
-
-
-<script src="/js/script.js"></script>
-
-
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
 </div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <i class="iconfont icon-love"></i> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  
+    <script  src="https://cdn.jsdelivr.net/npm/tocbot@4/dist/tocbot.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4/anchor.min.js" ></script>
+  
+  
+    <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js" ></script>
+  
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+        typing(title);
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        loader: {
+          load: ['ui/lazy']
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" ></script>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </body>
 </html>

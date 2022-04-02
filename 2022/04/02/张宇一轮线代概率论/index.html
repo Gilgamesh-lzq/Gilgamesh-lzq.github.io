@@ -1,12 +1,22 @@
 
+
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/myfavicon.png">
+  <link rel="icon" href="/img/myfavicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
   
-  <title>张宇一轮线代概率论 | Gilgamesh&#39;s Blog</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="张宇一轮线代概率论  [TOC] 线代一、行列式 余子式：$M_{ij}$，不带正负号；代数余子式：$A_{ij}$，带正负号  某行余子式计算，直接按系数换掉那一行   范德蒙行列式：$\left|\begin{array}{cccc}1 &amp;1&amp;\cdots&amp;1 \\x_1&amp;x_2&amp;\cdots &amp;x_n\\x_1^2&amp;x_2^2&amp;">
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Gilgamesh">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="张宇一轮线代概率论  [TOC] 线代一、行列式 余子式：$M_{ij}$，不带正负号；代数余子式：$A_{ij}$，带正负号  某行余子式计算，直接按系数换掉那一行   范德蒙行列式：$\left|\begin{array}{cccc}1 &amp;1&amp;\cdots&amp;1 \\x_1&amp;x_2&amp;\cdots &amp;x_n\\x_1^2&amp;x_2^2&amp;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="张宇一轮线代概率论">
 <meta property="og:url" content="https://gilgamesh-lzq.github.io/2022/04/02/%E5%BC%A0%E5%AE%87%E4%B8%80%E8%BD%AE%E7%BA%BF%E4%BB%A3%E6%A6%82%E7%8E%87%E8%AE%BA/index.html">
@@ -67,80 +77,223 @@
 <meta property="article:published_time" content="2022-04-02T09:35:49.000Z">
 <meta property="article:modified_time" content="2022-04-02T09:36:59.183Z">
 <meta property="article:author" content="Gilgamesh">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153683.png">
   
   
-    <link rel="icon" href="/favicon.png">
-  
-  
-<link rel="stylesheet" href="/css/style.css">
+  <title>张宇一轮线代概率论 - Gilgamesh&#39;s Blog</title>
 
-  <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4/github-markdown.min.css" />
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hint.css@2/hint.min.css" />
+
   
-<meta name="generator" content="Hexo 6.1.0"></head>
-<body>
-<div id="container">
-  <div id="wrap">
-    <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Gilgamesh&#39;s Blog</a>
-      </h1>
+    
+    
       
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css" />
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"gilgamesh-lzq.github.io","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 6.1.0"></head>
+
+
+<body>
+  <header style="height: 80vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Gilgamesh&#39;s Blog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
     </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//www.baidu.com/baidu" method="get" accept-charset="utf-8" class="search-form">
-          <input type="search" name="word" maxlength="20" class="search-form-input" placeholder="Search">
-          <input type="submit" value="" class="search-form-submit">
-          <input name=tn type=hidden value="bds">
-          <input name=cl type=hidden value="3">
-          <input name=ct type=hidden value="2097152">
-          <input type="hidden" name="si" value="gilgamesh-lzq.github.io">
-        </form>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/post.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="张宇一轮线代概率论">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2022-04-02 17:35" pubdate>
+        2022年4月2日 下午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      6.2k 字
+    </span>
+  
+
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      53 分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+            <div class="scroll-down-bar">
+              <i class="iconfont icon-arrowdown"></i>
+            </div>
+          
+        </div>
       </div>
     </div>
-  </div>
-</header>
-    <div class="outer">
-      <section id="main"><article id="post-张宇一轮线代概率论" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2022/04/02/%E5%BC%A0%E5%AE%87%E4%B8%80%E8%BD%AE%E7%BA%BF%E4%BB%A3%E6%A6%82%E7%8E%87%E8%AE%BA/" class="article-date">
-  <time datetime="2022-04-02T09:35:49.000Z" itemprop="datePublished">2022-04-02</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      张宇一轮线代概率论
-    </h1>
-  
+  </header>
 
-      </header>
+  <main>
     
-    <div class="article-entry" itemprop="articleBody">
       
-        <h1 align="center">张宇一轮线代概率论</h1>
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">张宇一轮线代概率论</h1>
+            
+            <div class="markdown-body">
+              <h1 align="center">张宇一轮线代概率论</h1>
 
 <p>[TOC]</p>
 <h1 id="线代"><a href="#线代" class="headerlink" title="线代"></a>线代</h1><h2 id="一、行列式"><a href="#一、行列式" class="headerlink" title="一、行列式"></a>一、行列式</h2><ul>
@@ -152,26 +305,26 @@
 <li><p>范德蒙行列式：$\left|\begin{array}{cccc}1 &amp;1&amp;\cdots&amp;1 \\x_1&amp;x_2&amp;\cdots &amp;x_n\\x_1^2&amp;x_2^2&amp;\cdots &amp;x_n^2\\\vdots&amp;\vdots&amp;&amp;\vdots\\x_1^{n-1}&amp;x_2^{n-1}&amp;\cdots &amp;x_n^{n-1}\\ \end{array}\right|=\underset{1\le i&lt;j\le n}{\Pi}(x_j-x_i)$ </p>
 </li>
 <li>计算<ul>
-<li>爪形：==斜爪消横爪== <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153683.png" alt="image-20220311095320748" style="zoom:20%;" /></li>
-<li>异爪形 ：==递推n阶(从指甲尖开始)== <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153685.png" alt="image-20220311095302450" style="zoom:20%;" />    <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153686.png" alt="image-20220311095412950" style="zoom:25%;" /></li>
-<li>行(列)和相等（每行元素换个位置）：==所有列加到第一列，所有行减去第一行== <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153687.png" alt="image-20220311100334670" style="zoom:25%;" /></li>
-<li>拉普拉斯展开：==行列变换化为分块矩阵== <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153688.png" alt="image-20220311101656567" style="zoom:25%;" /></li>
+<li>爪形：==斜爪消横爪== <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153683.png" srcset="/img/loading.gif" lazyload alt="image-20220311095320748" style="zoom:20%;" /></li>
+<li>异爪形 ：==递推n阶(从指甲尖开始)== <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153685.png" srcset="/img/loading.gif" lazyload alt="image-20220311095302450" style="zoom:20%;" />    <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153686.png" srcset="/img/loading.gif" lazyload alt="image-20220311095412950" style="zoom:25%;" /></li>
+<li>行(列)和相等（每行元素换个位置）：==所有列加到第一列，所有行减去第一行== <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153687.png" srcset="/img/loading.gif" lazyload alt="image-20220311100334670" style="zoom:25%;" /></li>
+<li>拉普拉斯展开：==行列变换化为分块矩阵== <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153688.png" srcset="/img/loading.gif" lazyload alt="image-20220311101656567" style="zoom:25%;" /></li>
 <li>范德蒙行列式</li>
 </ul>
 </li>
 </ul>
 <h2 id="二、矩阵"><a href="#二、矩阵" class="headerlink" title="二、矩阵"></a>二、矩阵</h2><h3 id="1-性质"><a href="#1-性质" class="headerlink" title="1.性质"></a>1.性质</h3><ul>
 <li>$\begin{cases}(\boldsymbol{A}+\boldsymbol{B})^T&amp;=&amp;\boldsymbol{A}^T+\boldsymbol{B}^T\(\boldsymbol{AB})^T&amp;=&amp;\boldsymbol{B}^T\boldsymbol{A}^T\|\boldsymbol{A_{n\times n}}^T|&amp;=&amp;|\boldsymbol{A_{n\times n}}|\end{cases}$ </li>
-<li>施密特正交化 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153689.png" alt="image-20220311231044096" style="zoom: 40%;" /> <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153690.png" alt="image-20220311231115416" style="zoom: 40%;" /> </li>
-<li>$\boldsymbol{A}^T\boldsymbol{A}=E$，则正交。其向量组是标准正交向量组。<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153691.png" alt="image-20220312064436764" style="zoom: 33%;" /></li>
-<li>分块矩阵 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153692.png" alt="image-20220312064925270" style="zoom:40%;" /></li>
+<li>施密特正交化 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153689.png" srcset="/img/loading.gif" lazyload alt="image-20220311231044096" style="zoom: 40%;" /> <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153690.png" srcset="/img/loading.gif" lazyload alt="image-20220311231115416" style="zoom: 40%;" /> </li>
+<li>$\boldsymbol{A}^T\boldsymbol{A}=E$，则正交。其向量组是标准正交向量组。<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153691.png" srcset="/img/loading.gif" lazyload alt="image-20220312064436764" style="zoom: 33%;" /></li>
+<li>分块矩阵 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153692.png" srcset="/img/loading.gif" lazyload alt="image-20220312064925270" style="zoom:40%;" /></li>
 </ul>
 <h3 id="2-矩阵的逆"><a href="#2-矩阵的逆" class="headerlink" title="2.矩阵的逆"></a>2.矩阵的逆</h3><ul>
-<li>$\boldsymbol{A}^{-1}=\frac{1}{|\boldsymbol{A}|}\boldsymbol{A}^*$  <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153694.png" alt="image-20220312074751928" style="zoom:33%;" /><ul>
+<li>$\boldsymbol{A}^{-1}=\frac{1}{|\boldsymbol{A}|}\boldsymbol{A}^*$  <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153694.png" srcset="/img/loading.gif" lazyload alt="image-20220312074751928" style="zoom:33%;" /><ul>
 <li>二阶求逆口诀：主对调，副变号，<strong>除以行列式</strong></li>
 </ul>
 </li>
-<li>分块矩阵的逆 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153695.png" alt="image-20220312075135249" style="zoom:40%;" /></li>
+<li>分块矩阵的逆 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153695.png" srcset="/img/loading.gif" lazyload alt="image-20220312075135249" style="zoom:40%;" /></li>
 <li>伴随矩阵：代数余子式<strong>转置</strong>排成矩阵 $\boldsymbol{A}\boldsymbol{A}^<em>=\boldsymbol{A}^</em>\boldsymbol{A}=|\boldsymbol{A}|\boldsymbol{E}$ <ul>
 <li>$|\boldsymbol{A}^<em>|=|\boldsymbol{A}|^{n-1}$ ，$(\boldsymbol{A}^</em>)^<em>=|\boldsymbol{A}^{n-2}|A$ ，$(k\boldsymbol{A})^</em>=k^{n-1}\boldsymbol{A}^*$ </li>
 </ul>
@@ -180,7 +333,7 @@
 <h3 id="3-初等变换"><a href="#3-初等变换" class="headerlink" title="3.初等变换"></a>3.初等变换</h3><ul>
 <li><p>行变换相当于左乘，列变换相当于右乘</p>
 </li>
-<li><p>初等变换性质 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153696.png" alt="image-20220312221903615" style="zoom:33%;" /></p>
+<li><p>初等变换性质 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153696.png" srcset="/img/loading.gif" lazyload alt="image-20220312221903615" style="zoom:33%;" /></p>
 <ul>
 <li><p>例：求一个矩阵由哪些初等阵构成</p>
 <blockquote>
@@ -189,7 +342,7 @@
 </li>
 </ul>
 </li>
-<li><p>分块矩阵的逆 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153697.png" alt="image-20220312230346064" style="zoom: 25%;" /> <strong>左乘同行，右乘同列，添负号</strong> ==主对角线不换位置，副对角线换位置==</p>
+<li><p>分块矩阵的逆 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153697.png" srcset="/img/loading.gif" lazyload alt="image-20220312230346064" style="zoom: 25%;" /> <strong>左乘同行，右乘同列，添负号</strong> ==主对角线不换位置，副对角线换位置==</p>
 </li>
 </ul>
 <h2 id="三、向量组"><a href="#三、向量组" class="headerlink" title="三、向量组"></a>三、向量组</h2><h3 id="1-线性相关"><a href="#1-线性相关" class="headerlink" title="1.线性相关"></a>1.线性相关</h3><ul>
@@ -217,14 +370,14 @@
 <li>$\begin{cases}r(AB)\le min\{r(A),r(B)\}\\r(A+B)\le r(A)+r(B)\\r(A^*)=\begin{cases}n&amp;r(A)=n\\1&amp;r(A)=n-1\\0&amp;r(A)&lt;n-1\end{cases}\\AB=0\Longrightarrow r(A)+r(B)\le A的列数\end{cases}$ </li>
 </ul>
 <h3 id="3-向量空间"><a href="#3-向量空间" class="headerlink" title="3.向量空间"></a>3.向量空间</h3><ul>
-<li>$\xi到\eta$的过渡矩阵定义：<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153698.png" alt="image-20220315155609939" style="zoom:33%;" /></li>
-<li>坐标变换公式：<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153699.png" alt="image-20220315155816149" style="zoom:43%;" /></li>
+<li>$\xi到\eta$的过渡矩阵定义：<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153698.png" srcset="/img/loading.gif" lazyload alt="image-20220315155609939" style="zoom:33%;" /></li>
+<li>坐标变换公式：<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153699.png" srcset="/img/loading.gif" lazyload alt="image-20220315155816149" style="zoom:43%;" /></li>
 </ul>
 <h2 id="四、线性方程组"><a href="#四、线性方程组" class="headerlink" title="四、线性方程组"></a>四、线性方程组</h2><h3 id="1-具体"><a href="#1-具体" class="headerlink" title="1.具体"></a>1.具体</h3><ul>
 <li><p>齐次</p>
 <ul>
 <li>必有零解，列满秩时有唯一零解，列不满秩有n-r个线性无关解</li>
-<li>解法：<strong>设出来通解</strong>后求出其他值 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153700.png" alt="image-20220315195449733" style="zoom:33%;" /></li>
+<li>解法：<strong>设出来通解</strong>后求出其他值 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153700.png" srcset="/img/loading.gif" lazyload alt="image-20220315195449733" style="zoom:33%;" /></li>
 </ul>
 </li>
 <li><p>非齐次</p>
@@ -237,7 +390,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="2-抽象"><a href="#2-抽象" class="headerlink" title="2.抽象"></a>2.抽象</h3><p>有解条件 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153701.png" alt="22-0315_22" style="zoom:33%;" /></p>
+<h3 id="2-抽象"><a href="#2-抽象" class="headerlink" title="2.抽象"></a>2.抽象</h3><p>有解条件 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153701.png" srcset="/img/loading.gif" lazyload alt="22-0315_22" style="zoom:33%;" /></p>
 <h3 id="3-公共解、同解方程组"><a href="#3-公共解、同解方程组" class="headerlink" title="3.公共解、同解方程组"></a>3.公共解、同解方程组</h3><ul>
 <li><p>求公共解</p>
 <ul>
@@ -247,7 +400,7 @@
 </li>
 <li><p>求出两个通解，令其相等，求出任意系数之间的关系（k和l），关系带入通解得到公共解</p>
 <blockquote>
-<p>联立 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153702.png" alt="image-20220315225601200" style="zoom: 25%;" /></p>
+<p>联立 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153702.png" srcset="/img/loading.gif" lazyload alt="image-20220315225601200" style="zoom: 25%;" /></p>
 </blockquote>
 </li>
 </ul>
@@ -279,7 +432,7 @@
 </li>
 <li><p>例题</p>
 <blockquote>
-<p><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153703.png" alt="image-20220316104012183" style="zoom:33%;" /></p>
+<p><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153703.png" srcset="/img/loading.gif" lazyload alt="image-20220316104012183" style="zoom:33%;" /></p>
 </blockquote>
 </li>
 </ul>
@@ -296,14 +449,14 @@
 <li>若最高次项是1，且所有系数都是整数，那么所有有理根都是$a_0$的因数</li>
 </ul>
 <blockquote>
-<p>注意$k\neq0!!!$ <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153704.png" alt="image-20220316075710694" style="zoom: 30%;" /></p>
+<p>注意$k\neq0!!!$ <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153704.png" srcset="/img/loading.gif" lazyload alt="image-20220316075710694" style="zoom: 30%;" /></p>
 </blockquote>
 </li>
 </ul>
 </li>
 <li><p>抽象</p>
 <blockquote>
-<p>各种变化 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153705.png" alt="image-20220316090927438" style="zoom:33%;" /></p>
+<p>各种变化 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153705.png" srcset="/img/loading.gif" lazyload alt="image-20220316090927438" style="zoom:33%;" /></p>
 </blockquote>
 </li>
 </ul>
@@ -327,7 +480,7 @@
 <li>应用<ul>
 <li>实对称阵<ul>
 <li>不同特征值的特征向量<strong>正交</strong>。它必有n个线性无关的特征向量，因此必可相似对角化</li>
-<li>特征向量间的关系 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153706.png" alt="image-20220316162627233" style="zoom: 25%;" /></li>
+<li>特征向量间的关系 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153706.png" srcset="/img/loading.gif" lazyload alt="image-20220316162627233" style="zoom: 25%;" /></li>
 <li>计算：求$Q^{-1}AQ=Q^TAQ=\Lambda$，多一步正交化(如果需要的话)和单位化</li>
 </ul>
 </li>
@@ -374,7 +527,7 @@
 <ul>
 <li><p>必要条件：主对角元素全正、行列式&gt;0 </p>
 <blockquote>
-<p>前提A一定是对称阵 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153707.png" alt="image-20220316231249574" style="zoom: 40%;" /></p>
+<p>前提A一定是对称阵 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153707.png" srcset="/img/loading.gif" lazyload alt="image-20220316231249574" style="zoom: 40%;" /></p>
 </blockquote>
 </li>
 </ul>
@@ -395,13 +548,13 @@
 </li>
 <li><p>概率公式</p>
 <ul>
-<li><p>条件概率 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153708.png" alt="image-20220318124856730" style="zoom:33%;" /></p>
+<li><p>条件概率 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153708.png" srcset="/img/loading.gif" lazyload alt="image-20220318124856730" style="zoom:33%;" /></p>
 </li>
-<li><p>乘法公式 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153709.png" alt="image-20220318140934424" style="zoom: 33%;" /></p>
+<li><p>乘法公式 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153709.png" srcset="/img/loading.gif" lazyload alt="image-20220318140934424" style="zoom: 33%;" /></p>
 </li>
 <li><p>例题：</p>
 <blockquote>
-<p> <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153710.png" alt="image-20220318143307507" style="zoom:33%;" /></p>
+<p> <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153710.png" srcset="/img/loading.gif" lazyload alt="image-20220318143307507" style="zoom:33%;" /></p>
 <p>定义上来说AB不对</p>
 </blockquote>
 </li>
@@ -409,7 +562,7 @@
 </li>
 <li><p><strong>全概率公式</strong>例题：</p>
 <blockquote>
-<p> <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153711.png" alt="image-20220318145527373" style="zoom:33%;" /></p>
+<p> <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153711.png" srcset="/img/loading.gif" lazyload alt="image-20220318145527373" style="zoom:33%;" /></p>
 <p>$P(A)=P(H_1)P(A|H_1)+P(H_2)P(A|H_2)=\frac{7}{8}$ </p>
 <p>$P(C_1)=P(H_1|A)=\frac{P(H_1A)}{P(A)}=\frac{4}{7},P(C_2)=P(H_2|A)=\frac{P(H_2A)}{P(A)}=\frac{3}{7}$</p>
 <p>$P(\bar A)=P(C_1)P(\bar A|C_1)+P(C_2)P(\bar A|C_2)=\frac{4}{7}\cdot0+\frac{3}{7}\cdot\frac{1}{4}=\frac{3}{28}$ </p>
@@ -438,22 +591,22 @@
 </li>
 <li><p>例题：</p>
 <blockquote>
-<p>概念题 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153712.png" alt="image-20220319123623045" style="zoom:33%;" /></p>
+<p>概念题 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153712.png" srcset="/img/loading.gif" lazyload alt="image-20220319123623045" style="zoom:33%;" /></p>
 </blockquote>
 </li>
-<li><p>均匀分布 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153713.png" alt="image-20220319155655080" style="zoom:40%;" /></p>
+<li><p>均匀分布 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153713.png" srcset="/img/loading.gif" lazyload alt="image-20220319155655080" style="zoom:40%;" /></p>
 </li>
-<li><p>指数分布 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153714.png" alt="image-20220319161745927" style="zoom:40%;" /> </p>
+<li><p>指数分布 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153714.png" srcset="/img/loading.gif" lazyload alt="image-20220319161745927" style="zoom:40%;" /> </p>
 <ul>
 <li>$\lambda$表示失效率，越高表示越快</li>
 <li>$p(x\ge s+t|x\ge s)=p(x\ge t)$ </li>
 </ul>
 </li>
-<li><p>正态分布 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153715.png" alt="image-20220319164105042" style="zoom:40%;" /> $\phi(x)$ </p>
+<li><p>正态分布 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153715.png" srcset="/img/loading.gif" lazyload alt="image-20220319164105042" style="zoom:40%;" /> $\phi(x)$ </p>
 <ul>
 <li>$\Phi(0)=0,\Phi(-x)=1-\Phi(x)$ </li>
 <li>上$\alpha$分位数：某点右侧面积是$\alpha$ </li>
-<li><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153716.png" alt="image-20220319171921146" style="zoom:40%;" /> 见到正态分布必写标准化</li>
+<li><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153716.png" srcset="/img/loading.gif" lazyload alt="image-20220319171921146" style="zoom:40%;" /> 见到正态分布必写标准化</li>
 </ul>
 </li>
 </ul>
@@ -469,22 +622,22 @@
 <h3 id="4-随机变量分布函数"><a href="#4-随机变量分布函数" class="headerlink" title="4.随机变量分布函数"></a>4.随机变量分布函数</h3><ul>
 <li><p>例题</p>
 <blockquote>
-<p> <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153717.jpg" alt="90C3A0B8D9E27A9F74A0A24737072DDD" style="zoom:17%;" /></p>
+<p> <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153717.jpg" srcset="/img/loading.gif" lazyload alt="90C3A0B8D9E27A9F74A0A24737072DDD" style="zoom:17%;" /></p>
 </blockquote>
 </li>
 </ul>
 <h2 id="三、多维随机变量"><a href="#三、多维随机变量" class="headerlink" title="三、多维随机变量"></a>三、多维随机变量</h2><h3 id="1-多维随机变量"><a href="#1-多维随机变量" class="headerlink" title="1.多维随机变量"></a>1.多维随机变量</h3><ul>
-<li><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153718.png" alt="image-20220319191723654" style="zoom:40%;" /></li>
+<li><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153718.png" srcset="/img/loading.gif" lazyload alt="image-20220319191723654" style="zoom:40%;" /></li>
 <li>二维分布函数中，其中一个取到无穷，得到的就是另一个的分布函数</li>
 </ul>
 <h3 id="2-二维离散"><a href="#2-二维离散" class="headerlink" title="2.二维离散"></a>2.二维离散</h3><ul>
-<li><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153719.png" alt="image-20220319194447122" style="zoom: 33%;" /></li>
+<li><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153719.png" srcset="/img/loading.gif" lazyload alt="image-20220319194447122" style="zoom: 33%;" /></li>
 </ul>
 <h3 id="3-二维连续"><a href="#3-二维连续" class="headerlink" title="3.二维连续"></a>3.二维连续</h3><ul>
 <li>联合概率密度</li>
-<li>边缘概率密度：==求谁不积谁，不积先定限== <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153720.png" alt="image-20220319200659586" style="zoom:40%;" /></li>
-<li>条件概率密度：<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153722.png" alt="image-20220319200849965" style="zoom:13%;" /> $条件=\frac{联合}{边缘}$ </li>
-<li>独立性：<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153723.png" alt="image-20220319201059600" style="zoom: 22%;" /></li>
+<li>边缘概率密度：==求谁不积谁，不积先定限== <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153720.png" srcset="/img/loading.gif" lazyload alt="image-20220319200659586" style="zoom:40%;" /></li>
+<li>条件概率密度：<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153722.png" srcset="/img/loading.gif" lazyload alt="image-20220319200849965" style="zoom:13%;" /> $条件=\frac{联合}{边缘}$ </li>
+<li>独立性：<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153723.png" srcset="/img/loading.gif" lazyload alt="image-20220319201059600" style="zoom: 22%;" /></li>
 </ul>
 <h3 id="4-函数的分布-⭐️"><a href="#4-函数的分布-⭐️" class="headerlink" title="4.函数的分布(⭐️)"></a>4.函数的分布<strong>(⭐️)</strong></h3><ul>
 <li><p>(离散，离散)-&gt;离散</p>
@@ -497,26 +650,26 @@
 <blockquote>
 <p>$Z=X+Y$时，把一个变量直接替换，对另一个变量积分，得到Z的概率密度函数</p>
 <p>其实积分内部还要乘一个偏导z</p>
-<p> <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153724.png" alt="image-20220320082850030" style="zoom:30%;" /> </p>
+<p> <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153724.png" srcset="/img/loading.gif" lazyload alt="image-20220320082850030" style="zoom:30%;" /> </p>
 </blockquote>
 </li>
 </ul>
 </li>
 <li><p>(离散，连续)-&gt;连续</p>
 <ul>
-<li>离散的那个用全概率公式展开<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153725.png" alt="image-20220320095058019" style="zoom:30%;" /></li>
+<li>离散的那个用全概率公式展开<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153725.png" srcset="/img/loading.gif" lazyload alt="image-20220320095058019" style="zoom:30%;" /></li>
 </ul>
 </li>
 </ul>
 <h2 id="四、随机变量数字特征"><a href="#四、随机变量数字特征" class="headerlink" title="四、随机变量数字特征"></a>四、随机变量数字特征</h2><h3 id="1-一维"><a href="#1-一维" class="headerlink" title="1.一维"></a>1.一维</h3><ul>
-<li>期望 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153726.png" alt="image-20220320101157215" style="zoom:25%;" /></li>
+<li>期望 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153726.png" srcset="/img/loading.gif" lazyload alt="image-20220320101157215" style="zoom:25%;" /></li>
 <li>方差：<ul>
 <li>平方的期望减期望的平方 $DX=EX^2-(EX)^2$ </li>
 <li>$D(X\pm Y)=D(X)+D(Y)\pm 2Cov(X,Y)$ </li>
-<li><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153727.png" alt="image-20220320104520366" style="zoom:40%;" /></li>
+<li><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153727.png" srcset="/img/loading.gif" lazyload alt="image-20220320104520366" style="zoom:40%;" /></li>
 </ul>
 </li>
-<li>切比雪夫不等式 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153728.png" alt="image-20220320105428675" style="zoom:40%;" /></li>
+<li>切比雪夫不等式 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153728.png" srcset="/img/loading.gif" lazyload alt="image-20220320105428675" style="zoom:40%;" /></li>
 </ul>
 <h3 id="2-二维"><a href="#2-二维" class="headerlink" title="2.二维"></a>2.二维</h3><ul>
 <li>期望：只有独立才可打开直接乘</li>
@@ -538,16 +691,16 @@
 </li>
 <li><p>利莫夫-拉普拉斯定理：样本足够大时，$\sum\limits_{i=1}^{n}X_i,E=nE\bar X,D=nD\bar X$ </p>
 <blockquote>
-<p>例题 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153729.png" alt="image-20220320152012514" style="zoom:37%;" /></p>
+<p>例题 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153729.png" srcset="/img/loading.gif" lazyload alt="image-20220320152012514" style="zoom:37%;" /></p>
 </blockquote>
 </li>
 </ul>
 <h2 id="六、数理统计"><a href="#六、数理统计" class="headerlink" title="六、数理统计"></a>六、数理统计</h2><h3 id="1-统计量及其分布"><a href="#1-统计量及其分布" class="headerlink" title="1.统计量及其分布"></a>1.统计量及其分布</h3><ul>
 <li><p>样本数字特征</p>
 <ul>
-<li><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153730.png" alt="image-20220320154623427" style="zoom:40%;" /> <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153731.png" alt="image-20220320182505524" style="zoom:35%;" /></li>
-<li><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153732.png" alt="image-20220320154657909" style="zoom:40%;" /></li>
-<li><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153733.jpg" alt="D8648F59053E38F9362FCA75029B3C6F" style="zoom:20%;" /></li>
+<li><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153730.png" srcset="/img/loading.gif" lazyload alt="image-20220320154623427" style="zoom:40%;" /> <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153731.png" srcset="/img/loading.gif" lazyload alt="image-20220320182505524" style="zoom:35%;" /></li>
+<li><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153732.png" srcset="/img/loading.gif" lazyload alt="image-20220320154657909" style="zoom:40%;" /></li>
+<li><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153733.jpg" srcset="/img/loading.gif" lazyload alt="D8648F59053E38F9362FCA75029B3C6F" style="zoom:20%;" /></li>
 </ul>
 </li>
 <li><p>顺序统计量</p>
@@ -573,7 +726,7 @@
 </li>
 <li><p>==正态总体下常用结论==</p>
 <blockquote>
-<p> <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153734.png" alt="image-20220320195027681" style="zoom:40%;" /></p>
+<p> <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153734.png" srcset="/img/loading.gif" lazyload alt="image-20220320195027681" style="zoom:40%;" /></p>
 </blockquote>
 </li>
 </ul>
@@ -582,7 +735,7 @@
 <li>矩估计法：算出来$EX$，令$\bar x=EX$，反解出来$\hat \theta$ </li>
 <li>极大似然估计<ul>
 <li>写概率函数，取对数，求导，令为0，解出$\hat \theta$，根据范围选择合理的值</li>
-<li><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153735.png" alt="image-20220321093858663" style="zoom:30%;" /></li>
+<li><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153735.png" srcset="/img/loading.gif" lazyload alt="image-20220321093858663" style="zoom:30%;" /></li>
 <li>问“估计值”，用小写$x_i$；问“估计量”用大写$X_i$ </li>
 </ul>
 </li>
@@ -603,7 +756,7 @@
 <p>推导：</p>
 <p>$p(|\bar x-\mu|&lt;\Delta)=1-\alpha\iff p(|\frac{\bar x-\mu}{\sigma/\sqrt{n}}|&lt;\frac{\Delta}{\sigma/\sqrt{n}})=1-\alpha$ </p>
 <p>$\Delta=Z_{\frac{\alpha}{2}}\frac{\sigma}{\sqrt{n}}$ 或者 $\Delta=T_{\frac{\alpha}{2}}(n-1)\cdot\frac{S}{\sqrt{n}}$ </p>
-<p>$\Delta$表示想要置信度为$1-\alpha$情况下$|\bar x-\mu|$的上限 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153736.png" alt="image-20220321082805252" style="zoom:25%;" /></p>
+<p>$\Delta$表示想要置信度为$1-\alpha$情况下$|\bar x-\mu|$的上限 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153736.png" srcset="/img/loading.gif" lazyload alt="image-20220321082805252" style="zoom:25%;" /></p>
 <p>即$p(\bar x-\Delta&lt;\mu&lt;\bar x+\Delta)=1-\alpha=0.99$ “有99%的把握落在这个区间”</p>
 </blockquote>
 </li>
@@ -622,200 +775,252 @@
 </li>
 </ul>
 
-      
-    </div>
-    <footer class="article-footer">
-      
-        <a data-url="https://gilgamesh-lzq.github.io/2022/04/02/%E5%BC%A0%E5%AE%87%E4%B8%80%E8%BD%AE%E7%BA%BF%E4%BB%A3%E6%A6%82%E7%8E%87%E8%AE%BA/" data-id="cl1hzgb5z0001b88og6w9hqpz" class="article-share-link">Share</a>
-      
-
-      
-        <a href="https://gilgamesh-lzq.github.io/2022/04/02/%E5%BC%A0%E5%AE%87%E4%B8%80%E8%BD%AE%E7%BA%BF%E4%BB%A3%E6%A6%82%E7%8E%87%E8%AE%BA/#ds-thread" class="article-comment-link">Comments</a>
-      
-
-      
-    </footer>
-  </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2022/04/02/%E5%9B%BE%E6%95%B0%E6%8D%AE%E5%BA%93%E8%B0%83%E7%A0%94%E6%8A%A5%E5%91%8A/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          图数据库调研报告
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2022/04/02/%E5%BC%A0%E5%AE%87%E4%B8%80%E8%BD%AE%E9%AB%98%E6%95%B0/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">张宇一轮高数</div>
-    </a>
-  
-</nav>
-
-  
-</article>
-
-
-  <section id="comments">
-    <div id="ds-thread" class="ds-thread" data-thread-key="2022/04/02/张宇一轮线代概率论/" data-title="张宇一轮线代概率论" data-url="https://gilgamesh-lzq.github.io/2022/04/02/%E5%BC%A0%E5%AE%87%E4%B8%80%E8%BD%AE%E7%BA%BF%E4%BB%A3%E6%A6%82%E7%8E%87%E8%AE%BA/"></div>
-  </section>
-</section>
-      
-      <aside id="sidebar">
-  
-    
-  
-    
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/04/">四月 2022</a><span class="archive-list-count">3</span></li></ul>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2022/04/02/%E5%9B%BE%E6%95%B0%E6%8D%AE%E5%BA%93%E8%B0%83%E7%A0%94%E6%8A%A5%E5%91%8A/">图数据库调研报告</a>
-          </li>
-        
-          <li>
-            <a href="/2022/04/02/%E5%BC%A0%E5%AE%87%E4%B8%80%E8%BD%AE%E7%BA%BF%E4%BB%A3%E6%A6%82%E7%8E%87%E8%AE%BA/">张宇一轮线代概率论</a>
-          </li>
-        
-          <li>
-            <a href="/2022/04/02/%E5%BC%A0%E5%AE%87%E4%B8%80%E8%BD%AE%E9%AB%98%E6%95%B0/">张宇一轮高数</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Links</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="https://github.com/Gilgamesh-lzq" target="_blank">我的主页</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-      
-    </div>
-    <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2022 Gilgamesh<br>
-      Powered by <a href="//hexo.io/" target="_blank">Hexo</a>
-      .
-      Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>
-    </div>
-  </div>
-</footer>
-  </div>
-  <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-  <!-- totop start -->
-<div id="totop">
-<a title="totop"><img src="/img/scrollup.png"/></a>
-</div>
-
-<!-- totop end -->
-
-<!-- 多说公共js代码 start -->
-<script type="text/javascript">
-var duoshuoQuery = {short_name:"reqianduan"};
-  (function() {
-    var ds = document.createElement('script');
-    ds.type = 'text/javascript';ds.async = true;
-    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-    ds.charset = 'UTF-8';
-    (document.getElementsByTagName('head')[0]
-     || document.getElementsByTagName('body')[0]).appendChild(ds);
-  })();
-  </script>
-<!-- 多说公共js代码 end -->
-
-
-<!-- 百度分享 start -->
-
-<!-- 百度分享 end -->
-
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-
-
-
-
-<! -- mathjax config similar to math.stackexchange -->
-
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-                processEscapes: true
-                    
-}
-  
-        });
-</script>
-
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-tex2jax: {
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-                  
-}
-    
-        });
-</script>
-
-<script type="text/x-mathjax-config">
-MathJax.Hub.Queue(function() {
-            var all = MathJax.Hub.getAllJax(), i;
-            for(i=0; i < all.length; i += 1) {
-                            all[i].SourceElement().parentNode.className += ' has-jax';
-                                    
-            }
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
                 
-        });
-</script>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2022/04/02/%E5%9B%BE%E6%95%B0%E6%8D%AE%E5%BA%93%E8%B0%83%E7%A0%94%E6%8A%A5%E5%91%8A/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">图数据库调研报告</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/04/02/%E5%BC%A0%E5%AE%87%E4%B8%80%E8%BD%AE%E9%AB%98%E6%95%B0/">
+                        <span class="hidden-mobile">张宇一轮高数</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
 
-<script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.5.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
-
-
-
-<script src="/js/script.js"></script>
-
-
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
 </div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <i class="iconfont icon-love"></i> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  
+    <script  src="https://cdn.jsdelivr.net/npm/tocbot@4/dist/tocbot.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4/anchor.min.js" ></script>
+  
+  
+    <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js" ></script>
+  
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+        typing(title);
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        loader: {
+          load: ['ui/lazy']
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" ></script>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </body>
 </html>
