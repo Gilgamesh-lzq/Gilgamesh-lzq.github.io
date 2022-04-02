@@ -271,15 +271,22 @@ body {
 }
 .article-entry h1,
 .widget h1 {
-  font-size: 2em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
 }
 .article-entry h2,
 .widget h2 {
-  font-size: 1.5em;
+  font-size: 1.75em;
+  line-height: 1.1;
+  border-bottom: 0px solid #eee;
+  color: #7e3131;
 }
 .article-entry h3,
 .widget h3 {
-  font-size: 1.3em;
+  font-size: 1.5em;
+  line-height: 1.1;
+  color: RGB(47, 85, 151);
 }
 .article-entry h4,
 .widget h4 {
@@ -292,14 +299,41 @@ body {
 .article-entry h6,
 .widget h6 {
   font-size: 1em;
-  color: #999;
+  color: #777;
+}
+.article-entry a,
+.widget a {
+  color: #173774;
+}
+.article-entry blockquote,
+.widget blockquote {
+  border-left: 4px solid #dfe2e5;
+  padding: 0 15px;
+  color: #777;
+  padding-right: 0;
+}
+.article-entry mark,
+.widget mark {
+  background: #fff99f;
+  padding: 0px solid #585e5a;
+  border-16px-solid-radius: #4d4f52;
+  color: #000;
 }
 .article-entry hr,
 .widget hr {
-  border: 1px dashed #ddd;
+  height: 2px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+  overflow: hidden;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
 }
 .article-entry strong,
 .widget strong {
+  color: #be0000;
   font-weight: bold;
 }
 .article-entry em,
