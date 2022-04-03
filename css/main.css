@@ -892,7 +892,7 @@ label {
 }
 .markdown-body {
   font-size: 1rem;
-  line-height: 1.4;
+  line-height: 1.5;
   font-family: font/FZHei-B01S.ttf;
   margin-bottom: 2rem;
   color: var(--post-text-color);
@@ -993,7 +993,7 @@ label {
 }
 .markdown-body pre code {
   overflow-x: auto;
-  line-height: 1.1;
+  line-height: 1.2;
   border-radius: 3px;
   tab-size: 4;
 }
@@ -1119,7 +1119,7 @@ figure.highlight td.code > pre {
   background-color: transparent;
   font-size: 0.9rem;
   padding: 0.5rem 0.75rem;
-  line-height: 1.2;
+  line-height: 1.3;
   border-radius: 0.125rem;
   transition: background-color 0.2s ease-in-out;
 }
