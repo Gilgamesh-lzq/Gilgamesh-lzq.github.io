@@ -994,7 +994,7 @@ label {
 .markdown-body pre code {
   overflow-x: auto;
   line-height: 1.2;
-  border-radius: 3px;
+  border-radius: 5px;
   tab-size: 4;
 }
 .markdown-body pre .mermaid {
@@ -1044,7 +1044,7 @@ hr {
 }
 *:not(td) > .code-wrapper {
   position: relative;
-  border-radius: 3px;
+  border-radius: 5px;
 }
 pre[class*=language-].line-numbers {
   position: initial;
@@ -1058,8 +1058,9 @@ figure.highlight {
 figure.highlight table {
   border: 0;
   margin: 0;
+  margin-top: 0rem;
   width: auto;
-  border-radius: 3px;
+  border-radius: 5px;
 }
 figure.highlight td {
   border: 0;
