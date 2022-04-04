@@ -20,6 +20,7 @@ figure.highlight::before {
     margin-top: -15px;
     position: absolute;
     width: 12px;
+    z-index:999;
 }
 
 
@@ -194,7 +195,7 @@ table td:last-child {
 
 .CodeMirror-lines {
     padding-left: 4px;
-    font-family: "/font/CONSOLAS.TTF";
+    font-family: "/font/CONSOLA.TTF";
 }
 
 .code-tooltip {
