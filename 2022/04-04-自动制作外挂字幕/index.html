@@ -16,23 +16,24 @@
   <meta name="author" content="Gilgamesh">
   <meta name="keywords" content="">
   
-    <meta name="description" content="苹果系统一些藏在深处的指令以及其用法。打开Terminal，输入本文提到的命令，探索新大陆。">
+    <meta name="description" content="分享一种我自己在用的解析剪映AI字幕的缓存文件生成外挂字幕的方法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Mac中一些有用的奇怪命令">
-<meta property="og:url" content="https://gilgamesh-lzq.github.io/2022/04/03/Mac%E4%B8%AD%E4%B8%80%E4%BA%9B%E6%9C%89%E7%94%A8%E7%9A%84%E5%A5%87%E6%80%AA%E5%91%BD%E4%BB%A4/index.html">
+<meta property="og:title" content="制作视频外挂字幕">
+<meta property="og:url" content="https://gilgamesh-lzq.github.io/2022/04-04-%E8%87%AA%E5%8A%A8%E5%88%B6%E4%BD%9C%E5%A4%96%E6%8C%82%E5%AD%97%E5%B9%95/index.html">
 <meta property="og:site_name" content="Gilgamesh&#39;s Blog">
-<meta property="og:description" content="苹果系统一些藏在深处的指令以及其用法。打开Terminal，输入本文提到的命令，探索新大陆。">
+<meta property="og:description" content="分享一种我自己在用的解析剪映AI字幕的缓存文件生成外挂字幕的方法">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:03-13:56:18-image-20220403135431099.png">
-<meta property="article:published_time" content="2022-04-03T04:59:19.000Z">
-<meta property="article:modified_time" content="2022-04-03T11:42:37.452Z">
+<meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:04-02:00:25-image-20220404011306278.png">
+<meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:04-02:00:25-image-20220404014103436.png">
+<meta property="article:published_time" content="2022-04-04T13:51:13.000Z">
+<meta property="article:modified_time" content="2022-04-03T18:00:31.031Z">
 <meta property="article:author" content="Gilgamesh">
 <meta property="article:tag" content="软件使用">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:03-13:56:18-image-20220403135431099.png">
+<meta name="twitter:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:04-02:00:25-image-20220404011306278.png">
   
   
-  <title>Mac中一些有用的奇怪命令 - Gilgamesh&#39;s Blog</title>
+  <title>制作视频外挂字幕 - Gilgamesh&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
@@ -69,7 +70,7 @@
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"gilgamesh-lzq.github.io","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":90,"cursorChar":"_","loop":true},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":2},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"gilgamesh-lzq.github.io","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":85,"cursorChar":"_","loop":true},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":2},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
@@ -182,7 +183,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="Mac中一些有用的奇怪命令">
+            <span class="h2" id="subtitle" title="制作视频外挂字幕">
               
             </span>
 
@@ -192,8 +193,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2022-04-03 12:59" pubdate>
-        2022年4月3日 下午
+      <time datetime="2022-04-04 21:51" pubdate>
+        2022年4月4日 晚上
       </time>
     </span>
   
@@ -203,7 +204,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      2.6k 字
+      1.6k 字
     </span>
   
 
@@ -212,7 +213,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      23 分钟
+      14 分钟
     </span>
   
 
@@ -245,36 +246,30 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Mac中一些有用的奇怪命令</h1>
+            <h1 style="display: none">制作视频外挂字幕</h1>
             
             <div class="markdown-body">
-              <h1 align="center">Mac中一些有用的奇怪命令</h1>
+              <h1 align="center">制作视频外挂字幕</h1>
 
-<p>&emsp;&emsp;苹果系统自带的设置可以调整许多设置，但不是全部。有些设置隐藏在“百度区”中，只有在受其困扰遂上网搜索时才会发现。本文收集了一些我自己用到过的指令并解释了其用法，希望能对大家有所帮助。打开Terminal，输入本文提到的命令，探索新大陆。</p>
-<p>&emsp;&emsp;<strong>不要随便在命令行中输入你不了解的指令</strong>，正如不要随便安装你不了解的软件。它们可能会修改系统文件对你的使用体验造成不可逆的影响，也可能在系统中你不知道的位置留下一点足迹（俗称“拉屎”），日积月累磁盘空间就被蚕食掉了。本文提到的指令都配套了与之对应的解除此设置的指令，如果你不喜欢某设置可以改回去，<strong>不会对你的系统造成影响</strong>。</p>
+<p>&emsp;&emsp;不知道有多少小伙伴有和我一样看网上视频课程喜欢下载下来（爬下来）看？这样视频倍速播放较为自由，还可以做音频处理、自己加字幕等等操作，让学习过程更为愉快。本文主要探讨加字幕过程。</p>
 <p>$\ $</p>
-<h2 id="1-解决软件打不开"><a href="#1-解决软件打不开" class="headerlink" title="1.解决软件打不开"></a>1.解决软件打不开</h2><figure class="highlight bash"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><pre><code class="hljs bash">sudo xattr -r -d com.apple.quarantine [你软件的.app绝对路径]<br></code></pre></td></tr></table></figure>
-<p>系统会自动为一些文件打上“备份”的标签，包括新下载的软件、签名校验不通过的盗版软件以及自己写的脚本等。被打上此标签的可执行程序是不允许执行的。例如，如果你写了一个脚本就像在Windows和Linux中常做的那样，无论是执行需要何种权限的命令，也无论脚本类型是<code>.sh</code>,<code>.command</code>,<code>.bash</code>或者是根本没有拓展名，你的脚本是根本不可能双击执行的，一定会显示权限不够。</p>
-<p>这条语句可以去除这个“备份”标签，解除这个障碍（当然你得手动给你的脚本<code>+x</code>的权限，这在任何系统中都一样）。这不会对你正常使用文件产生任何影响。</p>
-<h2 id="2-解决conda环境自动激活"><a href="#2-解决conda环境自动激活" class="headerlink" title="2.解决conda环境自动激活"></a>2.解决conda环境自动激活</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">conda config --<span class="hljs-built_in">set</span> auto_activate_base <span class="hljs-literal">true</span><br>conda config --<span class="hljs-built_in">set</span> auto_activate_base <span class="hljs-literal">false</span><br></code></pre></td></tr></table></figure>
-<p>有时我们不希望所有的环境都混在一起，但是自从安装了conda，每次打开命令行都会自动激活base环境。可以通过以上语句控制base环境是否自动开启。</p>
-<h2 id="3-控制Dock栏自动隐藏的动画速度"><a href="#3-控制Dock栏自动隐藏的动画速度" class="headerlink" title="3.控制Dock栏自动隐藏的动画速度"></a>3.控制Dock栏自动隐藏的动画速度</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo defaults write com.apple.Dock autohide-delay -<span class="hljs-built_in">float</span> 0 &amp;&amp; killall Dock<br>sudo defaults delete com.apple.Dock autohide-delay &amp;&amp; killall Dock<br></code></pre></td></tr></table></figure>
-<p>苹果默认的动画很丝滑，但不是所有人都愿意看过渡动画。有些人就是喜欢“来也匆匆去也匆匆”的系统，那么可以使用以上指令修改系统关闭或开启此动画。也可以尝试修改其中的值来调整到合适的速度。</p>
-<p>注意<code>&amp;&amp;</code>用来连接先后执行的两条指令，在此设置中<code>killall Dock</code>必不可少，只有Dock自动重启后修改的设置才会生效。</p>
-<h2 id="4-修改启动台图标数量"><a href="#4-修改启动台图标数量" class="headerlink" title="4.修改启动台图标数量"></a>4.修改启动台图标数量</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo defaults write com.apple.dock springboard-columns -int 10<br>sudo defaults write com.apple.dock springboard-rows -int 8<br>killall Dock<br></code></pre></td></tr></table></figure>
-<p>启动台图标很大，有些人安装了很多软件以至于想要使用时不好找（当然也可以用“聚焦”来快速搜索，但是谁能记住所有软件的名字呢）。使用上述指令可以调整启动台默认展示图标的列数、行数。只有Dock自动重启后修改的设置才会生效。</p>
-<p>注意行列数改多不会让图标间隔变小，只会让图标变小。苹果的图标全部是按照像素点点对点制作，缩放后可能看着有点模糊。默认的数值是5行7列，我实际体验下来还是默认的最好用。</p>
-<h2 id="5-在Dock栏上添加空白分隔"><a href="#5-在Dock栏上添加空白分隔" class="headerlink" title="5.在Dock栏上添加空白分隔"></a>5.在Dock栏上添加空白分隔</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">defaults write com.apple.dock persistent-apps -array-add <span class="hljs-string">&#x27;&#123;&quot;tile-type&quot;=&quot;spacer-tile&quot;;&#125;&#x27;</span>; killall Dock<br>defaults write com.apple.dock persistent-others -array-add <span class="hljs-string">&#x27;&#123;tile-data=&#123;&#125;; tile-type=&quot;spacer-tile&quot;;&#125;&#x27;</span>; killall Dock<br></code></pre></td></tr></table></figure>
-<p>Dock栏上有时软件会很多，看起来眼花缭乱不方便找软件，此时可以使用上面的指令为Dock栏添加几个空白，可以随意将它们拖到合适的地方。如果不需要这空白了，只要像移除Dock栏上的其他图标一样拖出去即可删除。本质上此指令是修改Dock栏配置文件，添加一个不指向任何东西的空白图标。</p>
-<p>注意Dock栏中的短竖线左侧为软件区域，右侧为文件及文件夹区域，左右两侧的空白不互通，对应的两条指令也不同。</p>
-<p><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:03-13:56:18-image-20220403135431099.png" srcset="/img/loading.gif" lazyload alt="image-20220403135431099" style="zoom:50%;" /></p>
-<h2 id="6-查看系统唤醒"><a href="#6-查看系统唤醒" class="headerlink" title="6.查看系统唤醒"></a>6.查看系统唤醒</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">pmset -g assertions<br></code></pre></td></tr></table></figure>
-<p>一般来说苹果电脑关盖就会进入睡眠状态，立即将所有内存数据写入磁盘，几个小时后断开除内存外其他所有硬件的电源。这种睡眠方式理论上是非常省电的，但是系统有可能会被一些情况唤醒，甚至是频繁唤醒，导致电量快速消耗。使用此指令可以检查电脑被什么进程唤醒了，如果是系统进程可以考虑是否要关闭，如果是第三方软件可以考虑是否要卸载（本人有强迫症对流氓软件零容忍）。</p>
-<h2 id="7-设置电脑名称"><a href="#7-设置电脑名称" class="headerlink" title="7.设置电脑名称"></a>7.设置电脑名称</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo scutil --<span class="hljs-built_in">set</span> HostName Mac<br></code></pre></td></tr></table></figure>
-<p>一般来说命令行会显示你在系统偏好设置“共享”中设置的电脑名，但是也有些特殊情况，比如路由器DHCP服务突然挂了，它会给电脑分配一个169.254网段的地址，电脑此时就会自动改名为“bongu”，网络恢复后不会恢复，更改共享中的电脑名也不会恢复。不影响什么，但是使用命令行时看着心里不舒服。此时可以使用这条指令改名。</p>
-<h2 id="8-显示隐藏文件"><a href="#8-显示隐藏文件" class="headerlink" title="8.显示隐藏文件"></a>8.显示隐藏文件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo defaults write com.apple.finder AppleShowAllFiles TRUE &amp;&amp; killall Finder<br></code></pre></td></tr></table></figure>
-<p>一般来说苹果电脑会自动隐藏掉<code>隐藏文件</code>，因为那些配置文件和软件运行库文件夹不是普通用户需要操心的，隐藏掉看起来会非常整洁。不过我等程序员显然不喜欢自己电脑用起来像别人的电脑。虽然使用<code>⌘+⇧+.</code>可以临时控制显示或者隐藏文件，但是每次重启电脑都要重新选择显示所有文件，这样不够elegant。使用此命令可以直接设置默认始终显示隐藏文件。参考前面的几条指令，将<code>TRUE</code>替换为<code>FALSE</code>可以设置默认不显示隐藏文件，将<code>write</code>替换为<code>delete</code>可以删除刚刚设置的默认配置。</p>
-<p>​    </p>
+<h2 id="1-方案调研"><a href="#1-方案调研" class="headerlink" title="1.方案调研"></a>1.方案调研</h2><p>视频加上了外挂字幕后，字幕形式可以随意调整成自己喜欢的样式，英文课程也可以使用机翻。对于课程加速后不容易听清的问题，加字幕也是一个很有效的辅助。但是如何制作字幕却是一个问题。我探索了一下github，看起来没什么很成熟可以拿来直接用的神经网络，网上也搜不到成熟的商业软件可以一站式解决这个需求。目前据我所知所有可行的方案有：</p>
+<ul>
+<li>Windows系统中使用华为电脑管家的智能字幕功能。不能自定义格式，可以中英翻译，略有滞后，准确性一般。</li>
+<li>使用云服务商的实时语音转文本接口。大部分云服务商都提供完全免费的或数千小时免费的实时语音转文本服务。需要自己写程序和接口交互，需要自己处理分词间隔等问题，较麻烦，准确率一般，略有滞后，不支持翻译。</li>
+<li>苹果App Store中由<code>Hangzhou Duoziwei Technology Co.Ltd</code>开发的软件<code>YPlayer</code>和<code>BeMyEars</code>软件。两个软件使用同一套引擎，前者是一个能实时显示多语言AI字幕的简陋播放器，支持文本导出（不是字幕导出。导出的文本没有时间戳），性能很差导出长视频字幕时会内存溢出卡死；后者是一个将麦克风音频实时识别字幕显示在屏幕上的纯实时字幕软件，性能同样很差，不支持导出，支持多语言识别。想要使用<code>BeMyEars</code>识别正在播放视频的字幕必须使用第三方Mac音频流控制软件如<a target="_blank" rel="noopener" href="https://github.com/ExistentialAudio/BlackHole"><u>BlackHole</u></a>等将电脑扬声器重定向到电脑麦克风。</li>
+<li><a target="_blank" rel="noopener" href="https://jianwai.youdao.com"><strong><u>网易见外平台</u></strong></a>。一个免费的字幕制作平台，支持上传视频或者音频自动生成中英文srt字幕，但每天总时长不能超过两个小时。支持字幕中英机翻，不限量。</li>
+<li><strong>剪映</strong>。字节跳动旗下的一款视频制作软件，有AI生成字幕功能，不限量，但字幕不能导出。</li>
+</ul>
+<p>截至本文上传日期，剪映仍然通过将音频分离出来上传到服务器再由服务器发回字幕的方式生成字幕，同时字幕在本地是实时缓存在文件中的，也就是说可以通过抓包或者读取本地项目缓存文件的方式获得字幕，然后解析其格式化文本生成srt字幕即可。获得srt字幕后可以在网易见外平台上翻译也可以在播放器中自定义喜欢的格式（比如我个人比较喜欢老莱视频中那样白字蓝边灰底的样式）。</p>
+<p><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:04-02:00:25-image-20220404011306278.png" srcset="/img/loading.gif" lazyload alt="image-20220404011306278" style="zoom:50%;" /></p>
+<h2 id="2-解析字幕"><a href="#2-解析字幕" class="headerlink" title="2.解析字幕"></a>2.解析字幕</h2><p>抓包比较麻烦，但得到的单个<code>json</code>文件字幕内容和时间戳在一起，比较容易处理；分析本地文件则比较复杂，因为剪映将字幕的内容和时间戳分开保存，需要一一配对生成字幕。下面演示分析本地文件生成字幕的方法。</p>
+<p>使用剪映生成字幕很简单，这里略过。字幕生成成功后，通过这个我制作的<a target="_blank" rel="noopener" href="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:03-21:44:39-%E5%89%AA%E6%98%A0%E5%AD%97%E5%B9%95%E5%AF%BC%E5%87%BA.html"><u>转换网页</u></a>，本地打开下载下来的<code>html文件</code>即可，按照网页中指示找到你使用的剪映版本项目缓存文件所在目录。里面众多<code>json</code>文件中会有一个<strong>体积明显比较大</strong>，就是它。</p>
+<p>打开网页，调整设置。网页完全根据我自己的电脑分辨率适配，如果你的电脑上输入框溢出看不到右边的按钮，可以修改网页源代码40行和111行，修改其中的行列数值。</p>
+<p>如果想要生成适合Linux中使用的字幕文件，换行符选择<code>\n</code>,其他系统中选择<code>\r\n</code>。这一设置影响不大，一般的播放器都能识别。按照你使用的剪映版本<strong>调整时间单位</strong>，电脑版选微秒，安卓版选毫秒。错误的设置生成的字幕会无法使用。网页提供了一个示例来测试你的设备是否能使用它。点击“生成srt”按钮，下方会生成字幕，有一个下载字幕的按钮可以调用浏览器下载功能将文件保存到本地。测试完成后点击“清空”按钮<strong>清空输入框内容</strong>。</p>
+<p><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:04-02:00:25-image-20220404014103436.png" srcset="/img/loading.gif" lazyload alt="image-20220404014103436"></p>
+<p>使用文本编辑器打开那个剪映项目缓存文件，将其中全部内容复制出来（<code>ctrl+A</code>,<code>ctrl+C</code>），粘贴到网页输入框中。由于文件通常很大，这个过程可能很卡，要卡半天。冷静、理智、稳重，<strong>慢慢等</strong>。复制完成后点击“生成srt”按钮，很快就会生成字幕。在下方生成的字幕旁边有下载字幕的按钮，点击下载即可。</p>
+<p>接下来，enjoy your watching！</p>
 
             </div>
             <hr>
@@ -309,18 +304,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/04/04/%E8%87%AA%E5%8A%A8%E5%88%B6%E4%BD%9C%E5%A4%96%E6%8C%82%E5%AD%97%E5%B9%95/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">制作视频外挂字幕</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/04/03/%E8%AE%A9%E4%BD%A0%E7%9A%84PDF%E6%9B%B4%E5%AE%B9%E6%98%93%E9%98%85%E8%AF%BB/">
-                        <span class="hidden-mobile">让你的PDF更容易阅读</span>
+                      <a href="/2022/04-03-Mac%E4%B8%AD%E4%B8%80%E4%BA%9B%E6%9C%89%E7%94%A8%E7%9A%84%E5%A5%87%E6%80%AA%E5%91%BD%E4%BB%A4/">
+                        <span class="hidden-mobile">Mac中一些有用的奇怪命令</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
