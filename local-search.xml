@@ -23,25 +23,6 @@
   
   
   <entry>
-    <title>test-code-highlight</title>
-    <link href="/2022/04-04-test-code-highlight/"/>
-    <url>/2022/04-04-test-code-highlight/</url>
-    
-    <content type="html"><![CDATA[<figure class="highlight python"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></div></td><td class="code"><pre><code class="hljs python"><span class="hljs-meta">@requires_authorization(<span class="hljs-params">roles=[<span class="hljs-string">&quot;ADMIN&quot;</span>]</span>)</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">somefunc</span>(<span class="hljs-params">param1=<span class="hljs-string">&#x27;&#x27;</span>, param2=<span class="hljs-number">0</span></span>):<br>    <span class="hljs-string">r&#x27;&#x27;&#x27;A docstring&#x27;&#x27;&#x27;</span><br>    <span class="hljs-keyword">if</span> param1 &gt; param2: <span class="hljs-comment"># interesting</span><br>        <span class="hljs-built_in">print</span> <span class="hljs-string">&#x27;Gre\&#x27;ater&#x27;</span><br>    <span class="hljs-keyword">return</span> (param2 - param1 + <span class="hljs-number">1</span> + <span class="hljs-number">0b10l</span>) <span class="hljs-keyword">or</span> <span class="hljs-literal">None</span><br><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">SomeClass</span>:<br>    <span class="hljs-keyword">pass</span><br><br><span class="hljs-meta">&gt;&gt;&gt; </span>message = <span class="hljs-string">&#x27;&#x27;&#x27;interpreter</span><br><span class="hljs-string"><span class="hljs-meta">... </span>prompt&#x27;&#x27;&#x27;</span><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-    <categories>
-      
-      <category>1</category>
-      
-    </categories>
-    
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>Mac中一些有用的奇怪命令</title>
     <link href="/2022/04-03-Mac%E4%B8%AD%E4%B8%80%E4%BA%9B%E6%9C%89%E7%94%A8%E7%9A%84%E5%A5%87%E6%80%AA%E5%91%BD%E4%BB%A4/"/>
     <url>/2022/04-03-Mac%E4%B8%AD%E4%B8%80%E4%BA%9B%E6%9C%89%E7%94%A8%E7%9A%84%E5%A5%87%E6%80%AA%E5%91%BD%E4%BB%A4/</url>

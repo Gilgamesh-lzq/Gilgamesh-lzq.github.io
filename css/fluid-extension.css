@@ -6,7 +6,7 @@ figure.highlight {
     */
     background: rgb(246,248,250);
     border-radius: 8px;
-    box-shadow: 1px 2px 17px 0px rgba(0, 0, 0, .4);
+    box-shadow: 1px 2px 22px 1px rgba(0, 0, 0, .3);
     padding-top: 25px;
     z-index:998;
 }
