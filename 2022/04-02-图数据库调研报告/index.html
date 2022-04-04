@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html lang="zh-CN" data-default-color-scheme=auto>
+<html lang="zh-CN" data-default-color-scheme=light>
 
 
 
@@ -16,12 +16,12 @@
   <meta name="author" content="Gilgamesh">
   <meta name="keywords" content="">
   
-    <meta name="description" content="2021年秋季学期大数据管理系统课程中对图数据库做的调研报告，包括图数据库的存储和索引模式总数以及一些最新进展">
+    <meta name="description" content="2021年秋季学期大数据管理系统课程中对图数据库做的调研报告。解读一篇综述中对图数据库的介绍和总结，对其中的一些表述进行理解后的复述以及解释，并为了更好地说明图数据库基本特点对文章内容进行重新组合。本文重点是各种图数据库类型分类以及它们的储存方式。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="图数据库调研报告">
 <meta property="og:url" content="https://gilgamesh-lzq.github.io/2022/04-02-%E5%9B%BE%E6%95%B0%E6%8D%AE%E5%BA%93%E8%B0%83%E7%A0%94%E6%8A%A5%E5%91%8A/index.html">
 <meta property="og:site_name" content="Gilgamesh&#39;s Blog">
-<meta property="og:description" content="2021年秋季学期大数据管理系统课程中对图数据库做的调研报告，包括图数据库的存储和索引模式总数以及一些最新进展">
+<meta property="og:description" content="2021年秋季学期大数据管理系统课程中对图数据库做的调研报告。解读一篇综述中对图数据库的介绍和总结，对其中的一些表述进行理解后的复述以及解释，并为了更好地说明图数据库基本特点对文章内容进行重新组合。本文重点是各种图数据库类型分类以及它们的储存方式。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:02-19:08:26-64f1dd9348ca3abff26e19083013d9e0_4_Figure_3.png">
 <meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:02-19:08:26-64f1dd9348ca3abff26e19083013d9e0_19_Figure_11.png">
@@ -38,9 +38,8 @@
 <meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:02-19:08:26-64f1dd9348ca3abff26e19083013d9e0_23_Figure_18.png">
 <meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:02-19:08:26-64f1dd9348ca3abff26e19083013d9e0_29_Table_5.png">
 <meta property="article:published_time" content="2022-04-02T11:10:13.000Z">
-<meta property="article:modified_time" content="2022-04-02T18:30:32.303Z">
+<meta property="article:modified_time" content="2022-04-04T13:43:27.239Z">
 <meta property="article:author" content="Gilgamesh">
-<meta property="article:tag" content="报告">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:02-19:08:26-64f1dd9348ca3abff26e19083013d9e0_4_Figure_3.png">
   
@@ -147,18 +146,6 @@
               <a class="nav-link" href="/categories/">
                 <i class="iconfont icon-category-fill"></i>
                 分类
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/tags/">
-                <i class="iconfont icon-tags-fill"></i>
-                标签
               </a>
             </li>
           
@@ -387,13 +374,6 @@
                     
                   </div>
                 
-                
-                  <div class="post-meta">
-                    <i class="iconfont icon-tags"></i>
-                    
-                      <a class="hover-with-bg" href="/tags/%E6%8A%A5%E5%91%8A/">报告</a>
-                    
-                  </div>
                 
               </div>
               

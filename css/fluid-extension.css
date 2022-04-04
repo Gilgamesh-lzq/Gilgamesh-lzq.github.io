@@ -5,9 +5,10 @@ figure.highlight {
     background: rgb(246,248,250);
     */
     background: rgb(246,248,250);
-    border-radius: 5px;
+    border-radius: 8px;
     box-shadow: 1px 2px 7px 0px rgba(0, 0, 0, .4);
-    padding-top: 25px
+    padding-top: 25px;
+    z-index:998;
 }
 
 figure.highlight::before {
@@ -195,7 +196,7 @@ table td:last-child {
 
 .CodeMirror-lines {
     padding-left: 4px;
-    font-family: "/font/CONSOLA.TTF";
+    font-family: "font/CONSOLA.TTF";
 }
 
 .code-tooltip {
@@ -212,7 +213,6 @@ tt {
     /*
     background-color: #f8f8f8;
     */
-    background-color: #4f2626;
     border-radius: 5px;
     padding: 0;
     padding: 0px 0px 0px 0px;
