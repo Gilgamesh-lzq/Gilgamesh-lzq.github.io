@@ -19,14 +19,14 @@
     <meta name="description" content="苹果系统自带的设置可以调整许多设置，但不是全部。有些设置隐藏在“百度区”中，只有在受其困扰遂上网搜索时才会发现。本文收集了一些我自己用到过的指令并解释了其用法，希望能对大家有所帮助。打开Terminal，输入本文提到的命令，探索新大陆。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Mac中一些有用的冷门命令">
-<meta property="og:url" content="https://gilgamesh-lzq.github.io/2022/04-03-Mac%E4%B8%AD%E4%B8%80%E4%BA%9B%E6%9C%89%E7%94%A8%E7%9A%84%E5%86%B7%E9%97%A8%E5%91%BD%E4%BB%A4/index.html">
+<meta property="og:url" content="https://gilgamesh-lzq.github.io/2022/04-06-Mac%E4%B8%AD%E4%B8%80%E4%BA%9B%E6%9C%89%E7%94%A8%E7%9A%84%E5%86%B7%E9%97%A8%E5%91%BD%E4%BB%A4/index.html">
 <meta property="og:site_name" content="Gilgamesh&#39;s Blog">
 <meta property="og:description" content="苹果系统自带的设置可以调整许多设置，但不是全部。有些设置隐藏在“百度区”中，只有在受其困扰遂上网搜索时才会发现。本文收集了一些我自己用到过的指令并解释了其用法，希望能对大家有所帮助。打开Terminal，输入本文提到的命令，探索新大陆。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:03-13:56:18-image-20220403135431099.png">
 <meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:05-19:21:19-image-20220405174159263.png">
-<meta property="article:published_time" content="2022-04-03T04:59:19.000Z">
-<meta property="article:modified_time" content="2022-04-05T15:08:10.960Z">
+<meta property="article:published_time" content="2022-04-06T04:59:19.000Z">
+<meta property="article:modified_time" content="2022-04-05T16:22:50.138Z">
 <meta property="article:author" content="Gilgamesh">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:03-13:56:18-image-20220403135431099.png">
@@ -184,8 +184,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2022-04-03 12:59" pubdate>
-        2022年4月3日 下午
+      <time datetime="2022-04-06 12:59" pubdate>
+        2022年4月6日 下午
       </time>
     </span>
   
@@ -195,7 +195,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      8.3k 字
+      9.2k 字
     </span>
   
 
@@ -204,7 +204,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      70 分钟
+      77 分钟
     </span>
   
 
@@ -242,11 +242,11 @@
             <div class="markdown-body">
               <h1 align="center">Mac中一些有用的冷门命令</h1>
 
-<h1 id="本篇文章仍在施工中。。。"><a href="#本篇文章仍在施工中。。。" class="headerlink" title="本篇文章仍在施工中。。。"></a><strong>本篇文章仍在施工中。。。</strong></h1><p>苹果系统自带的设置可以调整许多设置，但不是全部。有些设置隐藏在“百度区”中，只有在受其困扰遂上网搜索时才会发现。本文收集了一些我自己用到过的指令并解释了其用法，希望能对大家有所帮助。打开Terminal，输入本文提到的命令，探索新大陆。</p>
+<p>苹果系统自带的设置可以调整许多设置，但不是全部。有些设置隐藏在“百度区”中，只有在受其困扰遂上网搜索时才会发现。本文收集了一些我自己用到过的指令并解释了其用法，希望能对大家有所帮助。打开Terminal，输入本文提到的命令，探索新大陆。</p>
 <p><strong>不要随便在命令行中输入你不了解的指令</strong>，正如不要随便安装你不了解的软件。它们可能会修改系统文件对你的使用体验造成不可逆的影响，也可能在系统中你不知道的位置留下一点足迹（俗称“拉屎”），日积月累磁盘空间就被蚕食掉了。本文提到的指令都配套了与之对应的解除此设置的指令，如果你不喜欢某设置可以改回去，<strong>不会对你的系统造成影响</strong>。</p>
 <p>$\ $</p>
-<h2 id="1-杂项"><a href="#1-杂项" class="headerlink" title="1.杂项"></a>1.杂项</h2><h3 id="1-1-解决软件打不开"><a href="#1-1-解决软件打不开" class="headerlink" title="1.1.解决软件打不开"></a>1.1.解决软件打不开</h3><figure class="highlight bash"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><pre><code class="hljs bash">sudo xattr -r -d com.apple.quarantine [你软件的.app绝对路径]<br></code></pre></td></tr></table></figure>
-<p>系统会自动为一些文件打上“备份”的标签，包括新下载的软件、签名校验不通过的盗版软件以及自己写的脚本等。被打上此标签的可执行程序是不允许执行的。例如，如果你写了一个脚本就像在Windows和Linux中常做的那样，无论是执行需要何种权限的命令，也无论脚本类型是<code>.sh</code>,<code>.command</code>,<code>.bash</code>或者是根本没有拓展名，你的脚本是根本不可能双击执行的，一定会显示权限不够。</p>
+<h2 id="1-日常"><a href="#1-日常" class="headerlink" title="1.日常"></a>1.日常</h2><h3 id="1-1-解决软件打不开"><a href="#1-1-解决软件打不开" class="headerlink" title="1.1.解决软件打不开"></a>1.1.解决软件打不开</h3><figure class="highlight bash"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><pre><code class="hljs bash">sudo xattr -r -d com.apple.quarantine [你软件的.app绝对路径]<br></code></pre></td></tr></table></figure>
+<p>系统会自动为一些文件打上“备份”的属性标签，包括来自网络的文件以及自己写的脚本等。被打上此标签的可执行程序是不允许执行的。例如，如果你写了一个脚本就像在Windows和Linux中常做的那样，无论是执行需要何种权限的命令，也无论脚本类型是<code>.sh</code>,<code>.command</code>,<code>.bash</code>或者是根本没有拓展名，你的脚本是根本不可能双击执行的，一定会显示权限不够。</p>
 <p>这条语句可以去除这个“备份”标签，解除这个障碍（当然你得手动给你的脚本<code>+x</code>的权限，这在任何系统中都一样）。这不会对你正常使用文件产生任何影响。</p>
 <h3 id="1-2-解决conda环境自动激活"><a href="#1-2-解决conda环境自动激活" class="headerlink" title="1.2.解决conda环境自动激活"></a>1.2.解决conda环境自动激活</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">conda config --<span class="hljs-built_in">set</span> auto_activate_base <span class="hljs-literal">true</span><br>conda config --<span class="hljs-built_in">set</span> auto_activate_base <span class="hljs-literal">false</span><br></code></pre></td></tr></table></figure>
 <p>有时我们不希望所有的环境都混在一起，但是自从安装了conda，每次打开命令行都会自动激活base环境。可以通过以上语句控制base环境是否自动开启。</p>
@@ -271,7 +271,20 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># &gt;&gt;&gt; conda initialize &gt;&gt;&gt;</span><br><span class="hljs-comment"># !! Contents within this block are managed by &#x27;conda init&#x27; !!</span><br>__conda_setup=<span class="hljs-string">&quot;<span class="hljs-subst">$(&#x27;/Users/zql/miniforge3/bin/conda&#x27; &#x27;shell.zsh&#x27; &#x27;hook&#x27; 2&gt; /dev/null)</span>&quot;</span><br><span class="hljs-keyword">if</span> [ $? -eq 0 ]; <span class="hljs-keyword">then</span><br>    <span class="hljs-built_in">eval</span> <span class="hljs-string">&quot;<span class="hljs-variable">$__conda_setup</span>&quot;</span><br><span class="hljs-keyword">else</span><br>    <span class="hljs-keyword">if</span> [ -f <span class="hljs-string">&quot;/Users/zql/miniforge3/etc/profile.d/conda.sh&quot;</span> ]; <span class="hljs-keyword">then</span><br>        . <span class="hljs-string">&quot;/Users/zql/miniforge3/etc/profile.d/conda.sh&quot;</span><br>    <span class="hljs-keyword">else</span><br>        <span class="hljs-built_in">export</span> PATH=<span class="hljs-string">&quot;/Users/zql/miniforge3/bin:<span class="hljs-variable">$PATH</span>&quot;</span><br>    <span class="hljs-keyword">fi</span><br><span class="hljs-keyword">fi</span><br><span class="hljs-built_in">unset</span> __conda_setup<br><span class="hljs-comment"># &lt;&lt;&lt; conda initialize &lt;&lt;&lt;</span><br><br><span class="hljs-built_in">source</span> ~/.bash_profile<br></code></pre></td></tr></table></figure>
 <p>​    <code>.zshrc</code>中的前14行都由我安装Miniforge时自动生成，这是控制conda环境的语句。第16行由我自己添加，这一句的意思是，每次打开黑窗口时自动刷新一次环境变量。使用这个方法可以在日常使用开发工具时解决复杂的环境问题，也可以使用<code>alias</code>语法自定义常用的指令。</p>
 <p>注意使用此方式配置的环境变量只能在用户自己点击Terminal时使用。软件在调用命令时不会加载环境变量，因此找不到目录时可能要考虑使用完整绝对路径。例如我在使用typora搭配picgo配置图床时typora一直显示找不到指令。</p>
-<h2 id="2-电源设置"><a href="#2-电源设置" class="headerlink" title="2.电源设置"></a>2.电源设置</h2><p>在macOS中系统偏好设置提供的设置项显然太少了。您能分辨这些情况下电脑中的程序是否还会运行吗？</p>
+<h2 id="2-defaults命令"><a href="#2-defaults命令" class="headerlink" title="2.defaults命令"></a>2.defaults命令</h2><p>plist文件在macOS中被用来记录系统的各种<strong>偏好设置</strong>，所有与系统有关的设置项文件都在<code>/Library/Preferences</code>中。使用defaults命令可以修改这些设置甚至是写入自己的设置。设置项可能导致软件崩溃，移除设置项可以直接删除配置文件或者使用给出的命令。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 读取所有设置项</span><br>defaults <span class="hljs-built_in">read</span> [DOMAIN]<br><span class="hljs-comment"># 读取某设置项</span><br>defaults <span class="hljs-built_in">read</span> [DOMAIN] [PROPERTY_NAME]<br><span class="hljs-comment"># 设置某设置项</span><br>defaults write [DOMAIN] [PROPERTY_NAME] [VALUE] <br><span class="hljs-comment"># 重制某个设置项</span><br>defaults delete [DOMAIN] [PROPERTY_NAME] <br><span class="hljs-comment"># 重制某个设置</span><br>defaults delete [DOMAIN] <br></code></pre></td></tr></table></figure>
+<h2 id="3-xattr命令"><a href="#3-xattr命令" class="headerlink" title="3.xattr命令"></a>3.xattr命令</h2><p>Mac OS X 10.4及更高版本通过使用HFS+文件系统属性文件B<em>树功能支持<em>*扩展属性</em></em>。每个属性由一个名称和相关数据组成，该名称是一个以<code>\0</code>截止的Unicode字符串。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 显示所有扩展属性名称，效果与&quot;ls -l@&quot;相同</span><br>xattr [-lrsvx] file ...<br><span class="hljs-comment"># 显示与给定属性名称关联的值。通常是字符串，但如果有空值则以16进制显示</span><br>xattr -p [-lrsvx] attr_name file ...<br><span class="hljs-comment"># 给一个属性设置一个值</span><br>xattr -w [-rsx] attr_name attr_value file ...<br><span class="hljs-comment"># 将某属性以及与之对应的值一起删除</span><br>xattr -d [-rsv] attr_name file ...<br><span class="hljs-comment"># 清除所有属性以及与之对应的值</span><br>xattr -c [-rsv] file ...<br><span class="hljs-comment"># 显示一个简短的帮助信息并立即退出</span><br>xattr -h | --<span class="hljs-built_in">help</span><br></code></pre></td></tr></table></figure>
+<p>可选选项：</p>
+<ul>
+<li><code>-l</code>，将表单和值对应起来进行显示</li>
+<li><code>-r</code>，递归地处理</li>
+<li><code>-s</code>，如果文件参数是符号链接，对符号链接本身采取行动而不是它指向的文件</li>
+<li><code>-v</code>，强制运行结果中显示文件名（默认只有一个文件时不现实文件名）</li>
+<li><code>-x</code>，强制属性值用16进制表示</li>
+</ul>
+<p>这个东西官方还做了C语言的API，但是咱平时也用不着，这里就不写了，官方文档放上：<a target="_blank" rel="noopener" href="https://www.unix.com/man-page/mojave/2/listxattr"><u><em>显示xattr</em></u></a>，<a target="_blank" rel="noopener" href="https://www.unix.com/man-page/mojave/2/getxattr"><u><em>获取xattr</em></u></a>，<a target="_blank" rel="noopener" href="https://www.unix.com/man-page/mojave/2/setxattr"><u><em>设置xattr</em></u></a>，<a target="_blank" rel="noopener" href="https://www.unix.com/man-page/mojave/2/removexattr"><u><em>移除xattr</em></u></a>。</p>
+<h2 id="4-pmset命令"><a href="#4-pmset命令" class="headerlink" title="4.pmset命令"></a>4.pmset命令</h2><p>在macOS中系统偏好设置提供的<strong>电源设置</strong>项显然太少了。您能分辨这些情况下电脑中的程序是否还会运行吗？</p>
 <ul>
 <li>不关盖，放至黑屏后</li>
 <li>不关盖，按指纹键锁屏</li>
@@ -280,15 +293,15 @@
 <li>不插电源关盖，然后插入电源</li>
 </ul>
 <p><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:05-19:21:19-image-20220405174159263.png" srcset="/img/loading.gif" lazyload alt="image-20220405174159263" style="zoom: 33%;" /></p>
-<p>实际上，macOS的<code>pmset</code>命令为我们提供了更丰富的设定。以下介绍参考了<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Pmset"><u><em>维基百科</em></u></a>。（就很离谱，苹果官网自己没有介绍，没有API文档，维基百科上倒是挺详细）</p>
-<h3 id="2-1-选择设置对象"><a href="#2-1-选择设置对象" class="headerlink" title="2.1.选择设置对象"></a>2.1.选择设置对象</h3><p>设置的对象默认为全部场景，否则请指定场景。指定场景命令不能单独使用，必须和其他指令组合使用，否则不会生效。</p>
+<p>实际上，macOS的<code>pmset</code>命令为我们提供了更丰富的设定。以下介绍参考了<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Pmset"><u><em>维基百科</em></u></a>。</p>
+<h3 id="4-1-选择设置对象"><a href="#4-1-选择设置对象" class="headerlink" title="4.1.选择设置对象"></a>4.1.选择设置对象</h3><p>设置的对象默认为全部场景，否则请指定场景。指定场景命令不能单独使用，必须和其他指令组合使用，否则不会生效。</p>
 <ul>
 <li><code>-c</code>（充电器），调整连接到充电器时使用的设置</li>
 <li><code>-b</code>（电池），调整使用本机电池时使用的设置</li>
 <li><code>-u</code>（UPS），调整运行UPS时使用的设置</li>
 <li><code>-a</code>（所有，默认）调整所有场景的设置</li>
 </ul>
-<h3 id="2-2-设置唤醒、睡眠、开机或关机"><a href="#2-2-设置唤醒、睡眠、开机或关机" class="headerlink" title="2.2.设置唤醒、睡眠、开机或关机"></a>2.2.设置唤醒、睡眠、开机或关机</h3><p>可以根据一周中任意的一天和时间组合重复发生，也可以设置在未来的日期和时间。语法如下：</p>
+<h3 id="4-2-设置唤醒、睡眠、开机或关机"><a href="#4-2-设置唤醒、睡眠、开机或关机" class="headerlink" title="4.2.设置唤醒、睡眠、开机或关机"></a>4.2.设置唤醒、睡眠、开机或关机</h3><p>可以根据一周中任意的一天和时间组合重复发生，也可以设置在未来的日期和时间。语法如下：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">pmset [repeat, schedule] [<span class="hljs-built_in">sleep</span>, wake, poweron, shutdown, wakeorpoweron] [&lt;MTWRFSU&gt; &lt;<span class="hljs-built_in">date</span>/time&gt;]<br></code></pre></td></tr></table></figure>
 <p>schedule参数用于设置一次性电源事件，repeat用于设置每日或每周事件。事件的调度只能由特权用户完成。每次设置都会覆盖以前的设置，因此想要设置多个触发事件必须在一个命令字符串中输入它们。schedule参数识别以下附加参数：</p>
 <ul>
@@ -303,7 +316,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo pmset repeat shutdown MTWRFSU 23:59:00 wakeorpoweron MTWRFSU 7:00:00<br></code></pre></td></tr></table></figure>
 </blockquote>
 <p>语法限制很严格，任何错误都将导致命令失败，并将显示一条简短的帮助消息。计划事件设置存储在专用硬件中，因此“黑苹果”上此功能可能不稳定。重复事件存储在<code>/Library/Preferences/SystemConfiguration/com.apple.AutoWake.plist</code>中，此文件可以使用<code>defaults</code>命令手动编辑，但更改有可能被覆盖；更改后不会立即生效。</p>
-<h3 id="2-3-查看所有电源管理配置项"><a href="#2-3-查看所有电源管理配置项" class="headerlink" title="2.3.查看所有电源管理配置项"></a>2.3.查看所有电源管理配置项</h3><p><code>-g</code>显示有关当前电源管理配置的信息，或最近活动的日志。如果没有提供其他参数，仅显示当前设置；如果后面跟了其他参数则显示此参数的详细设置项。如果提供了多个参数，那么只有第一个参数是有用的，多余的参数会被忽略。</p>
+<h3 id="4-3-查看所有电源管理配置项"><a href="#4-3-查看所有电源管理配置项" class="headerlink" title="4.3.查看所有电源管理配置项"></a>4.3.查看所有电源管理配置项</h3><p><code>-g</code>显示有关当前电源管理配置的信息，或最近活动的日志。如果没有提供其他参数，仅显示当前设置；如果后面跟了其他参数则显示此参数的详细设置项。如果提供了多个参数，那么只有第一个参数是有用的，多余的参数会被忽略。</p>
 <ul>
 <li><code>-g live</code>，显示当前正在使用的设置</li>
 <li><code>-g custom</code>，显示所有电源的自定义设置</li>
@@ -327,7 +340,7 @@
 <li><code>-g systemstate</code>，打印当前系统的电量状态和可用能力。</li>
 <li><code>-g everything</code>，打印每个参数。这是一个有用的快速收集所有 pmset 提供的输出。适用于 10.8。</li>
 </ul>
-<h3 id="2-4-配置休眠和安全睡眠选项"><a href="#2-4-配置休眠和安全睡眠选项" class="headerlink" title="2.4.配置休眠和安全睡眠选项"></a>2.4.配置休眠和安全睡眠选项</h3><p>pmset可以识别以下参数，它们可以按任何顺序给出。任何错误的语法或无法识别的参数都将导致整个命令失败，这会在屏幕上打出一个log和一个简短的帮助文档。电源管理设置只能使用sudo权限修改。</p>
+<h3 id="4-4-配置休眠和安全睡眠选项"><a href="#4-4-配置休眠和安全睡眠选项" class="headerlink" title="4.4.配置休眠和安全睡眠选项"></a>4.4.配置休眠和安全睡眠选项</h3><p>pmset可以识别以下参数，它们可以按任何顺序给出。任何错误的语法或无法识别的参数都将导致整个命令失败，这会在屏幕上打出一个log和一个简短的帮助文档。电源管理设置只能使用sudo权限修改。</p>
 <p>通过pmset进行的所有更改都将保存在<code>/Library/Preferences/SystemConfiguration/com.apple.PowerManagement.plist</code>的持久首选项文件中。可以使用<code>defaults</code>命令手动修改此文件，但电源管理系统不会立即处理这些更改。对配置文件的手动编辑有可能被覆盖。<code>pmset touch</code>命令将从磁盘上重读现有设置并应用。</p>
 <ul>
 <li><code>displaysleep</code>，控制显示器无操作几分钟后灭屏，0以禁用显示睡眠</li>
@@ -381,7 +394,7 @@
                   <div class="post-meta mr-3">
                     <i class="iconfont icon-category"></i>
                     
-                      <a class="hover-with-bg" href="/categories/%E6%9D%82%E8%B0%88/">杂谈</a>
+                      <a class="hover-with-bg" href="/categories/%E7%9F%A5%E8%AF%86%E7%A7%AF%E7%B4%AF/">知识积累</a>
                     
                   </div>
                 
@@ -399,18 +412,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/04-04-%E8%87%AA%E5%8A%A8%E5%88%B6%E4%BD%9C%E5%A4%96%E6%8C%82%E5%AD%97%E5%B9%95/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">制作视频外挂字幕</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/04-03-%E8%AE%A9%E4%BD%A0%E7%9A%84PDF%E6%9B%B4%E5%AE%B9%E6%98%93%E9%98%85%E8%AF%BB/">
-                        <span class="hidden-mobile">让你的PDF更容易阅读</span>
+                      <a href="/2022/04-04-%E8%87%AA%E5%8A%A8%E5%88%B6%E4%BD%9C%E5%A4%96%E6%8C%82%E5%AD%97%E5%B9%95/">
+                        <span class="hidden-mobile">制作视频外挂字幕</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
