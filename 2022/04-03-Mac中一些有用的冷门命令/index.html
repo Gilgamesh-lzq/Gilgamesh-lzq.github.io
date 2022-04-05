@@ -24,8 +24,9 @@
 <meta property="og:description" content="苹果系统自带的设置可以调整许多设置，但不是全部。有些设置隐藏在“百度区”中，只有在受其困扰遂上网搜索时才会发现。本文收集了一些我自己用到过的指令并解释了其用法，希望能对大家有所帮助。打开Terminal，输入本文提到的命令，探索新大陆。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:03-13:56:18-image-20220403135431099.png">
+<meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:05-19:21:19-image-20220405174159263.png">
 <meta property="article:published_time" content="2022-04-03T04:59:19.000Z">
-<meta property="article:modified_time" content="2022-04-05T06:24:34.570Z">
+<meta property="article:modified_time" content="2022-04-05T11:53:23.935Z">
 <meta property="article:author" content="Gilgamesh">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:03-13:56:18-image-20220403135431099.png">
@@ -194,7 +195,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      4.4k 字
+      6.8k 字
     </span>
   
 
@@ -203,7 +204,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      37 分钟
+      57 分钟
     </span>
   
 
@@ -241,35 +242,102 @@
             <div class="markdown-body">
               <h1 align="center">Mac中一些有用的冷门命令</h1>
 
-<p>苹果系统自带的设置可以调整许多设置，但不是全部。有些设置隐藏在“百度区”中，只有在受其困扰遂上网搜索时才会发现。本文收集了一些我自己用到过的指令并解释了其用法，希望能对大家有所帮助。打开Terminal，输入本文提到的命令，探索新大陆。</p>
+<h1 id="本篇文章仍在施工中。。。"><a href="#本篇文章仍在施工中。。。" class="headerlink" title="本篇文章仍在施工中。。。"></a><strong>本篇文章仍在施工中。。。</strong></h1><p>苹果系统自带的设置可以调整许多设置，但不是全部。有些设置隐藏在“百度区”中，只有在受其困扰遂上网搜索时才会发现。本文收集了一些我自己用到过的指令并解释了其用法，希望能对大家有所帮助。打开Terminal，输入本文提到的命令，探索新大陆。</p>
 <p><strong>不要随便在命令行中输入你不了解的指令</strong>，正如不要随便安装你不了解的软件。它们可能会修改系统文件对你的使用体验造成不可逆的影响，也可能在系统中你不知道的位置留下一点足迹（俗称“拉屎”），日积月累磁盘空间就被蚕食掉了。本文提到的指令都配套了与之对应的解除此设置的指令，如果你不喜欢某设置可以改回去，<strong>不会对你的系统造成影响</strong>。</p>
 <p>$\ $</p>
-<h2 id="1-解决软件打不开"><a href="#1-解决软件打不开" class="headerlink" title="1.解决软件打不开"></a>1.解决软件打不开</h2><figure class="highlight bash"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><pre><code class="hljs bash">sudo xattr -r -d com.apple.quarantine [你软件的.app绝对路径]<br></code></pre></td></tr></table></figure>
+<h2 id="1-杂项"><a href="#1-杂项" class="headerlink" title="1.杂项"></a>1.杂项</h2><h3 id="1-1-解决软件打不开"><a href="#1-1-解决软件打不开" class="headerlink" title="1.1.解决软件打不开"></a>1.1.解决软件打不开</h3><figure class="highlight bash"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><pre><code class="hljs bash">sudo xattr -r -d com.apple.quarantine [你软件的.app绝对路径]<br></code></pre></td></tr></table></figure>
 <p>系统会自动为一些文件打上“备份”的标签，包括新下载的软件、签名校验不通过的盗版软件以及自己写的脚本等。被打上此标签的可执行程序是不允许执行的。例如，如果你写了一个脚本就像在Windows和Linux中常做的那样，无论是执行需要何种权限的命令，也无论脚本类型是<code>.sh</code>,<code>.command</code>,<code>.bash</code>或者是根本没有拓展名，你的脚本是根本不可能双击执行的，一定会显示权限不够。</p>
 <p>这条语句可以去除这个“备份”标签，解除这个障碍（当然你得手动给你的脚本<code>+x</code>的权限，这在任何系统中都一样）。这不会对你正常使用文件产生任何影响。</p>
-<h2 id="2-解决conda环境自动激活"><a href="#2-解决conda环境自动激活" class="headerlink" title="2.解决conda环境自动激活"></a>2.解决conda环境自动激活</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">conda config --<span class="hljs-built_in">set</span> auto_activate_base <span class="hljs-literal">true</span><br>conda config --<span class="hljs-built_in">set</span> auto_activate_base <span class="hljs-literal">false</span><br></code></pre></td></tr></table></figure>
+<h3 id="1-2-解决conda环境自动激活"><a href="#1-2-解决conda环境自动激活" class="headerlink" title="1.2.解决conda环境自动激活"></a>1.2.解决conda环境自动激活</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">conda config --<span class="hljs-built_in">set</span> auto_activate_base <span class="hljs-literal">true</span><br>conda config --<span class="hljs-built_in">set</span> auto_activate_base <span class="hljs-literal">false</span><br></code></pre></td></tr></table></figure>
 <p>有时我们不希望所有的环境都混在一起，但是自从安装了conda，每次打开命令行都会自动激活base环境。可以通过以上语句控制base环境是否自动开启。</p>
-<h2 id="3-控制Dock栏自动隐藏的动画速度"><a href="#3-控制Dock栏自动隐藏的动画速度" class="headerlink" title="3.控制Dock栏自动隐藏的动画速度"></a>3.控制Dock栏自动隐藏的动画速度</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo defaults write com.apple.Dock autohide-delay -<span class="hljs-built_in">float</span> 0 &amp;&amp; killall Dock<br>sudo defaults delete com.apple.Dock autohide-delay &amp;&amp; killall Dock<br></code></pre></td></tr></table></figure>
+<h3 id="1-3-控制Dock栏自动隐藏的动画速度"><a href="#1-3-控制Dock栏自动隐藏的动画速度" class="headerlink" title="1.3.控制Dock栏自动隐藏的动画速度"></a>1.3.控制Dock栏自动隐藏的动画速度</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo defaults write com.apple.Dock autohide-delay -<span class="hljs-built_in">float</span> 0 &amp;&amp; killall Dock<br>sudo defaults delete com.apple.Dock autohide-delay &amp;&amp; killall Dock<br></code></pre></td></tr></table></figure>
 <p>苹果默认的动画很丝滑，但不是所有人都愿意看过渡动画。有些人就是喜欢“来也匆匆去也匆匆”的系统，那么可以使用以上指令修改系统关闭或开启此动画。也可以尝试修改其中的值来调整到合适的速度。</p>
 <p>注意<code>&amp;&amp;</code>用来连接先后执行的两条指令，在此设置中<code>killall Dock</code>必不可少，只有Dock自动重启后修改的设置才会生效。</p>
-<h2 id="4-修改启动台图标数量"><a href="#4-修改启动台图标数量" class="headerlink" title="4.修改启动台图标数量"></a>4.修改启动台图标数量</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo defaults write com.apple.dock springboard-columns -int 10<br>sudo defaults write com.apple.dock springboard-rows -int 8<br>killall Dock<br></code></pre></td></tr></table></figure>
+<h3 id="1-4-修改启动台图标数量"><a href="#1-4-修改启动台图标数量" class="headerlink" title="1.4.修改启动台图标数量"></a>1.4.修改启动台图标数量</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo defaults write com.apple.dock springboard-columns -int 10<br>sudo defaults write com.apple.dock springboard-rows -int 8<br>killall Dock<br></code></pre></td></tr></table></figure>
 <p>启动台图标很大，有些人安装了很多软件以至于想要使用时不好找（当然也可以用“聚焦”来快速搜索，但是谁能记住所有软件的名字呢）。使用上述指令可以调整启动台默认展示图标的列数、行数。只有Dock自动重启后修改的设置才会生效。</p>
 <p>注意行列数改多不会让图标间隔变小，只会让图标变小。苹果的图标全部是按照像素点点对点制作，缩放后可能看着有点模糊。默认的数值是5行7列，我实际体验下来还是默认的最好用。</p>
-<h2 id="5-在Dock栏上添加空白分隔"><a href="#5-在Dock栏上添加空白分隔" class="headerlink" title="5.在Dock栏上添加空白分隔"></a>5.在Dock栏上添加空白分隔</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">defaults write com.apple.dock persistent-apps -array-add <span class="hljs-string">&#x27;&#123;&quot;tile-type&quot;=&quot;spacer-tile&quot;;&#125;&#x27;</span>; killall Dock<br>defaults write com.apple.dock persistent-others -array-add <span class="hljs-string">&#x27;&#123;tile-data=&#123;&#125;; tile-type=&quot;spacer-tile&quot;;&#125;&#x27;</span>; killall Dock<br></code></pre></td></tr></table></figure>
+<h3 id="1-5-在Dock栏上添加空白分隔"><a href="#1-5-在Dock栏上添加空白分隔" class="headerlink" title="1.5.在Dock栏上添加空白分隔"></a>1.5.在Dock栏上添加空白分隔</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">defaults write com.apple.dock persistent-apps -array-add <span class="hljs-string">&#x27;&#123;&quot;tile-type&quot;=&quot;spacer-tile&quot;;&#125;&#x27;</span>; killall Dock<br>defaults write com.apple.dock persistent-others -array-add <span class="hljs-string">&#x27;&#123;tile-data=&#123;&#125;; tile-type=&quot;spacer-tile&quot;;&#125;&#x27;</span>; killall Dock<br></code></pre></td></tr></table></figure>
 <p>Dock栏上有时软件会很多，看起来眼花缭乱不方便找软件，此时可以使用上面的指令为Dock栏添加几个空白，可以随意将它们拖到合适的地方。如果不需要这空白了，只要像移除Dock栏上的其他图标一样拖出去即可删除。本质上此指令是修改Dock栏配置文件，添加一个不指向任何东西的空白图标。</p>
 <p>注意Dock栏中的短竖线左侧为软件区域，右侧为文件及文件夹区域，左右两侧的空白不互通，对应的两条指令也不同。</p>
 <p><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:03-13:56:18-image-20220403135431099.png" srcset="/img/loading.gif" lazyload alt="image-20220403135431099" style="zoom:50%;" /></p>
-<h2 id="6-查看系统唤醒"><a href="#6-查看系统唤醒" class="headerlink" title="6.查看系统唤醒"></a>6.查看系统唤醒</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">pmset -g assertions<br></code></pre></td></tr></table></figure>
+<h3 id="1-6-查看系统唤醒"><a href="#1-6-查看系统唤醒" class="headerlink" title="1.6.查看系统唤醒"></a>1.6.查看系统唤醒</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">pmset -g assertions<br></code></pre></td></tr></table></figure>
 <p>一般来说苹果电脑关盖就会进入睡眠状态，立即将所有内存数据写入磁盘，几个小时后断开除内存外其他所有硬件的电源。这种睡眠方式理论上是非常省电的，但是系统有可能会被一些情况唤醒，甚至是频繁唤醒，导致电量快速消耗。使用此指令可以检查电脑被什么进程唤醒了，如果是系统进程可以考虑是否要关闭，如果是第三方软件可以考虑是否要卸载（本人有强迫症对流氓软件零容忍）。</p>
-<h2 id="7-设置电脑名称"><a href="#7-设置电脑名称" class="headerlink" title="7.设置电脑名称"></a>7.设置电脑名称</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo scutil --<span class="hljs-built_in">set</span> HostName Mac<br></code></pre></td></tr></table></figure>
+<h3 id="1-7-设置电脑名称"><a href="#1-7-设置电脑名称" class="headerlink" title="1.7.设置电脑名称"></a>1.7.设置电脑名称</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo scutil --<span class="hljs-built_in">set</span> HostName Mac<br></code></pre></td></tr></table></figure>
 <p>一般来说命令行会显示你在系统偏好设置“共享”中设置的电脑名，但是也有些特殊情况，比如路由器DHCP服务突然挂了，它会给电脑分配一个169.254网段的地址，电脑此时就会自动改名为“bongu”，网络恢复后不会恢复，更改共享中的电脑名也不会恢复。不影响什么，但是使用命令行时看着心里不舒服。此时可以使用这条指令改名。</p>
-<h2 id="8-显示隐藏文件"><a href="#8-显示隐藏文件" class="headerlink" title="8.显示隐藏文件"></a>8.显示隐藏文件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo defaults write com.apple.finder AppleShowAllFiles TRUE &amp;&amp; killall Finder<br></code></pre></td></tr></table></figure>
+<h3 id="1-8-显示隐藏文件"><a href="#1-8-显示隐藏文件" class="headerlink" title="1.8.显示隐藏文件"></a>1.8.显示隐藏文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo defaults write com.apple.finder AppleShowAllFiles TRUE &amp;&amp; killall Finder<br></code></pre></td></tr></table></figure>
 <p>一般来说苹果电脑会自动隐藏掉<code>隐藏文件</code>，因为那些配置文件和软件运行库文件夹不是普通用户需要操心的，隐藏掉看起来会非常整洁。不过我等程序员显然不喜欢自己电脑用起来像别人的电脑。虽然使用<code>⌘+⇧+.</code>可以临时控制显示或者隐藏文件，但是每次重启电脑都要重新选择显示所有文件，这样不够elegant。使用此命令可以直接设置默认始终显示隐藏文件。参考前面的几条指令，将<code>TRUE</code>替换为<code>FALSE</code>可以设置默认不显示隐藏文件，将<code>write</code>替换为<code>delete</code>可以删除刚刚设置的默认配置。</p>
-<h2 id="9-设置环境变量"><a href="#9-设置环境变量" class="headerlink" title="9.设置环境变量"></a>9.设置环境变量</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment">#/Library/Java/JavaVirtualMachines/jdk1.8.0_311.jdk/Contents/Home/</span><br><span class="hljs-built_in">export</span> JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_311.jdk/Contents/Home/<br><span class="hljs-built_in">export</span> CLASSPAHT=.:<span class="hljs-variable">$JAVA_HOME</span>/lib/dt.jar:<span class="hljs-variable">$JAVA_HOME</span>/lib/tools.jar<br><span class="hljs-built_in">export</span> PATH=<span class="hljs-variable">$JAVA_HOME</span>/bin:<span class="hljs-variable">$PATH</span><br><br><span class="hljs-comment">#/Library/Java/apache-maven-3.8.4</span><br><span class="hljs-built_in">export</span> MAVEN_HOME=/Library/Java/apache-maven-3.8.4/<br><span class="hljs-built_in">export</span> PATH=<span class="hljs-variable">$PATH</span>:<span class="hljs-variable">$JAVA_HOME</span>/bin:<span class="hljs-variable">$MAVEN_HOME</span>/bin:<span class="hljs-variable">$PATH</span><br><br><span class="hljs-comment">#/usr/local/mysql</span><br><span class="hljs-built_in">export</span> PATH=/usr/local/mysql/bin:<span class="hljs-variable">$PATH</span><br><br><span class="hljs-comment">#/usr/local/mongodb</span><br><span class="hljs-built_in">export</span> PATH=/usr/local/mongodb/bin:<span class="hljs-variable">$PATH</span><br><br><span class="hljs-built_in">alias</span> ll=<span class="hljs-string">&#x27;ls -l&#x27;</span><br><span class="hljs-built_in">alias</span> python=<span class="hljs-string">&#x27;python3&#x27;</span><br><span class="hljs-built_in">alias</span> aaasss=<span class="hljs-string">&#x27;cd ~/Desktop/桌面文件/Blog&#x27;</span><br><span class="hljs-built_in">alias</span> aaaddd=<span class="hljs-string">&#x27;open ~/Desktop/桌面文件/Blog/source/_posts&#x27;</span><br><br><span class="hljs-comment"># /usr/local/lib/node_modules/picgo/bin/picgo</span><br><span class="hljs-built_in">export</span> PATH=/usr/local/bin:/usr/local/sbin:<span class="hljs-variable">$PATH</span><br><span class="hljs-built_in">export</span> PATH=/usr/local/lib/node_modules/picgo/bin:<span class="hljs-variable">$PATH</span><br></code></pre></td></tr></table></figure>
+<h3 id="1-9-设置环境变量"><a href="#1-9-设置环境变量" class="headerlink" title="1.9.设置环境变量"></a>1.9.设置环境变量</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment">#/Library/Java/JavaVirtualMachines/jdk1.8.0_311.jdk/Contents/Home/</span><br><span class="hljs-built_in">export</span> JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_311.jdk/Contents/Home/<br><span class="hljs-built_in">export</span> CLASSPAHT=.:<span class="hljs-variable">$JAVA_HOME</span>/lib/dt.jar:<span class="hljs-variable">$JAVA_HOME</span>/lib/tools.jar<br><span class="hljs-built_in">export</span> PATH=<span class="hljs-variable">$JAVA_HOME</span>/bin:<span class="hljs-variable">$PATH</span><br><br><span class="hljs-comment">#/Library/Java/apache-maven-3.8.4</span><br><span class="hljs-built_in">export</span> MAVEN_HOME=/Library/Java/apache-maven-3.8.4/<br><span class="hljs-built_in">export</span> PATH=<span class="hljs-variable">$PATH</span>:<span class="hljs-variable">$JAVA_HOME</span>/bin:<span class="hljs-variable">$MAVEN_HOME</span>/bin:<span class="hljs-variable">$PATH</span><br><br><span class="hljs-comment">#/usr/local/mysql</span><br><span class="hljs-built_in">export</span> PATH=/usr/local/mysql/bin:<span class="hljs-variable">$PATH</span><br><br><span class="hljs-comment">#/usr/local/mongodb</span><br><span class="hljs-built_in">export</span> PATH=/usr/local/mongodb/bin:<span class="hljs-variable">$PATH</span><br><br><span class="hljs-built_in">alias</span> ll=<span class="hljs-string">&#x27;ls -l&#x27;</span><br><span class="hljs-built_in">alias</span> python=<span class="hljs-string">&#x27;python3&#x27;</span><br><span class="hljs-built_in">alias</span> aaasss=<span class="hljs-string">&#x27;cd ~/Desktop/桌面文件/Blog&#x27;</span><br><span class="hljs-built_in">alias</span> aaaddd=<span class="hljs-string">&#x27;open ~/Desktop/桌面文件/Blog/source/_posts&#x27;</span><br><br><span class="hljs-comment"># /usr/local/lib/node_modules/picgo/bin/picgo</span><br><span class="hljs-built_in">export</span> PATH=/usr/local/bin:/usr/local/sbin:<span class="hljs-variable">$PATH</span><br><span class="hljs-built_in">export</span> PATH=/usr/local/lib/node_modules/picgo/bin:<span class="hljs-variable">$PATH</span><br></code></pre></td></tr></table></figure>
 <p>显示隐藏文件后，在用户家目录下可以看到一个隐藏文件<code>.bash_profile</code>，这就是用户环境变量，你可以仿照我的写法写适合你自己的环境变量。还能看到一个隐藏文件名为<code>.zshrc</code>，这是zsh的默认配置文件，在用户打开Terminal时自动加载。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># &gt;&gt;&gt; conda initialize &gt;&gt;&gt;</span><br><span class="hljs-comment"># !! Contents within this block are managed by &#x27;conda init&#x27; !!</span><br>__conda_setup=<span class="hljs-string">&quot;<span class="hljs-subst">$(&#x27;/Users/zql/miniforge3/bin/conda&#x27; &#x27;shell.zsh&#x27; &#x27;hook&#x27; 2&gt; /dev/null)</span>&quot;</span><br><span class="hljs-keyword">if</span> [ $? -eq 0 ]; <span class="hljs-keyword">then</span><br>    <span class="hljs-built_in">eval</span> <span class="hljs-string">&quot;<span class="hljs-variable">$__conda_setup</span>&quot;</span><br><span class="hljs-keyword">else</span><br>    <span class="hljs-keyword">if</span> [ -f <span class="hljs-string">&quot;/Users/zql/miniforge3/etc/profile.d/conda.sh&quot;</span> ]; <span class="hljs-keyword">then</span><br>        . <span class="hljs-string">&quot;/Users/zql/miniforge3/etc/profile.d/conda.sh&quot;</span><br>    <span class="hljs-keyword">else</span><br>        <span class="hljs-built_in">export</span> PATH=<span class="hljs-string">&quot;/Users/zql/miniforge3/bin:<span class="hljs-variable">$PATH</span>&quot;</span><br>    <span class="hljs-keyword">fi</span><br><span class="hljs-keyword">fi</span><br><span class="hljs-built_in">unset</span> __conda_setup<br><span class="hljs-comment"># &lt;&lt;&lt; conda initialize &lt;&lt;&lt;</span><br><br><span class="hljs-built_in">source</span> ~/.bash_profile<br></code></pre></td></tr></table></figure>
 <p>​    <code>.zshrc</code>中的前14行都由我安装Miniforge时自动生成，这是控制conda环境的语句。第16行由我自己添加，这一句的意思是，每次打开黑窗口时自动刷新一次环境变量。使用这个方法可以在日常使用开发工具时解决复杂的环境问题，也可以使用<code>alias</code>语法自定义常用的指令。</p>
 <p>注意使用此方式配置的环境变量只能在用户自己点击Terminal时使用。软件在调用命令时不会加载环境变量，因此找不到目录时可能要考虑使用完整绝对路径。例如我在使用typora搭配picgo配置图床时typora一直显示找不到指令。</p>
+<h2 id="2-电源设置"><a href="#2-电源设置" class="headerlink" title="2.电源设置"></a>2.电源设置</h2><p>在macOS中系统偏好设置提供的设置项显然太少了。您能分辨这些情况下电脑中的程序是否还会运行吗？</p>
+<ul>
+<li>不关盖，放至黑屏后</li>
+<li>不关盖，按指纹键锁屏</li>
+<li>插着电源关盖</li>
+<li>插着电源关盖，然后拔出电源</li>
+<li>不插电源关盖，然后插入电源</li>
+</ul>
+<p><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:05-19:21:19-image-20220405174159263.png" srcset="/img/loading.gif" lazyload alt="image-20220405174159263" style="zoom: 33%;" /></p>
+<p>实际上，macOS的<code>pmset</code>命令为我们提供了更丰富的设定。以下介绍参考了<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Pmset"><u><em>维基百科</em></u></a>。（就很离谱，苹果官网自己没有介绍，没有API文档，维基百科上倒是挺详细）</p>
+<h3 id="2-1-选择设置对象"><a href="#2-1-选择设置对象" class="headerlink" title="2.1.选择设置对象"></a>2.1.选择设置对象</h3><p>设置的对象默认为全部场景，否则请指定场景。指定场景命令不能单独使用，必须和其他指令组合使用，否则不会生效。</p>
+<ul>
+<li><code>-c</code>（充电器），调整连接到充电器时使用的设置</li>
+<li><code>-b</code>（电池），调整使用本机电池时使用的设置</li>
+<li><code>-u</code>（UPS），调整运行UPS时使用的设置</li>
+<li><code>-a</code>（所有，默认）调整所有场景的设置</li>
+</ul>
+<h3 id="2-2-设置唤醒、睡眠、开机或关机"><a href="#2-2-设置唤醒、睡眠、开机或关机" class="headerlink" title="2.2.设置唤醒、睡眠、开机或关机"></a>2.2.设置唤醒、睡眠、开机或关机</h3><p>可以根据一周中任意的一天和时间组合重复发生，也可以设置在未来的日期和时间。语法如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">pmset [repeat, schedule] [<span class="hljs-built_in">sleep</span>, wake, poweron, shutdown, wakeorpoweron] [&lt;MTWRFSU&gt; &lt;<span class="hljs-built_in">date</span>/time&gt;]<br></code></pre></td></tr></table></figure>
+<p>每次设置都会覆盖以前的设置，因此想要设置多个触发事件必须在一个命令字符串中输入它们。</p>
+<blockquote>
+<p>举例：要将一周中每天的关机事件设置为23:59，并将一周中每天的唤醒或开机事件设置为7:00</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo pmset repeat shutdown MTWRFSU 23:59:00 wakeorpoweron MTWRFSU 7:00:00<br></code></pre></td></tr></table></figure>
+</blockquote>
+<h3 id="2-3-查看所有电源管理配置项"><a href="#2-3-查看所有电源管理配置项" class="headerlink" title="2.3.查看所有电源管理配置项"></a>2.3.查看所有电源管理配置项</h3><p>显示有关当前电源管理配置的信息，或最近活动的日志。如果没有提供其他参数，仅显示当前设置。</p>
+<ul>
+<li><code>-g</code>，列出当前的电源管理设置</li>
+<li><code>pmset -g sched</code>，查看当前计划的事件类型</li>
+</ul>
+<h3 id="2-4-配置休眠和安全睡眠选项"><a href="#2-4-配置休眠和安全睡眠选项" class="headerlink" title="2.4.配置休眠和安全睡眠选项"></a>2.4.配置休眠和安全睡眠选项</h3><p>pmset可以识别以下参数，它们可以按任何顺序给出。任何错误的语法或无法识别的参数都将导致整个命令失败，这会在屏幕上打出一个log和一个简短的帮助文档。电源管理设置只能使用sudo权限修改。</p>
+<ul>
+<li><code>displaysleep</code>，控制显示器无操作几分钟后灭屏，0以禁用显示睡眠</li>
+<li><code>disksleep</code>，控制磁盘几分钟无操作后自动断电，0以禁用磁盘睡眠</li>
+<li><code>sleep</code>，无操作几分钟后系统睡眠（所有程序暂停），0以禁用睡眠</li>
+<li><code>womp</code>，允许以太网数据包唤醒，设为1以启用或0以禁用。只有当设备插入电源时才会显示此设置，否则运行“pmset -g”时不会有womp设置项</li>
+<li><code>hibernatemode</code>，更改休眠模式。<ul>
+<li>0，休眠时只有内存通电</li>
+<li>1，内存数据写入磁盘，然后电脑完全断电</li>
+<li>3，内存数据写入磁盘，同时保持内存供电</li>
+<li>5，与模式1大致相同，但适合安全地处理虚拟内存的数据</li>
+<li>7，与模式3大致相同，但适合安全地处理虚拟内存的数据</li>
+<li>25，与模式1大致相同，用于Mac OS X 10.7中的休眠</li>
+</ul>
+</li>
+<li><code>hibernatefile</code>，更改休眠时内存映象储存的位置。只能位于根卷上</li>
+<li><code>ring</code>，允许通过调制解调器唤醒，1启用或0禁用</li>
+<li><code>autorestart</code>，电池寿命检测到损耗时自动重启，1启用或0禁用</li>
+<li><code>dps</code>，根据负载动态地调整处理器速度，1启用或0禁用</li>
+<li><code>reduce</code>，保持降低处理器速度，1启用或0禁用</li>
+<li><code>powerbutton</code>，按下电源键时进入睡眠而不是关机，1启用或0禁用</li>
+<li><code>powernap</code>，让机器即使在睡眠时也能保持最新状态（接收更新和时钟同步等），1可以启用，0可以禁用</li>
+<li><code>lidwake</code>，（仅限笔记本）开盖时唤醒机器，1启用或0禁用</li>
+<li><code>acwake</code>，（仅限笔记本）当电源更换（插上或拔下充电线）时唤醒机器，1启用或0禁用</li>
+<li><code>lessbright</code>，（仅限笔记本）切换到指定电源时略微调低显示屏亮度，1启用或0禁用</li>
+<li><code>halfdim</code>，显示器睡眠时将亮度调到一半，1启用或0禁用</li>
+<li><code>sms</code>，（仅支持笔记本）感受到加速度时自动锁定机械硬盘的磁头，1启用或0禁用</li>
+<li><code>haltlevel</code>，（仅限UPS）当UPS仅剩某百分比电量时自动关机</li>
+<li><code>haltafter</code>，（仅限UPS）使用UPS供电指定分钟数后自动关机</li>
+<li><code>haltremain</code>，（仅限UPS）当UPS仅剩指定分钟数时自动关机</li>
+<li><code>ttyskeepawake</code>，当任何tty（例如远程登录会话）处于活动状态时，防止空闲系统睡眠；只有当其空闲时间超过系统睡眠计时器，1启用或0禁用时，tty才处于非活动状态</li>
+<li><code>autopoweroff</code>，（交流电源）在支持的情况下，默认启用作为欧洲能源相关产品指令第6批的实施。睡眠后，自动关机延迟几分钟，系统将写入休眠图像，进入低功率芯片组睡眠。从这种状态醒来比从正常睡眠中醒来需要更长的时间。如果连接任何外部设备，如果系统处于电池供电状态，或者如果系统绑定到网络并启用唤醒网络访问，系统将不会自动关机。</li>
+<li><code>autopoweroffdelay</code>，（交流电源）进入自动关机模式前的延迟。（值=整数，以秒为单位）</li>
+<li><code>standbydelaylow</code>，将休眠映像写入磁盘并关闭待机内存之前的延迟。当剩余电池容量低时，使用standbydelaylow。（值=整数，以秒为单位）</li>
+<li><code>standbydelayhigh</code>，将休眠映像写入磁盘并关闭待机内存之前的延迟。当剩余电池容量高时，使用standbydelayhigh。（值=整数，以秒为单位）</li>
+<li><code>networkoversleep</code>，此设置会影响macOS网络在系统睡眠期间显示共享网络服务的方式。并非所有平台都使用此设置；不支持更改其值。</li>
+<li><code>destroyfvkeyonstandby</code>，进入待机模式时销毁文件保险库密钥。默认情况下，即使系统处于待机状态，文件保险库键也会保留。如果密钥被销毁，将提示用户在退出待机模式时输入密码。（值：1 - 销毁，0 - 保留）。由于系统必须完全关机，您还需要将“hibernatemode”设置为25（暂停到磁盘）。</li>
+</ul>
 
             </div>
             <hr>
