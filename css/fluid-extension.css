@@ -162,9 +162,7 @@ blockquote blockquote {
 table {
     padding: 0;
     word-break: initial;
-    text-align: center;
     overflow-x: auto;
-    table-layout: automatic;
 }
 table tr {
     border: 1px solid #dfe2e5;
