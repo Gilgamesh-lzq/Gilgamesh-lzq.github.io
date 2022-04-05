@@ -26,7 +26,7 @@
 <meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:03-13:56:18-image-20220403135431099.png">
 <meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:05-19:21:19-image-20220405174159263.png">
 <meta property="article:published_time" content="2022-04-03T04:59:19.000Z">
-<meta property="article:modified_time" content="2022-04-05T11:53:23.935Z">
+<meta property="article:modified_time" content="2022-04-05T15:08:10.960Z">
 <meta property="article:author" content="Gilgamesh">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:03-13:56:18-image-20220403135431099.png">
@@ -195,7 +195,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      6.8k 字
+      8.3k 字
     </span>
   
 
@@ -204,7 +204,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      57 分钟
+      70 分钟
     </span>
   
 
@@ -290,23 +290,51 @@
 </ul>
 <h3 id="2-2-设置唤醒、睡眠、开机或关机"><a href="#2-2-设置唤醒、睡眠、开机或关机" class="headerlink" title="2.2.设置唤醒、睡眠、开机或关机"></a>2.2.设置唤醒、睡眠、开机或关机</h3><p>可以根据一周中任意的一天和时间组合重复发生，也可以设置在未来的日期和时间。语法如下：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">pmset [repeat, schedule] [<span class="hljs-built_in">sleep</span>, wake, poweron, shutdown, wakeorpoweron] [&lt;MTWRFSU&gt; &lt;<span class="hljs-built_in">date</span>/time&gt;]<br></code></pre></td></tr></table></figure>
-<p>每次设置都会覆盖以前的设置，因此想要设置多个触发事件必须在一个命令字符串中输入它们。</p>
+<p>schedule参数用于设置一次性电源事件，repeat用于设置每日或每周事件。事件的调度只能由特权用户完成。每次设置都会覆盖以前的设置，因此想要设置多个触发事件必须在一个命令字符串中输入它们。schedule参数识别以下附加参数：</p>
+<ul>
+<li>类型。sleep、wake、poweron、shutdown或wakeorpoweron</li>
+<li>日期和时间（仅限schedule）。格式为”MM/dd/yy HH:mm:ss”必须为24小时格式，必须加引号</li>
+<li>时间（仅repeat）。格式为HH:mm:ss；必须为24小时格式，但不必加引号</li>
+<li>工作日。MTWRFSU的子集，如M、MTWRF、weekdays、weekends和everyday都可以</li>
+<li>所有者。描述是谁正在安排电源事件的人或程序（可选）</li>
+</ul>
 <blockquote>
 <p>举例：要将一周中每天的关机事件设置为23:59，并将一周中每天的唤醒或开机事件设置为7:00</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo pmset repeat shutdown MTWRFSU 23:59:00 wakeorpoweron MTWRFSU 7:00:00<br></code></pre></td></tr></table></figure>
 </blockquote>
-<h3 id="2-3-查看所有电源管理配置项"><a href="#2-3-查看所有电源管理配置项" class="headerlink" title="2.3.查看所有电源管理配置项"></a>2.3.查看所有电源管理配置项</h3><p>显示有关当前电源管理配置的信息，或最近活动的日志。如果没有提供其他参数，仅显示当前设置。</p>
+<p>语法限制很严格，任何错误都将导致命令失败，并将显示一条简短的帮助消息。计划事件设置存储在专用硬件中，因此“黑苹果”上此功能可能不稳定。重复事件存储在<code>/Library/Preferences/SystemConfiguration/com.apple.AutoWake.plist</code>中，此文件可以使用<code>defaults</code>命令手动编辑，但更改有可能被覆盖；更改后不会立即生效。</p>
+<h3 id="2-3-查看所有电源管理配置项"><a href="#2-3-查看所有电源管理配置项" class="headerlink" title="2.3.查看所有电源管理配置项"></a>2.3.查看所有电源管理配置项</h3><p><code>-g</code>显示有关当前电源管理配置的信息，或最近活动的日志。如果没有提供其他参数，仅显示当前设置；如果后面跟了其他参数则显示此参数的详细设置项。如果提供了多个参数，那么只有第一个参数是有用的，多余的参数会被忽略。</p>
 <ul>
-<li><code>-g</code>，列出当前的电源管理设置</li>
-<li><code>pmset -g sched</code>，查看当前计划的事件类型</li>
+<li><code>-g live</code>，显示当前正在使用的设置</li>
+<li><code>-g custom</code>，显示所有电源的自定义设置</li>
+<li><code>-g cap</code>，显示机器支持哪些电力管理功能</li>
+<li><code>-g sched</code>，显示计划启动、唤醒或关闭、睡眠事件</li>
+<li><code>-g ps / batt</code>，显示电池和 UPS 的状态</li>
+<li><code>-g pslog</code>，显示电源（电池或者 UPS）状态的连续日志</li>
+<li><code>-g rawlog</code>，显示直接读取电池的电池状态的连续日志</li>
+<li><code>-g therm</code>，显示影响 CPU 速度的温度阈值。不适用于全部平台</li>
+<li><code>-g thermlog</code>，显示影响 CPU 速度的温度的通知日志。不适用于全部平台</li>
+<li><code>-g assertions</code>，显示电量提醒的概要。此提醒可以阻止系统睡眠或显示器睡眠。适用于 10.6 及更新版本</li>
+<li><code>-g assertionslog</code>，显示电量提醒的日志。适用于 10.6 及更新版本</li>
+<li><code>-g sysload</code>，显示“系统负载顾问”——。适用于 10.6 及更新版本</li>
+<li><code>-g ac/adapter</code>，显示关于交流电源适配器的详情。只有 MacBoook 和 MacBook Pro 支持。</li>
+<li><code>-g log</code>，显示睡眠，唤醒及其他电源管理时间的历史。这个日志只提供给管理员和调试目的</li>
+<li><code>-g uuid</code>，显示当前活跃的睡眠、唤醒的 UUID。</li>
+<li><code>-g uuidlog</code>，显示当前活跃的睡眠、唤醒的 UUID，并且打印一个新的被系统设置的 UUID</li>
+<li><code>-g history</code>，一个调试工具。当使用启动参数 io=0x3000000 被启用时，打印系统睡眠唤醒的 UUID 的时间线。</li>
+<li><code>-g powerstate</code>，打印当前为 IO Kit 驱动电源状态。调用者应该至少提供一个 IO Kit 类名来作为参数。如果没有类名被听过，它将打印全部驱动的电源状态。</li>
+<li><code>-g stats</code>，打印自系统启动以来睡眠和唤醒系统的计数。</li>
+<li><code>-g systemstate</code>，打印当前系统的电量状态和可用能力。</li>
+<li><code>-g everything</code>，打印每个参数。这是一个有用的快速收集所有 pmset 提供的输出。适用于 10.8。</li>
 </ul>
 <h3 id="2-4-配置休眠和安全睡眠选项"><a href="#2-4-配置休眠和安全睡眠选项" class="headerlink" title="2.4.配置休眠和安全睡眠选项"></a>2.4.配置休眠和安全睡眠选项</h3><p>pmset可以识别以下参数，它们可以按任何顺序给出。任何错误的语法或无法识别的参数都将导致整个命令失败，这会在屏幕上打出一个log和一个简短的帮助文档。电源管理设置只能使用sudo权限修改。</p>
+<p>通过pmset进行的所有更改都将保存在<code>/Library/Preferences/SystemConfiguration/com.apple.PowerManagement.plist</code>的持久首选项文件中。可以使用<code>defaults</code>命令手动修改此文件，但电源管理系统不会立即处理这些更改。对配置文件的手动编辑有可能被覆盖。<code>pmset touch</code>命令将从磁盘上重读现有设置并应用。</p>
 <ul>
 <li><code>displaysleep</code>，控制显示器无操作几分钟后灭屏，0以禁用显示睡眠</li>
 <li><code>disksleep</code>，控制磁盘几分钟无操作后自动断电，0以禁用磁盘睡眠</li>
 <li><code>sleep</code>，无操作几分钟后系统睡眠（所有程序暂停），0以禁用睡眠</li>
 <li><code>womp</code>，允许以太网数据包唤醒，设为1以启用或0以禁用。只有当设备插入电源时才会显示此设置，否则运行“pmset -g”时不会有womp设置项</li>
-<li><code>hibernatemode</code>，更改休眠模式。<ul>
+<li><code>hibernatemode</code>，更改休眠模式。（<strong>0/3/25以外的选项慎用</strong>）<ul>
 <li>0，休眠时只有内存通电</li>
 <li>1，内存数据写入磁盘，然后电脑完全断电</li>
 <li>3，内存数据写入磁盘，同时保持内存供电</li>
@@ -327,17 +355,23 @@
 <li><code>lessbright</code>，（仅限笔记本）切换到指定电源时略微调低显示屏亮度，1启用或0禁用</li>
 <li><code>halfdim</code>，显示器睡眠时将亮度调到一半，1启用或0禁用</li>
 <li><code>sms</code>，（仅支持笔记本）感受到加速度时自动锁定机械硬盘的磁头，1启用或0禁用</li>
-<li><code>haltlevel</code>，（仅限UPS）当UPS仅剩某百分比电量时自动关机</li>
-<li><code>haltafter</code>，（仅限UPS）使用UPS供电指定分钟数后自动关机</li>
-<li><code>haltremain</code>，（仅限UPS）当UPS仅剩指定分钟数时自动关机</li>
-<li><code>ttyskeepawake</code>，当任何tty（例如远程登录会话）处于活动状态时，防止空闲系统睡眠；只有当其空闲时间超过系统睡眠计时器，1启用或0禁用时，tty才处于非活动状态</li>
-<li><code>autopoweroff</code>，（交流电源）在支持的情况下，默认启用作为欧洲能源相关产品指令第6批的实施。睡眠后，自动关机延迟几分钟，系统将写入休眠图像，进入低功率芯片组睡眠。从这种状态醒来比从正常睡眠中醒来需要更长的时间。如果连接任何外部设备，如果系统处于电池供电状态，或者如果系统绑定到网络并启用唤醒网络访问，系统将不会自动关机。</li>
-<li><code>autopoweroffdelay</code>，（交流电源）进入自动关机模式前的延迟。（值=整数，以秒为单位）</li>
-<li><code>standbydelaylow</code>，将休眠映像写入磁盘并关闭待机内存之前的延迟。当剩余电池容量低时，使用standbydelaylow。（值=整数，以秒为单位）</li>
-<li><code>standbydelayhigh</code>，将休眠映像写入磁盘并关闭待机内存之前的延迟。当剩余电池容量高时，使用standbydelayhigh。（值=整数，以秒为单位）</li>
-<li><code>networkoversleep</code>，此设置会影响macOS网络在系统睡眠期间显示共享网络服务的方式。并非所有平台都使用此设置；不支持更改其值。</li>
-<li><code>destroyfvkeyonstandby</code>，进入待机模式时销毁文件保险库密钥。默认情况下，即使系统处于待机状态，文件保险库键也会保留。如果密钥被销毁，将提示用户在退出待机模式时输入密码。（值：1 - 销毁，0 - 保留）。由于系统必须完全关机，您还需要将“hibernatemode”设置为25（暂停到磁盘）。</li>
+<li><code>haltlevel</code>，（仅限UPS）当UPS仅剩某百分比电量时电脑自动关机</li>
+<li><code>haltafter</code>，（仅限UPS）使用UPS供电指定分钟数后电脑自动关机</li>
+<li><code>haltremain</code>，（仅限UPS）当UPS仅剩指定分钟数时电脑自动关机</li>
+<li><code>ttyskeepawake</code>，当任何tty（例如远程登录会话）处于活动状态时阻止空闲系统睡眠，除非其空闲时间超过系统睡眠计时器，1启用或0禁用时，tty才处于非活动状态</li>
+<li><code>autopoweroff</code>，（交流电源）如果系统支持的话，默认启用欧洲标准的能源节省计划。进入睡眠后超过设置的时间后，内存数据写入磁盘，进入低功率芯片组睡眠。从这种状态唤醒比从正常睡眠中醒来需要更长的时间。如果连接任何外设、或系统处于电池供电状态、或系统联网并启用了唤醒网络访问，系统将不会自动关机。1启用或0禁用</li>
+<li><code>autopoweroffdelay</code>，（交流电源）设置进入自动关机模式前的时间，整数，以秒为单位</li>
+<li><code>standbydelaylow</code>，将休眠映像写入磁盘并内存断电的等待时长。低电量时启用，整数，以秒为单位</li>
+<li><code>standbydelayhigh</code>，将休眠映像写入磁盘并内存断电的等待时长。高电量时启用，整数，以秒为单位</li>
+<li><code>networkoversleep</code>，此设置会影响macOS是否在睡眠期间显示共享网络服务。并非所有平台都使用此设置；不支持更改其值</li>
+<li><code>destroyfvkeyonstandby</code>，进入睡眠模式时销毁文件保险库密钥。默认情况下，即使系统处于待机状态，文件保险库键也会保留。如果密钥被销毁，将提示用户在退出待机模式时输入密码。1 - 销毁，0 - 保留。由于系统必须完全关机，您还需要将“hibernatemode”设置为25。</li>
 </ul>
+<blockquote>
+<p>举例：设置仅由电池供电时，10 分钟后进入睡眠状态，并在 5 分钟后将显示屏设置为睡眠状态</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">pmset -b <span class="hljs-built_in">sleep</span> 10 displaysleep 5<br></code></pre></td></tr></table></figure>
+<p>举例：当连着充电器时，设置30分钟后入睡，显示器设置为永不入睡</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">pmset -c <span class="hljs-built_in">sleep</span> 30 displaysleep 0<br></code></pre></td></tr></table></figure>
+</blockquote>
 
             </div>
             <hr>
