@@ -26,7 +26,7 @@
 <meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:03-13:56:18-image-20220403135431099.png">
 <meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:05-19:21:19-image-20220405174159263.png">
 <meta property="article:published_time" content="2022-04-06T04:59:19.000Z">
-<meta property="article:modified_time" content="2022-04-06T14:46:34.381Z">
+<meta property="article:modified_time" content="2022-04-06T17:43:43.121Z">
 <meta property="article:author" content="Gilgamesh">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:03-13:56:18-image-20220403135431099.png">
@@ -195,7 +195,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      9.2k 字
+      9.6k 字
     </span>
   
 
@@ -204,7 +204,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      77 分钟
+      81 分钟
     </span>
   
 
@@ -271,6 +271,10 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># &gt;&gt;&gt; conda initialize &gt;&gt;&gt;</span><br><span class="hljs-comment"># !! Contents within this block are managed by &#x27;conda init&#x27; !!</span><br>__conda_setup=<span class="hljs-string">&quot;<span class="hljs-subst">$(&#x27;/Users/zql/miniforge3/bin/conda&#x27; &#x27;shell.zsh&#x27; &#x27;hook&#x27; 2&gt; /dev/null)</span>&quot;</span><br><span class="hljs-keyword">if</span> [ $? -eq 0 ]; <span class="hljs-keyword">then</span><br>    <span class="hljs-built_in">eval</span> <span class="hljs-string">&quot;<span class="hljs-variable">$__conda_setup</span>&quot;</span><br><span class="hljs-keyword">else</span><br>    <span class="hljs-keyword">if</span> [ -f <span class="hljs-string">&quot;/Users/zql/miniforge3/etc/profile.d/conda.sh&quot;</span> ]; <span class="hljs-keyword">then</span><br>        . <span class="hljs-string">&quot;/Users/zql/miniforge3/etc/profile.d/conda.sh&quot;</span><br>    <span class="hljs-keyword">else</span><br>        <span class="hljs-built_in">export</span> PATH=<span class="hljs-string">&quot;/Users/zql/miniforge3/bin:<span class="hljs-variable">$PATH</span>&quot;</span><br>    <span class="hljs-keyword">fi</span><br><span class="hljs-keyword">fi</span><br><span class="hljs-built_in">unset</span> __conda_setup<br><span class="hljs-comment"># &lt;&lt;&lt; conda initialize &lt;&lt;&lt;</span><br><br><span class="hljs-built_in">source</span> ~/.bash_profile<br></code></pre></td></tr></table></figure>
 <p>​    <code>.zshrc</code>中的前14行都由我安装Miniforge时自动生成，这是控制conda环境的语句。第16行由我自己添加，这一句的意思是，每次打开黑窗口时自动刷新一次环境变量。使用这个方法可以在日常使用开发工具时解决复杂的环境问题，也可以使用<code>alias</code>语法自定义常用的指令。</p>
 <p>注意使用此方式配置的环境变量只能在用户自己点击Terminal时使用。软件在调用命令时不会加载环境变量，因此找不到目录时可能要考虑使用完整绝对路径。例如我在使用typora搭配picgo配置图床时typora一直显示找不到指令。</p>
+<h3 id="1-10-切换最高权限"><a href="#1-10-切换最高权限" class="headerlink" title="1.10.切换最高权限"></a>1.10.切换最高权限</h3><p>Mac购买之初会要求创建一个用户，此用户为管理员账户，但在Terminal中一般运行在普通权限下，需要特殊权限比如<code>sudo</code>的时候会要求用户输入密码。在图形界面下不能指定使用管理员用户，也就是不能像linux直接使用root用户操作那样。但是在Terminal中可以切换到管理员权限：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo su <span class="hljs-comment"># 管理员权限</span><br><span class="hljs-built_in">exit</span> <span class="hljs-comment"># 退出此状态</span><br></code></pre></td></tr></table></figure>
+<p>值得注意的是，此状态权限仍小于“系统权限”，比如<code>/usr/bin</code>这个目录无论如何你是无法编辑的，因为Mac有系统完整性保护(SIP)。而且最新的机器似乎保护更严格，即使关闭了SIP仍然不能编辑系统某些内容（比如删掉系统自带某些软件），因为它们是“只读的镜像”，这可能是通过其特殊的文件系统实现的。</p>
+<p>顺带一提，电脑中<strong>只有一个用户时不要给用户改名</strong>。如果想改名可以通过新建一个用户然后将其加入管理员用户组。直接改名会导致直接失去管理员权限，然后你就没权限新建一个管理员了🤪。当然已经跳坑了也有办法解决，进启动界面用安全模式命令行新建一个管理员账户。这个操作在M1芯片和Intel芯片的Mac上不同，具体请参考官方客服。</p>
 <h2 id="2-defaults命令"><a href="#2-defaults命令" class="headerlink" title="2.defaults命令"></a>2.defaults命令</h2><p>plist文件在macOS中被用来记录系统的各种<strong>偏好设置</strong>，所有与系统有关的设置项文件都在<code>/Library/Preferences</code>中。使用defaults命令可以修改这些设置甚至是写入自己的设置。设置项可能导致软件崩溃，移除设置项可以直接删除配置文件或者使用给出的命令。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 读取所有设置项</span><br>defaults <span class="hljs-built_in">read</span> [DOMAIN]<br><span class="hljs-comment"># 读取某设置项</span><br>defaults <span class="hljs-built_in">read</span> [DOMAIN] [PROPERTY_NAME]<br><span class="hljs-comment"># 设置某设置项</span><br>defaults write [DOMAIN] [PROPERTY_NAME] [VALUE] <br><span class="hljs-comment"># 重制某个设置项</span><br>defaults delete [DOMAIN] [PROPERTY_NAME] <br><span class="hljs-comment"># 重制某个设置</span><br>defaults delete [DOMAIN] <br></code></pre></td></tr></table></figure>
 <h2 id="3-xattr命令"><a href="#3-xattr命令" class="headerlink" title="3.xattr命令"></a>3.xattr命令</h2><p>Mac OS X 10.4及更高版本通过使用HFS+文件系统属性文件B<em>树功能支持<em>*扩展属性</em></em>。每个属性由一个名称和相关数据组成，该名称是一个以<code>\0</code>截止的Unicode字符串。</p>
