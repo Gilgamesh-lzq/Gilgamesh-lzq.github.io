@@ -24,9 +24,6 @@ figure.highlight::before {
     z-index:999;
 }
 
-
-
-
 a {
     color: #173774;
 }
@@ -164,6 +161,8 @@ table {
     padding: 0;
     word-break: initial;
     overflow-x: auto;
+    max-height: 22em;
+    overflow-y: auto !important;
 }
 table tr {
     border: 1px solid #dfe2e5;

@@ -992,7 +992,7 @@ label {
   font-size: 85% !important;
 }
 .markdown-body pre code {
-  overflow-x: auto;
+  max-height: 400px;
   line-height: 1.2;
   border-radius: 5px;
   tab-size: 4;
@@ -1008,8 +1008,11 @@ label {
   max-width: 90%;
   margin: 1.3rem auto;
   display: block;
-  box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15);
-  border-radius: 3px;
+/*
+    box-shadow $img-shadow
+    */
+  box-shadow: 1px 2px 26px 1px rgba(0,0,0,0.3);
+  border-radius: 12px;
   background-color: transparent;
 }
 .markdown-body details {
@@ -1018,22 +1021,22 @@ label {
 .markdown-body details summary {
   outline: none;
 }
-p > ul,
-p > a,
-p > a > ul {
+.markdown-body p > ul,
+.markdown-body p > a,
+.markdown-body p > a > ul {
   text-indent: 0em;
 }
-pre {
+.markdown-body pre {
   border-radius: 3px;
 }
-.hljs {
+.markdown-body .hljs {
   overflow-x: initial;
   padding: 0;
 }
-.hljs pre {
+.markdown-body .hljs pre {
   background-color: initial !important;
 }
-hr {
+.markdown-body hr {
   height: 2px;
   padding: 0;
   margin: 16px 0;
@@ -2067,3 +2070,65 @@ note-default {
     margin-left: 1rem;
   }
 }
+/*
+.highlight-container
+  position: relative
+  background-color: highlight-background
+  &.on
+    .highlight-footer
+      display: none
+    .hide-btn
+      display: flex
+    .highlight-wrap
+      max-height: none
+  .highlight-wrap
+    overflow: hidden
+    max-height: 200px
+  .highlight-footer
+    position absolute
+    width: 100%
+    left: 0
+    bottom: 0
+    height: 60px
+    background-image: 'linear-gradient(-180deg, rgba(255,255,255,0) 0%, %s 65%)' % highlight-background;
+    text-align: center
+  .show-btn
+    color: #fff
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+    bottom: 0
+    line-height: 2.6em
+    text-decoration: none
+    padding: 0 0.8em
+    &:hover
+      text-decoration: none
+  .hide-btn
+    color: #fff
+    font-size: 12px
+    width: 22px
+    position: absolute
+    left: -21px
+    top: 0
+    line-height: 1em
+    text-decoration: none
+    text-align: center
+    display: none
+    flex-direction: column
+    background-color: highlight-background
+    border-radius: 4px 0 0 4px
+    padding: 0.1em 0 0.6em
+    transition: top ease 0.35s
+    &:hover
+      text-decoration: none
+  .fa-angle-up,
+  .fa-angle-down
+    font-family: font-icon
+    font-style: normal
+    color: #ca0c16
+  .fa-angle-up:before
+    content:"\f106"
+  .fa-angle-down:before
+    content:"\f107"
+    margin-left: 0.5em
+*/
