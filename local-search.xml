@@ -23,6 +23,25 @@
   
   
   <entry>
+    <title>test Form</title>
+    <link href="/2022/04-04-test/test-Form/"/>
+    <url>/2022/04-04-test/test-Form/</url>
+    
+    <content type="html"><![CDATA[<p><a href="123.com">123</a><br><a href="123.com"><u><em>123</em></u></a></p><div class="table-container"><table><thead><tr><th>$\frac{2}{3}$</th><th>$\alpha_1$</th><th>$a\times b$</th></tr></thead><tbody><tr><td>4</td><td>5</td><td>6</td></tr><tr><td>7</td><td>8</td><td>9</td></tr><tr><td>1</td><td>2</td><td>3</td></tr></tbody></table></div><div class="table-container"><table><thead><tr><th>123</th><th>🤔</th><th>weq</th><th>sd wrqvc</th><th>cwerercw4w</th><th>w</th><th>wer we</th><th>r w</th><th>wer</th></tr></thead><tbody><tr><td>wer s fevqrevq reger e</td><td>ewrt qre tqtq rw</td><td>wcrevbbytr</td><td>qrqer tqretqer t e te3 4r</td><td>cerverwtvertvr</td><td>rgervcrevcrv</td><td>ergwerg wer</td><td>fwewtvwecwevcwergr</td><td>ewrgrebw b  ergcecgvweg24g5</td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table></div><details>  <summary>屠龙宝刀点击就送</summary>      我系渣渣辉，是兄弟就添加友链！</details><figure class="highlight python"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></div></td><td class="code"><pre><code class="hljs python">&lt;details&gt;&lt;summary&gt;<br><span class="hljs-keyword">import</span> time<br><span class="hljs-keyword">import</span> pygame<br><span class="hljs-keyword">import</span> copy<br><span class="hljs-keyword">import</span> random<br><span class="hljs-keyword">from</span> itertools <span class="hljs-keyword">import</span> chain<br>&lt;/summary&gt;<br><br>pygame.init()<br>screen = pygame.display.set_mode((<span class="hljs-number">800</span>, <span class="hljs-number">700</span>), <span class="hljs-number">0</span>, <span class="hljs-number">32</span>)<br>pygame.display.set_caption(<span class="hljs-string">&quot;Alpha Fool&quot;</span>)<br>font = pygame.font.Font(<span class="hljs-string">&quot;./微软黑体.ttf&quot;</span>, <span class="hljs-number">70</span>)  <span class="hljs-comment"># 我自己电脑的字体文件路径</span><br>buttonFont1 = pygame.font.Font(<span class="hljs-string">&quot;./微软黑体.ttf&quot;</span>, <span class="hljs-number">34</span>) <span class="hljs-comment"># 按钮字体</span><br>buttonFont2 = pygame.font.Font(<span class="hljs-string">&quot;./微软黑体.ttf&quot;</span>, <span class="hljs-number">40</span>) <span class="hljs-comment"># 按钮字体</span><br>&lt;/details&gt;<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>类别</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>制作视频外挂字幕</title>
     <link href="/2022/04-04-%E8%87%AA%E5%8A%A8%E5%88%B6%E4%BD%9C%E5%A4%96%E6%8C%82%E5%AD%97%E5%B9%95/"/>
     <url>/2022/04-04-%E8%87%AA%E5%8A%A8%E5%88%B6%E4%BD%9C%E5%A4%96%E6%8C%82%E5%AD%97%E5%B9%95/</url>
