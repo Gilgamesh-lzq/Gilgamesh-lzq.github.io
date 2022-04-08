@@ -1,3 +1,7 @@
+.col-lg-8.nopadding-x-md > .container.nopadding-x-md > #board.py-5 {
+    width: 123%;
+    left: -23%; 
+}
 
 figure.highlight {
     /*
