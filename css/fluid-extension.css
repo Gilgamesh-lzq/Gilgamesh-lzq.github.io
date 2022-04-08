@@ -2,7 +2,18 @@
     width: 123%;
     left: -23%; 
 }
-
+@media (max-width: 767px) {
+    .col-lg-8.nopadding-x-md > .container.nopadding-x-md > #board.py-5 {
+        width: 100%;
+        left: 0; 
+    }
+}
+@media (max-width: 424px) {
+    .col-lg-8.nopadding-x-md > .container.nopadding-x-md > #board.py-5 {
+        width: 100%;
+        left: 0; 
+    }
+}
 
 figure.highlight {
     /*

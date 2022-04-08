@@ -1460,10 +1460,6 @@ post-custom {
     padding-left: 1rem;
     padding-right: 1rem;
   }
-  #board {
-    width: 100%;
-    left: 0;
-  }
 }
 .post-content h1::before,
 .post-content h2::before,
