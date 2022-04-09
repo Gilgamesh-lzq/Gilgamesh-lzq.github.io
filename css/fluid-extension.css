@@ -131,12 +131,12 @@ table{
 p {
     text-indent: 2em; /*首行缩进*/
 }
-/*
-strong {
+
+.markdown-body > strong {
     color: #be0000;
     font-weight: bold;
 }
-*/
+
 
 li>ol,
 li>ul {
