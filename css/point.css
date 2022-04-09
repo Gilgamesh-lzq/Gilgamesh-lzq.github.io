@@ -1,4 +1,4 @@
-body, header, div.mask.flex-center, div.scroll-down-bar, #banner.banner, h1,h2,h3,h4,h5,h6 {
+body, header, main, div.mask.flex-center, div.scroll-down-bar, #banner.banner, h1,h2,h3,h4,h5,h6 {
     cursor: url(https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/a11.cur), auto;
 }
 
