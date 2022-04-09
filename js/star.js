@@ -36,7 +36,7 @@
     }
     function l() {
         this.character = "*",
-        this.lifeSpan = 100, // 就靠它调整速度啦
+        this.lifeSpan = 120, // 就靠它调整速度啦
         this.initialStyles = {
             position: "fixed",
             top: "0",
