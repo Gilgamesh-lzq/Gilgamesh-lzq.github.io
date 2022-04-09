@@ -1,6 +1,6 @@
 .col-lg-8.nopadding-x-md > .container.nopadding-x-md > #board.py-5 {
-    width: 123%;
-    left: -23%; 
+    width: 122%;
+    left: -22%; 
 }
 @media (max-width: 767px) {
     .col-lg-8.nopadding-x-md > .container.nopadding-x-md > #board.py-5 {
@@ -13,6 +13,17 @@
         width: 100%;
         left: 0; 
     }
+}
+
+.tocbot-active-link {
+    font-weight: bold;
+    /*color var(--link-hover-color)*/
+    color: #800000;
+    background: #FA807233;
+    border-radius: 5px;
+}
+.toc-list-item::before {
+    background: #800000;
 }
 
 figure.highlight {
@@ -130,6 +141,9 @@ table{
 
 p {
     text-indent: 2em; /*首行缩进*/
+}
+li > p {
+    text-indent: 0;
 }
 
 .markdown-body > strong {
