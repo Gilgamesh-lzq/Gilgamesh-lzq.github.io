@@ -1580,8 +1580,8 @@ post-custom {
 #toc {
   position: -webkit-sticky;
   position: sticky;
-  top: 3rem;
-  padding: 3rem 0 0 0;
+  top: 2rem;
+  padding: 2rem 0 0 0;
   visibility: hidden;
 }
 .toc-header {

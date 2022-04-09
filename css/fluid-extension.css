@@ -37,7 +37,6 @@ figure.highlight {
     padding-top: 25px;
     z-index:998;
 }
-
 figure.highlight::before {
     background: #fc625d;
     border-radius: 50%;
