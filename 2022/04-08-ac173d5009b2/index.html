@@ -29,7 +29,7 @@
 <meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:08-03:49:24-image-20220408024159314.png">
 <meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:08-03:49:24-image-20220408030947794.png">
 <meta property="article:published_time" content="2022-04-07T16:38:11.000Z">
-<meta property="article:modified_time" content="2022-04-07T19:57:20.496Z">
+<meta property="article:modified_time" content="2022-04-10T12:47:18.836Z">
 <meta property="article:author" content="Gilgamesh">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:08-03:49:24-image-20220408013736031.png">
@@ -245,7 +245,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：2022年4月8日 凌晨
+                  本文最后更新于：2022年4月10日 晚上
                 
               </p>
             
@@ -281,7 +281,7 @@
 <h2 id="5-对多个块的组织"><a href="#5-对多个块的组织" class="headerlink" title="5.对多个块的组织"></a>5.对多个块的组织</h2><p>可以观察到，每多一个校验位，数据块的大小就可以翻倍。也就是说，数据块越大，冗余信息占比越小。但数据块不是越大越好，因为上面提到的汉明码只能纠正一个位的错误、指示两个位的错误，而数据块越大其中有多个错误的可能性就越高。实际上错误一旦产生往往会影响很多个位，导致整个块被毁掉。因此实际的处理中会把多个块的数据交替排列，这样可以把一连串的错误交错打散到许多个数据块中。当然现在已经有Reed Solomon等更先进的编码来处理这种问题。</p>
 <p><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:08-03:49:24-image-20220408030947794.png" srcset="/img/loading.gif" lazyload alt="image-20220408030947794" style="zoom: 33%;" /></p>
 <h2 id="6-后记"><a href="#6-后记" class="headerlink" title="6.后记"></a>6.后记</h2><p>在此引用3blue1brown的话：</p>
-<p>聪明的想法往往看起来尤其简洁，甚至会让人们以为理所当然。通过本篇介绍，希望汉明码这种代码存在的合理性对你来说已经显而易见。但千万不要草率地以为这些代码真的显而易见，因为这绝不简单。</p>
+<p>聪明的想法往往看起来尤其简洁，甚至会让人们以为理所当然。通过本篇介绍，希望汉明码这种算法存在的合理性对你来说已经显而易见。但千万不要草率地以为这些算法真的显而易见，因为这绝不简单。</p>
 <p>聪明的想法看似太简单是因为我们只看到了最终的结果，清理掉了过程中的琐事，缄口不提其中的错误岔路，一笔带过解决问题的伊始和前路上无穷的可以探索的可能性，包括所有这一切。对一些特别的发明发现而言，大体上总是有第二个更深层次的原因——人们会忘记欣赏。</p>
 <p>把信息当作比特位这种想法直到1948年才被集中整理成完整的理论收集在克劳德·香农独创的信息论论文中，这篇论文的发表和汉明提出他的算法是同时发生的。某种意义上讲，正是这篇奠定基础的论文展示了有效的纠错方式在理论上是永远可行的，无论出现错误的概率有多高。</p>
 <p>几十年的快速发展，许多人已经习惯于把比特和信息放在一起思考，很容易忽视掉这两者是多么的不同。可悲的是，那些深远地影响了未来人们思想的想法最终会被年轻一代视作平淡无奇。</p>
