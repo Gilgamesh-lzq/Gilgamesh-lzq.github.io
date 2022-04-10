@@ -24,7 +24,7 @@
 <meta property="og:description" content="摘要">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-04-10T10:06:11.000Z">
-<meta property="article:modified_time" content="2022-04-10T11:26:00.952Z">
+<meta property="article:modified_time" content="2022-04-10T11:27:11.200Z">
 <meta property="article:author" content="Gilgamesh">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -279,7 +279,8 @@
 <h2 id="3-本地配置"><a href="#3-本地配置" class="headerlink" title="3.本地配置"></a>3.本地配置</h2><p>修改hexo根目录下<code>_config.yml</code>文件，设置git目标：</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">deploy:</span><br>  <span class="hljs-attr">type:</span> <span class="hljs-string">git</span><br>  <span class="hljs-attr">repo:</span> <span class="hljs-string">git@[你主机的IP地址或者域名]:/home/git/Blog/repo/blog.git</span><br>  <span class="hljs-attr">branch:</span> <span class="hljs-string">master</span><br></code></pre></td></tr></table></figure>
 <p>此时应该已经可以使用了，在hexo根目录下使用<code>hexo clean &amp;&amp; hexo g -d</code>重新编译博客并发布。浏览器输入域名可以访问。</p>
-<h2 id="4-一些后话"><a href="#4-一些后话" class="headerlink" title="4.一些后话"></a>4.一些后话</h2><p>我自己测试我的博客在单核0.5G内存1M带宽的机器上可以流畅访问，对于博客小白来说性能应该没什么问题，20G的硬盘只用了3G多。建议把主题的资源文件和博客的图片都扔到图床中，这样对服务器的空间、计算压力、网络压力都有极大缓解。</p>
+<h2 id="4-一些后话"><a href="#4-一些后话" class="headerlink" title="4.一些后话"></a>4.一些后话</h2><p>我没配置密钥登陆，有需求的小伙伴可以自己改一改脚本。</p>
+<p>我自己测试我的博客在单核0.5G内存1M带宽的机器上可以流畅访问，对于博客小白来说性能应该没什么问题，20G的硬盘只用了3G多。建议把主题的资源文件和博客的图片都扔到图床中，这样对服务器的空间、计算压力、网络压力都有极大缓解。</p>
 <p>没测试过高并发能抗多少。或许以后有时间可以试试。</p>
 
             </div>
