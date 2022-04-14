@@ -26,7 +26,7 @@
 <meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:03-13:56:18-image-20220403135431099.png">
 <meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:05-19:21:19-image-20220405174159263.png">
 <meta property="article:published_time" content="2022-04-06T04:59:19.000Z">
-<meta property="article:modified_time" content="2022-04-14T02:18:56.782Z">
+<meta property="article:modified_time" content="2022-04-14T11:21:03.692Z">
 <meta property="article:author" content="Gilgamesh">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:03-13:56:18-image-20220403135431099.png">
@@ -241,7 +241,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：2022年4月14日 上午
+                  本文最后更新于：2022年4月14日 晚上
                 
               </p>
             
@@ -251,9 +251,10 @@
 <p>苹果系统自带的设置可以调整许多设置，但不是全部。有些设置隐藏在“百度区”中，只有在受其困扰遂上网搜索时才会发现。本文收集了一些我自己用到过的指令并解释了其用法，希望能对大家有所帮助。打开Terminal，输入本文提到的命令，探索新大陆。</p>
 <p><strong>不要随便在命令行中输入你不了解的指令</strong>，正如不要随便安装你不了解的软件。它们可能会修改系统文件对你的使用体验造成不可逆的影响，也可能在系统中你不知道的位置留下一点足迹（俗称“拉屎”），日积月累磁盘空间就被蚕食掉了。本文提到的指令都配套了与之对应的解除此设置的指令，如果你不喜欢某设置可以改回去，<strong>不会对你的系统造成影响</strong>。</p>
 <p>$\ $</p>
-<h2 id="1-日常"><a href="#1-日常" class="headerlink" title="1.日常"></a>1.日常</h2><h3 id="1-1-解决软件打不开"><a href="#1-1-解决软件打不开" class="headerlink" title="1.1.解决软件打不开"></a>1.1.解决软件打不开</h3><figure class="highlight bash"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><pre><code class="hljs bash">sudo xattr -r -d com.apple.quarantine [你软件的.app绝对路径]<br></code></pre></td></tr></table></figure>
+<h2 id="1-日常"><a href="#1-日常" class="headerlink" title="1.日常"></a>1.日常</h2><h3 id="1-1-解决软件打不开"><a href="#1-1-解决软件打不开" class="headerlink" title="1.1.解决软件打不开"></a>1.1.解决软件打不开</h3><figure class="highlight bash"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><pre><code class="hljs bash">sudo xattr -r -d com.apple.quarantine [你软件的.app绝对路径]<br><span class="hljs-comment"># 强制加签名</span><br>sudo codesign --force --deep --sign - 文件位置（直接将应用拖进去即可）<br></code></pre></td></tr></table></figure>
 <p>系统会自动为一些文件打上“备份”的属性标签，包括来自网络的文件以及自己写的脚本等。被打上此标签的可执行程序是不允许执行的。例如，如果你写了一个脚本就像在Windows和Linux中常做的那样，无论是执行需要何种权限的命令，也无论脚本类型是<code>.sh</code>,<code>.command</code>,<code>.bash</code>或者是根本没有拓展名，你的脚本是根本不可能双击执行的，一定会显示权限不够。</p>
 <p>这条语句可以去除这个“备份”标签，解除这个障碍（当然你得手动给你的脚本<code>+x</code>的权限，这在任何系统中都一样）。这不会对你正常使用文件产生任何影响。</p>
+<p>如果破解软件由于没有签名无法启动，可以通过手动强制本地签名的方式为其签名。</p>
 <h3 id="1-2-解决conda环境自动激活"><a href="#1-2-解决conda环境自动激活" class="headerlink" title="1.2.解决conda环境自动激活"></a>1.2.解决conda环境自动激活</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">conda config --<span class="hljs-built_in">set</span> auto_activate_base <span class="hljs-literal">true</span><br>conda config --<span class="hljs-built_in">set</span> auto_activate_base <span class="hljs-literal">false</span><br></code></pre></td></tr></table></figure>
 <p>有时我们不希望所有的环境都混在一起，但是自从安装了conda，每次打开命令行都会自动激活base环境。可以通过以上语句控制base环境是否自动开启。</p>
 <h3 id="1-3-控制Dock栏自动隐藏的动画速度"><a href="#1-3-控制Dock栏自动隐藏的动画速度" class="headerlink" title="1.3.控制Dock栏自动隐藏的动画速度"></a>1.3.控制Dock栏自动隐藏的动画速度</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo defaults write com.apple.Dock autohide-delay -<span class="hljs-built_in">float</span> 0 &amp;&amp; killall Dock<br>sudo defaults delete com.apple.Dock autohide-delay &amp;&amp; killall Dock<br></code></pre></td></tr></table></figure>
