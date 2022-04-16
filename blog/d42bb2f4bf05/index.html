@@ -16,23 +16,20 @@
   <meta name="author" content="Gilgamesh">
   <meta name="keywords" content="">
   
-    <meta name="description" content="不知道有多少小伙伴有和我一样看网上视频课程喜欢下载下来（爬下来）看？这样视频倍速播放较为自由，还可以做音频处理、自己加字幕等等操作，让学习过程更为愉快。本文主要探讨加字幕过程，分享一种我自己在用的解析剪映AI字幕的缓存文件生成外挂字幕的方法。">
+    <meta name="description" content="完全掌控你的系统。苹果电脑系统控制脚本使用的介绍、指导和示例">
 <meta property="og:type" content="article">
-<meta property="og:title" content="制作视频外挂字幕">
-<meta property="og:url" content="https://gilgamesh-lzq.github.io/9dd8d2cc97df/index.html">
+<meta property="og:title" content="HammerSpoon使用指南">
+<meta property="og:url" content="https://gilgamesh-lzq.github.io/blog/d42bb2f4bf05/index.html">
 <meta property="og:site_name" content="Gilgamesh&#39;s Blog">
-<meta property="og:description" content="不知道有多少小伙伴有和我一样看网上视频课程喜欢下载下来（爬下来）看？这样视频倍速播放较为自由，还可以做音频处理、自己加字幕等等操作，让学习过程更为愉快。本文主要探讨加字幕过程，分享一种我自己在用的解析剪映AI字幕的缓存文件生成外挂字幕的方法。">
+<meta property="og:description" content="完全掌控你的系统。苹果电脑系统控制脚本使用的介绍、指导和示例">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:04-02:00:25-image-20220404011306278.png">
-<meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:04-02:00:25-image-20220404014103436.png">
-<meta property="article:published_time" content="2022-04-04T13:51:13.000Z">
-<meta property="article:modified_time" content="2022-04-16T19:27:36.807Z">
+<meta property="article:published_time" content="2022-04-10T04:57:25.000Z">
+<meta property="article:modified_time" content="2022-04-10T13:04:57.171Z">
 <meta property="article:author" content="Gilgamesh">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:04-02:00:25-image-20220404011306278.png">
   
   
-  <title>制作视频外挂字幕 - Gilgamesh&#39;s Blog</title>
+  <title>HammerSpoon使用指南 - Gilgamesh&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
@@ -174,7 +171,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="制作视频外挂字幕">
+            <span class="h2" id="subtitle" title="HammerSpoon使用指南">
               
             </span>
 
@@ -184,8 +181,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2022-04-04 21:51" pubdate>
-        2022年4月4日 晚上
+      <time datetime="2022-04-10 12:57" pubdate>
+        2022年4月10日 下午
       </time>
     </span>
   
@@ -195,7 +192,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1.7k 字
+      935 字
     </span>
   
 
@@ -204,7 +201,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      11 分钟
+      6 分钟
     </span>
   
 
@@ -237,38 +234,54 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">制作视频外挂字幕</h1>
+            <h1 style="display: none">HammerSpoon使用指南</h1>
             
               <p class="note note-info">
                 
-                  本文最后更新于：2022年4月17日 凌晨
+                  本文最后更新于：2022年4月10日 晚上
                 
               </p>
             
             <div class="markdown-body">
-              <h1 align="center">制作视频外挂字幕</h1>
+              <h1 align="center">HammerSpoon使用指南</h1>
 
-<p>不知道有多少小伙伴有和我一样看网上视频课程喜欢下载下来（爬下来）看？这样视频倍速播放较为自由，还可以做音频处理、自己加字幕等等操作，让学习过程更为愉快。本文主要探讨加字幕过程。</p>
-<p>$\ $</p>
-<h2 id="1-方案调研"><a href="#1-方案调研" class="headerlink" title="1.方案调研"></a>1.方案调研</h2><p>视频加上了外挂字幕后，字幕形式可以随意调整成自己喜欢的样式，英文课程也可以使用机翻。对于课程加速后不容易听清的问题，加字幕也是一个很有效的辅助。但是如何制作字幕却是一个问题。我探索了一下github，看起来没什么很成熟可以拿来直接用的神经网络，网上也搜不到成熟的商业软件可以一站式解决这个需求。目前据我所知所有可行的方案有：</p>
+<h1 id="文章仍在施工中···"><a href="#文章仍在施工中···" class="headerlink" title="文章仍在施工中···"></a><strong>文章仍在施工中···</strong></h1><h4 align="center">序言</h4>
+
+<p>苹果电脑在某些方面做得很棒很符合人的直觉，在另一些方面却很不顺手，初次使用苹果电脑的朋友们一定深有同感。某种意义上这是为了简洁，因为不是所有人都需要乱七八糟的功能；也可以说这只是其他操作系统的特色功能，只是我们用习惯了而已。原因已不重要，本文致力于给苹果电脑用户一个畅快的使用体验。</p>
+<p>以下问题是否在你使用苹果电脑时困扰着你？</p>
 <ul>
-<li>Windows系统中使用华为电脑管家的智能字幕功能。不能自定义格式，可以中英翻译，略有滞后，准确性一般。</li>
-<li>使用云服务商的实时语音转文本接口。大部分云服务商都提供完全免费的或数千小时免费的实时语音转文本服务。需要自己写程序和接口交互，需要自己处理分词间隔等问题，较麻烦，准确率一般，略有滞后，不支持翻译。</li>
-<li>苹果App Store中由<code>Hangzhou Duoziwei Technology Co.Ltd</code>开发的软件<code>YPlayer</code>和<code>BeMyEars</code>软件。两个软件使用同一套引擎，前者是一个能实时显示多语言AI字幕的简陋播放器，支持文本导出（不是字幕导出。导出的文本没有时间戳），性能很差导出长视频字幕时会内存溢出卡死；后者是一个将麦克风音频实时识别字幕显示在屏幕上的纯实时字幕软件，性能同样很差，不支持导出，支持多语言识别。想要使用<code>BeMyEars</code>识别正在播放视频的字幕必须使用第三方Mac音频流控制软件如 <a target="_blank" rel="noopener" href="https://github.com/ExistentialAudio/BlackHole"><u><em>BlackHole</em></u></a> 等将电脑扬声器重定向到电脑麦克风。</li>
-<li><a target="_blank" rel="noopener" href="https://jianwai.youdao.com"><strong><u>网易见外平台</u></strong></a>。一个免费的字幕制作平台，支持上传视频或者音频自动生成中英文srt字幕，但每天总时长不能超过两个小时。支持字幕中英机翻，不限量。</li>
-<li><strong>剪映</strong>。字节跳动旗下的一款视频制作软件，有AI生成字幕功能，不限量，但字幕不能导出。</li>
+<li>中英文输入法切换不灵敏，切换时按键时间太短可能不会切换，按键时间稍长就容易触发大写锁定</li>
+<li>在不同软件间频繁切换输入法</li>
+<li>在同一个软件的多个窗口中切换很麻烦，因为默认的窗口聚合不能更改</li>
+<li>没有<code>delete</code>键，向光标后面删除很麻烦</li>
+<li>菜单栏没有折叠的功能，有时候图标太多很碍眼</li>
+<li>不方便调整右键菜单</li>
 </ul>
-<p>截至本文上传日期，剪映仍然通过将音频分离出来上传到服务器再由服务器发回字幕的方式生成字幕，同时字幕在本地是实时缓存在文件中的，也就是说可以通过抓包或者读取本地项目缓存文件的方式获得字幕，然后解析其格式化文本生成srt字幕即可。获得srt字幕后可以在网易见外平台上翻译也可以在播放器中自定义喜欢的格式（比如我个人比较喜欢老莱视频中那样白字蓝边灰底的样式）。</p>
-<p><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:04-02:00:25-image-20220404011306278.png" srcset="/img/loading.gif" lazyload alt="image-20220404011306278" style="zoom:50%;" /></p>
-<h2 id="2-解析字幕"><a href="#2-解析字幕" class="headerlink" title="2.解析字幕"></a>2.解析字幕</h2><p>抓包比较麻烦，但得到的单个<code>json</code>文件字幕内容和时间戳在一起，比较容易处理；分析本地文件则比较复杂，因为剪映将字幕的内容和时间戳分开保存，需要一一配对生成字幕。下面演示分析本地文件生成字幕的方法。</p>
-<p>使用剪映生成字幕很简单，这里略过。字幕生成成功后，通过这个我制作的<a href="/my-html/剪映字幕导出.html"><u><em>转换网页</em></u></a>，本地打开下载下来的<code>html文件</code>即可，按照网页中指示找到你使用的剪映版本项目缓存文件所在目录。里面众多<code>json</code>文件中会有一个<strong>体积明显比较大</strong>，就是它。</p>
-<p>打开网页，调整设置。网页完全根据我自己的电脑分辨率适配，如果你的电脑上输入框溢出看不到右边的按钮，可以修改网页源代码40行和111行，修改其中的行列数值。</p>
-<p>如果想要生成适合Linux中使用的字幕文件，换行符选择<code>\n</code>,其他系统中选择<code>\r\n</code>。这一设置影响不大，一般的播放器都能识别。按照你使用的剪映版本<strong>调整时间单位</strong>，电脑版选微秒，安卓版选毫秒。错误的设置生成的字幕会无法使用。网页提供了一个示例来测试你的设备是否能使用它。点击“生成srt”按钮，下方会生成字幕，有一个下载字幕的按钮可以调用浏览器下载功能将文件保存到本地。测试完成后点击“清空”按钮<strong>清空输入框内容</strong>。</p>
-<p><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:04-02:00:25-image-20220404014103436.png" srcset="/img/loading.gif" lazyload alt="image-20220404014103436"></p>
-<p>使用文本编辑器打开那个剪映项目缓存文件，将其中全部内容复制出来（<code>ctrl+A</code>,<code>ctrl+C</code>），粘贴到网页输入框中。由于文件通常很大，这个过程可能很卡，要卡半天。冷静、理智、稳重，<strong>慢慢等</strong>。复制完成后点击“生成srt”按钮，很快就会生成字幕。在下方生成的字幕旁边有下载字幕的按钮，点击下载即可。</p>
-<p>接下来，enjoy your watching！</p>
-<h4 id="Json向Srt转换网页"><a href="#Json向Srt转换网页" class="headerlink" title="Json向Srt转换网页"></a>Json向Srt转换网页</h4><p><a href="/my-html/剪映字幕导出.html"><u><em>转换网页</em></u></a></p>
-
+<p>虽然以上提到的每个痛点都有人推荐过专门的“效率提升”软件，但是众所周知这类软件没有一个能一次性解决多个问题而又不添些无用的烦人功能，而且装多了还会互相打架，崭新的电脑就是这么经年累月变慢变卡。<strong>HammerSpoon可以一次性解决前4个问题</strong>，而且完全由你自己编写控制语句，不会在任何你不需要的地方打扰你。</p>
+<p>我在制作脚本的过程中走了很多弯路，遇到过很多奇怪的BUG。希望本文能帮助你更快地上手。</p>
+<h2 id="1、什么是HammerSpoon"><a href="#1、什么是HammerSpoon" class="headerlink" title="1、什么是HammerSpoon"></a>1、什么是HammerSpoon</h2><p>HammerSpoon是一个使用Lua语言编写的macOS系统脚本控制器，它能调用macOS系统提供的大量系统API完成一些自动化功能。目前此软件在GitHub开源，并且有 <a target="_blank" rel="noopener" href="http://www.hammerspoon.org/docs/"><u><em>官方文档</em></u></a> 和 <a target="_blank" rel="noopener" href="http://www.hammerspoon.org/go/"><u><em>示例程序</em></u></a> 以及一个不小的社区。</p>
+<p>HammerSpoon的功能包括但不限于：</p>
+<ul>
+<li>输入：<ul>
+<li>监测目前wifi的状态</li>
+<li>监测usb设备状态</li>
+<li>监测键盘事件</li>
+<li>监测鼠标动作及按键</li>
+<li>监听网络端口</li>
+</ul>
+</li>
+<li>输出：<ul>
+<li>模拟按下某些按键</li>
+<li>模拟鼠标某些动作</li>
+<li>通过系统接口直接控制电脑某些硬件</li>
+<li>播放声音</li>
+<li>弹窗显示文字</li>
+</ul>
+</li>
+</ul>
+<h2 id="2、上手体验"><a href="#2、上手体验" class="headerlink" title="2、上手体验"></a>2、上手体验</h2><p>我相信大多数人没有用过Lua语言甚至没听说过Lua语言。不过好在作为一种脚本语言，Lua语言可读性比较强，其源码由纯C语言编写，我们稍加探索同样能够阅读。因此不要因为不会编写Lua语言程序望而却步，接下来我将通过几个小例子带你快速上手。</p>
+<p>首先安装软件，在 <a target="_blank" rel="noopener" href="https://github.com/Hammerspoon/hammerspoon/releases/"><u><em>官网</em></u></a> 下载安装包，直接安装。启动软件时会要求系统偏好设置中“辅助功能”权限，请授予。</p>
+<h2 id="3、高阶准备"><a href="#3、高阶准备" class="headerlink" title="3、高阶准备"></a>3、高阶准备</h2><h2 id="4、高阶操作"><a href="#4、高阶操作" class="headerlink" title="4、高阶操作"></a>4、高阶操作</h2>
             </div>
             <hr>
             <div>
@@ -290,29 +303,6 @@
                   
                 </p>
               
-              
-                <div class="post-prevnext">
-                  <article class="post-prev col-6">
-                    
-                    
-                      <a href="/e7beb15ab2ea/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Mac中一些有用的冷门命令</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
-                  </article>
-                  <article class="post-next col-6">
-                    
-                    
-                      <a href="/a65539427ee0/">
-                        <span class="hidden-mobile">让你的PDF更容易阅读</span>
-                        <span class="visible-mobile">下一篇</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
-                    
-                  </article>
-                </div>
               
             </div>
 
