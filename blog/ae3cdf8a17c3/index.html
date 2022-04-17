@@ -16,20 +16,20 @@
   <meta name="author" content="Gilgamesh">
   <meta name="keywords" content="">
   
-    <meta name="description" content="摘要">
+    <meta name="description" content="其他用户对你家目录的写权限会导致你密钥登陆认证失败。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ssh不能密钥登陆？记一次排查">
+<meta property="og:title" content="ssh不能密钥登陆？记一次BUG排查">
 <meta property="og:url" content="https://gilgamesh-lzq.github.io/blog/ae3cdf8a17c3/index.html">
 <meta property="og:site_name" content="Gilgamesh&#39;s Blog">
-<meta property="og:description" content="摘要">
+<meta property="og:description" content="其他用户对你家目录的写权限会导致你密钥登陆认证失败。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-04-17T18:36:23.000Z">
-<meta property="article:modified_time" content="2022-04-17T18:52:07.580Z">
+<meta property="article:modified_time" content="2022-04-17T19:48:29.809Z">
 <meta property="article:author" content="Gilgamesh">
 <meta name="twitter:card" content="summary_large_image">
   
   
-  <title>ssh不能密钥登陆？记一次排查 - Gilgamesh&#39;s Blog</title>
+  <title>ssh不能密钥登陆？记一次BUG排查 - Gilgamesh&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
@@ -171,7 +171,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="ssh不能密钥登陆？记一次排查">
+            <span class="h2" id="subtitle" title="ssh不能密钥登陆？记一次BUG排查">
               
             </span>
 
@@ -192,7 +192,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      137 字
+      582 字
     </span>
   
 
@@ -201,7 +201,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      1 分钟
+      4 分钟
     </span>
   
 
@@ -234,7 +234,7 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">ssh不能密钥登陆？记一次排查</h1>
+            <h1 style="display: none">ssh不能密钥登陆？记一次BUG排查</h1>
             
               <p class="note note-info">
                 
@@ -243,10 +243,23 @@
               </p>
             
             <div class="markdown-body">
-              <h1 align="center">ssh不能密钥登陆？记一次排查</h1>
+              <h1 align="center">ssh不能密钥登陆？记一次BUG排查</h1>
 
-<h2 id="1-问题复述："><a href="#1-问题复述：" class="headerlink" title="1.问题复述："></a>1.问题复述：</h2><h2 id="2-问题背景："><a href="#2-问题背景：" class="headerlink" title="2.问题背景："></a>2.问题背景：</h2><p>书接上回，我在云服务器上搭了一个hexo博客并写了一件配置脚本，方便服务器被人搞了快速重置或者以后换服务器。那时是没有配置密钥登陆的，倒不是因为我</p>
-<h2 id="3-解决过程"><a href="#3-解决过程" class="headerlink" title="3.解决过程"></a>3.解决过程</h2><h3 id="3-1-已排查的无效问题"><a href="#3-1-已排查的无效问题" class="headerlink" title="3.1.已排查的无效问题"></a>3.1.已排查的无效问题</h3><h3 id="3-2-问题锁定"><a href="#3-2-问题锁定" class="headerlink" title="3.2.问题锁定"></a>3.2.问题锁定</h3><h3 id="3-3-有用的帖子"><a href="#3-3-有用的帖子" class="headerlink" title="3.3.有用的帖子"></a>3.3.有用的帖子</h3>
+<h2 id="1-问题复述："><a href="#1-问题复述：" class="headerlink" title="1.问题复述："></a>1.问题复述：</h2><p>使用同样的公钥配置root和git用户，root用户轻松免密登陆，git用户却无法使用公钥登陆。</p>
+<h2 id="2-问题背景："><a href="#2-问题背景：" class="headerlink" title="2.问题背景："></a>2.问题背景：</h2><p>书接上回，我在云服务器上搭了一个hexo博客并写了一件配置脚本，方便服务器被人搞了快速重置或者以后换服务器。当时免密登陆没有写在脚本里是因为人们不总是每次重装都重做密钥。但时间一长，仍不免觉得输密码太费事。在试图配置git用户免密登陆时发现无论如何都无法免密登陆，使用root用户却轻松免密登陆。</p>
+<h2 id="3-解决过程"><a href="#3-解决过程" class="headerlink" title="3.解决过程"></a>3.解决过程</h2><h3 id="3-1-已排查的无效问题"><a href="#3-1-已排查的无效问题" class="headerlink" title="3.1.已排查的无效问题"></a>3.1.已排查的无效问题</h3><ul>
+<li>调整<code>.ssh</code>目录下的公钥各种权限（不起作用）</li>
+<li>在<code>sshd_config</code>中调整一些设置，如选择RSA、选择认证文件位置等（不起作用）</li>
+<li>清除本地ssh的相关<code>known_hosts</code>缓存（不起作用）</li>
+<li>给服务器的git设置用户名和邮箱（不起作用）</li>
+<li>用多种方法将公钥传到服务器，尝试chown给不同用户（不起作用）</li>
+<li>检索阿里云对可以密钥登陆的用户是否有白名单（没有）</li>
+<li>检索是否有在ssh中配置可以密钥登陆用户的白名单（没有）</li>
+<li>检索Mac的ssh是否错误配置密码登陆优先于密钥登陆（没有）</li>
+</ul>
+<p>以上常规解法都没能解决我的问题。</p>
+<h3 id="3-2-问题锁定"><a href="#3-2-问题锁定" class="headerlink" title="3.2.问题锁定"></a>3.2.问题锁定</h3><p>关闭密码登陆后，root用户仍然顺利登陆，git用户无法登陆，显示<code>permission denied(publickey)</code>。这一般是</p>
+<h3 id="3-3-有用的帖子"><a href="#3-3-有用的帖子" class="headerlink" title="3.3.有用的帖子"></a>3.3.有用的帖子</h3><h3 id="3-4-找到答案"><a href="#3-4-找到答案" class="headerlink" title="3.4.找到答案"></a>3.4.找到答案</h3>
             </div>
             <hr>
             <div>
