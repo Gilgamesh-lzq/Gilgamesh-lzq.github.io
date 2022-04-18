@@ -17,6 +17,7 @@
 
 a.nav-link.dropdown-toggle {
     href: "/categories/";
+    z-index: 10;
 }
 
 .tocbot-active-link {
