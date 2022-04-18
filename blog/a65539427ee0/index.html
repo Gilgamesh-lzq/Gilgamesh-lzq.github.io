@@ -30,7 +30,7 @@
 <meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:03-23:11:31-image-20220403225516241.png">
 <meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:03-23:11:31-image-20220403225922251.png">
 <meta property="article:published_time" content="2022-04-03T04:13:58.000Z">
-<meta property="article:modified_time" content="2022-04-04T13:36:00.355Z">
+<meta property="article:modified_time" content="2022-04-18T06:36:42.319Z">
 <meta property="article:author" content="Gilgamesh">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:03-23:11:31-image-20220403213413071.png">
@@ -245,7 +245,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：2022年4月4日 晚上
+                  本文最后更新于：2022年4月18日 下午
                 
               </p>
             
@@ -253,7 +253,6 @@
               <h1 align="center">让你的PDF更容易阅读</h1>
 
 <p>许多人有“无纸化学习”的习惯，PDF版本的教材是其中十分重要的一环。然而，通过各种渠道找到的PDF版教材通常不怎么清晰，属于“能看，只能看一点点”的程度，一些背景不干净的PDF在电子墨水屏上看更是惨不忍睹。本文致力于对电子书做一些简单的图像处理以提高阅读体验。</p>
-<p>$\ $</p>
 <h2 id="1-原理"><a href="#1-原理" class="headerlink" title="1.原理"></a>1.原理</h2><p>本文中要处理的电子书特指扫描版PDF，一方面是因为这种类型的教材数量最多，而且文字版教材阅读方面可能存在的的主要问题是排版而不是文字。PDF文档格式简单来说是一种类似json的资源描述格式，它以每页为单位链接了若干对象，然后将对象的字节码或者二进制码直接插入其中（两种都支持，因此有的PDF用文本编辑器打开能看懂，有的就是乱码）。对于扫描PDF来说，它只是一堆图像的集合，不会有复杂的后处理和计算，因此可以通过直接处理其中的图像来达到目的。具体来说，处理过程分为拆分图片、处理图片、合并图片三部分。</p>
 <p>对数字图像的任何处理都会造成其中包含总信息的损失，但是其中大部分是我们不需要的低频信息，使人能够认出来文字的信息多属于高频信息。可以通过一些图像变换牺牲掉一些无关紧要的低频信息来换取高频信息的加强。这也就是为什么有时候更清晰的图像可以反而体积更小</p>
 <h2 id="2-第一步：拆分"><a href="#2-第一步：拆分" class="headerlink" title="2.第一步：拆分"></a>2.第一步：拆分</h2><p>科普几个图像格式，<code>jpeg</code>是有损压缩，目前在所有平台支持最好；<code>png</code>比<code>jpg</code>多一个透明图层，一般电脑截图是这种格式，但我们的PDF显然不含有透明图层，因此这种格式我们不采用；<code>tiff</code>是一个打包，它可以存储多种数据和标签，包括24位无压缩数据，因此我们将PDF拆分为图像时采用此格式，以便造保存所有信息方便后续处理得到质量更高的图像。格式灵活和丰富的缺点就是不实在所有设备上都支持得很好，因此各大PDF合并软件都默认对<code>tiff</code>格式图像合并时做一次格式转换，这一点后面会提到。</p>
