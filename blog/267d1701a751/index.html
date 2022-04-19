@@ -23,14 +23,14 @@
 <meta property="og:site_name" content="Gilgamesh&#39;s Blog">
 <meta property="og:description" content="贝叶斯网络学习笔记。记录贝叶斯网络的思想以及使用方法。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://gilgamesh-lzq.github.io/blog/267d1701a751/%E8%B4%9D%E5%8F%B6%E6%96%AF%E6%8E%A8%E7%90%86.assets/zhusuan%E4%B8%BB%E8%A6%81%E5%8A%9F%E8%83%BD.png">
-<meta property="og:image" content="https://gilgamesh-lzq.github.io/blog/267d1701a751/%E8%B4%9D%E5%8F%B6%E6%96%AF%E6%8E%A8%E7%90%86.assets/image-20220419213317032.png">
-<meta property="og:image" content="https://gilgamesh-lzq.github.io/blog/267d1701a751/%E8%B4%9D%E5%8F%B6%E6%96%AF%E6%8E%A8%E7%90%86.assets/image-20220419214301959.png">
+<meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:19-22:05:05-zhusuan%E4%B8%BB%E8%A6%81%E5%8A%9F%E8%83%BD.png">
+<meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:19-22:05:05-image-20220419213317032.png">
+<meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:19-22:05:05-image-20220419214301959.png">
 <meta property="article:published_time" content="2022-04-18T17:22:35.000Z">
-<meta property="article:modified_time" content="2022-04-19T14:04:27.532Z">
+<meta property="article:modified_time" content="2022-04-19T14:05:36.987Z">
 <meta property="article:author" content="Gilgamesh">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://gilgamesh-lzq.github.io/blog/267d1701a751/%E8%B4%9D%E5%8F%B6%E6%96%AF%E6%8E%A8%E7%90%86.assets/zhusuan%E4%B8%BB%E8%A6%81%E5%8A%9F%E8%83%BD.png">
+<meta name="twitter:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:19-22:05:05-zhusuan%E4%B8%BB%E8%A6%81%E5%8A%9F%E8%83%BD.png">
   
   
   <title>贝叶斯网络学习笔记 - Gilgamesh&#39;s Blog</title>
@@ -293,8 +293,7 @@
             <div class="markdown-body">
               <h1 align="center">贝叶斯网络学习笔记</h1>
 
-
-
+<p><br></p>
 <h2 id="1-贝叶斯网络的思想"><a href="#1-贝叶斯网络的思想" class="headerlink" title="1.贝叶斯网络的思想"></a>1.贝叶斯网络的思想</h2><p>在传统的点估计神经网络中一般是输入一个点得到一个点，它给出一个确定的结果或分类的概率。在使用神经网络进行预测时，也就是对一个偏离训练集的数据进行插值拟合，本质上它是对结果的曲线(高维曲面)向外进行了一个延伸。它预测的结果没有考虑已经偏离的数据其本身带来的不确定性，导致它对结果的预测处于一个过度自信的状态。也就是说它被骗了。</p>
 <p>符合均匀分布的输入数据在复杂的神经网络的变换下其分布可能改变成任意的数据，比如某个物体的图片。这就是为什么很多情况下可以用对抗网络简单地添加一些噪声来大幅度干扰预测结果。</p>
 <p>在传统的点估计神经网络中一般不考虑输入数据本身的影响，也就是默认输入数据符合均匀分布，它得到的结果就是对这个均匀分布进行一定函数变换后得到的新分布。而实际上输入数据很可能服从于某个分布而不是默认的均匀分布。贝叶斯理论认为概率是对可信度的衡量，它是一个根据输入分布发生变化的频谱——不同的确定的自变量分布经过同样的函数变换可以得到不同的新分布。本质上后者是对前者的一个推广，在贝叶斯网络中如果限制自变量符合均匀分布，那么它将得到传统的点估计神经网络得到结果的一个极大似然估计。</p>
@@ -318,12 +317,12 @@
 <p>如果想构建复杂的网络，可以把多个像上面这样的函数组合在一起串成一串。输入的自变量每经过一个函数变换其分布都会变复杂一点，经过n个函数变换后其分布足以拟合真实数据的分布。</p>
 <p>这种网络的瓶颈在于为了保持函数是一一映射，其输入输出的维度需要是一样的。</p>
 <h2 id="4-计算库"><a href="#4-计算库" class="headerlink" title="4.计算库"></a>4.计算库</h2><h3 id="4-1-珠算平台"><a href="#4-1-珠算平台" class="headerlink" title="4.1.珠算平台"></a>4.1.珠算平台</h3><p>珠算平台目前在github开源，处于开发阶段，需要下载后使用<code>pip install .</code>来安装。其主要功能如下$^{[1]}$：</p>
-<p><img src="%E8%B4%9D%E5%8F%B6%E6%96%AF%E6%8E%A8%E7%90%86.assets/zhusuan%E4%B8%BB%E8%A6%81%E5%8A%9F%E8%83%BD.png" srcset="/img/loading.gif" lazyload alt="zhusuan主要功能" style="zoom:50%;" /></p>
+<p><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:19-22:05:05-zhusuan%E4%B8%BB%E8%A6%81%E5%8A%9F%E8%83%BD.png" srcset="/img/loading.gif" lazyload alt="zhusuan主要功能" style="zoom:50%;" /></p>
 <h3 id="4-2-示例程序"><a href="#4-2-示例程序" class="headerlink" title="4.2.示例程序"></a>4.2.示例程序</h3><h4 id="4-2-1-贝叶斯逻辑回归"><a href="#4-2-1-贝叶斯逻辑回归" class="headerlink" title="4.2.1.贝叶斯逻辑回归"></a>4.2.1.贝叶斯逻辑回归</h4><figure class="highlight python"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></div></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> zhusuan <span class="hljs-keyword">as</span> zs<br><span class="hljs-keyword">import</span> tensorflow <span class="hljs-keyword">as</span> tf<br><br><span class="hljs-meta">@zs.meta_bayesian_net(<span class="hljs-params">scope=<span class="hljs-string">&quot;blr&quot;</span></span>)</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">build_blr</span>(<span class="hljs-params">x, alpha, D</span>):<br>    bn = zs.BayesianNet()<br>    w = bn.normal(<span class="hljs-string">&#x27;w&#x27;</span>, mean=tf.zeros([D]), std=alpha, group_ndims=<span class="hljs-number">1</span>)<br>    y_logit = tf.reduce_sum(tf.expand_dims(w, <span class="hljs-number">0</span>)*x, axis=<span class="hljs-number">1</span>)<br>    bn.bernoulli(<span class="hljs-string">&#x27;y&#x27;</span>, y_logit)<br>    <span class="hljs-keyword">return</span> bn<br></code></pre></td></tr></table></figure>
-<p><img src="%E8%B4%9D%E5%8F%B6%E6%96%AF%E6%8E%A8%E7%90%86.assets/image-20220419213317032.png" srcset="/img/loading.gif" lazyload alt="image-20220419213317032" style="zoom: 33%;" /></p>
+<p><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:19-22:05:05-image-20220419213317032.png" srcset="/img/loading.gif" lazyload alt="image-20220419213317032" style="zoom: 33%;" /></p>
 <h4 id="4-2-2-变分自动编码器"><a href="#4-2-2-变分自动编码器" class="headerlink" title="4.2.2.变分自动编码器"></a>4.2.2.变分自动编码器</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># 生成网络</span><br><span class="hljs-meta">@zs.meta_bayesian_net(<span class="hljs-params">scope=<span class="hljs-string">&quot;vae&quot;</span>, reuse_variables=<span class="hljs-literal">True</span></span>)</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">build_vae</span>(<span class="hljs-params">N, D</span>):<br>    bn = zs.BayesianNet()<br>    z_mean = tf.zeros([N,D])<br>    z = bn.normal(<span class="hljs-string">&#x27;z&#x27;</span>, z_mean, std=<span class="hljs-number">1.</span>, group_ndims=<span class="hljs-number">1</span>)<br>    h = tf.layers.dense(z, <span class="hljs-number">500</span>, activation=tf.nn.relu)<br>    x_logits = tf.layers.dense(h, <span class="hljs-number">784</span>)<br>    bn.bernoulli(<span class="hljs-string">&#x27;x&#x27;</span>, x_logits, group_ndims=<span class="hljs-number">1</span>)<br>    <span class="hljs-keyword">return</span> bn<br></code></pre></td></tr></table></figure>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># 推断网络</span><br><span class="hljs-meta">@zs.reuse_variables(<span class="hljs-params"><span class="hljs-string">&quot;vae_q&quot;</span></span>)</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">build_q_net</span>(<span class="hljs-params">h_dim, z_dim</span>):<br>    bn = zs.BayesianNet()<br>    h = tf.layers.dense(x, h_dim, activation=tf.nn.relu)<br>    z_mean = tf.layers.dense(h, z_dim)<br>    z_logstd = tf.layers.dense(h, z_dim)<br>    bn.normal(<span class="hljs-string">&#x27;z&#x27;</span>, z_mean, logstd=z_logstd, group_ndims=<span class="hljs-number">1</span>)<br>    <span class="hljs-keyword">return</span> bn<br></code></pre></td></tr></table></figure>
-<p><img src="%E8%B4%9D%E5%8F%B6%E6%96%AF%E6%8E%A8%E7%90%86.assets/image-20220419214301959.png" srcset="/img/loading.gif" lazyload alt="image-20220419214301959" style="zoom:33%;" /></p>
+<p><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:19-22:05:05-image-20220419214301959.png" srcset="/img/loading.gif" lazyload alt="image-20220419214301959" style="zoom:33%;" /></p>
 <h2><font color="black">参考链接</font></h2>
 
 <ol>
