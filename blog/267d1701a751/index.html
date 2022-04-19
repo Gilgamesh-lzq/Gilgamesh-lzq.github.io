@@ -24,7 +24,7 @@
 <meta property="og:description" content="贝叶斯网络学习笔记。记录贝叶斯网络的思想以及使用方法。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-04-18T17:22:35.000Z">
-<meta property="article:modified_time" content="2022-04-19T06:00:12.331Z">
+<meta property="article:modified_time" content="2022-04-19T06:14:51.917Z">
 <meta property="article:author" content="Gilgamesh">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -310,6 +310,12 @@
 <h2 id="3-基于Flow的贝叶斯网络模型"><a href="#3-基于Flow的贝叶斯网络模型" class="headerlink" title="3.基于Flow的贝叶斯网络模型"></a>3.基于Flow的贝叶斯网络模型</h2><p>如果输入数据$z\sim p(z)$，其结果$x=g(z)$，那么$z=f(x)=g^{-1}(x)$，$p(x)=p(f(x))|det\frac{\partial f(x)}{\partial x}|$  (雅可比行列式)。也就是说如果变换函数g是一一映射而且是可逆的，那么可以通过其反函数和z的分布计算出x的分布。</p>
 <p>构建模型时一个简单的想法是把x分成两份，令$\begin{cases}y_1=x_1\\ y_2=x_2+m(x_1)\end{cases}$，其Jacob行列式为1，且反函数很好算$\begin{cases}x_1=y_1\\ x_2=y_2-m(y_1)\end{cases}$。公式中的m函数是任意一个符合g标准的变换。</p>
 <p>如果想构建复杂的网络，可以把多个像上面这样的函数组合在一起串成一串。输入的自变量每经过一个函数变换其分布都会变复杂一点，经过n个函数变换后其分布足以拟合真实数据的分布。</p>
+<h2><font color="black">参考文章</font></h2>
+
+<ol>
+<li><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1WK411n7Sw"><u><em>贝叶斯深度学习前沿进展-朱军</em></u></a></li>
+<li><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1TL4y187qF?spm_id_from=333.824.header_right.history_list.click"><u><em>神经网络（十三）：贝叶斯神经网络</em></u></a></li>
+</ol>
 
             </div>
             <hr>
