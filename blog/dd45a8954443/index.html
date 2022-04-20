@@ -23,12 +23,12 @@
 <meta property="og:site_name" content="Gilgamesh&#39;s Blog">
 <meta property="og:description" content="介绍手动编译Nginx源码并做反向代理的具体步骤">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://gilgamesh-lzq.github.io/blog/dd45a8954443/Nginx%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86.assets/image-20220420091241650.png">
+<meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:20-09:46:47-image-20220420091241650.png">
 <meta property="article:published_time" content="2022-04-19T15:00:31.000Z">
-<meta property="article:modified_time" content="2022-04-20T01:19:19.066Z">
+<meta property="article:modified_time" content="2022-04-20T01:46:50.876Z">
 <meta property="article:author" content="Gilgamesh">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://gilgamesh-lzq.github.io/blog/dd45a8954443/Nginx%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86.assets/image-20220420091241650.png">
+<meta name="twitter:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:20-09:46:47-image-20220420091241650.png">
   
   
   <title>Nginx反向代理 - Gilgamesh&#39;s Blog</title>
@@ -238,7 +238,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      607 字
+      915 字
     </span>
   
 
@@ -247,7 +247,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      4 分钟
+      6 分钟
     </span>
   
 
@@ -294,7 +294,7 @@
 <p>众所周知Nginx可以做流量转发。本文将介绍手动编译Nginx源码并做反向代理的具体步骤。需要一个域名和一台服务器，最好是境外服务器因为境外服务器不需要ICP备案，比较省事。</p>
 <blockquote>
 <ul>
-<li>据我所知，阿里云的香港服务器也是有墙的。</li>
+<li>据我所知，阿里云的香港服务器也是有墙的</li>
 <li>下文以ubuntu系统为例，使用root用户操作</li>
 </ul>
 </blockquote>
@@ -305,8 +305,11 @@
 <h2 id="2-安装软件"><a href="#2-安装软件" class="headerlink" title="2.安装软件"></a>2.安装软件</h2><figure class="highlight bash"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 更新软件库、升级已有程序、安装编译工具包和nginx</span><br>apt-get update &amp;&amp; apt-get -y upgrade &amp;&amp; apt-get install -y build-essential nginx<br></code></pre></td></tr></table></figure>
 <p>这一步中，Nginx已经安装好了，但是我们<strong>不打算直接使用它</strong>。因为这样直接使用官方源码编译的对一些插件会不兼容或导致你机器的服务不稳定。安装好后它会在机器内留一套适合你本机器的编译参数，我们将使用这些参数自己编译一个。</p>
 <h2 id="3-查看参数"><a href="#3-查看参数" class="headerlink" title="3.查看参数"></a>3.查看参数</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 查看参数，记录下来其中的nginx版本和参数</span><br>nginx -V<br></code></pre></td></tr></table></figure>
-<p><img src="Nginx%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86.assets/image-20220420091241650.png" srcset="/img/loading.gif" lazyload alt="image-20220420091241650"></p>
-<h2 id="4-编译源码"><a href="#4-编译源码" class="headerlink" title="4.编译源码"></a>4.编译源码</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 此处下载的版本号要和你上面记录的版本号一致</span><br>wget https://nginx.org/download/nginx-1.14.0.tar.gz<br>tar -xvf nginx-1.14.0.tar.gz &amp;&amp; <span class="hljs-built_in">cd</span> nginx-1.14.0<br></code></pre></td></tr></table></figure>
+<p><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:20-09:46:47-image-20220420091241650.png" srcset="/img/loading.gif" lazyload alt="image-20220420091241650"></p>
+<h2 id="4-编译源码"><a href="#4-编译源码" class="headerlink" title="4.编译源码"></a>4.编译源码</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 此处下载的版本号要和你上面记录的版本号一致</span><br>wget https://nginx.org/download/nginx-1.14.0.tar.gz<br><span class="hljs-comment"># 解压</span><br>tar -xvf nginx-1.14.0.tar.gz &amp;&amp; <span class="hljs-built_in">cd</span> nginx-1.14.0<br><span class="hljs-comment"># 确认参数</span><br>./configure [你刚刚保存那一堆参数]<br></code></pre></td></tr></table></figure>
+<p>确认参数过程中会有很多<code>./configure: error: the XXX module requires the XXX library</code>，不要慌，这是正常的。一个一个去查缺失的这个包怎么安装。一般来说就是<code>apt-get install XXX</code>。重复尝试确认参数，直到最终显示<code>Configuration summary</code>，这说明需要的库已经都安装好了。</p>
+<h2 id="5-安装Nginx"><a href="#5-安装Nginx" class="headerlink" title="5.安装Nginx"></a>5.安装Nginx</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 编译</span><br>make<br><span class="hljs-comment"># 安装</span><br>make install<br><span class="hljs-comment"># 安装文件放入之前nginx的安装目录</span><br><span class="hljs-built_in">cp</span> -rf objs/nginx /usr/sbin/nginx<br></code></pre></td></tr></table></figure>
+<h2 id="6-生成SSL证书"><a href="#6-生成SSL证书" class="headerlink" title="6.生成SSL证书"></a>6.生成SSL证书</h2><p>有SSL证书才能使用https。</p>
 
             </div>
             <hr>
