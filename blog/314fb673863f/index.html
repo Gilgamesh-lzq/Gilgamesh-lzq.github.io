@@ -24,7 +24,7 @@
 <meta property="og:description" content="shell脚本使用笔记">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-04-20T13:24:29.000Z">
-<meta property="article:modified_time" content="2022-04-20T15:44:39.206Z">
+<meta property="article:modified_time" content="2022-04-20T16:02:22.044Z">
 <meta property="article:author" content="Gilgamesh">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -236,7 +236,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1.1k 字
+      1.2k 字
     </span>
   
 
@@ -245,7 +245,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      7 分钟
+      8 分钟
     </span>
   
 
@@ -282,7 +282,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：2022年4月20日 晚上
+                  本文最后更新于：2022年4月21日 凌晨
                 
               </p>
             
@@ -336,6 +336,19 @@
 </li>
 </ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-meta">#!/bin/bash</span><br>[<span class="hljs-variable">$#</span> -ne 2] &amp;&amp; &#123;<br>	<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;输入俩参数&quot;</span><br>	<span class="hljs-built_in">exit</span> 119  <span class="hljs-comment"># 返回值给$?变量</span><br>&#125;<br><span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;OK&quot;</span><br></code></pre></td></tr></table></figure>
+<h2 id="3-shell子串"><a href="#3-shell子串" class="headerlink" title="3.shell子串"></a>3.shell子串</h2><h3 id="3-1-bash基础内置命令"><a href="#3-1-bash基础内置命令" class="headerlink" title="3.1.bash基础内置命令"></a>3.1.bash基础内置命令</h3><ul>
+<li><code>echo</code><ul>
+<li><code>-n</code>，不换行输出</li>
+<li><code>-e</code>，解析字符串中的转义符</li>
+</ul>
+</li>
+<li><code>eval</code>，执行多个命令</li>
+<li><code>exec</code>，不创建子进程，执行后续命令。执行完毕后自动exit</li>
+</ul>
+<h3 id="3-2-子串"><a href="#3-2-子串" class="headerlink" title="3.2.子串"></a>3.2.子串</h3><ul>
+<li><code>$&#123;a&#125;</code>，变量值</li>
+<li>`$</li>
+</ul>
 
             </div>
             <hr>
