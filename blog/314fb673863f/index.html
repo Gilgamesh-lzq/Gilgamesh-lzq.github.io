@@ -24,7 +24,7 @@
 <meta property="og:description" content="shell脚本使用笔记">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-04-20T13:24:29.000Z">
-<meta property="article:modified_time" content="2022-04-20T15:32:45.719Z">
+<meta property="article:modified_time" content="2022-04-20T15:44:39.206Z">
 <meta property="article:author" content="Gilgamesh">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -236,7 +236,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      918 字
+      1.1k 字
     </span>
   
 
@@ -245,7 +245,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      6 分钟
+      7 分钟
     </span>
   
 
@@ -294,10 +294,11 @@
 <li>变量使用<code>$variable</code>来保存，弱类型，默认都是字符串，赋值时等号不要写空格</li>
 <li>父子shell的变量不共用</li>
 <li>环境变量在当前shell以及任意子shell中可以使用</li>
-<li><code>!!</code>为上一条指令，<code>$?</code>为上一条语句是否执行成功</li>
+<li><code>!!</code>为上一条指令</li>
 <li>单引号不能识别特殊语法。需要变量替换要使用双引号</li>
 <li>使用<code>bash</code>会开启一个子shell，使用<code>source</code>不会开启新shell</li>
 <li>反引号括起来的执行结果会被保存下来，其效果相当于<code>a=&amp;(ls)</code></li>
+<li><code>nohup XXX &amp; 1&gt;/dev/null</code> 后台执行命令</li>
 </ul>
 <h2 id="2-变量"><a href="#2-变量" class="headerlink" title="2.变量"></a>2.变量</h2><ul>
 <li>用户个人环境变量配置文件<code>~/.bash_profile</code>，远程登录用户特有<code>~/.bashrc</code>。全局配置文件<code>/etc/profile</code>、<code>/etc/bashrc</code>。系统建议最好创建在<code>/etc/profile.d</code>而不是直接修改全局配置。全局配置影响所有登录用户，个人配置优先生效</li>
@@ -327,10 +328,14 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></div></td><td class="code"><pre><code class="hljs bash"><span class="hljs-meta">#!/bin/bash</span><br><span class="hljs-keyword">for</span> var <span class="hljs-keyword">in</span> <span class="hljs-string">&quot;<span class="hljs-variable">$@</span>&quot;</span><br><span class="hljs-keyword">do</span><br>	<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;<span class="hljs-variable">$var</span>&quot;</span><br><span class="hljs-keyword">done</span><br></code></pre></td></tr></table></figure>
 <ul>
 <li><strong>特殊状态</strong><ul>
-<li></li>
+<li><code>$?</code>，上一次命令执行状态返回值，正确，非0失败</li>
+<li><code>$$</code>，当前shell脚本的进程号</li>
+<li><code>$!</code>，上一次后台进程的PID</li>
+<li><code>$_</code>，获取上次执行命令最后一个参数</li>
 </ul>
 </li>
 </ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-meta">#!/bin/bash</span><br>[<span class="hljs-variable">$#</span> -ne 2] &amp;&amp; &#123;<br>	<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;输入俩参数&quot;</span><br>	<span class="hljs-built_in">exit</span> 119  <span class="hljs-comment"># 返回值给$?变量</span><br>&#125;<br><span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;OK&quot;</span><br></code></pre></td></tr></table></figure>
 
             </div>
             <hr>
