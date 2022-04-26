@@ -61,6 +61,25 @@
   
   
   <entry>
+    <title>MongoDB学习笔记</title>
+    <link href="/blog/8d1686a9454f/"/>
+    <url>/blog/8d1686a9454f/</url>
+    
+    <content type="html"><![CDATA[<h1 align="center">MongoDB学习笔记</h1><h1 id="本文仍在施工中。。。"><a href="#本文仍在施工中。。。" class="headerlink" title="本文仍在施工中。。。"></a><strong>本文仍在施工中。。。</strong></h1><h2 id="1-Mac安装"><a href="#1-Mac安装" class="headerlink" title="1.Mac安装"></a>1.Mac安装</h2><p><a href="https://www.mongodb.com/try#community"><u><em>官网</em></u></a> 下载可执行文件包。选择本地部署，选择社区版服务端，选择你需要的版本，点击下载即可。</p><blockquote><p>从大版本号6开始Mac版有ARM指令集可选，实际使用速度提升很高，但是截至本文创建时间，还没有形成稳定发布版本。</p></blockquote><p><img src="MongoDB%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.assets/image-20220426140104500.png" alt="image-20220426140104500"></p><p>下载得到的压缩包中只有一个<code>bin</code>文件包，内含4个最基本的服务端可执行文件。将<code>mongodb</code>文件夹放至合适的位置，给<code>bin</code>目录加环境变量。</p><figure class="highlight bash"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># mysql也在/usr/local，因此也放在这里，省事</span><br><span class="hljs-built_in">export</span> PATH=/usr/local/mongodb/bin:<span class="hljs-variable">$PATH</span><br></code></pre></td></tr></table></figure><p>创建<code>log</code>和<code>data</code>目录，用于存放日志和数据库数据（叫啥都行，你知道就行）。</p><p>使用以下指令开启和关闭服务端，此时可以命令行输入<code>mongo</code>进入数据库shell。</p><blockquote><p><code>--fork</code>指令用于指定后台运行，而后台运行没有对应的指令一键退出，需要进入shell后输入<code>db.adminCommand(&#123; &quot;shutdown&quot; : 1 &#125;)</code>。如果你确定你的数据库目前没有读写，而且是单机运行，那么也可以直接杀掉进程。</p></blockquote><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 开启服务端</span><br>mongod --dbpath [data目录] --logpath [<span class="hljs-built_in">log</span>目录/mongo.log] --fork<br><span class="hljs-comment"># 关闭服务端(偷懒版)</span><br>killall -9 mongod<br></code></pre></td></tr></table></figure><h2 id="2-数据迁移"><a href="#2-数据迁移" class="headerlink" title="2.数据迁移"></a>2.数据迁移</h2><p>MongoDB提供直接输入输出数据库到文件的功能，可以用于数据库迁移。进行这些操作需要补充可执行文件。官网下载即可。目前数据库工具还没有苹果ARM版本。</p><p><img src="MongoDB%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.assets/image-20220426142043224.png" alt="image-20220426142043224"></p><p>下载的压缩包中同样只有一个<code>bin</code>文件夹，里面补充了一些可执行文件。将它们复制到你MongoDB的<code>bin</code>目录中。</p><p><img src="MongoDB%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.assets/image-20220426142304546.png" alt="image-20220426142304546" style="zoom:50%;" /></p><p>数据库导出可以使用JetBrains全家桶的数据库插件，它可以一次性导出一整个库，效率比较高，但是不提供导入功能。</p><p>在系统shell中输入以下语句导入数据：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 数据文件</span><br>mongoimport --db [数据库名] --collection [集合名] --file [数据文件]<br><span class="hljs-comment"># json数组(JetBrains导出的格式)</span><br>mongoimport --db [数据库名] --collection [集合名] --jsonArray [数据文件]<br></code></pre></td></tr></table></figure><h2 id="3-shell操作"><a href="#3-shell操作" class="headerlink" title="3.shell操作"></a>3.shell操作</h2><h2 id="4-python操作"><a href="#4-python操作" class="headerlink" title="4.python操作"></a>4.python操作</h2><h2 id="5-基本架构"><a href="#5-基本架构" class="headerlink" title="5.基本架构"></a>5.基本架构</h2><p><br></p><h2><font color="black">参考链接</font></h2><ol><li><a href="https://www.mongodb.com/try#community"><u><em>MongoDB官网下载</em></u></a></li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>类别</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>贝叶斯网络学习笔记</title>
     <link href="/blog/05b77b75f2b9/"/>
     <url>/blog/05b77b75f2b9/</url>

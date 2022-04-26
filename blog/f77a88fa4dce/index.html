@@ -16,24 +16,20 @@
   <meta name="author" content="Gilgamesh">
   <meta name="keywords" content="">
   
-    <meta name="description" content="MongoDB学习笔记。本文仍在施工中">
+    <meta name="description" content="摘要">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MongoDB学习笔记">
-<meta property="og:url" content="https://gilgamesh-lzq.github.io/blog/8d1686a9454f/index.html">
+<meta property="og:title" content="设计一个简易搜索引擎">
+<meta property="og:url" content="https://gilgamesh-lzq.github.io/blog/f77a88fa4dce/index.html">
 <meta property="og:site_name" content="Gilgamesh&#39;s Blog">
-<meta property="og:description" content="MongoDB学习笔记。本文仍在施工中">
+<meta property="og:description" content="摘要">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://gilgamesh-lzq.github.io/blog/8d1686a9454f/MongoDB%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.assets/image-20220426140104500.png">
-<meta property="og:image" content="https://gilgamesh-lzq.github.io/blog/8d1686a9454f/MongoDB%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.assets/image-20220426142043224.png">
-<meta property="og:image" content="https://gilgamesh-lzq.github.io/blog/8d1686a9454f/MongoDB%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.assets/image-20220426142304546.png">
-<meta property="article:published_time" content="2022-04-18T18:42:46.000Z">
-<meta property="article:modified_time" content="2022-04-26T06:33:27.097Z">
+<meta property="article:published_time" content="2022-04-26T01:41:53.000Z">
+<meta property="article:modified_time" content="2022-04-26T04:12:01.621Z">
 <meta property="article:author" content="Gilgamesh">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://gilgamesh-lzq.github.io/blog/8d1686a9454f/MongoDB%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.assets/image-20220426140104500.png">
   
   
-  <title>MongoDB学习笔记 - Gilgamesh&#39;s Blog</title>
+  <title>设计一个简易搜索引擎 - Gilgamesh&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
@@ -219,7 +215,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="MongoDB学习笔记">
+            <span class="h2" id="subtitle" title="设计一个简易搜索引擎">
               
             </span>
 
@@ -229,8 +225,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2022-04-19 02:42" pubdate>
-        2022年4月19日 凌晨
+      <time datetime="2022-04-26 09:41" pubdate>
+        2022年4月26日 上午
       </time>
     </span>
   
@@ -240,7 +236,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      959 字
+      1.4k 字
     </span>
   
 
@@ -249,7 +245,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      6 分钟
+      9 分钟
     </span>
   
 
@@ -282,42 +278,64 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">MongoDB学习笔记</h1>
+            <h1 style="display: none">设计一个简易搜索引擎</h1>
             
               <p class="note note-info">
                 
-                  本文最后更新于：2022年4月26日 下午
+                  本文最后更新于：2022年4月26日 中午
                 
               </p>
             
             <div class="markdown-body">
-              <h1 align="center">MongoDB学习笔记</h1>
+              <h1 align="center">设计一个简易搜索引擎</h1>
 
-<h1 id="本文仍在施工中。。。"><a href="#本文仍在施工中。。。" class="headerlink" title="本文仍在施工中。。。"></a><strong>本文仍在施工中。。。</strong></h1><h2 id="1-Mac安装"><a href="#1-Mac安装" class="headerlink" title="1.Mac安装"></a>1.Mac安装</h2><p><a target="_blank" rel="noopener" href="https://www.mongodb.com/try#community"><u><em>官网</em></u></a> 下载可执行文件包。选择本地部署，选择社区版服务端，选择你需要的版本，点击下载即可。</p>
+<ul>
+<li>主要处理流程：<ul>
+<li>离线需要完成的工作<ul>
+<li>爬取大量网页</li>
+<li>对网页内容进行提取和表示（本系统提取和表示的目标是网页文字信息中的词）</li>
+<li>根据这些内容建立倒排索引文件</li>
+</ul>
+</li>
+<li>在线需要完成的工作<ul>
+<li>接受用户的查询请求</li>
+<li>表示接受的请求</li>
+<li>与索引文件进行匹配</li>
+<li>得出查询结果</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="1-爬虫"><a href="#1-爬虫" class="headerlink" title="1.爬虫"></a>1.爬虫</h2><p>参考我之前的文章 <a target="_blank" rel="noopener" href="http://lzqlearn.com/blog/a7a8bae9a7ba/"><u><em>使用wget爬取整个网站</em></u></a> 。使用wget比自己写的爬虫要稳定得多，而且爬得更彻底。本搜索引擎使用 <a target="_blank" rel="noopener" href="https://www.runoob.com"><u><em>菜鸟教程</em></u></a> 作为搜索内容网站。</p>
+<h2 id="2-数据提取"><a href="#2-数据提取" class="headerlink" title="2.数据提取"></a>2.数据提取</h2><p><strong>提取</strong>：随便打开几个爬取的网页，格式化整个文档后观察页面结构，可以看到<code>body</code>正文内容在子类<code>article-intro</code>中，其中只有一个<code>h1</code>，这是文章标题。使用<code>BeautifulSoup</code>即可对其进行解析得到正文内容。我们即将使用这些内容分词产生关键词。</p>
+<p><strong>分离</strong>：使用<code>BeautifulSoup</code>提取出来的是一个对象，它有一个<code>.text</code>用法可以直接剥去所有html标签得到内容。但不能这样处理，因为菜鸟教程是一个程序员自学网站，正文中就包含了大量的代码甚至代码块，这对搜索是没有帮助的，但是它不会被剥掉标签，这导致分离的正文中有很多html语法的内容，给分词带来了麻烦。我们实际采用的方法是获取到所有标签，对其进行筛选，碰到<code>notranslate</code>、<code>example</code>、<code>pre</code>类直接丢弃，其余的内容加入到正文列表中。这样对文章正文内容遍历一遍后，我们得到了一个正文组成的数组。使用<code>join</code>方法用空格将它们拼接在一起，就得到了正文字符串。有的文章丢弃无用内容后已经没有内容了，则将其设为一个空格。</p>
+<p><strong>过滤</strong>：下面将字符串格式化为我们需要的样子。</p>
+<ul>
+<li>将所有的<code>&amp;nbsp;</code>和<code>&amp;emsp;</code>替换为空格，这些html控制字符会干扰MapReduce的处理</li>
+<li>将所有标点符号替换为空格</li>
+<li>将所有tab替换为空格</li>
+<li>将所有单个数字替换为空格</li>
+<li>将所有回车替换为单个空格</li>
+<li>将所有unicode字符替换为空格，主要是会导致程序报错的异常终止符——分段分行符<code>\u2028</code>、<code>\u2029</code></li>
+<li>使用正则表达式将所有位于中文字符中间的空格删除，这样分词时可以使文章连起来，分词更丰富更准确</li>
+<li>使用正则表达式将所有连续多个空格替换为一个空格</li>
+</ul>
 <blockquote>
-<p>从大版本号6开始Mac版有ARM指令集可选，实际使用速度提升很高，但是截至本文创建时间，还没有形成稳定发布版本。</p>
+<p>通过以上处理，正文内容已经被处理为一行只含有文章文字和英文单词内容的字符串。虽然看起来工作不多，实际每一个处理都是多次尝试修改BUG才得到的结果。</p>
 </blockquote>
-<p><img src="MongoDB%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.assets/image-20220426140104500.png" srcset="/img/loading.gif" lazyload alt="image-20220426140104500"></p>
-<p>下载得到的压缩包中只有一个<code>bin</code>文件包，内含4个最基本的服务端可执行文件。将<code>mongodb</code>文件夹放至合适的位置，给<code>bin</code>目录加环境变量。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># mysql也在/usr/local，因此也放在这里，省事</span><br><span class="hljs-built_in">export</span> PATH=/usr/local/mongodb/bin:<span class="hljs-variable">$PATH</span><br></code></pre></td></tr></table></figure>
-<p>创建<code>log</code>和<code>data</code>目录，用于存放日志和数据库数据（叫啥都行，你知道就行）。</p>
-<p>使用以下指令开启和关闭服务端，此时可以命令行输入<code>mongo</code>进入数据库shell。</p>
+<p><strong>合并</strong>：在获取文章内容时给处理函数传入了此文件的文件路径。而使用wget爬取的网站恰好保存了网站内容的路径，因此截取文件路径保存从域名开始的路径恰好就是网址。MapReduce处理需要一个分隔词，用分隔词将URL、标题、正文连接起来，最后加一个回车，就得到了一个网站的处理结果。</p>
 <blockquote>
-<p><code>--fork</code>指令用于指定后台运行，而后台运行没有对应的指令一键退出，需要进入shell后输入<code>db.adminCommand(&#123; &quot;shutdown&quot; : 1 &#125;)</code>。如果你确定你的数据库目前没有读写，而且是单机运行，那么也可以直接杀掉进程。</p>
+<p>使用os.walk功能可以遍历爬虫文件夹得到所有文件的绝对路径，一一调用上面的处理函数将结果一行行写入保存结果的文件即可完成数据提取工作。这个过程中会不可避免地遇到几个不符合提取规范的文件或者系统的临时文件，为避免代码报错需要对便利过程加<code>try-catch</code>，并捕获所有异常。</p>
 </blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 开启服务端</span><br>mongod --dbpath [data目录] --logpath [<span class="hljs-built_in">log</span>目录/mongo.log] --fork<br><span class="hljs-comment"># 关闭服务端(偷懒版)</span><br>killall -9 mongod<br></code></pre></td></tr></table></figure>
-<h2 id="2-数据迁移"><a href="#2-数据迁移" class="headerlink" title="2.数据迁移"></a>2.数据迁移</h2><p>MongoDB提供直接输入输出数据库到文件的功能，可以用于数据库迁移。进行这些操作需要补充可执行文件。官网下载即可。目前数据库工具还没有苹果ARM版本。</p>
-<p><img src="MongoDB%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.assets/image-20220426142043224.png" srcset="/img/loading.gif" lazyload alt="image-20220426142043224"></p>
-<p>下载的压缩包中同样只有一个<code>bin</code>文件夹，里面补充了一些可执行文件。将它们复制到你MongoDB的<code>bin</code>目录中。</p>
-<p><img src="MongoDB%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.assets/image-20220426142304546.png" srcset="/img/loading.gif" lazyload alt="image-20220426142304546" style="zoom:50%;" /></p>
-<p>数据库导出可以使用JetBrains全家桶的数据库插件，它可以一次性导出一整个库，效率比较高，但是不提供导入功能。</p>
-<p>在系统shell中输入以下语句导入数据：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 数据文件</span><br>mongoimport --db [数据库名] --collection [集合名] --file [数据文件]<br><span class="hljs-comment"># json数组(JetBrains导出的格式)</span><br>mongoimport --db [数据库名] --collection [集合名] --jsonArray [数据文件]<br></code></pre></td></tr></table></figure>
-<h2 id="3-shell操作"><a href="#3-shell操作" class="headerlink" title="3.shell操作"></a>3.shell操作</h2><h2 id="4-python操作"><a href="#4-python操作" class="headerlink" title="4.python操作"></a>4.python操作</h2><h2 id="5-基本架构"><a href="#5-基本架构" class="headerlink" title="5.基本架构"></a>5.基本架构</h2><p><br></p>
+<h2 id="3-分词"><a href="#3-分词" class="headerlink" title="3.分词"></a>3.分词</h2><p>读取上面生成的正文提取文档，一行代表一个链接，提取正文内容，直接送给<code>jieba</code>库分词，分词结果中筛去所有单独的数字和长度小于2的字符串，使用空格拼成一个字符串接在每行后面，最后加一个回车，就完成了分词过程。</p>
+<p>我们使用课程服务器的JVM堆缓冲区大小不允许自己调节，因此对分词文件进行分片，分为10份，跑10次MapReduce。</p>
+<p><br></p>
 <h2><font color="black">参考链接</font></h2>
 
 <ol>
-<li><a target="_blank" rel="noopener" href="https://www.mongodb.com/try#community"><u><em>MongoDB官网下载</em></u></a></li>
+<li><a target="_blank" rel="noopener" href="http://lzqlearn.com/blog/a7a8bae9a7ba/"><u><em>使用wget爬取整个网站</em></u></a></li>
+<li><a target="_blank" rel="noopener" href="https://www.runoob.com"><u><em>菜鸟教程</em></u></a></li>
 </ol>
 
             </div>
@@ -328,7 +346,7 @@
                   <div class="post-meta mr-3">
                     <i class="iconfont icon-category"></i>
                     
-                      <a class="hover-with-bg" href="/categories/%E7%B1%BB%E5%88%AB/">类别</a>
+                      <a class="hover-with-bg" href="/categories/%E8%AF%BE%E7%A8%8B%E4%BD%9C%E4%B8%9A/">课程作业</a>
                     
                   </div>
                 
@@ -341,29 +359,6 @@
                   
                 </p>
               
-              
-                <div class="post-prevnext">
-                  <article class="post-prev col-6">
-                    
-                    
-                      <a href="/blog/40a2b2317121/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Nginx反向代理</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
-                  </article>
-                  <article class="post-next col-6">
-                    
-                    
-                      <a href="/blog/05b77b75f2b9/">
-                        <span class="hidden-mobile">贝叶斯网络学习笔记</span>
-                        <span class="visible-mobile">下一篇</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
-                    
-                  </article>
-                </div>
               
             </div>
 
