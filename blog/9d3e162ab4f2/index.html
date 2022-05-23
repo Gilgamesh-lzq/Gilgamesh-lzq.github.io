@@ -1,0 +1,1740 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=light>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/myfavicon.png">
+  <link rel="icon" href="/img/myfavicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#6d472d">
+  <meta name="author" content="Gilgamesh">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="计算机考研408计算机网络科目基础复习笔记，包含基础的概念辨析、流程图、对比表格等等">
+<meta property="og:type" content="article">
+<meta property="og:title" content="408-计网-基础笔记">
+<meta property="og:url" content="https://gilgamesh-lzq.github.io/blog/9d3e162ab4f2/index.html">
+<meta property="og:site_name" content="Gilgamesh&#39;s Blog">
+<meta property="og:description" content="计算机考研408计算机网络科目基础复习笔记，包含基础的概念辨析、流程图、对比表格等等">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220517094922157.png">
+<meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220517101820700.png">
+<meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220517131856606.png">
+<meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220517212437171.png">
+<meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220517220321336.png">
+<meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220517222731180.png">
+<meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220518090406586.png">
+<meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220518122107766.png">
+<meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220518122312244.png">
+<meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220520172335085.png">
+<meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220520172817998.png">
+<meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220520171701569.png">
+<meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220520173535165.png">
+<meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220520194030997.png">
+<meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220520200355116.png">
+<meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220520200036219.png">
+<meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220520201427752.png">
+<meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220520204333964.png">
+<meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220520211750372.png">
+<meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220520212350605.png">
+<meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220521093432058.png">
+<meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220521100022407.png">
+<meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220521064954224.png">
+<meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220521071941733.png">
+<meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220521065922505.png">
+<meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220521070800509.png">
+<meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220521090855299.png">
+<meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220521102512801.png">
+<meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220522085616542.png">
+<meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220522103338977.png">
+<meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220522105604633.png">
+<meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220522153400356.png">
+<meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220522100216093.png">
+<meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220522154749857.png">
+<meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220522165616523.png">
+<meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220522171145693.png">
+<meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220522173741962.png">
+<meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220522203105060.png">
+<meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220522205049445.png">
+<meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220522211814512.png">
+<meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220522214047212.png">
+<meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220523080908760.png">
+<meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220523081710488.png">
+<meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220523085249107.png">
+<meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220523094709705.png">
+<meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220523095529066.png">
+<meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220523101622598.png">
+<meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220523102045887.png">
+<meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220523102235893.png">
+<meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220523102359699.png">
+<meta property="article:published_time" content="2022-05-16T03:22:25.000Z">
+<meta property="article:modified_time" content="2022-05-23T02:32:38.241Z">
+<meta property="article:author" content="Gilgamesh">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220517094922157.png">
+  
+  
+  <title>408-计网-基础笔记 - Gilgamesh&#39;s Blog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10/styles/xcode.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+  
+<link rel="stylesheet" href="/css/fluid-extension.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"gilgamesh-lzq.github.io","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":85,"cursorChar":"_","loop":true},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":2},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.1.0"></head>
+
+
+<body>
+  <header style="height: 80vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Gilgamesh&#39;s Blog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" target="_self" href="javascript:;" role="button"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/">
+                    
+                    ===所有分类===
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/%E7%9F%A5%E8%AF%86%E7%A7%AF%E7%B4%AF/">
+                    <i class="iconfont icon-brush"></i>
+                     知识积累
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/%E8%AF%BE%E7%A8%8B%E4%BD%9C%E4%B8%9A/">
+                    <i class="iconfont icon-bookmark"></i>
+                     课程作业
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/%E6%9D%82%E8%B0%88/">
+                    <i class="iconfont icon-bug"></i>
+                     杂谈
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/%E8%80%83%E7%A0%94/">
+                    <i class="iconfont icon-books"></i>
+                     考研
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                文章
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                作者
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:03-00:40:56-home.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="408-计网-基础笔记">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2022-05-16 11:22" pubdate>
+        2022年5月16日 上午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      10k 字
+    </span>
+  
+
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      65 分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+            <div class="scroll-down-bar">
+              <i class="iconfont icon-arrowdown"></i>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">408-计网-基础笔记</h1>
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：2022年5月23日 上午
+                
+              </p>
+            
+            <div class="markdown-body">
+              <h1 align="center">408-计网-基础笔记</h1>
+
+<p><br></p>
+<h2 id="1-网络体系结构"><a href="#1-网络体系结构" class="headerlink" title="1.网络体系结构"></a>1.网络体系结构</h2><h3 id="1-1-概念辨析"><a href="#1-1-概念辨析" class="headerlink" title="1.1.概念辨析"></a>1.1.概念辨析</h3><ul>
+<li><p>发展阶段</p>
+<ul>
+<li>第一阶段：1983年阿帕网接受TCP/IP，选定Internet为主要的计算机通信系统</li>
+<li>第二阶段：1985年起，美国国家科学基金会NSF围绕6个大型计算机中心建设计算机网络，即国家科学基金网NSFNET</li>
+<li>第三阶段：多层次ISP结构</li>
+</ul>
+</li>
+<li><p>功能</p>
+<ul>
+<li><strong>数据通信</strong>：7层模型的 <strong>低3层</strong>。 对应 <strong>通信子网</strong></li>
+<li><strong>资源共享</strong>：7层模型的 <strong>高3层</strong>。 对应 <strong>资源子网</strong></li>
+</ul>
+</li>
+<li><p>按拓扑结构分类：总线、星形、环形、网状</p>
+</li>
+<li><p>性能指标</p>
+<ul>
+<li><p>速率（比特率）</p>
+<ul>
+<li>描述速率用10进制 $1kb/s=10^3b/s$，描述存储容量用2进制 $1KB=2^{10}B=2^{13}b$</li>
+</ul>
+</li>
+<li><p>带宽：网络设备能支持的最高速度。电磁波$1\mu s$传播200m</p>
+<ul>
+<li><p>入口发送数据的速率，不是链路上传播的速率（主机可发送的最高数据率）</p>
+<blockquote>
+<p>高速链路：发送速度极高，不是传播速度高</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>吞吐量：在单位时间内通过某个网络（或信道、接口）的数据量。单位b/s，kb/s，Mb/s等</p>
+</li>
+<li><p>时延：发送(<strong>传输</strong>)+<strong>传播</strong>+排队+处理</p>
+</li>
+<li><p>时延带宽积：又称为以比特为单位的链路长度。即“<strong>某段链路现在有多少比特</strong>”</p>
+</li>
+<li><p>往返时延RTT：从我发送第一个bit开始，到我收到第一个bit的确认 之间的时延</p>
+<ul>
+<li>RTT越大，在收到确认之前，可以发送的数据越多</li>
+<li>传播时延 * 2 + 接收方处理时间</li>
+</ul>
+</li>
+<li><p>利用率</p>
+<ul>
+<li><p>信道利用率：有数据通过时间 / 总时间</p>
+</li>
+<li><p>网络利用率：信道利用率加权平均值</p>
+<blockquote>
+<p>随利用率增大，时延急剧增大</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-2-体系结构"><a href="#1-2-体系结构" class="headerlink" title="1.2.体系结构"></a>1.2.体系结构</h3><ul>
+<li><p>概念填空</p>
+<ul>
+<li>网络体系结构 是 从<strong>功能</strong>上 描述 计算机网络结构</li>
+<li>计算机网络体系结构，简称网络体系结构，是<strong>分层结构</strong></li>
+<li>每层遵循某个/些<strong>网络协议</strong>以完成本层功能</li>
+<li><strong>计算机网络体系结构</strong>是计算机网络的<strong>各层及其协议</strong>的集合</li>
+<li>仅仅在<strong>相邻层</strong>间有接口，且所提供服务的具体实现细节对上一层完全屏蔽</li>
+<li>体系结构是<strong>抽象</strong>的，而<strong>实现</strong>是指能运行的一些软件和硬件</li>
+</ul>
+</li>
+<li><p>分层结构</p>
+<ul>
+<li><p>SDU服务数据单元：用户的数据</p>
+</li>
+<li><p>PCI协议控制单元：协议信息</p>
+</li>
+<li><p>PDU协议数据单元：对等层次之间传送的数据单位（PCI + SDU）</p>
+<blockquote>
+<p>图示 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220517094922157.png" srcset="/img/loading.gif" lazyload alt="image-20220517094922157" style="zoom:25%;" /></p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>7层OSI (“物联网淑惠试用”)</p>
+<ul>
+<li><p><u>物理层、数据链路层、网络层、传输层、会话层、表示层、应用层</u></p>
+</li>
+<li><p>数据链路层添首尾，物理层不做处理，网络层及以上只加头 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220517101820700.png" srcset="/img/loading.gif" lazyload alt="image-20220517101820700" style="zoom:25%;" /></p>
+<blockquote>
+<p>“分组”和“数据报”的关系：数据报太长了就会切分为分组 </p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">层次</th>
+<th style="text-align:center">作用</th>
+<th style="text-align:center">功能</th>
+<th style="text-align:center">主要协议</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">表示层</td>
+<td style="text-align:center">数据格式变换</td>
+<td style="text-align:center">加密解密、压缩恢复</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">会话层</td>
+<td style="text-align:center">建立/管理/终止会话、从校验点/同步点继续恢复通信</td>
+<td style="text-align:center">数据同步</td>
+<td style="text-align:center">HTTP</td>
+</tr>
+<tr>
+<td style="text-align:center">传输层</td>
+<td style="text-align:center">两个进程端到端的通信，传输报文段</td>
+<td style="text-align:center">可靠/不可靠传输、差错控制(顺序错等等)、流量控制、复用分用</td>
+<td style="text-align:center">TCP、UDP</td>
+</tr>
+<tr>
+<td style="text-align:center">网络层</td>
+<td style="text-align:center">把分组/数据报从源端传到目的端</td>
+<td style="text-align:center">路由选择、流量控制、差错控制(奇偶校验等等)、拥塞控制</td>
+<td style="text-align:center">IP</td>
+</tr>
+<tr>
+<td style="text-align:center">数据链路层</td>
+<td style="text-align:center">把网络层传下来的数据报组装成帧</td>
+<td style="text-align:center">成帧(定义帧的开始结束)、差错控制(帧/位错)、流量控制、访问(接入)控制：控制对信道的访问</td>
+<td style="text-align:center">SDLC、HDLC、PPP、STP</td>
+</tr>
+<tr>
+<td style="text-align:center">物理层</td>
+<td style="text-align:center">传输比特</td>
+<td style="text-align:center">比特同步、比特编码、定义接口特性、传输模式、传输速率</td>
+<td style="text-align:center">RJ45、802.3</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul>
+<li><p>4层TCP/IP</p>
+<ul>
+<li><u>网络接口层、网际层、传输层、应用层</u></li>
+<li>与7层模型相同点：都分层、基于独立的协议栈的概念、可以实现异构网络互联</li>
+<li>与7层模型不同点<ul>
+<li>OSI定义三点：服务、协议、接口</li>
+<li>OSI先出现，参考模型先于协议发明，不偏向特定协议</li>
+<li>TCP/IP设计之初就考虑到异构网互联问题，将IP作为重要层次</li>
+<li>面向连接和无连接 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220517131856606.png" srcset="/img/loading.gif" lazyload alt="image-20220517131856606" style="zoom:25%;" /></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>5层体系结构</p>
+<ul>
+<li><u>物理层、数据链路层、网络层、传输层、应用层</u></li>
+<li>分别传输：比特、帧、数据报、报文段、报文</li>
+</ul>
+</li>
+</ul>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">层次</th>
+<th style="text-align:center">作用</th>
+<th style="text-align:center">典型协议</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">应用层</td>
+<td style="text-align:center">支持各种网络应用</td>
+<td style="text-align:center">FTP、SMTP、HTTP</td>
+</tr>
+<tr>
+<td style="text-align:center">传输层</td>
+<td style="text-align:center">进程-进程的数据传输</td>
+<td style="text-align:center">TCP、UDP</td>
+</tr>
+<tr>
+<td style="text-align:center">网络层</td>
+<td style="text-align:center">源主机到目的主机的数据分组路由与转发</td>
+<td style="text-align:center">IP、ICMP、OSPF等</td>
+</tr>
+<tr>
+<td style="text-align:center">数据链路层</td>
+<td style="text-align:center">把网络层传下来的数据报组装成帧</td>
+<td style="text-align:center">Ethernet、PPP</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="2-物理层"><a href="#2-物理层" class="headerlink" title="2.物理层"></a>2.物理层</h2><h3 id="2-1-原理"><a href="#2-1-原理" class="headerlink" title="2.1.原理"></a>2.1.原理</h3><ul>
+<li><p>术语</p>
+<ul>
+<li><p>信道：一条通信线路往往包含一条发送信道和一条接收信道</p>
+<ul>
+<li>按 传输信号 分为：模拟、数字</li>
+<li>按 传输介质 分为：无线、有线</li>
+</ul>
+</li>
+<li><p>通信方式：单工(单向)、半双工(可换方向，但是不能同时)、全双工(双向同时)</p>
+</li>
+<li><p>数据传输方式</p>
+<ul>
+<li>串行：8bit 一个一个发。速度慢，费用低，适合远距离</li>
+<li>并行：8bit 通过8条信道同时发送。速度快，费用高，适合近距离</li>
+</ul>
+</li>
+<li><p>实现同步的方式</p>
+<ul>
+<li><p>同步：以一个数据区块为单位，又称为<strong>区块传输</strong>。<strong>先送出1个或多个同步字符</strong>，再送出整批的数据</p>
+</li>
+<li><p>异步：将比特<strong>从低位到高位</strong>分成小组进行传送，小组可以是8位或更长。发送方可以在任何时刻发送这些比特组，而接收方不知道它们会在什么时候到达。<strong>加一个字符起始位和一个字符终止位</strong></p>
+<blockquote>
+<p>典型例子：键盘</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>码元：用一个<strong>固定时长</strong>的<strong>信号波形</strong>（数字脉冲），代表不同离散数值的基本波形，这个时长内的信号称为<strong>k进制码元</strong>，而该时长称为<strong>码元宽度</strong>。当码元的离散状态有M个时（M大于2），此时码元为<strong>M进制码元</strong>。</p>
+<blockquote>
+<p>1码元可以携带多比特的信息量。例如，在使用二进制编码时，只有两种不同的码元，一种代表0状态，另一种代表1状态。</p>
+</blockquote>
+</li>
+<li><p>速率：单位时间内传输的数据量</p>
+<ul>
+<li><p>码元速率：单位时间信号变化次数(脉冲个数)，单位波特(Band)。码元速率与进制数无关</p>
+<blockquote>
+<p>如果画两段，就算电平不变，也算两个脉冲</p>
+</blockquote>
+</li>
+<li><p>信息速率：单位 比特每秒(b/s)</p>
+<blockquote>
+<p>波特率为A，一个码元携带C个比特信息，那么信息速率就是A$\times$C(b/s)</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>带宽</p>
+<ul>
+<li>模拟信号中：最高最低频率差值，单位Hz</li>
+<li>数字设备中：单位 比特每秒(bps)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>公式</p>
+<ul>
+<li><p>影响失真程度的因素：码元传输速率、信号传输距离、噪声干扰、传输媒体质量</p>
+</li>
+<li><p><strong>奈奎斯特定理</strong>：理想情况下，极限速率$=2\cdot W\cdot log_2V (b/s)$</p>
+<blockquote>
+<p>V指码元离散电平数目。W指带宽，单位Hz</p>
+<p>信道频带越宽，码元携带信息越多，速率越高</p>
+<p>此公式限制码元速率，没有限制信息速率</p>
+</blockquote>
+</li>
+<li><p><strong>香农定理</strong>：信道极限速率$=W\cdot log_2(1+\frac{S}{N})\ (b/s)$</p>
+<blockquote>
+<p>看见带宽单位是Hz，考虑两个定理</p>
+<p>信噪比和码元信息量都给了，都算，取最小值</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-2-编码"><a href="#2-2-编码" class="headerlink" title="2.2.编码"></a>2.2.编码</h3><ul>
+<li><p>基带信号 对应 数字信道。使用<strong>数字发送器</strong>编码 或 使用<strong>调制器</strong>调制</p>
+</li>
+<li><p>宽带信号 对应 模拟信道。使用<strong>PCM编码器</strong>编码 或 使用<strong>放大器调制器</strong>调制</p>
+<blockquote>
+<p>要求看见设备能推出来处理成了哪种信号</p>
+</blockquote>
+</li>
+<li><p>数字 -&gt; 数字</p>
+<ul>
+<li><p>非归零 NRZ</p>
+<ul>
+<li><p>高电平1，低电平0</p>
+<blockquote>
+<p>没有检错、难以同步</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>归零 RZ</p>
+<ul>
+<li>1码元内，以前半段判断。后半段必须都是0</li>
+</ul>
+</li>
+<li><p>反向不归零 NRZI</p>
+<ul>
+<li><p>码元开始处，电平翻转0，电平不变1</p>
+<blockquote>
+<p>全0数据OK，全1数据难以同步</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>曼彻斯特</p>
+<ul>
+<li><p>1码元内，前低后高为1，前高后低为0</p>
+<blockquote>
+<p>1码元内跳变2次，只传输1位。数据速率只有调制速率的$\frac{1}{2}$</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>差分曼彻斯特</p>
+<ul>
+<li><p>码元开始处，不变化1，变化0。码元中间跳变</p>
+<blockquote>
+<p>常用于局域网。抗干扰性强</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>4B/5B</p>
+<ul>
+<li>用5位编码4位，编码效率$80\%$。多出来的16位作为控制码(帧的开始结束、线路状态信息、保留)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>数字 -&gt; 模拟</p>
+<ul>
+<li>调幅 2ASK<ul>
+<li>0没有幅度，1有幅度</li>
+</ul>
+</li>
+<li>调频 2FSK<ul>
+<li>0低频，1高频</li>
+</ul>
+</li>
+<li>调相 2PSK<ul>
+<li>0正弦波，1余弦波</li>
+</ul>
+</li>
+<li>调幅 + 调相 QAM<ul>
+<li>如果有A种相位，每个相位B种振幅，那么状态有A$\times$B种，需要$log_2(A\times B)$个比特</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>模拟 -&gt; 数字</p>
+<ul>
+<li>PCM。抽样，量化，编码。$f_{采样}\ge 2f_{信号最高}$</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-3-数据交换"><a href="#2-3-数据交换" class="headerlink" title="2.3.数据交换"></a>2.3.数据交换</h3><p>报文交换和分组交换都是 <strong>存储转发</strong>交换方式。分组交换又分为<strong>数据报</strong>方式和<strong>虚电路</strong>方式。</p>
+<ul>
+<li>电路：独占资源，适合远程批处理信息传输 或 实时性要求高的大量数据传输<ul>
+<li>建立连接，传输数据，拆除电路</li>
+</ul>
+</li>
+</ul>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">优点</th>
+<th style="text-align:center">缺点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">传输时延小</td>
+<td style="text-align:center">建立连接时间长</td>
+</tr>
+<tr>
+<td style="text-align:center">数据顺序传送，无失序问题</td>
+<td style="text-align:center">信道使用效率低</td>
+</tr>
+<tr>
+<td style="text-align:center">实时性强</td>
+<td style="text-align:center">灵活性差，不适应突发性通信</td>
+</tr>
+<tr>
+<td style="text-align:center">全双工通信，没有冲突</td>
+<td style="text-align:center">无数据存储能力，难以平滑通信量</td>
+</tr>
+<tr>
+<td style="text-align:center">适用于模拟信号和数字信号</td>
+<td style="text-align:center">不同类型、不同规格、不同速率的终端很难相互通信</td>
+</tr>
+<tr>
+<td style="text-align:center">电路的交换设备及控制较简单</td>
+<td style="text-align:center">无法发现与纠正传输差错</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul>
+<li>报文：其长短很不一致，长度不限且可变<ul>
+<li>节点收下报文，暂存并检查</li>
+<li>输出电路空闲时，找到下一个节点，传送</li>
+<li>不需要占用端到端全部信道</li>
+</ul>
+</li>
+</ul>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">优点</th>
+<th style="text-align:center">缺点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">无建立连接时延</td>
+<td style="text-align:center">实时性差，转发时延</td>
+</tr>
+<tr>
+<td style="text-align:center">平滑通信量</td>
+<td style="text-align:center">只适用于数字信号</td>
+</tr>
+<tr>
+<td style="text-align:center">提高线路可靠性、提高线路利用率、提供多目标服务、便于类型规格和速度不同的计算机之间通信</td>
+<td style="text-align:center">要求每个结点有较大的缓冲区。有时要把报文存在磁盘上进一步增加了传送时延</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul>
+<li><p>分组：限制所传输的数据单位的长度，一般选128B</p>
+<ul>
+<li><p>数据报方式：为网络层提供<strong>无连接服务</strong></p>
+<blockquote>
+<p>无连接分组不是指不需要建立连接，指的是分组独立确定路径，不同分组路径可能不同</p>
+</blockquote>
+<ul>
+<li>每个分组都要携带源地址、目的地址、分组号</li>
+<li>交换结点可根据情况丢弃部分分组</li>
+<li>具有冗余路径，对故障的适应能力强，适用于突发性通信</li>
+</ul>
+</li>
+<li><p>虚电路方式：路径上所有节点都维持一张虚电路表，每一项是一个打开的虚电路的信息</p>
+<ul>
+<li>分组携带虚电路号</li>
+<li>节点只做差错控制，无需路由选择</li>
+<li>两个端系统之间可以有多条虚电路为不同进程提供服务</li>
+<li>某个节点或链路彻底失效时，所有经过的虚电路都被破坏</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">优点</th>
+<th style="text-align:center">缺点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">无建立连接时延</td>
+<td style="text-align:center">仍然有转发时延、对交换机要求更强处理能力</td>
+</tr>
+<tr>
+<td style="text-align:center">线路利用率高</td>
+<td style="text-align:center">大量控制信息降低通信效率</td>
+</tr>
+<tr>
+<td style="text-align:center">简化了存储管理、减少等待发送时间、减少出错几率和重发数据量</td>
+<td style="text-align:center">数据报服务：排序工作增加了麻烦</td>
+</tr>
+<tr>
+<td style="text-align:center">分组短小，适用于计算机之间突发式数据通信</td>
+<td style="text-align:center">虚电路服务：需要三个过程，增加时延</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul>
+<li>对他们的取舍：<ul>
+<li>电路：传送<strong>数据量大</strong>，且传送时间远大于呼叫。传输时延最小</li>
+<li>分组：端到端的通路有<strong>很多段</strong>的链路组成</li>
+<li>分组：报文交换和分组交换<strong>信道利用率优</strong>于电路交换，其中分组交换比报文交换的<strong>时延小</strong>，适合<strong>突发式</strong>数据通信</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-4-传输"><a href="#2-4-传输" class="headerlink" title="2.4.传输"></a>2.4.传输</h3><ul>
+<li>介质<ul>
+<li>导向<ul>
+<li>双绞线：便宜。长距离需要放大器/中继器</li>
+<li>同轴电缆：抗干扰性比双绞线好，传输距离更远，价格更贵<ul>
+<li>基带同轴电缆(局域网)、宽带同轴电缆(有线电视)</li>
+</ul>
+</li>
+<li>光纤：带宽非常大，超远距离<ul>
+<li>高折射率纤芯在里面</li>
+<li>单模、多模</li>
+<li>损耗小、抗雷抗磁、不易窃听、小、轻</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>非导向<ul>
+<li>无线电波：所有方向，穿透力强</li>
+<li>微波：固定方向，频段范围宽<ul>
+<li>地面微波接力通信</li>
+<li>卫星通信<ul>
+<li>优点：通信容量大、距离远、覆盖广、广播通信和多址通信</li>
+<li>缺点：时延长(250-270ms)、受气候影响、误码率高、成本高</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>红外线/可见光：固定方向、需要把信号转成各自的格式</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>设备<ul>
+<li>中继器：<strong>再生数字信号</strong> 和 <strong>还原</strong><ul>
+<li>543规则：最多5个网段(电线)，最多4个中继器，其中最多3个挂载有终端(电脑)</li>
+</ul>
+</li>
+<li>集线器：<strong>再生放大转发</strong><ul>
+<li>一个大冲突域，不能分割冲突域——平分带宽</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-数据链路层"><a href="#3-数据链路层" class="headerlink" title="3.数据链路层"></a>3.数据链路层</h2><p>链路是物理通道，数据链路是逻辑通道。数据链路层主要作用是<strong>加强物理层传输原始比特流的功能</strong>，将物理层提供的可能出错的物理连接改造成为<strong>逻辑上无差错的数据链路</strong>。数据链路层功能：</p>
+<ul>
+<li><p>为网络层提供服务。<u>无确认无连接、有确认无连接、有确认面向连接</u></p>
+<blockquote>
+<p>有连接一定有确认！有线链路用第一种，差错控制交给上层；无线链路用另两种</p>
+</blockquote>
+</li>
+<li><p>连接的建立、维持、释放（用于面向连接的服务）</p>
+</li>
+</ul>
+<h3 id="3-1-封装成帧"><a href="#3-1-封装成帧" class="headerlink" title="3.1.封装成帧"></a>3.1.封装成帧</h3><p>首尾加1字节的<strong>帧定界符</strong>。帧同步：<strong>接收方</strong>区分出起始和终止。最大传送单元 MTU：数据部分的最大长度</p>
+<ul>
+<li><p><del>字符计数：帧首用<strong>1字节</strong>标明帧内字符数</del></p>
+</li>
+<li><p><del>字符填充：SOH(Start Of Header)、EOT(End Of Transmission)</del></p>
+<ul>
+<li>填充转义字节 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220517212437171.png" srcset="/img/loading.gif" lazyload alt="image-20220517212437171" style="zoom:40%;" /></li>
+</ul>
+</li>
+<li><p>零比特填充：帧首尾都是01111110，数据中有连续11111就填0 <strong>“5110”</strong></p>
+</li>
+<li><p>违规编码法：用不存在的电平标识开始和终止</p>
+<blockquote>
+<p>曼彻斯特编码中电平一定跳变，不存在高高或低低</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="3-2-差错控制"><a href="#3-2-差错控制" class="headerlink" title="3.2.差错控制"></a>3.2.差错控制</h3><blockquote>
+<p>物理层的编码是对一个bit进行的，把数字变为信号；数据链路层的编码针对一组bit，通过冗余实现差错控制。</p>
+</blockquote>
+<ul>
+<li><p>循环冗余校验 CRC</p>
+<ul>
+<li>生成多项式r+1位 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220517220321336.png" srcset="/img/loading.gif" lazyload alt="image-20220517220321336" style="zoom:50%;" /></li>
+<li>模二除法，也就是异或，同0异1</li>
+</ul>
+</li>
+<li><p>纠错编码：海明码</p>
+<ul>
+<li>数据m位，冗余r位，<strong>$2^r\ge m+r+1$</strong></li>
+<li>校验码填在$2^n$的位置，其他位置依次放数据。先算序号大的校验码 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220517222731180.png" srcset="/img/loading.gif" lazyload alt="image-20220517222731180" style="zoom:50%;" /></li>
+<li>默认偶校验</li>
+<li>校验结果从高往低写，对应二进制数就是错误的地方</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-3-流量控制"><a href="#3-3-流量控制" class="headerlink" title="3.3.流量控制"></a>3.3.流量控制</h3><blockquote>
+<p>链路层流量控制是点到点(两个相邻节点)，收不下就不回复</p>
+<p>传输层流量控制是端到端(两个主机之间)，给发送方规定一个缓冲区</p>
+</blockquote>
+<ul>
+<li><p>停等协议：发送窗口1，接收窗口1</p>
+<ul>
+<li>数据帧和ACK都需要编号</li>
+<li>信道利用率 $u=\frac{t_d}{t_d+RTT+t_a}。\ t_d$：发送到链路上需要的时间</li>
+<li>信道吞吐率 = 信道利用率 * 发送方发送速率</li>
+</ul>
+</li>
+<li><p>后退N帧 GBN：发送窗口&gt;1，接收窗口1</p>
+<ul>
+<li><p>上层调用时会检查发送窗口是否已满。实际实现中发送方可以缓存这些数据，窗口不满时再发送</p>
+</li>
+<li><p>累积确认，ACK n 表明接收方已经收到<strong>n号帧和它之前的全部帧</strong></p>
+</li>
+<li><p>超时后从最小号未被确认的帧开始<strong>连续发送</strong> <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220518090406586.png" srcset="/img/loading.gif" lazyload alt="image-20220518090406586" style="zoom:50%;" /></p>
+</li>
+<li><p>若采用n个比特对帧编号，那么发送窗口的尺寸 <strong>$W_T\le 2^n-1$</strong>，防止套圈</p>
+<blockquote>
+<p>最坏情况：ACK全部丢失。假设3位编码，此时发送方重复发送0-6，接收方重复回复ACK6，直到发送方收到ACK为止</p>
+</blockquote>
+</li>
+<li><p>由于全双工通信，有时把确认帧放在发送的数据里一起发送(<strong>顺风车</strong>)</p>
+<blockquote>
+<p>例：RTT 100ms，发送带宽100Mb/s，发送窗口1000，每个帧1000B，忽略确认帧发送时长。求最高发送速率</p>
+<p>每100.08ms发送一整个窗口，$\frac{1000\times1000\times8}{100+\frac{1000\times8}{100\times10^6}+0}\approx80Mb/s$</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>选择重传 SR：发送窗口&gt;1，接收窗口&gt;1</p>
+<ul>
+<li><p>窗口每次向前移动到最小序号的未确认帧处</p>
+</li>
+<li><p>如果收到前一个窗口的帧，说明上次ACK丢失，重新返回ACK</p>
+</li>
+<li><p>发送窗口最好等于接收窗口（大了会溢出，小了没意义）<strong>$W_{T_{Max}}=W_{R_{Max}}=2^{n-1}$</strong></p>
+<blockquote>
+<p>与GBN区别在于发送了最小编号ACK后接收窗口随即滑动。</p>
+<p>最坏情况：ACK全部丢失。假设3位编码，此时发送方重复发送0-3，接收窗口在4-7，接收窗口不会再滑动，直到发送方收到ACK0为止</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-4-介质访问控制"><a href="#3-4-介质访问控制" class="headerlink" title="3.4.介质访问控制"></a>3.4.介质访问控制</h3><blockquote>
+<p>点对点(广域网)</p>
+<p>广播(局域网)：<strong>典型拓扑结构</strong>：总线型、星型(逻辑总线型)。需要介质访问控制来避免互相干扰</p>
+</blockquote>
+<ul>
+<li><p>静态划分信道</p>
+<ul>
+<li>频分多路复用 FDM <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220518122107766.png" srcset="/img/loading.gif" lazyload alt="image-20220518122107766" style="zoom:30%;" /></li>
+<li>时分多路复用 TDM <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220518122312244.png" srcset="/img/loading.gif" lazyload alt="image-20220518122312244" style="zoom:30%;" /><ul>
+<li>统计时分复用 STDM：按顺序放入缓存，一个STDM帧满了就发出</li>
+</ul>
+</li>
+<li>波分多路复用 WDM：利用光波的不同频率</li>
+<li>码分多路复用 CDM<ul>
+<li>码分多址 CDMA：要求各个站点<strong>芯片序列正交</strong>；线性相加后发送；分别与源站内积来分离数据</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>动态划分信道</p>
+<ul>
+<li><p>随机访问</p>
+<ul>
+<li><p>ALOHA：想发就发，如果冲突会导致差错，接收方不会确认。超时即可判定发生了冲突，等待随机时长重传</p>
+<ul>
+<li>时隙ALOHA：把时间分为时间片(时间槽)，一旦冲突，等到下一个时间片<strong>开始</strong>才能重传。<strong>吞吐量有提高</strong></li>
+</ul>
+</li>
+<li><p>CSMA：先监听，信道空闲就发送完整帧；信道忙就推迟发送。<strong>总线型网络</strong></p>
+<blockquote>
+<p>没有冲突检测，发生冲突还是要把数据帧发送完。浪费</p>
+</blockquote>
+<ul>
+<li>1-坚持CSMA：一直监听，空闲马上传输。冲突后等待随机时长</li>
+<li>非坚持CSMA：信道忙则等待随机时长后再监听，空闲马上传输</li>
+<li>p-坚持CSMA：一直监听，直到空闲。一旦空闲，以p概率发送数据，1-p的概率等到下一个时槽再发送。如果冲突，下一个时槽开始再重复上述过程</li>
+</ul>
+</li>
+<li><p>CSMA/CD：边发边检测，一旦冲突马上停止。常用于<strong>半双工网络</strong>、总线型局域网</p>
+<blockquote>
+<p>最迟一个RTT知道发生了碰撞。最差情况：A的数据刚刚到达B，B恰好刚刚开始发送，A在一个RTT(<strong>基本退避时间</strong>)后才能收到B的信号。</p>
+</blockquote>
+<ul>
+<li><strong>截断二进制指数规避</strong>：k为重传次数，但到10后不再增大。从$[0,1,…,2^k-1]$随机取一个数r，避退时间就是 r倍 单程传播时延(又名 争用期)。16次失败后报告错误</li>
+<li><strong>最小帧长</strong>：传输速率 * RTT。以太网规定最短帧长为64B，&lt;它的都要填充。收到&lt;64B的都是无效的</li>
+</ul>
+</li>
+<li><p>CSMA/CA</p>
+<ul>
+<li>空闲则发出RTS（request to send），包括源地址、目的地址、下一份数据将持续发送的时间等</li>
+<li>接收端收到RTS后，将响应CTS（clear to send）</li>
+<li>收到数据，CRC检验，正确则响应ACK</li>
+<li><p>发送方没收到ACK就重传，二进制指数退避，有重传上限</p>
+<blockquote>
+<p>CD用于以太网，使用电压检测冲突，协议检测冲突</p>
+<p>CA用于无线网，多种手段检测冲突，协议避免冲突</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>轮询访问</p>
+<ul>
+<li>轮询协议：老大挨个问手下要不要发送数据</li>
+<li>令牌传递协议<ul>
+<li>令牌：一个特殊格式的MAC控制帧，不含任何信息。有最大持有时间</li>
+<li>要发送数据，修改令牌的标识位，把数据加在后面，传递。目的主机把帧复制下来。转一圈又传回来之后删除数据部分，把标识位改回去，传递</li>
+<li>物理 星型拓扑；逻辑 环形拓扑</li>
+<li>常用于<strong>负载较重、通信量较大</strong>的网络中</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-5-几种网络"><a href="#3-5-几种网络" class="headerlink" title="3.5.几种网络"></a>3.5.几种网络</h3><h4 id="3-5-1-以太网"><a href="#3-5-1-以太网" class="headerlink" title="3.5.1.以太网"></a>3.5.1.以太网</h4><blockquote>
+<p>802.3：以太网；802.5：令牌环网；802.8：光纤(FDDI)；802.11：无线局域网</p>
+</blockquote>
+<ul>
+<li>使用CSMA/CD协议的网络就是以太网</li>
+<li><strong>无连接</strong>：无握手过程；<strong>不可靠</strong>：发送帧无编号、接收方不确认、差错控制交给上层</li>
+<li>帧格式 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220520172335085.png" srcset="/img/loading.gif" lazyload alt="image-20220520172335085" style="zoom:60%;" /><ul>
+<li>不需要帧结束标识：采用曼码传输，电压不再变了说明传完了</li>
+<li>802.3： <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220520172817998.png" srcset="/img/loading.gif" lazyload alt="image-20220520172817998" style="zoom:50%;" /></li>
+</ul>
+</li>
+<li>10BASE-T：传送<strong>基带信号</strong>，使用<strong>无屏蔽双绞线</strong>，速率<strong>10Mb/s</strong><ul>
+<li>特点 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220520171701569.png" srcset="/img/loading.gif" lazyload alt="image-20220520171701569" style="zoom:50%;" /></li>
+</ul>
+</li>
+<li>100BASE-T：支持 全双工 和 半双工，可全双工不冲突</li>
+<li>吉比特：在<strong>光纤或双绞线</strong>上传送<strong>1Gb/s</strong>信号，支持 全双工 和 半双工，可全双工不冲突</li>
+<li>10吉比特：在<strong>光纤</strong>上传送<strong>10Gb/s</strong>信号，只支持全双工</li>
+</ul>
+<h4 id="3-5-2-无线局域网"><a href="#3-5-2-无线局域网" class="headerlink" title="3.5.2.无线局域网"></a>3.5.2.无线局域网</h4><ul>
+<li>帧头格式 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220520173535165.png" srcset="/img/loading.gif" lazyload alt="image-20220520173535165" style="zoom:50%;" /> </li>
+<li>其他类型<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220520194030997.png" srcset="/img/loading.gif" lazyload alt="image-20220520194030997" style="zoom:50%;" /></li>
+</ul>
+<h4 id="3-5-3-广域网"><a href="#3-5-3-广域网" class="headerlink" title="3.5.3.广域网"></a>3.5.3.广域网</h4><ul>
+<li>广域网延迟大，带宽大，强调资源共享而不是数据传输</li>
+<li>PPP协议：只支持全双工<ul>
+<li>帧格式 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220520200355116.png" srcset="/img/loading.gif" lazyload alt="image-20220520200355116" style="zoom:50%;" /></li>
+<li>状态图 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220520200036219.png" srcset="/img/loading.gif" lazyload alt="image-20220520200036219" style="zoom:50%;" /></li>
+<li>特点<ul>
+<li>简单：对于链路层的帧，无需纠错，无需序号，无需流量控制</li>
+<li>封装成帧：帧定界符</li>
+<li>透明传输：异步线路用字节填充，同步线路用比特填充</li>
+<li>多种网络层协议</li>
+<li>多种类型链路：串行/并行，同步/异步，电/光</li>
+<li>差错检测：错就丢弃</li>
+<li>检测连接状态</li>
+<li>最大传送单元MTU</li>
+<li>网络层地址协商：知道通信双方的网络层地址</li>
+<li>数据压缩协商</li>
+</ul>
+</li>
+<li>三个组成部分<ul>
+<li>一个将IP数据报封装到串行链路（同步串行/异步串行）的方法</li>
+<li>链路控制协议LCP：建立并维护数据链路连接。<strong>身份验证</strong></li>
+<li>网络控制协议NCP：支持多种网络层协议，每个不同的网络层协议都要一个相应的NCP来配置，为网络层协议建立和配置逻辑连接</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>HDLC协议：不是TCP/IP协议族的，<strong>由ISO制定</strong>，面向比特。全双工</p>
+<ul>
+<li>帧格式 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220520201427752.png" srcset="/img/loading.gif" lazyload alt="image-20220520201427752" style="zoom:50%;" /></li>
+<li><strong>可靠性高</strong>：CRC检验，帧编号</li>
+<li><p>三种站</p>
+<ul>
+<li>主站：起控制作用</li>
+<li>从站：被控制，配合主站参与差错恢复等链路控制</li>
+<li>复合站：两种都行</li>
+</ul>
+</li>
+<li><p>三种数据操作方式</p>
+<ul>
+<li>正常响应：从站发送消息要经过主站同意</li>
+<li>异步平衡：每一个复合站都可以对别的站传输数据</li>
+<li>异步响应：从站不需要经过主站同意</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-6-链路层设备"><a href="#3-6-链路层设备" class="headerlink" title="3.6.链路层设备"></a>3.6.链路层设备</h3><ul>
+<li><p>网桥：根据<strong>目的MAC</strong>对帧进行<strong>转发和过滤</strong></p>
+<ul>
+<li>网段：被网桥隔开的空间，使用同一物理层设备，能够直接通讯</li>
+<li><p>优点：</p>
+<ul>
+<li>过滤通信量，增大吞吐量</li>
+<li>扩大了物理范围</li>
+<li>提高了可靠性</li>
+<li>可互连不同物理层、不同MAC子层和不同速率的以太网</li>
+</ul>
+</li>
+<li><p>分类</p>
+<ul>
+<li><p>透明网桥：站点不知道帧将经过哪几个网桥，是一种即插即用设备</p>
+<ul>
+<li>自学习：发送帧经过网桥，网桥会把它的地址和接口存到转发表里</li>
+</ul>
+</li>
+<li><p>源路由网桥：把详细的最佳路由信息（路由最少/时间最短）放在帧首部中</p>
+<ul>
+<li>源站向目的站<strong>广播</strong>发送一个<strong>发现帧</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>交换机：多口网桥。每一个端口都是一个冲突域</p>
+<ul>
+<li><p>直通式：查完目的地址（6B），立刻转发</p>
+<ul>
+<li>延迟小</li>
+<li>可靠性低，不支持不同速率的端口</li>
+</ul>
+</li>
+<li><p>存储转发式：将帧放入高速缓存，并检查否正确，正确则转发，错误则丢弃</p>
+</li>
+<li><p>冲突域：每一个节点都能收到所有帧，同一时间只能有1台设备发送信息</p>
+</li>
+<li><p>广播域：能接收一个广播信号的范围</p>
+<blockquote>
+<p>设备对比 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220520204333964.png" srcset="/img/loading.gif" lazyload alt="image-20220520204333964" style="zoom: 45%;" /></p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="4-网络层"><a href="#4-网络层" class="headerlink" title="4.网络层"></a>4.网络层</h2><ul>
+<li>路由选择与分组转发</li>
+<li>异构网络互联</li>
+<li>拥塞控制：开环控制(静态)、闭环控制(动态)</li>
+</ul>
+<h3 id="4-1-转发"><a href="#4-1-转发" class="headerlink" title="4.1.转发"></a>4.1.转发</h3><h4 id="4-1-1-协议"><a href="#4-1-1-协议" class="headerlink" title="4.1.1.协议"></a>4.1.1.协议</h4><ul>
+<li>路由表：目的网络地址、目的网络子网掩码、下一跳地址</li>
+<li>协议<ul>
+<li>IP协议<ul>
+<li>首部格式 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220520211750372.png" srcset="/img/loading.gif" lazyload alt="image-20220520211750372" style="zoom:50%;" /></li>
+<li><strong>首部长度$\times$4Byte</strong>。一般20B</li>
+<li>总长度 = 首部 + 数据，单位是字节</li>
+<li>协议字段 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220520212350605.png" srcset="/img/loading.gif" lazyload alt="image-20220520212350605" style="zoom:50%;" /></li>
+<li>首部检验和：只检验首部</li>
+<li>同一数据报的分片使用同一标识。高位保留；中间位DF 1禁止分片，0允许分片；低位MF 1后面还有，0最后一片/没分片</li>
+<li>片偏移：分片后此便在原分组中相对位置，<strong>单位8B</strong></li>
+</ul>
+</li>
+<li>ARP<ul>
+<li>局域网查询 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220521093432058.png" srcset="/img/loading.gif" lazyload alt="image-20220521093432058" style="zoom:50%;" /></li>
+<li>不在一个局域网，就先查网关的MAC地址，再发送</li>
+</ul>
+</li>
+<li>DHCP<ul>
+<li><strong>应用层</strong>协议，客户机和服务端通过<strong>广播</strong>交互，基于<strong>UDP</strong></li>
+<li>主机 广播 DHCP发现报文</li>
+<li>DHCP服务器 广播 DHCP提供报文</li>
+<li>主机 广播 DHCP请求报文</li>
+<li>DHCP服务器 广播 DHCP确认报文</li>
+</ul>
+</li>
+<li>ICMP<ul>
+<li>格式 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220521100022407.png" srcset="/img/loading.gif" lazyload alt="image-20220521100022407" style="zoom:40%;" /> 报文封装在IP的数据部分</li>
+<li><strong>差错报文</strong><ul>
+<li>不可达</li>
+<li><del>网络拥塞</del></li>
+<li>TTL=0</li>
+<li>首部字段有问题</li>
+<li>重定向</li>
+</ul>
+</li>
+<li>不应发送差错报告报文<ul>
+<li>不套娃</li>
+<li>只报告第一个分片</li>
+<li>对具有组播地址的数据报都不发送ICMP差错报告报文</li>
+</ul>
+</li>
+<li><strong>询问报文</strong><ul>
+<li>回送请求和回答报文：ping</li>
+<li>时间戳请求和回答报文：时间同步</li>
+<li><del>掩码地址请求和回答报文、路由器询问和通告报文</del></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="4-1-2-IP地址"><a href="#4-1-2-IP地址" class="headerlink" title="4.1.2.IP地址"></a>4.1.2.IP地址</h4><ul>
+<li>IPv4<ul>
+<li>基本形式<ul>
+<li>分类 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220521064954224.png" srcset="/img/loading.gif" lazyload alt="image-20220521064954224" style="zoom: 50%;" /></li>
+<li>可用数 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220521071941733.png" srcset="/img/loading.gif" lazyload alt="image-20220521071941733" style="zoom:50%;" /></li>
+<li>特殊IP地址 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220521065922505.png" srcset="/img/loading.gif" lazyload alt="image-20220521065922505" style="zoom:50%;" /></li>
+<li>私有IP地址 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220521070800509.png" srcset="/img/loading.gif" lazyload alt="image-20220521070800509" style="zoom:50%;" /> 路由器不转发</li>
+</ul>
+</li>
+<li>子网划分：把主机号拆分为 子网号 和 主机号<ul>
+<li>子网掩码：1对应 网络号+子网号 的位数，0对应主机号的位数</li>
+</ul>
+</li>
+<li>无分类编址 CIDR<ul>
+<li>消除传统的ABC类地址以及划分子网的概念</li>
+<li>融合子网地址与子网掩码，方便子网划分</li>
+<li>把网络前缀都相同的连续的IP地址组成一个“CIDR地址块”<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220521090855299.png" srcset="/img/loading.gif" lazyload alt="image-20220521090855299" style="zoom: 50%;" /></li>
+<li><strong>路由聚合</strong>：前缀缩短，也就是网络地址取交集</li>
+<li><strong>最长前缀匹配</strong>：路由表中可能有几个匹配结果，选择网络前缀最长的</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>IPv6<ul>
+<li>格式 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220521102512801.png" srcset="/img/loading.gif" lazyload alt="image-20220521102512801" style="zoom:33%;" /></li>
+<li>特点：地址空间更大、移除了校验和、路由器不检查扩展首部、支持即插即用</li>
+<li>与v4的区别<ul>
+<li>v6首部长度必须是8B整数倍，v4首部长度必须是4B整数倍</li>
+<li>地址空间从32位扩展到<strong>128位</strong></li>
+<li>只能在主机处分片，<strong>路由器不能分片</strong></li>
+<li>ICMPv6 添加报文类型「分组过大」</li>
+<li>取消了 协议、服务类型、总长度，将扩展字段移出首部变为<strong>扩展首部</strong></li>
+<li><strong>即插即用</strong>(自动配置)</li>
+</ul>
+</li>
+<li>压缩形式 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220522085616542.png" srcset="/img/loading.gif" lazyload alt="image-20220522085616542" style="zoom:50%;" /><ul>
+<li>0000 换为 0</li>
+<li>0XXX 换为 XXX</li>
+<li>000X 换为 X</li>
+<li>一连串连续的0可以被一对冒号取代(只出现一次)</li>
+</ul>
+</li>
+<li>任意播：一对多通信，可作目的地址，一般选最近的</li>
+<li>过渡策略：<ul>
+<li>双栈协议：在一台设备上<strong>同时启用IPv4和IPv6</strong></li>
+<li>隧道协议：<strong>重新封装</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="4-1-3-IP应用"><a href="#4-1-3-IP应用" class="headerlink" title="4.1.3.IP应用"></a>4.1.3.IP应用</h4><ul>
+<li><p>IP组播</p>
+<ul>
+<li><p>224.0.0.0～239.255.255.255。D类地址，不是都能用</p>
+</li>
+<li><p>MAC地址 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220522103338977.png" srcset="/img/loading.gif" lazyload alt="image-20220522103338977" style="zoom:50%;" /></p>
+</li>
+<li><p>IGMP：让路由器知道是不是某个组播组还存在</p>
+<ul>
+<li><p>要加入组播组时向组播组发送IGMP，声明要加入；本地组播路由器把成员关系发给其他组播路由器</p>
+</li>
+<li><p>本地组播路由器周期性探寻局域网上主机，只要有一个回应就可以</p>
+</li>
+</ul>
+</li>
+<li><p>组播路由选择协议</p>
+<ul>
+<li><p>链路状态</p>
+</li>
+<li><p>距离向量</p>
+</li>
+<li><p>协议无关：稀疏、密集</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>移动IP：设备移动，IP不动 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220522105604633.png" srcset="/img/loading.gif" lazyload alt="image-20220522105604633" style="zoom:50%;" /></p>
+<ul>
+<li>移动过程 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220522153400356.png" srcset="/img/loading.gif" lazyload alt="image-20220522153400356" style="zoom:50%;" /></li>
+</ul>
+</li>
+</ul>
+<h3 id="4-2-路由选择"><a href="#4-2-路由选择" class="headerlink" title="4.2.路由选择"></a>4.2.路由选择</h3><h4 id="4-2-1-路由选择算法"><a href="#4-2-1-路由选择算法" class="headerlink" title="4.2.1.路由选择算法"></a>4.2.1.路由选择算法</h4><ul>
+<li><p>静态路由</p>
+<ul>
+<li>简单可靠，拓扑变化不大的网络中效果好，用于军事或小型商业</li>
+<li>路由更新慢，不适用于大型网络</li>
+</ul>
+</li>
+<li><p>动态路由</p>
+<ul>
+<li>距离向量算法 RIP：全局性</li>
+<li>链路状态算法 OSPF：分散性</li>
+</ul>
+</li>
+</ul>
+<h4 id="4-2-2-路由选择协议"><a href="#4-2-2-路由选择协议" class="headerlink" title="4.2.2.路由选择协议"></a>4.2.2.路由选择协议</h4><ul>
+<li>自制系统内 IGP<ul>
+<li>RIP：每一个路由器都维护<u>从它自己到其他每一个目的网络的唯一最佳<strong>跳数</strong>记录</u><ul>
+<li>一条路由最多包含15个路由器，<strong>16跳标记为不可达</strong></li>
+<li>只和<strong>相邻路由器</strong>每<strong>30秒</strong>交换<strong>自己的路由表</strong>，超过<strong>180秒</strong>邻居没通告，则判定邻居没了</li>
+<li><strong>应用层</strong>协议，使用<strong>UDP</strong>传送，一次最多传送25条信息</li>
+<li>好消息传得快，坏消息传得慢</li>
+</ul>
+</li>
+<li>OSPF<ul>
+<li>洪泛法向所有路由器发送信息，<strong>广播</strong></li>
+<li>发送本路由器以及邻居的链路状态：费用、距离、时延、带宽</li>
+<li>只有<strong>链路状态变化</strong>时才发送信息</li>
+<li>算法：<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220522100216093.png" srcset="/img/loading.gif" lazyload alt="image-20220522100216093" style="zoom:50%;" /></li>
+<li><strong>网络层</strong>协议，使用<strong>IP</strong>传送</li>
+<li><strong>30min</strong>刷新一次；网络大时比RIP好很多；<strong>收敛很快</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>自制系统间 EGP<ul>
+<li>BGP：边界路由器，交换网络可达性信息；发生变化时才更新</li>
+<li><strong>应用层</strong>协议，使用<strong>TCP</strong>传送</li>
+<li>支持CIDR</li>
+<li>刚运行时交换整个BGP路由表。但以后只交换更新部分</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-3-路由器"><a href="#4-3-路由器" class="headerlink" title="4.3.路由器"></a>4.3.路由器</h3><p>集线器不能互联物理层不同的网段。<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220522154749857.png" srcset="/img/loading.gif" lazyload alt="image-20220522154749857" style="zoom:50%;" /></p>
+<p>默认路由全0，路由表没有匹配就从默认路由走。</p>
+<h2 id="5-传输层"><a href="#5-传输层" class="headerlink" title="5.传输层"></a>5.传输层</h2><h3 id="5-1-概述"><a href="#5-1-概述" class="headerlink" title="5.1.概述"></a>5.1.概述</h3><ul>
+<li>主机才有的层次</li>
+<li>传输层提供<strong>进程和进程</strong>之间的逻辑通信，网络层提供主机与主机</li>
+<li>端口号<ul>
+<li>服务端：熟知端口号0-1023；登记端口号1024-49151</li>
+<li>常用端口号<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220522165616523.png" srcset="/img/loading.gif" lazyload alt="image-20220522165616523"></li>
+<li>客户端：49152-65535</li>
+<li>套接字：(IP,端口)，唯一标识一个主机和它上面的进程</li>
+</ul>
+</li>
+</ul>
+<h3 id="5-2-UDP"><a href="#5-2-UDP" class="headerlink" title="5.2.UDP"></a>5.2.UDP</h3><ul>
+<li>特点<ul>
+<li>面向报文，适合一次性传输少量数据的网络应用</li>
+<li>无拥塞控制，适合实时应用</li>
+</ul>
+</li>
+<li>首部格式 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220522171145693.png" srcset="/img/loading.gif" lazyload alt="image-20220522171145693" style="zoom:50%;" /></li>
+<li>UDP校验 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220522173741962.png" srcset="/img/loading.gif" lazyload alt="image-20220522173741962" style="zoom:50%;" /></li>
+</ul>
+<h3 id="5-3-TCP"><a href="#5-3-TCP" class="headerlink" title="5.3.TCP"></a>5.3.TCP</h3><ul>
+<li><p>首部格式 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220522203105060.png" srcset="/img/loading.gif" lazyload alt="image-20220522203105060" style="zoom:60%;" /></p>
+<ul>
+<li>确认号：期望下一次收到的，代表N-1都已经成功</li>
+<li>偏移：首部长度，<strong>单位4B</strong></li>
+<li>控制位：<ul>
+<li>URG 紧急：不缓冲</li>
+<li>ACK 确认：为1时确认号才有效</li>
+<li><del>PSH 推送：尽快接收，不等缓存填满</del></li>
+<li><del>RST 复位：连接有差错，尽快释放连接，重新传输</del></li>
+<li>SYN 同步：为1时，连接请求/接受报文</li>
+<li>FIN 终止：数据发完，释放连接</li>
+</ul>
+</li>
+<li>窗口：<strong>接收窗口</strong>，允许对方发送的数据量</li>
+<li>紧急指针：URG=1时才有用，直接指出紧急数据的位置</li>
+</ul>
+</li>
+<li><p>连接管理</p>
+<ul>
+<li>三次握手 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220522205049445.png" srcset="/img/loading.gif" lazyload alt="image-20220522205049445" style="zoom:67%;" /></li>
+<li>四次挥手 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220522211814512.png" srcset="/img/loading.gif" lazyload alt="image-20220522211814512" style="zoom:67%;" /><ul>
+<li>A发完最后一个ACK还要再等两个最长报文段寿命，防止它刚刚发送的ACK没有送到</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>可靠传输</p>
+<ul>
+<li>校验：和UDP一样加上伪首部计算校验码</li>
+<li>序号、确认、重传：规定时间内没收到确认就要重传已发送的报文段<ul>
+<li>比期望序号大的失序报文段到达时，发送一个冗余ACK，指明下一个期待字节的序号。收到3个冗余立即重传</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>流量控制</p>
+<ul>
+<li>一个例子 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220522214047212.png" srcset="/img/loading.gif" lazyload alt="image-20220522214047212" style="zoom: 50%;" /><ul>
+<li>A收到0窗口通知会启动计时器，到时间了会发一个0窗口的探测报文段</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>拥塞控制</p>
+<blockquote>
+<p>拥塞控制：发送站过多，数据迟迟到不了接收方</p>
+<p>流量控制：发送过快，接收方缓存不够</p>
+<p><u>讨论前提假设</u>：不使用捎带确认，接收方窗口足够大。拥塞窗口是发送方算出来的，反映当前网络容量</p>
+</blockquote>
+<ul>
+<li>慢开始、拥塞避免：<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220523080908760.png" srcset="/img/loading.gif" lazyload alt="image-20220523080908760" style="zoom:50%;" /><ul>
+<li>从1开始，每次乘2</li>
+<li>到门限值开始线性增大</li>
+<li>开始拥塞了，窗口改1，门限改为拥塞值的一半</li>
+</ul>
+</li>
+<li>快重传、快恢复：<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220523081710488.png" srcset="/img/loading.gif" lazyload alt="image-20220523081710488" style="zoom:50%;" /><ul>
+<li>收到3个重复确认，立即重传，窗口改为一半</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="6-应用层"><a href="#6-应用层" class="headerlink" title="6.应用层"></a>6.应用层</h2><ul>
+<li><p>DNS</p>
+<ul>
+<li><p>域名 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220523085249107.png" srcset="/img/loading.gif" lazyload alt="image-20220523085249107" style="zoom:60%;" /></p>
+</li>
+<li><p>递归查询：帮人帮到底</p>
+</li>
+<li><p>迭代查询：踢皮球</p>
+</li>
+</ul>
+</li>
+<li><p>FTP</p>
+<ul>
+<li>使用TCP实现可靠传输</li>
+<li>控制连接<strong>端口21</strong>，数据传送<strong>端口20</strong>(主动模式用20，被动模式自行协商&gt;1024)</li>
+<li>传输模式：文本(ASCII)、二进制</li>
+</ul>
+</li>
+<li><p>电子邮件 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220523094709705.png" srcset="/img/loading.gif" lazyload alt="image-20220523094709705" style="zoom: 50%;" /></p>
+<ul>
+<li><p>SMTP：14条命令（几个字母）和21种应答信息（三位数字代码+简单文字说明）</p>
+<blockquote>
+<p>C/S方式，端口号25，TCP </p>
+<p>不能传送二进制对象，只能传送7位ASCII码(不能传送其他国家文字)，服务器会拒绝过长的邮件</p>
+<p><img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220523095529066.png" srcset="/img/loading.gif" lazyload alt="image-20220523095529066" style="zoom:50%;" /></p>
+</blockquote>
+</li>
+<li><p>MIME：将非ASCII转为ASCII，再使用STMP传送</p>
+</li>
+<li><p>POP3：端口号110，TCP，C/S</p>
+</li>
+<li><p>IMAP：用户先看到邮件首部，打开邮件时才下载内容</p>
+</li>
+</ul>
+</li>
+<li><p>HTTP</p>
+<ul>
+<li>无状态(没有记忆)，面向文本，使用Cookie保存访问记录</li>
+<li>采用TCP，但是http本身无连接</li>
+<li>连接方式<ul>
+<li>非持久连接 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220523101622598.png" srcset="/img/loading.gif" lazyload alt="image-20220523101622598" style="zoom: 50%;" /><ul>
+<li>耗时2 * RTT + 传送时间</li>
+</ul>
+</li>
+<li>持久连接：非流水线式(等到确认再传送下一个文件)、流水线式</li>
+</ul>
+</li>
+<li>报文结构 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220523102045887.png" srcset="/img/loading.gif" lazyload alt="image-20220523102045887" style="zoom:50%;" /><ul>
+<li>例子：<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220523102235893.png" srcset="/img/loading.gif" lazyload alt="image-20220523102235893" style="zoom:50%;" /></li>
+<li>状态码：<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220523102359699.png" srcset="/img/loading.gif" lazyload alt="image-20220523102359699" style="zoom:67%;" /></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E8%80%83%E7%A0%94/">考研</a>
+                    
+                  </div>
+                
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外均为原创，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/blog/bb28e6626586/">
+                        <span class="hidden-mobile">408-数据结构-基础笔记</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+    
+
+  </div>
+  
+
+  
+  <!-- 备案信息 -->
+  <div class="beian">
+    <span>
+      <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">
+        沪ICP证2022011890号
+      </a>
+    </span>
+    
+  </div>
+
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  
+    <script  src="https://lib.baomitu.com/tocbot/4.18.0/tocbot.min.js" ></script>
+  
+  
+    <script  src="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  
+  
+    <script  src="https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js" ></script>
+  
+  
+    <script defer src="https://lib.baomitu.com/clipboard.js/2.0.10/clipboard.min.js" ></script>
+  
+
+
+
+
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+        typing(title);
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        loader: {
+          
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://lib.baomitu.com/mathjax/3.2.0/tex-svg.js" ></script>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>
