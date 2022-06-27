@@ -1,9 +1,9 @@
 body, header, main, div.mask.flex-center, div.scroll-down-bar, #banner.banner, h1,h2,h3,h4,h5,h6 {
-    cursor: url(img/a11.cur)!important;
+    cursor: url(img/a11.cur) default;
 }
 
 a:hover, button:hover, i:hover {
-    cursor: url(img/a22.cur)!important;
+    cursor: url(img/a22.cur) default;
 }
 
 #rightside>div>button,
@@ -15,30 +15,30 @@ a:hover, button:hover, i:hover {
     color: var(--btn-color);
     text-align: center;
     font-size: 16px;
-    cursor: url(img/a22.cur)!important;
+    cursor: url(img/a22.cur) default;
 }
 
 /* 文章标签 */
 .layout_post .tag_share .post-meta__tags {
-    cursor: url(img/a22.cur)!important;
+    cursor: url(img/a22.cur) default;
 }
 /* 评论区 */
 .vcol * {
-    cursor: url(img/a22.cur)!important;
+    cursor: url(img/a22.cur) default;
 }
 .v[data-class=v] .vicon {
-    cursor: url(img/a22.cur)!important;
+    cursor: url(img/a22.cur) default;
 }
 .v[data-class=v] .vbtn {
-    cursor: url(img/a22.cur)!important;
+    cursor: url(img/a22.cur) default;
 }
 /* 回复 */
 .vat {
-    cursor: url(img/a22.cur)!important;
+    cursor: url(img/a22.cur) default;
 }
 /*分页器*/
 #pagination .page-number:hover {
-    cursor: url(img/a22.cur)!important;
+    cursor: url(img/a22.cur) default;
 }
 /* 分页器的三个点(...) */
 .space {
