@@ -2,7 +2,7 @@ body, header, main, div.mask.flex-center, div.scroll-down-bar, #banner.banner, h
     cursor: url(img/a11.cur) default;
 }
 
-a:hover, button:hover, i:hover {
+a, a:hover, button:hover, i:hover {
     cursor: url(img/a22.cur) default;
 }
 
