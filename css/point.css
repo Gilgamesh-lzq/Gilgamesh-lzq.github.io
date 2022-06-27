@@ -1,4 +1,4 @@
-body, header, main, div.mask.flex-center, div.scroll-down-bar, #banner.banner, h1,h2,h3,h4,h5,h6 {
+body, header, main, div.mask.flex-center, div.scroll-down-bar, #banner.banner, h1,h2,h3,h4,h5,h6,a {
     cursor: url(img/a11.cur)!important;
 }
 
