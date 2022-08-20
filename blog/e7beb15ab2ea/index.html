@@ -26,7 +26,7 @@
 <meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:03-13:56:18-image-20220403135431099.png">
 <meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:05-19:21:19-image-20220405174159263.png">
 <meta property="article:published_time" content="2022-04-06T04:59:19.000Z">
-<meta property="article:modified_time" content="2022-06-11T14:52:28.004Z">
+<meta property="article:modified_time" content="2022-08-19T00:10:36.098Z">
 <meta property="article:author" content="Gilgamesh">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:04:03-13:56:18-image-20220403135431099.png">
@@ -246,7 +246,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      67 分钟
+      68 分钟
     </span>
   
 
@@ -283,7 +283,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：2022年6月11日 晚上
+                  本文最后更新于：2022年8月19日 早上
                 
               </p>
             
@@ -340,6 +340,8 @@
 <p>我的个人配置如下：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">export</span> PROMPT=<span class="hljs-string">&#x27;%F&#123;13&#125;%1~ %F&#123;50&#125;%B%# %f%b&#x27;</span><br></code></pre></td></tr></table></figure>
 <h3 id="1-12-查看硬盘寿命"><a href="#1-12-查看硬盘寿命" class="headerlink" title="1.12.查看硬盘寿命"></a>1.12.查看硬盘寿命</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 安装smartmontools</span><br>brew install smartmontools<br><span class="hljs-comment"># 打开S.M.A.R.T监控</span><br>smartctl -s on disk0<br><span class="hljs-comment"># 查看硬盘信息</span><br>smartctl -a disk0<br></code></pre></td></tr></table></figure>
+<h3 id="1-13-取消系统截图阴影"><a href="#1-13-取消系统截图阴影" class="headerlink" title="1.13.取消系统截图阴影"></a>1.13.取消系统截图阴影</h3><p>系统自带的截图是唯一一个能截出圆角的截图方式，然而一般会带着窗口阴影一起截下来。使用下面指令可以取消阴影。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 取消系统截图阴影</span><br>defaults write com.apple.screencapture disable-shadow -bool TRUE<br><span class="hljs-comment"># 恢复系统截图阴影</span><br>defaults write com.apple.screencapture disable-shadow -bool FALSE<br></code></pre></td></tr></table></figure>
 <h2 id="2-defaults命令"><a href="#2-defaults命令" class="headerlink" title="2.defaults命令"></a>2.defaults命令</h2><p>plist文件在macOS中被用来记录系统的各种<strong>偏好设置</strong>，所有与系统有关的设置项文件都在<code>/Library/Preferences</code>中。使用defaults命令可以修改这些设置甚至是写入自己的设置。设置项可能导致软件崩溃，移除设置项可以直接删除配置文件或者使用给出的命令。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 读取所有设置项</span><br>defaults <span class="hljs-built_in">read</span> [DOMAIN]<br><span class="hljs-comment"># 读取某设置项</span><br>defaults <span class="hljs-built_in">read</span> [DOMAIN] [PROPERTY_NAME]<br><span class="hljs-comment"># 设置某设置项</span><br>defaults write [DOMAIN] [PROPERTY_NAME] [VALUE] <br><span class="hljs-comment"># 重制某个设置项</span><br>defaults delete [DOMAIN] [PROPERTY_NAME] <br><span class="hljs-comment"># 重制某个设置</span><br>defaults delete [DOMAIN] <br></code></pre></td></tr></table></figure>
 <h2 id="3-xattr命令"><a href="#3-xattr命令" class="headerlink" title="3.xattr命令"></a>3.xattr命令</h2><p>Mac OS X 10.4及更高版本通过使用HFS+文件系统属性文件B<em>树功能支持<em>*扩展属性</em></em>。每个属性由一个名称和相关数据组成，该名称是一个以<code>\0</code>截止的Unicode字符串。</p>
