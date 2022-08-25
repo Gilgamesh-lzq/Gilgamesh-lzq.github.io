@@ -76,8 +76,9 @@
 <meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153735.png">
 <meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:08:25-15:19:51-image-20220825151934990.png">
 <meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153736.png">
+<meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:08:25-15:37:49-22-0825_15.png">
 <meta property="article:published_time" content="2022-04-02T09:35:49.000Z">
-<meta property="article:modified_time" content="2022-08-25T07:19:54.251Z">
+<meta property="article:modified_time" content="2022-08-25T07:50:51.042Z">
 <meta property="article:author" content="Gilgamesh">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153683.png">
@@ -288,7 +289,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      7.7k 字
+      8k 字
     </span>
   
 
@@ -297,7 +298,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      49 分钟
+      50 分钟
     </span>
   
 
@@ -858,7 +859,18 @@
 </li>
 <li><p>假设检验</p>
 <ul>
-<li>用估计的$\mu$算出来一个拒绝域，看抽样的均值是否在这里面</li>
+<li><p>用估计的$\mu$算出来一个拒绝域，看抽样的均值是否在这里面</p>
+<blockquote>
+<p>例题：学生成绩为正态布，选<strong>36</strong>名学生。平均成绩<strong>66.5</strong>分，标准差<strong>15</strong>分。</p>
+<p>问显著性水平<strong>0.05</strong>下，是否可以认为平均成绩为70分？<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:08:25-15:37:49-22-0825_15.png" srcset="/img/loading.gif" lazyload alt="22-0825_15" style="zoom:20%;" /></p>
+<ul>
+<li>假设$H_0：\mu=\mu_0=70。H_1：\mu\neq 70$</li>
+<li>$T=\frac{\bar X-\mu_0}{S/\sqrt{n}}=\frac{\bar X-70}{S/\sqrt{n}}=t(35)$</li>
+<li>$P\{|\frac{\bar X-\mu_0}{S/\sqrt n}|&gt;t_{\frac{\alpha}{2}}(35)\}=\alpha$</li>
+<li>$|t|=|\frac{66.5-70}{15/6}|=1.4&lt;2.0301$，不在拒绝域，假设合理</li>
+</ul>
+</blockquote>
+</li>
 </ul>
 </li>
 <li><p>两类错误</p>
