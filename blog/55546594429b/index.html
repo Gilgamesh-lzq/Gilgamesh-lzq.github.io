@@ -24,7 +24,7 @@
 <meta property="og:description" content="随手记录一下平时看剧用到的批量处理小脚本">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-09-06T06:10:57.000Z">
-<meta property="article:modified_time" content="2022-09-08T02:10:22.532Z">
+<meta property="article:modified_time" content="2022-09-12T13:26:57.316Z">
 <meta property="article:author" content="Gilgamesh">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -234,7 +234,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      2.9k 字
+      3.2k 字
     </span>
   
 
@@ -243,7 +243,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      18 分钟
+      20 分钟
     </span>
   
 
@@ -280,7 +280,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：2022年9月8日 上午
+                  本文最后更新于：2022年9月12日 晚上
                 
               </p>
             
@@ -309,6 +309,9 @@
 <p>整个python脚本如下：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment">#!/usr/bin/python3</span><br><span class="hljs-keyword">import</span> sys<br><span class="hljs-keyword">import</span> os<br><span class="hljs-keyword">import</span> subprocess<br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">get_duration</span>(<span class="hljs-params">video_path: <span class="hljs-built_in">str</span></span>):<br>    ext = os.path.splitext(video_path)[-<span class="hljs-number">1</span>]<br>    good_format = [<span class="hljs-string">&#x27;.mp4&#x27;</span>, <span class="hljs-string">&#x27;.avi&#x27;</span>, <span class="hljs-string">&#x27;.flv&#x27;</span>, <span class="hljs-string">&#x27;.ts&#x27;</span>]<br>    <span class="hljs-keyword">if</span> ext <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> good_format:<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;格式不支持&quot;</span>)<br>        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span><br>    ffprobe_cmd = <span class="hljs-string">&#x27;ffprobe -i &#123;&#125; -show_entries format=duration -v quiet -of csv=&quot;p=0&quot;&#x27;</span><br>    p = subprocess.Popen(<br>        ffprobe_cmd.<span class="hljs-built_in">format</span>(video_path),<br>        stdout=subprocess.PIPE,<br>        stderr=subprocess.PIPE,<br>        shell=<span class="hljs-literal">True</span>)<br>    out, err = p.communicate()<br>    duration_seconds = <span class="hljs-built_in">float</span>(<span class="hljs-built_in">str</span>(out, <span class="hljs-string">&#x27;utf-8&#x27;</span>).strip())<br>    <span class="hljs-keyword">return</span> <span class="hljs-built_in">int</span>(duration_seconds)<br><br>all_files = []<br><span class="hljs-keyword">def</span> <span class="hljs-title function_">walkdir</span>(<span class="hljs-params">path: <span class="hljs-built_in">str</span></span>):<br>    filelist = os.listdir(path)<br>    <span class="hljs-keyword">for</span> filename <span class="hljs-keyword">in</span> filelist:<br>        filepath = os.path.join(path, filename)<br>        <span class="hljs-keyword">if</span> os.path.isdir(filepath):<br>            walkdir(filepath)<br>        <span class="hljs-keyword">else</span>:<br>            all_files.append(filepath)<br><br><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&quot;__main__&quot;</span>:<br>    <span class="hljs-built_in">dir</span> = sys.argv[<span class="hljs-number">1</span>]<br>    all_time = <span class="hljs-number">0</span><br>    <span class="hljs-keyword">if</span> os.path.isdir(<span class="hljs-built_in">dir</span>):<br>        walkdir(<span class="hljs-built_in">str</span>(<span class="hljs-built_in">dir</span>))<br>        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> all_files:<br>            <span class="hljs-built_in">print</span>(i)<br>            <span class="hljs-keyword">try</span>:<br>                time = get_duration(i)<br>            <span class="hljs-keyword">except</span> Exception <span class="hljs-keyword">as</span> e:<br>                <span class="hljs-built_in">print</span>(e, <span class="hljs-string">&#x27;文件受损，无法计算\n&#x27;</span>)<br>                time = <span class="hljs-number">0</span><br>            <span class="hljs-keyword">if</span> time != <span class="hljs-number">0</span>:<br>                <span class="hljs-built_in">print</span>(time)<br>                all_time += time<br>    <span class="hljs-keyword">elif</span> os.path.isfile(<span class="hljs-built_in">dir</span>):<br>        <span class="hljs-built_in">print</span>(<span class="hljs-built_in">dir</span>)<br>        <span class="hljs-keyword">try</span>:<br>            time = get_duration(<span class="hljs-built_in">dir</span>)<br>        <span class="hljs-keyword">except</span> Exception <span class="hljs-keyword">as</span> e:<br>            <span class="hljs-built_in">print</span>(e, <span class="hljs-string">&#x27;文件受损，无法计算\n&#x27;</span>)<br>            time = <span class="hljs-number">0</span><br>        all_time += time<br>    <span class="hljs-keyword">else</span>:<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Are You OK?&quot;</span>)<br>    <span class="hljs-built_in">print</span>(all_time // <span class="hljs-number">3600</span>, all_time % <span class="hljs-number">3600</span> // <span class="hljs-number">60</span>, all_time % <span class="hljs-number">60</span>)<br></code></pre></td></tr></table></figure>
 <p>使用方法：将脚本直接拖到<code>cmd(Windows)</code>或<code>terminal(macOS)</code>中，随后拖入要统计时长的文件夹，按回车即可。如果没有可执行权限请赋予。</p>
+<p>也可以使用alias命令将脚本绝对路径命名为一个常用指令，方便地计算所有视频时长。</p>
+<h2 id="4-无损合并视频"><a href="#4-无损合并视频" class="headerlink" title="4.无损合并视频"></a>4.无损合并视频</h2><p>有些视频爬虫爬下来是分段的，使用ffmpeg无损合并不会重新编码，较快。此方法只适用于mpeg容器。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 首先生成一个文件列表(POSIX)</span><br><span class="hljs-built_in">printf</span> <span class="hljs-string">&quot;file &#x27;%s&#x27;\n&quot;</span> *.mp4 &gt; merge.txt<br><span class="hljs-comment"># windows用这个指令生成列表</span><br>(<span class="hljs-keyword">for</span> %i <span class="hljs-keyword">in</span> (*.mp4) <span class="hljs-keyword">do</span> @<span class="hljs-built_in">echo</span> file <span class="hljs-string">&#x27;%i&#x27;</span>) &gt; merge.txt<br><span class="hljs-comment"># 使用ffmpeg合并</span><br>ffmpeg -f concat -safe 0 -i merge.txt -c copy out.mp4<br></code></pre></td></tr></table></figure>
 <p><br></p>
 <h2><font color="black">参考链接</font></h2>
 
@@ -316,6 +319,7 @@
 <li><a target="_blank" rel="noopener" href="https://blog.csdn.net/LHJCSDNYL/article/details/122466668">python汉字简繁体转换方法</a></li>
 <li><a target="_blank" rel="noopener" href="https://fanyi-api.baidu.com/product/113">通用翻译API接入文档</a></li>
 <li><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_46085748/article/details/126147080">ffmpeg获取视频时长和分辨率</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/y534560449/article/details/121534481">FFMPEG合并视频文件(无损)</a></li>
 </ol>
 
             </div>
