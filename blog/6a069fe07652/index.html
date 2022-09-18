@@ -44,6 +44,7 @@
 <meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:06:26-17:09:41-image-20220530100935367.png">
 <meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:06:26-17:09:43-image-20220530102415091.png">
 <meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:06:26-17:09:52-image-20220611085128126.png">
+<meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:09:18-14:05:15-image-20220918140456110.png">
 <meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:06:26-17:10:01-image-20220614090410277.png">
 <meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:06:26-17:10:05-image-20220614102910700.png">
 <meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:06:26-17:10:12-image-20220616001903251.png">
@@ -77,7 +78,7 @@
 <meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:07:02-16:04:26-image-20220702150743918.png">
 <meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:07:02-16:04:26-image-20220702155649076.png">
 <meta property="article:published_time" content="2022-04-03T02:36:46.000Z">
-<meta property="article:modified_time" content="2022-07-23T04:52:25.452Z">
+<meta property="article:modified_time" content="2022-09-18T06:05:20.001Z">
 <meta property="article:author" content="Gilgamesh">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:06:26-17:07:37-image-20220523214318236.png">
@@ -297,7 +298,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      53 分钟
+      54 分钟
     </span>
   
 
@@ -334,7 +335,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：2022年7月23日 下午
+                  本文最后更新于：2022年9月18日 下午
                 
               </p>
             
@@ -561,10 +562,17 @@
 <li>套娃 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:06:26-17:09:35-image-20220529163652963.png" srcset="/img/loading.gif" lazyload alt="image-20220529163652963" style="zoom: 50%;" /></li>
 </ul>
 <h2 id="3-存储系统"><a href="#3-存储系统" class="headerlink" title="3.存储系统"></a>3.存储系统</h2><h3 id="3-1-概念"><a href="#3-1-概念" class="headerlink" title="3.1.概念"></a>3.1.概念</h3><ul>
-<li>随机存取存储器（内存）、串行访问存储器、相联存储器（快表）</li>
-<li>破坏性读出：读数据后需要重写（DRAM）。SRAM不需要重写</li>
-<li>存储速度：数据传输率 = 数据的宽度 / 存储周期（存取时间+恢复时间）</li>
-<li><strong>金属引脚个数</strong>：地址线（n位地址）+数据线（字长）+片选线（1）+读写控制线（1/2）</li>
+<li><p>随机存取存储器（内存）、串行访问存储器、相联存储器（快表）</p>
+</li>
+<li><p>破坏性读出：读数据后需要重写（DRAM）。SRAM不需要重写</p>
+</li>
+<li><p>存储速度：数据传输率 = 数据的宽度 / 存储周期（存取时间+恢复时间）</p>
+</li>
+<li><p><strong>金属引脚个数</strong>：地址线（n位地址）+数据线（字长）+片选线（1）+读写控制线（1/2）</p>
+<blockquote>
+<p>DRAM采用地址复用，地址线减半，但是需要一根<strong>行列通选线</strong>，替代掉了片选线</p>
+</blockquote>
+</li>
 </ul>
 <h3 id="3-2-DRAM"><a href="#3-2-DRAM" class="headerlink" title="3.2.DRAM"></a>3.2.DRAM</h3><ul>
 <li>DRAM：栅极电容；SRAM：双稳态触发器</li>
@@ -590,22 +598,32 @@
 </li>
 </ul>
 <h3 id="3-4-Cache"><a href="#3-4-Cache" class="headerlink" title="3.4.Cache"></a>3.4.Cache</h3><ul>
-<li>命中率H<ul>
+<li><p>命中率H</p>
+<ul>
 <li>先访问cache，<strong>平均访问时间</strong> $t=Ht_c+(1-H)(t_c+t_m)$</li>
 <li>同时访问，<strong>平均访问时间</strong> $t=Ht_c+(1-H)t_m$</li>
 </ul>
 </li>
-<li>映射方式 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:06:26-17:09:41-image-20220530100935367.png" srcset="/img/loading.gif" lazyload alt="image-20220530100935367" style="zoom:50%;" /><ul>
-<li>全相联 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:06:26-17:09:43-image-20220530102415091.png" srcset="/img/loading.gif" lazyload alt="image-20220530102415091" style="zoom:50%;" /><ul>
+<li><p>映射方式 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:06:26-17:09:41-image-20220530100935367.png" srcset="/img/loading.gif" lazyload alt="image-20220530100935367" style="zoom:50%;" /></p>
+<ul>
+<li><p>全相联 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:06:26-17:09:43-image-20220530102415091.png" srcset="/img/loading.gif" lazyload alt="image-20220530102415091" style="zoom:50%;" /></p>
+<ul>
 <li>Cache存储空间利用充分，命中率高；缺点：查找“标记”最慢，有可能需要对比所有行的标记</li>
 </ul>
 </li>
-<li>直接映射：主存块号 % cache块数 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:06:26-17:09:52-image-20220611085128126.png" srcset="/img/loading.gif" lazyload alt="image-20220611085128126" style="zoom: 33%;" /><ul>
-<li>当cache块数是$2^n$，主存块号<strong>末尾n位</strong>直接反映它在cache中的位置，标记位就不存储这几位了</li>
-<li>对于任意一个地址，只需对比一个“标记”，速度最快；缺点：Cache存储空间利用不充分，命中率低</li>
+<li><p>直接映射：主存块号 % cache块数 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:06:26-17:09:52-image-20220611085128126.png" srcset="/img/loading.gif" lazyload alt="image-20220611085128126" style="zoom: 33%;" /></p>
+<ul>
+<li><p>当cache块数是$2^n$，主存块号<strong>末尾n位</strong>直接反映它在cache中的位置，标记位就不存储这几位了</p>
+</li>
+<li><p>对于任意一个地址，只需对比一个“标记”，速度最快；缺点：Cache存储空间利用不充分，命中率低</p>
+<blockquote>
+<p>例题：<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:09:18-14:05:15-image-20220918140456110.png" srcset="/img/loading.gif" lazyload alt="image-20220918140456110" style="zoom:30%;" /></p>
+</blockquote>
+</li>
 </ul>
 </li>
-<li>组相联：另外两种方式的折中，综合效果较好<ul>
+<li><p>组相联：另外两种方式的折中，综合效果较好</p>
+<ul>
 <li>n路组相联映射：每n个Cache行为一组</li>
 </ul>
 </li>
@@ -636,8 +654,8 @@
 </li>
 <li><p>写不命中</p>
 <ul>
-<li>写分配法：先把数据调入cache，再修改，配合写回法</li>
-<li>非写分配法：直接写主存。搭配全写法</li>
+<li>写分配法：先把数据调入cache，再修改，==配合写回法==</li>
+<li>非写分配法：直接写主存。==搭配全写法==</li>
 </ul>
 </li>
 </ul>
