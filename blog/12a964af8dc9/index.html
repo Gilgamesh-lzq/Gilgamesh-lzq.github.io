@@ -74,7 +74,7 @@
 <meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220523102235893.png">
 <meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220523102359699.png">
 <meta property="article:published_time" content="2022-04-03T03:22:25.000Z">
-<meta property="article:modified_time" content="2022-07-23T04:52:33.631Z">
+<meta property="article:modified_time" content="2022-09-29T04:18:31.987Z">
 <meta property="article:author" content="Gilgamesh">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:05:23-10:31:06-image-20220517094922157.png">
@@ -331,7 +331,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：2022年7月23日 下午
+                  本文最后更新于：2022年9月29日 中午
                 
               </p>
             
@@ -1011,7 +1011,7 @@
 <p>最迟一个RTT知道发生了碰撞。最差情况：A的数据刚刚到达B，B恰好刚刚开始发送，A在一个RTT(<strong>基本退避时间</strong>)后才能收到B的信号。</p>
 </blockquote>
 <ul>
-<li><strong>截断二进制指数规避</strong>：k为重传次数，但到10后不再增大。从$[0,1,…,2^k-1]$随机取一个数r，避退时间就是 r倍 单程传播时延(又名 争用期)。16次失败后报告错误</li>
+<li><strong>截断二进制指数规避</strong>：k为重传次数，但<u>到10后不再增大</u>。从$[0,1,…,2^k-1]$随机取一个数r，避退时间就是 r 倍 单程传播时延(又名 争用期)。16次失败后报告错误</li>
 <li><strong>最小帧长</strong>：传输速率 * RTT。以太网规定最短帧长为64B，&lt;它的都要填充。收到&lt;64B的都是无效的</li>
 </ul>
 </li>
