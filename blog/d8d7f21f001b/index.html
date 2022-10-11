@@ -23,10 +23,15 @@
 <meta property="og:site_name" content="Gilgamesh&#39;s Blog">
 <meta property="og:description" content="记录王道23课程中相对22课程新增的数据表示运算硬件相关知识以及22大纲中新增的知识点。图片和知识点基于王道强化班。仅供学习交流，请勿用于商业用途。">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:10:10-19:50:54-image-20221010100650472.png">
+<meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:10:10-19:50:54-image-20221010121237152.png">
+<meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:10:10-19:50:54-image-20221010144945187.png">
+<meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:10:10-19:50:54-image-20221010153340551.png">
 <meta property="article:published_time" content="2022-10-08T12:48:42.000Z">
-<meta property="article:modified_time" content="2022-10-08T12:55:33.370Z">
+<meta property="article:modified_time" content="2022-10-10T11:50:58.718Z">
 <meta property="article:author" content="Gilgamesh">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:10:10-19:50:54-image-20221010100650472.png">
   
   
   <title>408-22新大纲知识点 - Gilgamesh&#39;s Blog</title>
@@ -234,7 +239,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      45 字
+      2.3k 字
     </span>
   
 
@@ -243,7 +248,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      1 分钟
+      15 分钟
     </span>
   
 
@@ -280,14 +285,211 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：2022年10月8日 晚上
+                  本文最后更新于：2022年10月10日 晚上
                 
               </p>
             
             <div class="markdown-body">
               <h1 align="center">408-22新大纲知识点</h1>
 
-<h2 id="1-数据表示和运算"><a href="#1-数据表示和运算" class="headerlink" title="1.数据表示和运算"></a>1.数据表示和运算</h2><h3 id="1-1-补码加减运算器、标志位"><a href="#1-1-补码加减运算器、标志位" class="headerlink" title="1.1.补码加减运算器、标志位"></a>1.1.补码加减<u>运算器、标志位</u></h3><h3 id="1-2-乘除法电路"><a href="#1-2-乘除法电路" class="headerlink" title="1.2.乘除法电路"></a>1.2.乘除法电路</h3>
+<h2 id="1-数据表示和运算"><a href="#1-数据表示和运算" class="headerlink" title="1.数据表示和运算"></a>1.数据表示和运算</h2><h3 id="1-1-补码加减运算器、标志位"><a href="#1-1-补码加减运算器、标志位" class="headerlink" title="1.1.补码加减运算器、标志位"></a>1.1.补码加减<u>运算器、标志位</u></h3><ul>
+<li>传统补码手算：<ul>
+<li>加法：直接相加，溢出舍弃</li>
+<li>减法：X-Y，Y连符号位一起全部取反末位+1，减法变加法</li>
+</ul>
+</li>
+<li>电路： <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:10:10-19:50:54-image-20221010100650472.png" srcset="/img/loading.gif" lazyload alt="image-20221010100650472" style="zoom:25%;" /><ul>
+<li>无符号数也可以使用此电路，但二者判断溢出逻辑不同</li>
+</ul>
+</li>
+<li>标志位（都在PSW状态字寄存器中）</li>
+</ul>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">OF (Overflow Flag)</th>
+<th style="text-align:center">溢出标志</th>
+<th style="text-align:center">溢出时为1否则置0</th>
+<th style="text-align:left">最高位 异或 次高位，只在<strong>有符号数</strong>运算有意义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">SF (Sign Flag)</td>
+<td style="text-align:center">符号标志</td>
+<td style="text-align:center">结果为负时置1,否则置0</td>
+<td style="text-align:left">取结果最高位，只在<strong>有符号数</strong>运算有意义</td>
+</tr>
+<tr>
+<td style="text-align:left">ZF (Zero Flag)</td>
+<td style="text-align:center">零标志</td>
+<td style="text-align:center">运算结果为0时置1，否则置0</td>
+<td style="text-align:left">运算结果全部位为0</td>
+</tr>
+<tr>
+<td style="text-align:left">CF (Carry Flag)</td>
+<td style="text-align:center">进位/借位标志</td>
+<td style="text-align:center">进位/借位时置1否则置0</td>
+<td style="text-align:left">最高位进位 异或 sub值(减法为1)，只在<strong>无符号数</strong>运算有意义</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="1-2-乘法电路"><a href="#1-2-乘法电路" class="headerlink" title="1.2.乘法电路"></a>1.2.乘法电路</h3><ul>
+<li>电路图：<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:10:10-19:50:54-image-20221010121237152.png" srcset="/img/loading.gif" lazyload alt="image-20221010121237152" style="zoom:35%;" /></li>
+<li><p>有符号数 乘法 算法：</p>
+<ul>
+<li><p>辅助位 一开始设为0</p>
+<ul>
+<li>辅助位 - Y中最低位 = 1时，(P)+[X]补</li>
+<li>辅助位 - Y中最低位 = 0时，(P)+[X]补</li>
+<li>辅助位 - Y中最低位 = -1时，(P)+[-X]补</li>
+</ul>
+</li>
+<li><p>算数右移时，用<strong>符号位</strong>补空位</p>
+</li>
+<li>此处用<strong>单符号位</strong>运算，n位右移后<strong>不用</strong>最后再来一次加法</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-3-除法电路"><a href="#1-3-除法电路" class="headerlink" title="1.3.除法电路"></a>1.3.除法电路</h3><p>本质上是把n位数扩展为2n位，对n位数做除法得到n位商。定点正小数，低位补0；定点正整数，高位补0</p>
+<ul>
+<li>电路图：<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:10:10-19:50:54-image-20221010144945187.png" srcset="/img/loading.gif" lazyload alt="image-20221010144945187" style="zoom:35%;" /></li>
+<li>需要的基本结构：<ul>
+<li>ALU</li>
+<li>移位寄存器：乘法右移，除法左移</li>
+<li>控制逻辑：加减信号（向ALU）、右移/左移信号（向寄存器）、写使能信号（向寄存器）</li>
+<li>计数器Cn：记录还剩几轮处理</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-固态硬盘"><a href="#2-固态硬盘" class="headerlink" title="2.固态硬盘"></a>2.固态硬盘</h2><ul>
+<li>基于闪存技术 Flash Memory, 属于电可擦除ROM，即EEPROM</li>
+<li>组成<ul>
+<li>闪存翻译层 ：负责翻译逻辑块号，找到对应页 (Page)</li>
+<li>存储介质：多个闪存芯片(Flash Chip) ，每个芯片包含多个块(block) ，每个块包含多个页(page)</li>
+<li>示意图：<img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:10:10-19:50:54-image-20221010153340551.png" srcset="/img/loading.gif" lazyload alt="image-20221010153340551" style="zoom:40%;" /></li>
+</ul>
+</li>
+<li>读写性能特性<ul>
+<li>以页 (page)为单位读/写：相当于磁盘的“扇区”</li>
+<li>以块 (block)为单位擦除：擦干净的块，其中的每页都可以写一次，读无限次</li>
+<li>支持随机访问：系统给定一个逻辑地址，闪存翻译层可通过电路迅速定位到对应的物理地址</li>
+<li>读快、写慢：要写的页如果有数据，则不能写入，需要将块内其他页全部复制到一个新的（擦除过的）块中，再写入新的页</li>
+</ul>
+</li>
+<li>与机械硬盘相比<ul>
+<li>SSD读写速度快，随机访问性能高，用电路控制访问位置；机械硬盘通过移动磁臂旋转磁盘控制访问位置，有寻道时间和旋转延迟</li>
+<li>SSD安静无噪音、耐摔抗震、能耗低、造价更贵</li>
+<li>SSD的一个“块”被擦除次数过多可能会坏掉， 而机械硬盘的扇区不会因为写的次数太多而坏掉</li>
+</ul>
+</li>
+<li>磨损均衡<ul>
+<li>思想：将”擦除平均分布在各个块上，以提升使用寿命</li>
+<li>动态磨损均衡：写入数据时，优先选择累计擦除次数少的新闪存块</li>
+<li>静态磨损均衡：SSD监测并自动进行数据分配、迁移， 让老旧的闪存块承担以读 为主的储存任务， 让较新的闪存块承担更多的写任务 </li>
+</ul>
+</li>
+</ul>
+<h2 id="3-多处理器"><a href="#3-多处理器" class="headerlink" title="3.多处理器"></a>3.多处理器</h2><h3 id="3-1-SISD、-SIMD、MIMD、向量处理器"><a href="#3-1-SISD、-SIMD、MIMD、向量处理器" class="headerlink" title="3.1.SISD、 SIMD、MIMD、向量处理器"></a>3.1.SISD、 SIMD、MIMD、向量处理器</h3><ul>
+<li>SISD(单指令流单数据流)<ul>
+<li>各指令序列只能并发、不能并行，每条指令处理1个数据。<strong>不是数据级并行</strong>技术</li>
+<li>一个处理器 + 一个主存储器。若采用<strong>指令流水线</strong>，需设置多个功能部件，采用多模块交叉存储</li>
+</ul>
+</li>
+<li>SIMD(单指令流多数据流)<ul>
+<li>各指令序列只能并发、不能并行，但每条指令可同时处理很多具体对象。<strong>是数据级并行</strong>技术</li>
+<li>一个指令控制部件（CU） + 多个处理单元/执行单元（如ALU） + 多个局部存储器 + 一个主存储器</li>
+<li>每个执行单元有各自的寄存器组、局部存储器、地址寄存器。不同执行单元<strong>执行同一条指令，处理不同的数据</strong></li>
+</ul>
+</li>
+<li>MISD：理论存在</li>
+<li>MIMD(多指令流多数据流)<ul>
+<li>各指令序列并行执行， 分别处理多个不同的数据。是一种<strong>线程级并行</strong>、 甚至是线程级以上并行技术</li>
+<li>多处理器系统<ul>
+<li>各处理器之间，可以通过LOAD/STORE指令，访问同一个主存储器，可通过主存相互传送数据</li>
+<li>多个处理器 + 一个主存储器。共享单一的物理地址空间</li>
+<li>多个处理器共享单一的物理地址空间</li>
+</ul>
+</li>
+<li>多计算机系统<ul>
+<li>各计算机之间， 不能通过LOAD/STORE指令直接访问 对方的存储器， 只能通过“消息传递”相互传送数据 </li>
+<li>多个处理器+多个主存储器。物理地址空间相互独立</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>向量处理机<ul>
+<li>条指令的处理对象是“向量”。擅长对向量型数据并行计算、浮点数运算</li>
+<li>常被用于超级计算机中，处理科学研究中巨大运算量</li>
+<li>多个处理单元，多组“向量寄存器”</li>
+<li>主存应采用“多个端口同时读取”的交叉多模块存储器</li>
+<li>主存大小限定了机器的解题规模，因此要有大容量的、集中式的主存</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-2-硬件多线程"><a href="#3-2-硬件多线程" class="headerlink" title="3.2.硬件多线程"></a>3.2.硬件多线程</h3><ul>
+<li>细粒度多线程：多个线程轮流交叉执行指令，多线程之间的指令不相关，可以乱序并行执行<ul>
+<li>处理器能在每个时钟周期切换线程</li>
+</ul>
+</li>
+<li>粗粒度多线程：仅在一个线程出现了较大开销的阻塞时，才切换线程，如Cache缺失<ul>
+<li>发生流水线阻塞时，必须清除被阻塞的流水线，新线程的指令开始执行前需要重载流水线。线程切换的开销更大</li>
+</ul>
+</li>
+<li>同时多线程（SMT）<ul>
+<li>在同一时钟周期中，发射多个不同线程中的多条指令执行</li>
+</ul>
+</li>
+</ul>
+<h2 id="4-汇编"><a href="#4-汇编" class="headerlink" title="4.汇编"></a>4.汇编</h2><ul>
+<li><p>算数逻辑运算</p>
+<ul>
+<li><p><u>OP, 目的地址, 源地址</u></p>
+</li>
+<li><p>加、减、乘、除：OP: add、 sub, mul、 div</p>
+</li>
+<li><p>左移、右移：shl、 shr</p>
+</li>
+</ul>
+</li>
+<li><p>分支结构</p>
+<ul>
+<li>判断条件(本质是减法)：cmp A, B，结果放到PSW中<ul>
+<li>无符号数减法关注CF、ZF（进位、零）</li>
+<li>有符号数减法关注OF、SF、ZF（溢出、符号、零）</li>
+</ul>
+</li>
+<li>跳转指令<ul>
+<li>jxxxx（条件跳转)</li>
+<li>jmp（无条件跳转)，相当于C语言的goto</li>
+<li>转移指令，通常采用相对寻址。用<strong>补码表示偏移量</strong>，补码的值通常意味着要往前/往后<strong>跳多少个地址指令</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>循环结构<ul>
+<li>xxx loop xxxx label：原理同跳转指令</li>
+<li>条件跳转指令 jxxxx 也可以用于实现循环</li>
+</ul>
+</li>
+<li>函数调用<ul>
+<li>调用指令：call label<ul>
+<li>修改PC的值，跳转到label</li>
+<li>call指令会将当前函数的相关信息入栈，这点与直接跳转不同</li>
+<li>入栈信息：当前PC</li>
+</ul>
+</li>
+<li>返回指令：ret<ul>
+<li>当前函数的信息出栈</li>
+<li>恢复上一层函数的运行现场，包括栈底指针ebp、程序计数器pc等</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
             </div>
             <hr>
             <div>

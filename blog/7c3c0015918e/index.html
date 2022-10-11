@@ -78,7 +78,7 @@
 <meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153736.png">
 <meta property="og:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/2022:08:25-15:37:49-22-0825_15.png">
 <meta property="article:published_time" content="2022-04-02T09:35:49.000Z">
-<meta property="article:modified_time" content="2022-10-09T02:35:52.939Z">
+<meta property="article:modified_time" content="2022-10-09T03:27:19.143Z">
 <meta property="article:author" content="Gilgamesh">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153683.png">
@@ -586,12 +586,14 @@
 </li>
 <li><p>P为二阶实对称阵，$A=\left[ \begin{array}{ccc} 0 &amp; a\\ -a &amp; 0\end{array} \right]$，a为<strong>正实数</strong>，则有 $P^TAP=\begin{cases}A,&amp;|P|=1 \\ -A,&amp;|P|=-1  \end{cases}$</p>
 </li>
-<li><p>从上面推广，$A=\left[ \begin{array}{ccc} \lambda_1 &amp; a\\ -a &amp; \lambda_2\end{array} \right]$，$B=\left[ \begin{array}{ccc} \lambda_3 &amp; b\\ -b &amp; \lambda_4\end{array} \right]$，a b为<strong>正实数</strong>，则$A\simeq B\iff A_s\simeq B_s$且$b^2\lambda_1\lambda_2=a^2\lambda_3\lambda_4$ </p>
+<li><p>若$A=\left[ \begin{array}{ccc} \lambda_1 &amp; a\\ -a &amp; \lambda_2\end{array} \right]$，$B=\left[ \begin{array}{ccc} \lambda_3 &amp; b\\ -b &amp; \lambda_4\end{array} \right]$，a b为<strong>正实数</strong>，则$A\simeq B\iff A_s\simeq B_s$且$b^2\lambda_1\lambda_2=a^2\lambda_3\lambda_4$ </p>
 </li>
 </ul>
 </li>
 <li><p>判定：</p>
 <ul>
+<li><p>非对称阵，正定，可能没有实特征值</p>
+</li>
 <li><p>必要条件：主对角元素全正、行列式&gt;0 </p>
 <blockquote>
 <p>前提A一定是对称阵 <img src="https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img/202204020153707.png" srcset="/img/loading.gif" lazyload alt="image-20220316231249574" style="zoom: 40%;" /></p>
@@ -599,7 +601,7 @@
 </li>
 </ul>
 </li>
-<li><p>三大变换：A正定$\begin{cases}\iff A^T正定\\\iff A^{-1}正定\\\Longrightarrow A^*正定\end{cases}$ </p>
+<li><p>三大变换：A正定$\begin{cases}\iff A^T正定（非对称方阵通过化为对称阵来判断正定）\\\iff A^{-1}正定\\\Longrightarrow A^*正定\end{cases}$ </p>
 </li>
 </ul>
 <h1 id=""><a href="#" class="headerlink" title="$\ $"></a>$\ $</h1><h1 id="概率论"><a href="#概率论" class="headerlink" title="概率论"></a>概率论</h1><h2 id="一、随机事件与概率"><a href="#一、随机事件与概率" class="headerlink" title="一、随机事件与概率"></a>一、随机事件与概率</h2><ul>
